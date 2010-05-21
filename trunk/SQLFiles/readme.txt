@@ -1,4 +1,4 @@
-This guide will help you create a database named 'QLKS' with two logins and two users:
++ This guide will help you create a database named 'QLKS' with two logins and two users:
   Logins: QLKS_ADMIN, pass: 1234
   Users: QLKS_NHAN_VIEN, pass: 1234
 
@@ -12,8 +12,6 @@ TABLES.sql
 LOGINS_AND_USERS.sql
 CONSTRAINTS.sql
 FUNCTIONS.sql
-PROCEDURES.sql
 TRIGGERS.sql
+PROCEDURES.sql
 TEST_DATA.sql
-
-P/S: Edit sql files to do your own things.

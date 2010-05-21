@@ -1,8 +1,7 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  5/21/2010 12:44:35 AM                    */
+/* Date de création :  5/20/2010 11:14:55 AM                    */
 /*==============================================================*/
-
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
@@ -504,6 +503,7 @@ create table PHONG (
    MA_PHONG             int                  identity,
    MA_LOAI_PHONG        int                  null,
    MA_TINH_TRANG        int                  null,
+   SO_PHONG             nvarchar(6)          null,
    constraint PK_PHONG primary key (MA_PHONG)
 )
 go
