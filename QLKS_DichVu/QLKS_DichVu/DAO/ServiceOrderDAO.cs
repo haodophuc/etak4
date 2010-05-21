@@ -17,13 +17,13 @@ namespace QLKS_DichVu.DAO
             databaseMaster = new DatabaseMaster(dbConnection.Connection);
         }
 
-        public DataTable getServiceOrderByRoomID(String roomID)
+        public DataTable getServiceOrderByRoomID(String roomNumber)
         {
             // build query
-            String storeProcedure = "PHIEU_DANG_KY_DICH_VU_THEO_SO_PHONG";
+            String storeProcedure = "SP_PHIEU_DANG_KY_DICH_VU_THEO_SO_PHONG";
             SqlCommand cmd = databaseMaster.getCommand(storeProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@SO_PHONG", roomID);
+            cmd.Parameters.AddWithValue("@SO_PHONG", roomNumber);
 
             // get data table
             SqlDataAdapter da = databaseMaster.getDataAdapter(cmd);

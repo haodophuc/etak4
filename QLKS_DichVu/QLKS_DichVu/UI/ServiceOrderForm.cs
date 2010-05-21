@@ -25,6 +25,7 @@ namespace QLKS_DichVu.UI
         public void loadServiceDataGridView()
         {
             DataTable dt = serviceOrderBUS.getServiceOrderByRoomID(roomIDTextBox.Text);
+            serviceOrderDataGridView.DataSource = dt;
         }
         #endregion
 
