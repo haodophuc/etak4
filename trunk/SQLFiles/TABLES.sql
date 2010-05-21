@@ -1,7 +1,8 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  5/20/2010 11:14:55 AM                    */
+/* Date de création :  5/21/2010 10:06:37 AM                    */
 /*==============================================================*/
+
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
@@ -54,16 +55,16 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('KHACH_TRO') and o.name = 'FK_KHACH_TR_TRO_KHACH_HA')
+   where r.fkeyid = object_id('KHACH_TRO') and o.name = 'FK_KHACH_TR_REFERENCE_PHIEU_TH')
 alter table KHACH_TRO
-   drop constraint FK_KHACH_TR_TRO_KHACH_HA
+   drop constraint FK_KHACH_TR_REFERENCE_PHIEU_TH
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('KHACH_TRO') and o.name = 'FK_KHACH_TR_TRO_PHIEU_DA')
+   where r.fkeyid = object_id('KHACH_TRO') and o.name = 'FK_KHACH_TR_TRO_KHACH_HA')
 alter table KHACH_TRO
-   drop constraint FK_KHACH_TR_TRO_PHIEU_DA
+   drop constraint FK_KHACH_TR_TRO_KHACH_HA
 go
 
 if exists (select 1
@@ -131,9 +132,9 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('PHIEU_THU_KHACH_HANG') and o.name = 'FK_PHIEU_TH_THU_KHACH_PHIEU_TH')
+   where r.fkeyid = object_id('PHIEU_THU_KHACH_HANG') and o.name = 'FK_PHIEU_TH_REFERENCE_KHACH_HA')
 alter table PHIEU_THU_KHACH_HANG
-   drop constraint FK_PHIEU_TH_THU_KHACH_PHIEU_TH
+   drop constraint FK_PHIEU_TH_REFERENCE_KHACH_HA
 go
 
 if exists (select 1
@@ -486,7 +487,7 @@ go
 /*==============================================================*/
 create table PHIEU_THU_KHACH_HANG (
    SO_PHIEU             int                  identity,
-   MA_PHIEU             int                  null,
+   MA_KHACH_HANG        int                  null,
    MA_CA_TRUC           int                  null,
    NGAY_PHIEU           datetime             null,
    SO_TIEN              money                null,
@@ -503,7 +504,7 @@ create table PHONG (
    MA_PHONG             int                  identity,
    MA_LOAI_PHONG        int                  null,
    MA_TINH_TRANG        int                  null,
-   SO_PHONG             nvarchar(6)          null,
+   SO_PHONG             nvarchar(10)         null,
    constraint PK_PHONG primary key (MA_PHONG)
 )
 go
@@ -523,10 +524,11 @@ go
 /*==============================================================*/
 create table THU_NGAN (
    MA_THU_NGAN          int                  identity,
+   TEN_DANG_NHAP        nvarchar(50)         not null,
+   MAT_KHAU             nvarchar(50)         not null,
    HO_TEN               nvarchar(50)         null,
    DIA_CHI              nvarchar(50)         null,
    DIEN_THOAI           nvarchar(20)         null,
-   MAT_KHAU             nvarchar(50)         null,
    constraint PK_THU_NGAN primary key (MA_THU_NGAN)
 )
 go
@@ -597,13 +599,13 @@ alter table KHACH_HANG
 go
 
 alter table KHACH_TRO
-   add constraint FK_KHACH_TR_TRO_KHACH_HA foreign key (MA_KHACH_HANG)
-      references KHACH_HANG (MA_KHACH_HANG)
+   add constraint FK_KHACH_TR_REFERENCE_PHIEU_TH foreign key (MA_PHIEU)
+      references PHIEU_THUE_PHONG (MA_PHIEU)
 go
 
 alter table KHACH_TRO
-   add constraint FK_KHACH_TR_TRO_PHIEU_DA foreign key (MA_PHIEU)
-      references PHIEU_DAT_PHONG (MA_PHIEU)
+   add constraint FK_KHACH_TR_TRO_KHACH_HA foreign key (MA_KHACH_HANG)
+      references KHACH_HANG (MA_KHACH_HANG)
 go
 
 alter table PHIEU_DANG_KY_DICH_VU
@@ -652,8 +654,8 @@ alter table PHIEU_THU_DOAN_KHACH
 go
 
 alter table PHIEU_THU_KHACH_HANG
-   add constraint FK_PHIEU_TH_THU_KHACH_PHIEU_TH foreign key (MA_PHIEU)
-      references PHIEU_THUE_PHONG (MA_PHIEU)
+   add constraint FK_PHIEU_TH_REFERENCE_KHACH_HA foreign key (MA_KHACH_HANG)
+      references KHACH_HANG (MA_KHACH_HANG)
 go
 
 alter table PHIEU_THU_KHACH_HANG
