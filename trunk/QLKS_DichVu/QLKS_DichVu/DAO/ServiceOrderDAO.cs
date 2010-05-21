@@ -20,11 +20,10 @@ namespace QLKS_DichVu.DAO
         public DataTable getServiceOrderByRoomID(String roomID)
         {
             // build query
-            String query = "SELECT * " + 
-                           "FROM PHIEU_DANG_KY_DICH_VU A INNER JOIN PHIEU_THUE_PHONG B ON A.MA_PHIEU = B.MA_PHIEU " +
-                           "WHERE B.MA_PHONG = @MA_PHONG";
-            SqlCommand cmd = databaseMaster.getCommand(query);
-            cmd.Parameters.AddWithValue("@MA_PHONG", roomID);
+            String storeProcedure = "PHIEU_DANG_KY_DICH_VU_THEO_SO_PHONG";
+            SqlCommand cmd = databaseMaster.getCommand(storeProcedure);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@SO_PHONG", roomID);
 
             // get data table
             SqlDataAdapter da = databaseMaster.getDataAdapter(cmd);
