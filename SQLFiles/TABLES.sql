@@ -426,13 +426,13 @@ go
 /* Table : PHIEU_DANG_KY_DICH_VU                                */
 /*==============================================================*/
 create table PHIEU_DANG_KY_DICH_VU (
-   SO_DICH_VU           int                  identity,
+   SO_PHIEU           int                  identity,
    MA_PHIEU             int                  null,
    MA_DICH_VU           int                  null,
    NGAY_PHUC_VU         datetime             null,
    SO_LUONG             int                  null,
    GHI_CHU              nvarchar(50)         null,
-   constraint PK_PHIEU_DANG_KY_DICH_VU primary key (SO_DICH_VU)
+   constraint PK_PHIEU_DANG_KY_DICH_VU primary key (SO_PHIEU)
 )
 go
 
