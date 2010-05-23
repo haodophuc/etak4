@@ -5,7 +5,7 @@
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{494D3C61-EDF2-4B6D-8254-C1DD748CA912}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QLKS_TiepNhanKhach</RootNamespace>
     <AssemblyName>QLKS_TiepNhanKhach</AssemblyName>
@@ -22,6 +22,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +48,7 @@
     <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -55,8 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
+    <Compile Include="BUS\QuocGiaBUS.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
+    <Compile Include="DAO\QuocGiaDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Form\Form_Main.cs">
       <SubType>Form</SubType>
@@ -75,6 +82,12 @@
     </Compile>
     <Compile Include="Form\Form_DatPhong.Designer.cs">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_CapNhatKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CapNhatKhachHang.Designer.cs">
+      <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
@@ -96,6 +109,10 @@
       <DependentUpon>Form_Main.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_CapNhatKhachHang.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -105,6 +122,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CapNhatKhachHang_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CapNhatPhong_UI.resx">
       <SubType>Designer</SubType>
@@ -128,6 +149,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\CapNhatKhachHang_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CapNhatKhachHang_UI.Designer.cs">
+      <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CapNhatPhong_UI.cs">
       <SubType>UserControl</SubType>
