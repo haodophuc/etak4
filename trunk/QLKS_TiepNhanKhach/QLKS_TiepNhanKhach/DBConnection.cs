@@ -122,6 +122,77 @@ namespace QLKS_TiepNhanKhach
             return dataTable;
         }
 
+        public int executeInsertQuery(String _sqlText, SqlParameter[] sqlParameters)
+        {
+            SqlCommand myComnand = new SqlCommand();
+            int num = 0;
+            try
+            {
+                myComnand.Connection = connection;
+                myComnand.CommandText = _sqlText;
+                myComnand.Parameters.AddRange(sqlParameters);
+                dataAdapter.InsertCommand = myComnand;
+                num = myComnand.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                errorMessage = e.Message;
+            }
+            finally
+            {
+                command.Dispose();
+            }
+            return num;
+        }
+
+        public int executeUpdateQuery(string _sqlText, SqlParameter[] sqlParameters)
+        {
+            SqlCommand myComand = new SqlCommand();
+            int num = 0;
+            try
+            {
+                myComand.Connection = connection;
+                myComand.CommandText = _sqlText;
+                myComand.Parameters.AddRange(sqlParameters);
+                dataAdapter.UpdateCommand = myComand;
+                num = myComand.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                errorMessage = e.Message;
+            }
+            finally
+            {
+                command.Dispose();
+            }
+            return num;
+        }
+
+        public int executeDeleteQuery(string _sqlText, SqlParameter[] sqlParameters)
+        {
+            SqlCommand myComand = new SqlCommand();
+            int num = 0;
+            try
+            {
+                myComand.Connection = connection;
+                myComand.CommandText = _sqlText;
+                myComand.Parameters.AddRange(sqlParameters);
+                dataAdapter.DeleteCommand = myComand;
+                num = myComand.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                errorMessage = e.Message;
+            }
+            finally
+            {
+                command.Dispose();
+            }
+            return num;
+        }
+
+    
         #endregion
     }
 }
