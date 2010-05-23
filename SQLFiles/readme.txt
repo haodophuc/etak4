@@ -8,10 +8,10 @@ Do this step by step:
 2) USE QLKS;
 
 3) Execute the SQL files with the following order:
-TABLES.sql
-LOGINS_AND_USERS.sql
-CONSTRAINTS.sql
-FUNCTIONS.sql
-TRIGGERS.sql
-PROCEDURES.sql
-TEST_DATA.sql
+1. TABLES.sql
+2. CONSTRAINTS.sql
+3. PROCEDURES.sql
+4. FUNCTIONS.sql
+5. TRIGGERS.sql
+6. LOGINS_AND_USERS.sql
+7. TEST_DATA.sql
