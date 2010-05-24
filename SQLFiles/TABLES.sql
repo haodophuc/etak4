@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  5/24/2010 10:38:02 PM                    */
+/* Date de création :  5/25/2010 12:16:21 AM                    */
 /*==============================================================*/
 
 
@@ -368,6 +368,7 @@ create table DICH_VU (
    MA_DICH_VU           int                  identity,
    TEN_DICH_VU          nvarchar(50)         null,
    DON_GIA              money                null,
+   HIEU_LUC             bit                  not null,
    constraint PK_DICH_VU primary key (MA_DICH_VU)
 )
 go
