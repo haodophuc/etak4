@@ -27,14 +27,17 @@ namespace QLKS_DichVu.UI
                                ";pwd=" + txtPassword.Text);
             dbConnection = new DBConnection(connection);
 
-            if (dbConnection.connect())
-            {
-                ServiceOrderForm serviceOrderForm = new ServiceOrderForm(this, dbConnection);
-                serviceOrderForm.Show();                
+            try {
+                dbConnection.connect();                
+                ServicesManagementForm serviceForm = new ServicesManagementForm(this, dbConnection);
+                serviceForm.MainForm = this;
+                serviceForm.Show();
                 this.Hide();
-            }
-            else
-                MessageBox.Show(dbConnection.ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }// end try
+            catch( Exception exception ) {
+                MessageBox.Show(exception.Message, "Error Encountered", MessageBoxButtons.OK);
+            }// end catch;
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)

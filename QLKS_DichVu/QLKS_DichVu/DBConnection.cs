@@ -27,6 +27,8 @@ namespace QLKS_DichVu
             get { return command; }
             set { command = value; }
         }
+	
+
         
         private string errorMessage;
 
@@ -41,43 +43,42 @@ namespace QLKS_DichVu
         #region methods
         public DBConnection()
         {
-            dataAdapter = new SqlDataAdapter();            
+            dataAdapter = new SqlDataAdapter();
         }
 
-        public DBConnection(SqlConnection connection)
+        public DBConnection(SqlConnection connection) : this()
         {
             this.connection = connection;
         }
-
-        public bool connect()
+        
+        public void connect()
         {
             if (connection == null)
             {
-                errorMessage = "Connection haven't been initialized";
-                return false;
-            }
-            if (connection.State == ConnectionState.Closed)
+                 throw new Exception("Connection haven't initialized");                
+            }// end if
+            else if (connection.State == ConnectionState.Closed)
             {
                 try
                 {
                     connection.Open();
-                    return true;
                 }
                 catch (Exception e)
                 {
-                    errorMessage = e.Message;
-                    return false;
+                    throw e;
                 }
-            }
-            errorMessage = "Cannot connect with connection";
-            return false;
+            }// end if #2
+            else
+            {
+                throw new Exception("Cannot connect with connection");
+            }// end else
         }
 
         public bool disconnect()
         {
             if (connection == null)
             {
-                errorMessage = "Connection haven't been initialized";
+                errorMessage = "Connection haven't initialized";
                 return false;
             }
             if (connection.State == ConnectionState.Open)
@@ -89,8 +90,7 @@ namespace QLKS_DichVu
                 }
                 catch (Exception e)
                 {
-                    errorMessage = e.Message;
-                    return false;
+                    throw e;
                 }
             }
             errorMessage = "Cannot disconnect with connection";
@@ -104,16 +104,13 @@ namespace QLKS_DichVu
             {
                 command = new SqlCommand(query,connection);
                 DataSet dataSet = new DataSet();
-
-                command.ExecuteNonQuery();
-                dataAdapter.SelectCommand = command;
+                dataAdapter.SelectCommand = command;                
                 dataAdapter.Fill(dataSet);
-                dataTable = dataSet.Tables[0];                
+                dataTable = dataSet.Tables[0];    
             }
             catch (SqlException e)
             {
-                errorMessage = e.Message;
-                return null;
+                throw e;
             }
             finally
             {
@@ -121,6 +118,74 @@ namespace QLKS_DichVu
             }
             return dataTable;
         }
+
+        public int executeInsertQuery(String query, SqlParameter[] sqlParameters)
+        {
+            int rows = 0;
+            try
+            {
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddRange(sqlParameters);
+                dataAdapter.InsertCommand = command;
+                rows = command.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                command.Dispose();
+            }
+            return rows;
+        }
+
+        public int executeUpdateQuery(string query, SqlParameter[] sqlParameters)
+        {
+            int rows = 0;
+            try
+            {
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddRange(sqlParameters);
+                dataAdapter.UpdateCommand = command;
+                rows = command.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                command.Dispose();
+            }
+            return rows;
+        }
+
+        public int executeDeleteQuery(string query, SqlParameter[] sqlParameters)
+        {
+            int rows = 0;
+            try
+            {
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddRange(sqlParameters);
+                dataAdapter.DeleteCommand = command;
+                rows = command.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                command.Dispose();
+            }
+            return rows;
+        }
+
+    
         #endregion
     }
 }
