@@ -33,9 +33,10 @@ namespace QLKS_TiepNhanKhach
         public DBConnection()
         {
             dataAdapter = new SqlDataAdapter();
+            connection = new SqlConnection(Program.connectString);
         }
 
-        public void Connect()
+        public SqlConnection Connect()
         {
             Exception exception;
             if (connection == null)
@@ -43,7 +44,7 @@ namespace QLKS_TiepNhanKhach
                 exception = new Exception("Connection haven't initialized");
                 throw exception;
             }
-            else if (connection.State == ConnectionState.Closed)
+            else if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
             {
                 try
                 {
@@ -59,6 +60,7 @@ namespace QLKS_TiepNhanKhach
                 exception = new Exception("Connection has already connected");
                 throw exception;
             }
+            return connection;
         }
 
         public void Disconnect()
@@ -92,8 +94,10 @@ namespace QLKS_TiepNhanKhach
             DataTable dataTable = null;
             try
             {
-                command = new SqlCommand(query,connection);
                 DataSet dataSet = new DataSet();
+                command = new SqlCommand();
+                command.Connection = Connect();
+                command.CommandText = query;
 
                 dataAdapter.SelectCommand = command;
                 dataAdapter.Fill(dataSet);
@@ -106,6 +110,7 @@ namespace QLKS_TiepNhanKhach
             finally
             {
                 command.Dispose();
+                Disconnect();
             }
             return dataTable;
         }
@@ -115,7 +120,9 @@ namespace QLKS_TiepNhanKhach
             int rows = 0;
             try
             {
-                command = new SqlCommand(query, connection);
+                command = new SqlCommand();
+                command.Connection = Connect();
+                command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
                 dataAdapter.InsertCommand = command;
                 rows = command.ExecuteNonQuery();
@@ -127,6 +134,7 @@ namespace QLKS_TiepNhanKhach
             finally
             {
                 command.Dispose();
+                Disconnect();
             }
             return rows;
         }
@@ -136,7 +144,9 @@ namespace QLKS_TiepNhanKhach
             int rows = 0;
             try
             {
-                command = new SqlCommand(query, connection);
+                command = new SqlCommand();
+                command.Connection = Connect();
+                command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
                 dataAdapter.UpdateCommand = command;
                 rows = command.ExecuteNonQuery();
@@ -148,6 +158,7 @@ namespace QLKS_TiepNhanKhach
             finally
             {
                 command.Dispose();
+                Disconnect();
             }
             return rows;
         }
@@ -157,7 +168,9 @@ namespace QLKS_TiepNhanKhach
             int rows = 0;
             try
             {
-                command = new SqlCommand(query, connection);
+                command = new SqlCommand();
+                command.Connection = Connect();
+                command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
                 dataAdapter.DeleteCommand = command;
                 rows = command.ExecuteNonQuery();
@@ -169,6 +182,7 @@ namespace QLKS_TiepNhanKhach
             finally
             {
                 command.Dispose();
+                Disconnect();
             }
             return rows;
         }
@@ -178,7 +192,9 @@ namespace QLKS_TiepNhanKhach
             int result = 0;
             try
             {
-                command = new SqlCommand(query, connection);
+                command = new SqlCommand();
+                command.Connection = Connect();
+                command.CommandText = query;
                 command.Parameters.AddRange(sqlParameters);
                 dataAdapter.SelectCommand = command;
                 result = Int32.Parse(command.ExecuteScalar().ToString());
@@ -196,6 +212,7 @@ namespace QLKS_TiepNhanKhach
             finally
             {
                 command.Dispose();
+                Disconnect();
             }
             return result;
         }

@@ -12,15 +12,15 @@ namespace QLKS_TiepNhanKhach.UI
 {
     public partial class CapNhatPhong_UI : UserControl
     {
-        DBConnection dbConnection;
+    
         PhongBUS phongBUS;
         LoaiPhongBUS loaiPhongBUS;
         public CapNhatPhong_UI(DBConnection dbConnection)
         {
             InitializeComponent();
-            this.dbConnection = dbConnection;
-            phongBUS = new PhongBUS(dbConnection);
-            loaiPhongBUS = new LoaiPhongBUS(dbConnection);
+            
+            phongBUS = new PhongBUS();
+            loaiPhongBUS = new LoaiPhongBUS();
         }
 
         private void CapNhatPhong_UI_Load(object sender, EventArgs e)

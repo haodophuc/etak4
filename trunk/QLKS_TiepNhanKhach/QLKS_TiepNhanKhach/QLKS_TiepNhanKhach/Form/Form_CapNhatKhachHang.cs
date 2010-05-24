@@ -14,7 +14,7 @@ namespace QLKS_TiepNhanKhach
         public Form_CapNhatKhachHang(DBConnection dbConnection)
         {
             InitializeComponent();
-            khachHangUI = new UI.CapNhatKhachHang_UI(dbConnection);
+            khachHangUI = new UI.CapNhatKhachHang_UI();
         }
 
         private void Form_CapNhatKhachHang_Load(object sender, EventArgs e)

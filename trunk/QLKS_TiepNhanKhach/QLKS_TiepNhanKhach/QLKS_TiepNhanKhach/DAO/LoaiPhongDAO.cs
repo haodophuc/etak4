@@ -10,9 +10,9 @@ namespace QLKS_TiepNhanKhach.DAO
     {
          private DBConnection dbConnection;
 
-        public LoaiPhongDAO(DBConnection dbConnection)
+        public LoaiPhongDAO()
         {
-            this.dbConnection = dbConnection;
+            this.dbConnection = new DBConnection();
         }
 
         public DataTable selectAllFromLoaiPhong()

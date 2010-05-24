@@ -11,9 +11,9 @@ namespace QLKS_TiepNhanKhach.BUS
     {
          private LoaiPhongDAO loaiPhongDAO;
 
-        public LoaiPhongBUS(DBConnection dbConnection)
+        public LoaiPhongBUS()
         {
-            loaiPhongDAO = new LoaiPhongDAO(dbConnection);
+            loaiPhongDAO = new LoaiPhongDAO();
         }
 
         public DataTable getAllFromLoaiPhong()

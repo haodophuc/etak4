@@ -11,9 +11,9 @@ namespace QLKS_TiepNhanKhach.BUS
     {
          private QuocGiaDAO quocGiaDAO;
 
-        public QuocGiaBUS(DBConnection dbConnection)
+        public QuocGiaBUS()
         {
-            quocGiaDAO = new QuocGiaDAO(dbConnection);
+            quocGiaDAO = new QuocGiaDAO();
 
         }
 

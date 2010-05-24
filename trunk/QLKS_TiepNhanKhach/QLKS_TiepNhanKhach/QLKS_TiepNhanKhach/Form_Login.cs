@@ -12,7 +12,7 @@ namespace QLKS_TiepNhanKhach
     public partial class Form_Connect : Form
     {
 
-        private DBConnection dbConnection = new DBConnection();
+        private DBConnection dbConnection;
 
         public Form_Connect()
         {
@@ -21,12 +21,14 @@ namespace QLKS_TiepNhanKhach
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            dbConnection.Connection = new SqlConnection(@"Data Source="+txtServerName.Text+
-                               ";Initial Catalog="+txtDBName.Text+
-                               ";User ID="+txtUserName.Text+
-                               ";Password="+txtPassword.Text);
+            Program.connectString=@"Data Source=" + txtServerName.Text +
+                               ";Initial Catalog=" + txtDBName.Text +
+                               ";User ID=" + txtUserName.Text +
+                               ";Password=" + txtPassword.Text;
+      
             try
             {
+                dbConnection = new DBConnection();
                 dbConnection.Connect();
                 Form_Main frmMain = new Form_Main(dbConnection);
                 frmMain.Show();  

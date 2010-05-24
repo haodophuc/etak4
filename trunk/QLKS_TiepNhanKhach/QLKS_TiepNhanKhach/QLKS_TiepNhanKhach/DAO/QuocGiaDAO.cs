@@ -9,9 +9,9 @@ namespace QLKS_TiepNhanKhach.DAO
     {
         private DBConnection dbConnection;
 
-        public QuocGiaDAO(DBConnection dbConnection)
+        public QuocGiaDAO()
         {
-            this.dbConnection = dbConnection;
+            this.dbConnection = new DBConnection();
         }
 
         public DataTable selectAllFromQuocGia()
