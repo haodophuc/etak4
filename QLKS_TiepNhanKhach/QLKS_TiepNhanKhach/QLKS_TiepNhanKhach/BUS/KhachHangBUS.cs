@@ -12,9 +12,9 @@ namespace QLKS_TiepNhanKhach.BUS
     {
         private KhachHangDAO khachHangDAO;
 
-        public KhachHangBUS(DBConnection dbConnection)
+        public KhachHangBUS()
         {
-            khachHangDAO = new KhachHangDAO(dbConnection);
+            khachHangDAO = new KhachHangDAO();
 
         }
 

@@ -11,9 +11,9 @@ namespace QLKS_TiepNhanKhach.BUS
     {
          private PhongDAO phongDAO;
 
-        public PhongBUS(DBConnection dbConnection)
+        public PhongBUS()
         {
-            phongDAO = new PhongDAO(dbConnection);
+            phongDAO = new PhongDAO();
         }
 
         public DataTable getAllFromPhong()

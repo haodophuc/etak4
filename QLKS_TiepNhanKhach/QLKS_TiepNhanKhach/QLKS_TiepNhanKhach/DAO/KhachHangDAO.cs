@@ -9,9 +9,9 @@ namespace QLKS_TiepNhanKhach.DAO
     {
         private DBConnection dbConnection;
 
-        public KhachHangDAO(DBConnection dbConnection)
+        public KhachHangDAO()
         {
-            this.dbConnection = dbConnection;
+            dbConnection = new DBConnection();
         }
 
         public DataTable SelectAll()

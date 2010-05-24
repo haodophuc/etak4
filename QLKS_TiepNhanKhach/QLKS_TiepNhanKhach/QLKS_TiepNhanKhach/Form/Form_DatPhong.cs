@@ -14,7 +14,7 @@ namespace QLKS_TiepNhanKhach
         public Form_DatPhong(DBConnection dbconnection)
         {
             InitializeComponent();
-            datphongUI = new UI.DatPhong_UI(dbconnection);
+            datphongUI = new UI.DatPhong_UI();
         }
 
         private void Form_DatPhong_Load(object sender, EventArgs e)

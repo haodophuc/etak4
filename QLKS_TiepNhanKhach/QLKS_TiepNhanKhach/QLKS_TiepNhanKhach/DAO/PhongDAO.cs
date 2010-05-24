@@ -10,9 +10,9 @@ namespace QLKS_TiepNhanKhach.DAO
     {
         private DBConnection dbConnection;
 
-        public PhongDAO(DBConnection dbConnection)
+        public PhongDAO()
         {
-            this.dbConnection = dbConnection;
+            this.dbConnection = new DBConnection();
         }
 
         public DataTable selectAllFromPhong()

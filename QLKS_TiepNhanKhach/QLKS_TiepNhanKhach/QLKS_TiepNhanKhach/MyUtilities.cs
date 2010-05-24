@@ -12,7 +12,7 @@ namespace QLKS_TiepNhanKhach
       public MyUtilities()
         {
         }
-      public void VisibleToolStripButton(SimpleButton bttThem, SimpleButton bttXoa, SimpleButton bttSua, SimpleButton bttLuu, SimpleButton bttHuy, bool value)
+      public void VisibleSimpleButton(SimpleButton bttThem, SimpleButton bttXoa, SimpleButton bttSua, SimpleButton bttLuu, SimpleButton bttHuy, bool value)
         {
             bttThem.Enabled = value;
             bttXoa.Enabled = value;

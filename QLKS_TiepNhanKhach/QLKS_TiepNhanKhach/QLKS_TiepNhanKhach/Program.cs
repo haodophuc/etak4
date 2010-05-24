@@ -16,5 +16,6 @@ namespace QLKS_TiepNhanKhach
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Connect());
         }
+        static public string connectString = "";
     }
 }
