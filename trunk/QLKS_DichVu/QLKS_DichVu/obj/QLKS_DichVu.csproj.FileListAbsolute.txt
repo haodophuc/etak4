@@ -1,0 +1,9 @@
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\bin\Debug\QLKS_DichVu.exe
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\bin\Debug\QLKS_DichVu.pdb
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\ResolveAssemblyReference.cache
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.Properties.Resources.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UI.LoginForm.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UI.ServiceOrderForm.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.csproj.GenerateResource.Cache
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.exe
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.pdb
