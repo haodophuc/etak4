@@ -10,19 +10,18 @@ namespace QLKS_TiepNhanKhach.BUS
     class QuocGiaBUS
     {
          private QuocGiaDAO quocGiaDAO;
-        private DBConnection dbConnection;
+       
 
-        public QuocGiaBUS(DBConnection dbConnection)
-        {
-            this.dbConnection = dbConnection;
-            quocGiaDAO = new QuocGiaDAO(dbConnection);
+        public QuocGiaBUS()
+        {  
+            quocGiaDAO = new QuocGiaDAO();
         }
 
-        public DataTable getAllFromQuocGia()
+        public DataTable GetAll()
         {
             try
             {
-                return quocGiaDAO.selectAllFromQuocGia();
+                return quocGiaDAO.SelectAll();
             }
             catch (Exception e)
             {

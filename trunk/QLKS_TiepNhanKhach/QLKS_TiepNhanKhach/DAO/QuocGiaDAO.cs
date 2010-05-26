@@ -7,19 +7,19 @@ namespace QLKS_TiepNhanKhach.DAO
 {
     class QuocGiaDAO
     {
-        private DBConnection dbConnection;
+       
 
-        public QuocGiaDAO(DBConnection dbConnection)
+        public QuocGiaDAO()
         {
-            this.dbConnection = dbConnection;
+           
         }
 
-        public DataTable selectAllFromQuocGia()
+        public DataTable SelectAll()
         {
             try
             {
                 string query = "Select * From QUOC_GIA";
-                return dbConnection.ExecuteSelectQuery(query);
+                return Program.dbConnection.ExecuteSelectQuery(query);
             }
             catch (Exception e)
             {

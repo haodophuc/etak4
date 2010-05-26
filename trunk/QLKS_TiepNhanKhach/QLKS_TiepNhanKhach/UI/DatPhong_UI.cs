@@ -10,12 +10,11 @@ namespace QLKS_TiepNhanKhach.UI
 {
     public partial class DatPhong_UI : UserControl
     {
-        private DBConnection dbConnection;
+       
 
-        public DatPhong_UI(DBConnection dbConnection)
+        public DatPhong_UI()
         {
             InitializeComponent();
-            this.dbConnection = dbConnection;
         }
 
         private void DatPhong_UI_Load(object sender, EventArgs e)

@@ -11,12 +11,10 @@ namespace QLKS_TiepNhanKhach.BUS
     class KhachHangBUS
     {
         private KhachHangDAO khachHangDAO;
-        private DBConnection dbConnection;
 
-        public KhachHangBUS(DBConnection dbConnection)
+        public KhachHangBUS()
         {
-            khachHangDAO = new KhachHangDAO(dbConnection);
-            this.dbConnection = dbConnection;
+            khachHangDAO = new KhachHangDAO();    
         }
 
         public DataTable GetAll()
@@ -31,11 +29,11 @@ namespace QLKS_TiepNhanKhach.BUS
             }
         }
        
-        public int Insert(KhachHangVO khachhangVO)
+        public int Insert(string[] khachHangInfo)
         {
             try
             {
-                return khachHangDAO.Insert(khachhangVO.MA_QUOC_GIA, khachhangVO.HO_KHACH_HANG, khachhangVO.TEN_KHACH_HANG, khachhangVO.CMND, khachhangVO.HO_CHIEU, khachhangVO.DIEN_THOAI);
+                return khachHangDAO.Insert(khachHangInfo);
             }
             catch (Exception e)
             {
@@ -43,11 +41,11 @@ namespace QLKS_TiepNhanKhach.BUS
             }
         }
 
-        public int Delete(KhachHangVO khachhangVO)
+        public int Delete(int maKhachHang)
         {
             try
             {
-                return khachHangDAO.Delete(khachhangVO.MA_KHACH_HANG);
+                return khachHangDAO.Delete(maKhachHang);
             }
             catch (Exception e)
             {
@@ -55,11 +53,11 @@ namespace QLKS_TiepNhanKhach.BUS
             }
         }
 
-        public int Update(KhachHangVO khachhangVO)
+        public int Update(string[] khachHangInfo)
         {
             try
             {
-                return khachHangDAO.Update(khachhangVO.MA_KHACH_HANG, khachhangVO.MA_QUOC_GIA, khachhangVO.HO_KHACH_HANG, khachhangVO.TEN_KHACH_HANG, khachhangVO.CMND, khachhangVO.HO_CHIEU, khachhangVO.DIEN_THOAI);
+                return khachHangDAO.Update(khachHangInfo);
             }
             catch (Exception e)
             {

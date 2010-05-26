@@ -12,8 +12,6 @@ namespace QLKS_TiepNhanKhach
     public partial class Form_Connect : Form
     {
 
-        private DBConnection dbConnection;
-
         public Form_Connect()
         {
             InitializeComponent();
@@ -23,14 +21,14 @@ namespace QLKS_TiepNhanKhach
         {
             try
             {
-                dbConnection = new DBConnection();
-                dbConnection.Connection.ConnectionString = @"Data Source=" + txtServerName.Text +
+                Program.dbConnection = new DBConnection();
+                Program.dbConnection.Connection.ConnectionString = @"Data Source=" + txtServerName.Text +
                               ";Initial Catalog=" + txtDBName.Text +
                               ";User ID=" + txtUserName.Text +
                               ";Password=" + txtPassword.Text;
-                dbConnection.Connect();
-                dbConnection.Disconnect();
-                Form_Main frmMain = new Form_Main(dbConnection);
+                Program.dbConnection.Connect();
+                Program.dbConnection.Disconnect();
+                Form_Main frmMain = new Form_Main();
                 frmMain.Show();
             }
             catch (Exception exception)
