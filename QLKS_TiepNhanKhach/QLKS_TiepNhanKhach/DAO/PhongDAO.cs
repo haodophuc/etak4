@@ -8,19 +8,19 @@ namespace QLKS_TiepNhanKhach.DAO
 {
     class PhongDAO
     {
-        private DBConnection dbConnection;
+       
 
-        public PhongDAO(DBConnection dbConnection)
+        public PhongDAO()
         {
-            this.dbConnection = dbConnection;
+           
         }
 
-        public DataTable selectAllFromPhong()
+        public DataTable SelectAll()
         {
             try
             {
                 string query = "Select * From Phong";
-                return dbConnection.ExecuteSelectQuery(query);
+                return Program.dbConnection.ExecuteSelectQuery(query);
             }
             catch(Exception e)
             {

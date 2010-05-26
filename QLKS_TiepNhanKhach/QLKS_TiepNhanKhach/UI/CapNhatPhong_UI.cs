@@ -15,14 +15,13 @@ namespace QLKS_TiepNhanKhach.UI
     
         private PhongBUS phongBUS;
         private LoaiPhongBUS loaiPhongBUS;
-        private DBConnection dbConnection;
+       
 
-        public CapNhatPhong_UI(DBConnection dbConnection)
+        public CapNhatPhong_UI()
         {
             InitializeComponent();
-            this.dbConnection = dbConnection;
-            phongBUS = new PhongBUS(dbConnection);
-            loaiPhongBUS = new LoaiPhongBUS(dbConnection);
+            phongBUS = new PhongBUS();
+            loaiPhongBUS = new LoaiPhongBUS();
         }
 
         private void CapNhatPhong_UI_Load(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace QLKS_TiepNhanKhach.UI
             try
             {
                 DataTable dTablePhong = new DataTable();
-                dTablePhong = phongBUS.getAllFromPhong();
+                dTablePhong = phongBUS.GetAll();
                 grdCtrl_CapNhatPhong.DataSource = dTablePhong;
             }
             catch (Exception exception)
@@ -50,7 +49,7 @@ namespace QLKS_TiepNhanKhach.UI
             try
             {
                 DataTable dtTableLoaiPhong = new DataTable();
-                dtTableLoaiPhong = loaiPhongBUS.getAllFromLoaiPhong();
+                dtTableLoaiPhong = loaiPhongBUS.GetAll();
 
                 cbo_LoaiPhong.DataSource = dtTableLoaiPhong;
                 cbo_LoaiPhong.ValueMember = "MA_LOAI_PHONG";

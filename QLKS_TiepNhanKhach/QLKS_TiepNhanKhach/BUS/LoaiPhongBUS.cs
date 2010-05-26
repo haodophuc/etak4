@@ -10,19 +10,18 @@ namespace QLKS_TiepNhanKhach.BUS
     class LoaiPhongBUS
     {
         private LoaiPhongDAO loaiPhongDAO;
-        private DBConnection dbConnection;
+        
 
-        public LoaiPhongBUS(DBConnection dbConnection)
+        public LoaiPhongBUS()
         {
-            this.dbConnection = dbConnection;
-            loaiPhongDAO = new LoaiPhongDAO(dbConnection);
+            loaiPhongDAO = new LoaiPhongDAO();
         }
 
-        public DataTable getAllFromLoaiPhong()
+        public DataTable GetAll()
         {
             try
             {
-                return loaiPhongDAO.selectAllFromLoaiPhong();
+                return loaiPhongDAO.SelectAll();
             }
             catch (Exception e)
             {

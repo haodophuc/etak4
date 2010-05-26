@@ -81,3 +81,20 @@ C:\Users\cddthd\Desktop\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_Tie
 C:\Users\cddthd\Desktop\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.DatPhong_UI.resources
 C:\Users\cddthd\Desktop\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.csproj.GenerateResource.Cache
 C:\Users\cddthd\Desktop\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.exe.licenses
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Debug\QLKS_TiepNhanKhach.exe.config
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.exe
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.pdb
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Debug\QLKS_TiepNhanKhach.exe
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Debug\QLKS_TiepNhanKhach.pdb
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\ResolveAssemblyReference.cache
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_CapNhatPhong.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_DatPhong.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_Main.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_CapNhatKhachHang.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_Connect.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Properties.Resources.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.CapNhatKhachHang_UI.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.CapNhatPhong_UI.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.DatPhong_UI.resources
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.csproj.GenerateResource.Cache
+E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.exe.licenses
