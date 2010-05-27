@@ -20,6 +20,7 @@ namespace QLKS_TiepNhanKhach
         private void Form_CapNhatKhachHang_Load(object sender, EventArgs e)
         {
             this.Controls.Add(khachHangUI);
+            this.MinimumSize = khachHangUI.MinimumSize;
             khachHangUI.Dock = DockStyle.Fill;
         }
 

@@ -9,3 +9,7 @@ D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.ex
 D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.pdb
 D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UI.ServicesManagementForm.resources
 D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.exe.licenses
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServicesManagement.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServicesInputAdd.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServiceGridView.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServicesInputUpdate.resources

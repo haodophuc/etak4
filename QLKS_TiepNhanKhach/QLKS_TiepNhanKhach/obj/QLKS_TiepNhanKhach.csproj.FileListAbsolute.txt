@@ -98,3 +98,20 @@ E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_T
 E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.DatPhong_UI.resources
 E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.csproj.GenerateResource.Cache
 E:\STUDY\Open University\HK6\Lap Trinh CSDL\ADO.NET project\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.exe.licenses
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Debug\QLKS_TiepNhanKhach.exe.config
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.exe
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.pdb
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Debug\QLKS_TiepNhanKhach.exe
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Debug\QLKS_TiepNhanKhach.pdb
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\ResolveAssemblyReference.cache
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_CapNhatKhachHang.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_CapNhatPhong.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_DatPhong.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_Main.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_Connect.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Properties.Resources.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.CapNhatKhachHang_UI.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.CapNhatPhong_UI.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.DatPhong_UI.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.csproj.GenerateResource.Cache
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.exe.licenses

@@ -21,15 +21,17 @@ namespace QLKS_DichVu.UI
         #region Event Handlers
         private void btnLogin_Click(object sender, EventArgs e)
         {            
-            SqlConnection connection = new SqlConnection("server=" + txtServerName.Text +
+            String connectionString = "server=" + txtServerName.Text +
                                ";database=" + txtDBName.Text +
                                ";uid=" + txtUserName.Text +
-                               ";pwd=" + txtPassword.Text);
-            dbConnection = new DBConnection(connection);
+                               ";pwd=" + txtPassword.Text;
+            Program.DBConnection = new DBConnection( connectionString );
+            
 
             try {
-                dbConnection.connect();                
-                ServicesManagementForm serviceForm = new ServicesManagementForm(this, dbConnection);
+                Program.DBConnection.Connect();
+                Program.DBConnection.Disconnect();
+                ServicesManagementForm serviceForm = new ServicesManagementForm( this );
                 serviceForm.MainForm = this;
                 serviceForm.Show();
                 this.Hide();
@@ -50,7 +52,7 @@ namespace QLKS_DichVu.UI
             if (dbConnection != null)
             {
                 //MessageBox.Show("Disconnected from database");
-                dbConnection.disconnect();
+                dbConnection.Disconnect();
             }
         }
 

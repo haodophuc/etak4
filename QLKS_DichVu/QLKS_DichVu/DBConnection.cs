@@ -8,60 +8,33 @@ namespace QLKS_DichVu
 {
     public class DBConnection
     {
-        #region properties
+       #region Constructors
 
-        private SqlDataAdapter dataAdapter;
-
-        private SqlConnection connection;
-
-        public SqlConnection Connection
-        {
-            get { return connection; }
-            set { connection = value; }
-        }
-
-        private SqlCommand command;
-
-        public SqlCommand Command
-        {
-            get { return command; }
-            set { command = value; }
-        }
-	
-
-        
-        private string errorMessage;
-
-        public string ErrorMessage
-        {
-            get { return errorMessage; }
-            set { errorMessage = value; }
-        }
-
-        #endregion
-
-        #region methods
         public DBConnection()
         {
-            dataAdapter = new SqlDataAdapter();
-        }
+            Connection = new SqlConnection();
+        }//end default constructor
 
-        public DBConnection(SqlConnection connection) : this()
+        public DBConnection(String connectionString)
         {
-            this.connection = connection;
-        }
-        
-        public void connect()
+            Connection = new SqlConnection(connectionString);
+        }//end method 
+
+       #endregion //end region Constructors
+
+       #region Methods
+                
+        public void Connect()
         {
-            if (connection == null)
+            if ( Connection == null)
             {
-                 throw new Exception("Connection haven't initialized");                
+                throw new Exception("Connection haven't initialized");
             }// end if
-            else if (connection.State == ConnectionState.Closed)
+            else if ( Connection.State == ConnectionState.Closed )
             {
                 try
                 {
-                    connection.Open();
+                    Connection.Open();
                 }
                 catch (Exception e)
                 {
@@ -72,120 +45,135 @@ namespace QLKS_DichVu
             {
                 throw new Exception("Cannot connect with connection");
             }// end else
-        }
+        }//end method Connect
 
-        public bool disconnect()
+        public bool Disconnect()
         {
-            if (connection == null)
+            if (Connection == null)
             {
-                errorMessage = "Connection haven't initialized";
-                return false;
-            }
-            if (connection.State == ConnectionState.Open)
+                throw new Exception( "Connection haven't initialized" );
+            }//end if sqlconnection is null
+            if (Connection.State == ConnectionState.Open)
             {
                 try
                 {
-                    connection.Close();
+                    Connection.Close();
                     return true;
                 }
                 catch (Exception e)
                 {
                     throw e;
                 }
-            }
-            errorMessage = "Cannot disconnect with connection";
-            return false;
-        }
+            }//end if connection is opened
+            else
+            {
+                throw new Exception( "Cannot disconnect with connection" );
+            }//end else
+        }//end method Disconnect
 
-        public DataTable executeSelectQuery(string query)
+        public DataTable ExecuteSelectQuery(string query)
         {
-            DataTable dataTable = null;
+            DataTable dataTable = new DataTable();
             try
             {
-                command = new SqlCommand(query,connection);
-                DataSet dataSet = new DataSet();
-                dataAdapter.SelectCommand = command;                
-                dataAdapter.Fill(dataSet);
-                dataTable = dataSet.Tables[0];    
-            }
+                dataAdapter = new SqlDataAdapter(query, Connection);
+                dataAdapter.Fill(dataTable);
+            }//end try
             catch (SqlException e)
             {
                 throw e;
-            }
+            }//end catch
             finally
             {
-                command.Dispose();
-            }
+                Connection.Close();
+            }//end finally
             return dataTable;
-        }
+        }//end method ExecuteSelectQuery
 
-        public int executeInsertQuery(String query, SqlParameter[] sqlParameters)
+        public int ExecuteNonQuery(String query, SqlParameter[] sqlParameters )
         {
-            int rows = 0;
+            int result = 0;
+            try {
+                // Open a connection
+                Connect();
+                // Construct SqlCommand
+                Command = new SqlCommand(query, Connection);
+                Command.Parameters.AddRange(sqlParameters);
+
+                // Execute query
+                result = Command.ExecuteNonQuery();
+
+            }//end try
+            catch( SqlException e ) {
+                throw e;
+            }//end catch
+            finally {
+                Command.Dispose();
+                Disconnect();
+            }//end finally
+
+            return result;
+        }//end method ExecuteNonQuery
+
+        public int ExecuteScalar(String query, SqlParameter[] sqlParameters)
+        {
+            int result = 0;
             try
             {
-                command = new SqlCommand(query, connection);
-                command.Parameters.AddRange(sqlParameters);
-                dataAdapter.InsertCommand = command;
-                rows = command.ExecuteNonQuery();
+                // Open a connection
+                Connect();
 
-            }
+                // Construct SqlCommand
+                Command = new SqlCommand(query, Connection);
+                Command.Parameters.AddRange(sqlParameters);
+
+                // Execute query
+                result = (Int32)Command.ExecuteScalar();
+
+            }//end try
             catch (SqlException e)
             {
                 throw e;
-            }
+            }//end catch
             finally
             {
-                command.Dispose();
-            }
-            return rows;
-        }
+                Command.Dispose();
+                Disconnect();
+            }//end finally
 
-        public int executeUpdateQuery(string query, SqlParameter[] sqlParameters)
+            return result;
+        }//end method ExecuteScalar
+
+       #endregion //end region Methods
+        
+       #region Attributes
+
+        public SqlConnection Connection
         {
-            int rows = 0;
-            try
-            {
-                command = new SqlCommand(query, connection);
-                command.Parameters.AddRange(sqlParameters);
-                dataAdapter.UpdateCommand = command;
-                rows = command.ExecuteNonQuery();
+            get { return connection; }
+            set { connection = value; }
+        }//end attribute Connection
 
-            }
-            catch (SqlException e)
-            {
-                throw e;
-            }
-            finally
-            {
-                command.Dispose();
-            }
-            return rows;
-        }
-
-        public int executeDeleteQuery(string query, SqlParameter[] sqlParameters)
+        public SqlCommand Command
         {
-            int rows = 0;
-            try
-            {
-                command = new SqlCommand(query, connection);
-                command.Parameters.AddRange(sqlParameters);
-                dataAdapter.DeleteCommand = command;
-                rows = command.ExecuteNonQuery();
+            get { return command; }
+            set { command = value; }
+        }//end attribute Command
 
-            }
-            catch (SqlException e)
-            {
-                throw e;
-            }
-            finally
-            {
-                command.Dispose();
-            }
-            return rows;
-        }
+        public string ErrorMessage
+        {
+            get { return errorMessage; }
+            set { errorMessage = value; }
+        }//end attribute ErrorMessage
 
-    
-        #endregion
-    }
-}
+       #endregion //end region Attributes
+
+       #region Instance Fields
+        private SqlDataAdapter dataAdapter;
+        private SqlConnection connection;
+        private SqlCommand command;
+        private String errorMessage;
+       #endregion //end region Instance Fields
+  
+    }//end class DBConnection
+}//end namespace QLKS_DichVu
