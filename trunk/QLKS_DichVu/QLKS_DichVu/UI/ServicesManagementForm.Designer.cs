@@ -1,6 +1,6 @@
-namespace QLKS_TiepNhanKhach
+﻿namespace QLKS_DichVu.UI
 {
-    partial class Form_CapNhatKhachHang
+    partial class ServicesManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,22 @@ namespace QLKS_TiepNhanKhach
         {
             this.SuspendLayout();
             // 
-            // Form_CapNhatKhachHang
+            // ServicesManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 625);
-            this.Name = "Form_CapNhatKhachHang";
-            this.Text = "Form_CapNhatKhachHang";
-            this.Load += new System.EventHandler(this.Form_CapNhatKhachHang_Load);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(572, 607);
+            this.MinimumSize = new System.Drawing.Size(580, 639);
+            this.Name = "ServicesManagementForm";
+            this.Text = "Quản Lý Dịch Vụ";
+            this.Load += new System.EventHandler(this.ServicesManagementForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServicesManagementForm_FormClosed);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
     }
 }

@@ -31,9 +31,11 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -56,6 +58,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServiceGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UIServiceGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServiceManagement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UIServiceManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServicesInputAdd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UIServicesInputAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServicesInputUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UIServicesInputUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -83,6 +101,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UIControl\UIServiceGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServiceGridView.Designer.cs">
+      <DependentUpon>UIServiceGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputAdd.Designer.cs">
+      <DependentUpon>UIServicesInputAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServiceManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServiceManagement.Designer.cs">
+      <DependentUpon>UIServiceManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputUpdate.Designer.cs">
+      <DependentUpon>UIServicesInputUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +143,7 @@
     <Compile Include="UI\ServicesManagementForm.Designer.cs">
       <DependentUpon>ServicesManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VO\ServiceVO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
