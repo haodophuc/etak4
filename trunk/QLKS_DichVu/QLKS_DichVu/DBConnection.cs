@@ -15,9 +15,9 @@ namespace QLKS_DichVu
             Connection = new SqlConnection();
         }//end default constructor
 
-        public DBConnection(String connectionString)
+        public DBConnection(String connectionString) : this()
         {
-            Connection = new SqlConnection(connectionString);
+            Connection.ConnectionString = connectionString;
         }//end method 
 
        #endregion //end region Constructors
@@ -47,7 +47,7 @@ namespace QLKS_DichVu
             }// end else
         }//end method Connect
 
-        public bool Disconnect()
+        public void Disconnect()
         {
             if (Connection == null)
             {
@@ -58,7 +58,6 @@ namespace QLKS_DichVu
                 try
                 {
                     Connection.Close();
-                    return true;
                 }
                 catch (Exception e)
                 {
@@ -85,7 +84,9 @@ namespace QLKS_DichVu
             }//end catch
             finally
             {
-                Connection.Close();
+                if (dataAdapter != null)
+                    dataAdapter.Dispose();
+                //Connection.Close();
             }//end finally
             return dataTable;
         }//end method ExecuteSelectQuery

@@ -26,7 +26,6 @@ namespace QLKS_DichVu.DAO
 
                 // build & execute sql query
                 String query = "SELECT MA_DICH_VU, TEN_DICH_VU, DON_GIA, HIEU_LUC FROM DICH_VU";
-                Connection = new DBConnection();
                 tableResult = Connection.ExecuteSelectQuery(query);
                 return tableResult;
             }
@@ -40,10 +39,9 @@ namespace QLKS_DichVu.DAO
         {
             try {
                 // build delete query
-                String delete = "DELETE FROM DICH_VU WHERE MA_DICH_VU = @MA_DICH_VU";
+                String delete = "DELETE FROM DICH_VU WHERE MA_DICH_VU=@MA_DICH_VU";
                 SqlParameter[] param = new SqlParameter[1];
                 param[0] = new SqlParameter("@MA_DICH_VU", serviceID);
-                Connection = new DBConnection();
                 int result = Connection.ExecuteNonQuery( delete, param );
                 return result;
             }// end try
@@ -62,7 +60,6 @@ namespace QLKS_DichVu.DAO
                 SqlParameter[] param = new SqlParameter[2];
                 param[0] = new SqlParameter("@TEN_DICH_VU", name);
                 param[1] = new SqlParameter("@DON_GIA", price);
-                Connection = new DBConnection();
                 int result = Connection.ExecuteNonQuery(insert, param);
                 return result;
             }// end try
@@ -76,16 +73,15 @@ namespace QLKS_DichVu.DAO
         {
             try {
                 //build query
-                String update = "UPDATE DICH_VU" +
-                                "SET TEN_DICH_VU = @TEN_DICH_VU, DON_GIA = @DON_GIA, HIEU_LUC = @HIEU_LUC" +
-                                "WHERE MA_DICH_VU = @MA_DICH_VU";
+                String update = "UPDATE DICH_VU " +
+                                "SET TEN_DICH_VU=@TEN_DICH_VU, DON_GIA=@DON_GIA, HIEU_LUC=@HIEU_LUC " +
+                                "WHERE MA_DICH_VU=@MA_DICH_VU";
                 SqlParameter[] param = new SqlParameter[4];
                 param[0] = new SqlParameter("@MA_DICH_VU", id);
                 param[1] = new SqlParameter("@TEN_DICH_VU", name);
                 param[2] = new SqlParameter("@DON_GIA", price);
                 param[3] = new SqlParameter("@HIEU_LUC", state);
 
-                Connection = new DBConnection();
                 int result = Connection.ExecuteNonQuery(update, param);
                 return result;
             }//end try

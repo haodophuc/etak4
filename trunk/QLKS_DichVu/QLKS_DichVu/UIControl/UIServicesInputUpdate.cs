@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -21,6 +21,7 @@ namespace QLKS_DichVu.UIControl
         public UIServicesInputUpdate(UIServicesManagement parent): this()
         {
             ParentUI = parent;
+            SetMode(Mode.Empty);
         }//end constructor
        #endregion //end region Constructors
 
@@ -61,36 +62,67 @@ namespace QLKS_DichVu.UIControl
 
         public void SetData(ServiceVO service)
         {
-            textBoxServiceName.Text = service.Name;
-            textBoxServicePrice.Text = service.Price.ToString();
-            SetCheckedState(service.State);
+            if (service == null) {
+                SetMode(Mode.Empty);
+            }//end if service is null
+            else {
+                SetMode(Mode.Active);
+                textBoxServiceName.Text = service.Name;
+                textBoxServicePrice.Text = service.Price.ToString();
+                SetCheckedState(service.State);
+            }//end else                
 
-            // Enable buttons
-            if (data == null)
-            {
-                buttonDelete.Enabled = true;
-                buttonReset.Enabled = true;
-            }//end if 
-
+            // Update data
             data = service;
         }//end method SetData
 
         public ServiceVO GetData()
         {
+            Double price;
             try
-            {
-                String id = data.ID;
-                String name = textBoxServiceName.Text;
-                Double price = Double.Parse(textBoxServicePrice.Text);
-                bool state = GetCheckedState();
-                data = new ServiceVO(id, name, price, state);
-                return data;
+            {               
+                price = Double.Parse(textBoxServicePrice.Text);                
             }//end try
             catch (Exception e)
             {
-                throw e;
+                if (e is ArgumentNullException || e is FormatException)
+                    price = data.Price;
+                else
+                    throw;
             }//end catch
+            String id = data.ID;
+            String name = textBoxServiceName.Text;
+            bool state = GetCheckedState();
+            data = new ServiceVO(id, name, price, state);
+            return data;
         }//end method GetData
+
+        private void SetMode( Mode mode )
+        {
+            // Value to enable/disable controls
+            bool enabled = false;
+
+            switch (mode) { 
+                case Mode.Empty:
+                    enabled = false;
+                    textBoxServiceName.Text = "Không có dữ liệu";
+                    textBoxServicePrice.Text = "Không có dữ liệu";
+                    break;
+                case Mode.Active:
+                    enabled = true;
+                    break;
+            }//end switch
+            
+            textBoxServiceName.Enabled = enabled;
+            textBoxServicePrice.Enabled = enabled;
+
+            radioButtonDisable.Enabled = enabled;
+            radioButtonEnable.Enabled = enabled;
+
+            buttonUpdate.Enabled = enabled;
+            buttonDelete.Enabled = enabled;
+            buttonReset.Enabled = enabled;
+        }//end method DisableControls
 
        #endregion //end region Methods
 
@@ -111,6 +143,11 @@ namespace QLKS_DichVu.UIControl
             ParentUI.UpdateService();
         }//end method buttonUpdate_Click
 
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            ParentUI.DeleteService();
+        }//end method buttonDelete_Click
+
        #endregion //end region Event Handling Methods
 
 
@@ -126,9 +163,8 @@ namespace QLKS_DichVu.UIControl
        #region Instance Fields
         private ServiceVO data;
         private UIServicesManagement parentUI;
+        private enum Mode : int { Empty, Active };
        #endregion Instance Fields       
-
-
 
     }//end class UIServicesInputUpdate
 }//end namespace QLKS_DichVu.UIControl
