@@ -11,8 +11,6 @@ namespace QLKS_DichVu.UI
 {
     public partial class LoginForm : Form
     {
-        private DBConnection dbConnection;
-
         public LoginForm()
         {
             InitializeComponent();
@@ -49,11 +47,6 @@ namespace QLKS_DichVu.UI
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (dbConnection != null)
-            {
-                //MessageBox.Show("Disconnected from database");
-                dbConnection.Disconnect();
-            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

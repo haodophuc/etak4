@@ -31,7 +31,7 @@
             this.groupControlAddService = new DevExpress.XtraEditors.GroupControl();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new QLKS_DichVu.UIControl.NumberTextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelServicePrice = new System.Windows.Forms.Label();
             this.labelServiceName = new System.Windows.Forms.Label();
@@ -41,6 +41,8 @@
             // 
             // groupControlAddService
             // 
+            this.groupControlAddService.AppearanceCaption.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupControlAddService.AppearanceCaption.Options.UseForeColor = true;
             this.groupControlAddService.Controls.Add(this.buttonReset);
             this.groupControlAddService.Controls.Add(this.buttonAdd);
             this.groupControlAddService.Controls.Add(this.textBoxPrice);
@@ -54,6 +56,7 @@
             this.groupControlAddService.Name = "groupControlAddService";
             this.groupControlAddService.Size = new System.Drawing.Size(580, 170);
             this.groupControlAddService.TabIndex = 0;
+            this.groupControlAddService.Text = "Thêm mới một dịch vụ";
             // 
             // buttonReset
             // 
@@ -80,6 +83,7 @@
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(181, 61);
             this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.ShortcutsEnabled = false;
             this.textBoxPrice.Size = new System.Drawing.Size(250, 20);
             this.textBoxPrice.TabIndex = 3;
             this.textBoxPrice.TextChanged += new System.EventHandler(this.textBox_TextChanged);
@@ -131,7 +135,7 @@
         private System.Windows.Forms.Label labelServiceName;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.TextBox textBoxPrice;
+        private QLKS_DichVu.UIControl.NumberTextBox textBoxPrice;
         private System.Windows.Forms.TextBox textBoxName;
 
     }

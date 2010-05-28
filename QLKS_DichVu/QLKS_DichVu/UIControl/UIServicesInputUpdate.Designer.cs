@@ -34,7 +34,7 @@
             this.radioButtonEnable = new System.Windows.Forms.RadioButton();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.textBoxServicePrice = new System.Windows.Forms.TextBox();
+            this.textBoxServicePrice = new QLKS_DichVu.UIControl.NumberTextBox();
             this.textBoxServiceName = new System.Windows.Forms.TextBox();
             this.labelServiceState = new System.Windows.Forms.Label();
             this.labelServicePrice = new System.Windows.Forms.Label();
@@ -45,6 +45,8 @@
             // 
             // groupControlUpdateService
             // 
+            this.groupControlUpdateService.AppearanceCaption.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupControlUpdateService.AppearanceCaption.Options.UseForeColor = true;
             this.groupControlUpdateService.Controls.Add(this.buttonDelete);
             this.groupControlUpdateService.Controls.Add(this.radioButtonDisable);
             this.groupControlUpdateService.Controls.Add(this.radioButtonEnable);
@@ -62,6 +64,7 @@
             this.groupControlUpdateService.Name = "groupControlUpdateService";
             this.groupControlUpdateService.Size = new System.Drawing.Size(580, 170);
             this.groupControlUpdateService.TabIndex = 0;
+            this.groupControlUpdateService.Text = "Cập nhật thông tin dịch vụ";
             // 
             // buttonDelete
             // 
@@ -72,6 +75,7 @@
             this.buttonDelete.TabIndex = 10;
             this.buttonDelete.Text = "Xóa Dịch Vụ";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // radioButtonDisable
             // 
@@ -121,6 +125,7 @@
             // 
             this.textBoxServicePrice.Location = new System.Drawing.Point(181, 61);
             this.textBoxServicePrice.Name = "textBoxServicePrice";
+            this.textBoxServicePrice.ShortcutsEnabled = false;
             this.textBoxServicePrice.Size = new System.Drawing.Size(250, 20);
             this.textBoxServicePrice.TabIndex = 4;
             this.textBoxServicePrice.TextChanged += new System.EventHandler(this.textBox_Changed);
@@ -181,7 +186,8 @@
         private System.Windows.Forms.Label labelServiceName;
         private System.Windows.Forms.TextBox textBoxServiceName;
         private System.Windows.Forms.Label labelServiceState;
-        private System.Windows.Forms.TextBox textBoxServicePrice;
+        //private System.Windows.Forms.TextBox textBoxServicePrice;
+        private QLKS_DichVu.UIControl.NumberTextBox textBoxServicePrice;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.RadioButton radioButtonDisable;

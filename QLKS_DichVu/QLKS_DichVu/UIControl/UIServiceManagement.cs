@@ -38,8 +38,9 @@ namespace QLKS_DichVu.UIControl
             }//end catch
         }//end method Insert
 
-        public void DeleteService() { 
-        
+        public void DeleteService() {
+            ServiceVO service = inputUpdateUI.GetData();
+            gridViewUI.DeleteService(service);
         }//end method DeleteService
 
         public void UpdateService() {

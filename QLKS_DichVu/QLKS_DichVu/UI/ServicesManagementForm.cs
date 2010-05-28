@@ -29,42 +29,12 @@ namespace QLKS_DichVu.UI
             UIServicesManagement mainUI = new UIServicesManagement();
             mainUI.Dock = DockStyle.Fill;
             this.Controls.Add(mainUI);
-
-            this.serviceBUS = new ServiceBUS();
         }// end constructor
 
         #endregion // end region Constructors
 
         #region Methods
-
-        public void LoadData()
-        {
-            try
-            {
-                DataTable tb = new DataTable();
-                tb = serviceBUS.GetAllServices();
-                BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = tb;
-                //gridControlService.DataSource = bindingSource;   
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }// end catch
-        }// end method LoadData
-
-        private String GetServiceID( GridView gridView )
-        {
-            // get handle(s) of selected row(s)
-            int[] selected = gridView.GetSelectedRows();
-            
-            // get row data
-            DataRow datarow = gridView.GetDataRow(selected[0]);
-
-            // return value of the first cell in the row
-            return datarow[0].ToString();
-        }// end method GetSerivceID
-
+           
         #endregion // end region Methods
 
         #region Attributes
@@ -108,7 +78,6 @@ namespace QLKS_DichVu.UI
 
         #region Instance Fields
         private Form mainForm;              // main application's form.
-        private ServiceBUS serviceBUS;      // service business layer
         #endregion //end region Instance Fields
 
         #region temp

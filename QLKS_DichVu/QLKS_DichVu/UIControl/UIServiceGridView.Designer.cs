@@ -64,6 +64,9 @@
             // 
             // gridViewServices
             // 
+            this.gridViewServices.Appearance.OddRow.BackColor = System.Drawing.Color.LightYellow;
+            this.gridViewServices.Appearance.OddRow.BackColor2 = System.Drawing.Color.LightYellow;
+            this.gridViewServices.Appearance.OddRow.Options.UseBackColor = true;
             this.gridViewServices.ColumnPanelRowHeight = 25;
             this.gridViewServices.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumnServiceName,
@@ -75,9 +78,12 @@
             this.gridViewServices.Name = "gridViewServices";
             this.gridViewServices.OptionsBehavior.Editable = false;
             this.gridViewServices.OptionsSelection.MultiSelect = true;
+            this.gridViewServices.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridViewServices.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewServices.OptionsView.ShowFooter = true;
             this.gridViewServices.RowHeight = 25;
             this.gridViewServices.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewServices_FocusedRowChanged);
+            this.gridViewServices.ColumnFilterChanged += new System.EventHandler(this.gridViewServices_ColumnFilterChanged);
             // 
             // gridColumnServiceName
             // 
@@ -86,6 +92,8 @@
             this.gridColumnServiceName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.gridColumnServiceName.AppearanceHeader.Options.UseFont = true;
             this.gridColumnServiceName.Caption = "Tên Dịch Vụ";
+            this.gridColumnServiceName.DisplayFormat.FormatString = "Test";
+            this.gridColumnServiceName.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumnServiceName.FieldName = "TEN_DICH_VU";
             this.gridColumnServiceName.Name = "gridColumnServiceName";
             this.gridColumnServiceName.Visible = true;
@@ -95,11 +103,12 @@
             // gridColumnServicePrice
             // 
             this.gridColumnServicePrice.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gridColumnServicePrice.AppearanceCell.Options.UseBackColor = true;
             this.gridColumnServicePrice.AppearanceCell.Options.UseFont = true;
             this.gridColumnServicePrice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.gridColumnServicePrice.AppearanceHeader.Options.UseFont = true;
             this.gridColumnServicePrice.Caption = "Đơn Giá";
-            this.gridColumnServicePrice.DisplayFormat.FormatString = "###.#00 VND";
+            this.gridColumnServicePrice.DisplayFormat.FormatString = " ###,### VND";
             this.gridColumnServicePrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumnServicePrice.FieldName = "DON_GIA";
             this.gridColumnServicePrice.Name = "gridColumnServicePrice";
