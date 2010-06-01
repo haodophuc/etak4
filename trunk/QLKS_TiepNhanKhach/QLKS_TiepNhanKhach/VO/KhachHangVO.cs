@@ -63,7 +63,11 @@ namespace QLKS_TiepNhanKhach.VO
             get { return hieu_luc; }
             set { hieu_luc = value; }
         }
-	
+
+        public KhachHangVO()
+        {
+
+        }
        
     }
 }

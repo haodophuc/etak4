@@ -21,6 +21,8 @@ namespace QLKS_TiepNhanKhach
         private void Form_CapNhatPhong_Load(object sender, EventArgs e)
         {
             this.Controls.Add(phongUI);
+            phongUI.Dock = DockStyle.Fill;
+            this.MinimumSize = phongUI.MinimumSize;
         }
     }
 }
