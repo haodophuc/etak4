@@ -49,6 +49,7 @@
     <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v9.3.Core, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraWizard.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -56,16 +57,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CongtyBus.cs" />
+    <Compile Include="BUS\DoanKhachBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\LoaiPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\QuocGiaBUS.cs" />
     <Compile Include="BUS\TinhTrangBUS.cs" />
+    <Compile Include="DAO\CongtyDAO.cs" />
+    <Compile Include="DAO\DoanKhachDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiPhongDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
@@ -96,6 +102,12 @@
     <Compile Include="Form\Form_Main.designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Form_CapNhatDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_CapNhatDoanKhach.Designer.cs">
+      <DependentUpon>Form_CapNhatDoanKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,10 @@
       <DependentUpon>Form_Main.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_CapNhatDoanKhach.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_CapNhatDoanKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -130,6 +146,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CapNhatCongTy_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CapNhatCongTy_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CapNhatDoanKhachChiTiet_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CapNhatDoanKhachChiTiet_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CapNhatDoanKhach_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CapNhatDoanKhach_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CapNhatKhachHang_UI.resx">
       <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
@@ -158,6 +186,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\CapNhatCongTy_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CapNhatCongTy_UI.Designer.cs">
+      <DependentUpon>CapNhatCongTy_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CapNhatDoanKhachChiTiet_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CapNhatDoanKhachChiTiet_UI.Designer.cs">
+      <DependentUpon>CapNhatDoanKhachChiTiet_UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CapNhatDoanKhach_UI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +222,8 @@
     <Compile Include="UI\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VO\CongtyVO.cs" />
+    <Compile Include="VO\DoanKhachVO.cs" />
     <Compile Include="VO\KhachHangVO.cs" />
     <Compile Include="VO\PhongVO.cs" />
   </ItemGroup>

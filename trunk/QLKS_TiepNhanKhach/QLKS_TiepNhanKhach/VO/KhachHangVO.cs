@@ -6,6 +6,10 @@ namespace QLKS_TiepNhanKhach.VO
 {
     class KhachHangVO
     {
+        public KhachHangVO()
+        {
+
+        }
         private int ma_khach_hang;
         public int MA_KHACH_HANG
         {
@@ -64,10 +68,7 @@ namespace QLKS_TiepNhanKhach.VO
             set { hieu_luc = value; }
         }
 
-        public KhachHangVO()
-        {
-
-        }
+       
        
     }
 }
