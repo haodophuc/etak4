@@ -12,6 +12,7 @@ namespace QLKS_TiepNhanKhach
     public partial class Form_CapNhatKhachHang : Form
     {
         CapNhatKhachHang_UI khachHangUI;
+
         public Form_CapNhatKhachHang()
         {
             InitializeComponent();
