@@ -11,7 +11,7 @@ namespace QLKS_DichVu.UI
     public partial class MainForm : Form
     {
         
-        public MainForm(LoginForm loginForm)
+        public MainForm()
         {
             InitializeComponent();
             
