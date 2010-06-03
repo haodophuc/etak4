@@ -1,10 +1,8 @@
 USE QLKS;
 
-
 IF EXISTS(SELECT 1 FROM sys.objects WHERE type = 'P')
 	DROP PROCEDURE SP_EMPTY_ALL_TABLES
 GO
-
 
 -------- This function is used for truncating all data from all tables --------
 
