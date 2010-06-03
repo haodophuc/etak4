@@ -22,6 +22,7 @@ namespace QLKS_DichVu.UIControl
         {
             ParentUI = parent;
             SetMode(Mode.Empty);
+            AcceptButton = buttonUpdate;
         }//end constructor
        #endregion //end region Constructors
 
@@ -157,12 +158,19 @@ namespace QLKS_DichVu.UIControl
             get { return parentUI; }
             set { this.parentUI = value; }
         }//end attribute ParentUI
+
+        public Button AcceptButton
+        {
+            get { return acceptButton; }
+            set { this.acceptButton = value; }
+        }//end attribute AcceptButton
        #endregion //end region Attributes
 
 
        #region Instance Fields
         private ServiceVO data;
         private UIServicesManagement parentUI;
+        private Button acceptButton;
         private enum Mode : int { Empty, Active };
        #endregion Instance Fields       
 

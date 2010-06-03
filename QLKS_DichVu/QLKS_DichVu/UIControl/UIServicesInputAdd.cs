@@ -20,6 +20,7 @@ namespace QLKS_DichVu.UIControl
 
         public UIServicesInputAdd( UIServicesManagement parent ) : this() {
             ParentUI = parent;
+            AcceptButton = buttonAdd;
         }//end constructor
 
       #endregion //end region Constructor
@@ -113,12 +114,19 @@ namespace QLKS_DichVu.UIControl
             set { this.parentUI = value; }
         }//end attribute ParentUI
 
+        public Button AcceptButton
+        {
+            get { return acceptButton; }
+            set { acceptButton = value; }
+        }//end attribute AcceptButton
+
        #endregion //end region Attributes
 
 
        #region Instance Fields
         private UIServicesManagement parentUI;
         private ServiceVO data;
+        private Button acceptButton;
        #endregion //end region Instance Fields
 
 

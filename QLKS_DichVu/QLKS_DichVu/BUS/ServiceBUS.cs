@@ -32,10 +32,10 @@ namespace QLKS_DichVu.BUS
             }// end catch
         }// end method GetAllServices
 
-        public int DeleteServiceByID(String serviceID)
+        public int DeleteService(ServiceVO service)
         {
             try {
-                return serviceDAO.DeleteServiceByID(serviceID);
+                return serviceDAO.DeleteService(service);
             }// end try
             catch (SqlException e) {
                 throw e;
@@ -46,7 +46,7 @@ namespace QLKS_DichVu.BUS
         {
             try
             {
-                return this.serviceDAO.InsertService(service.Name, service.Price);
+                return this.serviceDAO.InsertService(service);
             }// end try
             catch (SqlException e)
             {
@@ -56,7 +56,7 @@ namespace QLKS_DichVu.BUS
 
         public int UpdateService(ServiceVO service)
         {
-            return serviceDAO.UpdateService(service.ID, service.Name, service.Price, service.State);
+            return serviceDAO.UpdateService(service);
         }//end method UpdateService
 
        #endregion // end region Methods

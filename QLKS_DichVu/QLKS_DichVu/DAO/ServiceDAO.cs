@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using QLKS_DichVu.VO;
 
 namespace QLKS_DichVu.DAO
 {
@@ -35,13 +36,13 @@ namespace QLKS_DichVu.DAO
             }// end catch
         }// end method getAllServices
 
-        public int DeleteServiceByID( String serviceID )
+        public int DeleteService( ServiceVO service )
         {
             try {
                 // build delete query
                 String delete = "DELETE FROM DICH_VU WHERE MA_DICH_VU=@MA_DICH_VU";
                 SqlParameter[] param = new SqlParameter[1];
-                param[0] = new SqlParameter("@MA_DICH_VU", serviceID);
+                param[0] = new SqlParameter("@MA_DICH_VU", service.ID);
                 int result = Connection.ExecuteNonQuery( delete, param );
                 return result;
             }// end try
@@ -50,7 +51,7 @@ namespace QLKS_DichVu.DAO
             }// end catch
         }// end method DeleteService
 
-        public int InsertService( String name, Double price )
+        public int InsertService( ServiceVO service )
         {
             try
             {
@@ -58,8 +59,8 @@ namespace QLKS_DichVu.DAO
                 String insert = "INSERT INTO DICH_VU(TEN_DICH_VU, DON_GIA) "+
                                 "VALUES(@TEN_DICH_VU, @DON_GIA)";
                 SqlParameter[] param = new SqlParameter[2];
-                param[0] = new SqlParameter("@TEN_DICH_VU", name);
-                param[1] = new SqlParameter("@DON_GIA", price);
+                param[0] = new SqlParameter("@TEN_DICH_VU", service.Name);
+                param[1] = new SqlParameter("@DON_GIA", service.Price);
                 int result = Connection.ExecuteNonQuery(insert, param);
                 return result;
             }// end try
@@ -69,7 +70,7 @@ namespace QLKS_DichVu.DAO
             }// end catch
         }// end method InsertService
 
-        public int UpdateService(String id, String name, Double price, bool state)
+        public int UpdateService( ServiceVO service )
         {
             try {
                 //build query
@@ -77,10 +78,10 @@ namespace QLKS_DichVu.DAO
                                 "SET TEN_DICH_VU=@TEN_DICH_VU, DON_GIA=@DON_GIA, HIEU_LUC=@HIEU_LUC " +
                                 "WHERE MA_DICH_VU=@MA_DICH_VU";
                 SqlParameter[] param = new SqlParameter[4];
-                param[0] = new SqlParameter("@MA_DICH_VU", id);
-                param[1] = new SqlParameter("@TEN_DICH_VU", name);
-                param[2] = new SqlParameter("@DON_GIA", price);
-                param[3] = new SqlParameter("@HIEU_LUC", state);
+                param[0] = new SqlParameter("@MA_DICH_VU", service.ID);
+                param[1] = new SqlParameter("@TEN_DICH_VU", service.Name);
+                param[2] = new SqlParameter("@DON_GIA", service.Price);
+                param[3] = new SqlParameter("@HIEU_LUC", service.State);
 
                 int result = Connection.ExecuteNonQuery(update, param);
                 return result;

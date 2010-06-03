@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(572, 607);
             this.MinimumSize = new System.Drawing.Size(580, 639);
             this.Name = "ServicesManagementForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Dịch Vụ";
             this.Load += new System.EventHandler(this.ServicesManagementForm_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServicesManagementForm_FormClosed);

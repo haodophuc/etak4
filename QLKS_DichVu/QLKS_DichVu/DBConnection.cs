@@ -17,7 +17,13 @@ namespace QLKS_DichVu
 
         public DBConnection(String connectionString) : this()
         {
-            Connection.ConnectionString = connectionString;
+            try {
+                Connection.ConnectionString = connectionString;    
+            }//end try
+            catch {
+                throw;
+            }//end catch
+            
         }//end method 
 
        #endregion //end region Constructors
