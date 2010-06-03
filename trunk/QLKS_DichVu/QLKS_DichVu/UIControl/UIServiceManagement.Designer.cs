@@ -72,6 +72,7 @@
             this.tabContainer.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabAddService,
             this.tabUpdateService});
+            this.tabContainer.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabContainer_SelectedPageChanged);
             // 
             // tabAddService
             // 
@@ -82,7 +83,7 @@
             // tabUpdateService
             // 
             this.tabUpdateService.Name = "tabUpdateService";
-            this.tabUpdateService.Size = new System.Drawing.Size(573, 206);
+            this.tabUpdateService.Size = new System.Drawing.Size(573, 170);
             this.tabUpdateService.Text = "Cập Nhật Dịch Vụ";
             // 
             // UIServicesManagement

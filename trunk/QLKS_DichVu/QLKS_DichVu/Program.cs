@@ -15,7 +15,7 @@ namespace QLKS_DichVu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new UI.MainForm());
         }
 
         public static DBConnection DBConnection

@@ -16,42 +16,30 @@ namespace QLKS_DichVu.UI
     public partial class ServicesManagementForm : Form
     {
         #region Constructors
+
         public ServicesManagementForm()
         {
             InitializeComponent();
-        }// end default constructor
-
-        public ServicesManagementForm( Form main ) :  this()
-        {
-            this.MainForm = main;
-
             // Load controls
-            UIServicesManagement mainUI = new UIServicesManagement();
+            UIServicesManagement mainUI = new UIServicesManagement(this);
             mainUI.Dock = DockStyle.Fill;
             this.Controls.Add(mainUI);
-        }// end constructor
+        }// end default constructor
 
         #endregion // end region Constructors
 
+
         #region Methods
-           
         #endregion // end region Methods
 
-        #region Attributes
-        public Form MainForm
-        {
-            get { return mainForm; }
-            set { this.mainForm = value; }
-        }// end attribute MainForm
 
-        //public DBConnection Connection
-        //{
-        //    get { return connection; }
-        //    set { this.connection = value; }
-        //}// end attribute Connection
+        #region Attributes
+
         #endregion // end region Attributes
         
+
         #region Event-Handling Methods
+
         private void ServicesManagementForm_Load(object sender, EventArgs e)
         {
             //LoadData();
@@ -61,7 +49,7 @@ namespace QLKS_DichVu.UI
 
         private void ServicesManagementForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MainForm.Close();
+
         }// end method ServicesManagementForm_FormClosed
 
         private void gridViewService_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
@@ -74,14 +62,13 @@ namespace QLKS_DichVu.UI
         {
             //textBox3.Text = GetServiceID( gridViewService );
         }// end method gridViewService_Click
+
         #endregion
 
+
         #region Instance Fields
-        private Form mainForm;              // main application's form.
+
         #endregion //end region Instance Fields
 
-        #region temp
-        
-        #endregion // end region temp
     }// end class ServicesManagementForm
 }// end namespace QLKS_DichVu.UI

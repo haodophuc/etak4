@@ -13,3 +13,4 @@ D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UI
 D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServicesInputAdd.resources
 D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServiceGridView.resources
 D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UIControl.UIServicesInputUpdate.resources
+D:\G-ZoNE\G-Lab\Programming\ADO\QLKS_DichVu\QLKS_DichVu\obj\Debug\QLKS_DichVu.UI.MainForm.resources

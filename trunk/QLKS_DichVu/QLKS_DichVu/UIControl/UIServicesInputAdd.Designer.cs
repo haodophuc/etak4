@@ -31,10 +31,10 @@
             this.groupControlAddService = new DevExpress.XtraEditors.GroupControl();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.textBoxPrice = new QLKS_DichVu.UIControl.NumberTextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelServicePrice = new System.Windows.Forms.Label();
             this.labelServiceName = new System.Windows.Forms.Label();
+            this.textBoxPrice = new QLKS_DichVu.UIControl.NumberTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlAddService)).BeginInit();
             this.groupControlAddService.SuspendLayout();
             this.SuspendLayout();
@@ -79,15 +79,6 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // textBoxPrice
-            // 
-            this.textBoxPrice.Location = new System.Drawing.Point(181, 61);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.ShortcutsEnabled = false;
-            this.textBoxPrice.Size = new System.Drawing.Size(250, 20);
-            this.textBoxPrice.TabIndex = 3;
-            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(181, 30);
@@ -112,6 +103,15 @@
             this.labelServiceName.Size = new System.Drawing.Size(67, 13);
             this.labelServiceName.TabIndex = 0;
             this.labelServiceName.Text = "Tên Dịch Vụ";
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(181, 61);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.ShortcutsEnabled = false;
+            this.textBoxPrice.Size = new System.Drawing.Size(250, 20);
+            this.textBoxPrice.TabIndex = 3;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // UIServicesInputAdd
             // 

@@ -33,8 +33,10 @@
             this.gridColumnServiceName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnServicePrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnServiceState = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.radioGroupViewMode = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewServices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupViewMode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControlServices
@@ -55,12 +57,11 @@
             this.gridControlServices.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControlServices.MainView = this.gridViewServices;
             this.gridControlServices.Name = "gridControlServices";
-            this.gridControlServices.Size = new System.Drawing.Size(580, 400);
+            this.gridControlServices.Size = new System.Drawing.Size(580, 440);
             this.gridControlServices.TabIndex = 0;
             this.gridControlServices.UseEmbeddedNavigator = true;
             this.gridControlServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewServices});
-            this.gridControlServices.Click += new System.EventHandler(this.gridControlServices_Click);
             // 
             // gridViewServices
             // 
@@ -92,8 +93,6 @@
             this.gridColumnServiceName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.gridColumnServiceName.AppearanceHeader.Options.UseFont = true;
             this.gridColumnServiceName.Caption = "Tên Dịch Vụ";
-            this.gridColumnServiceName.DisplayFormat.FormatString = "Test";
-            this.gridColumnServiceName.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumnServiceName.FieldName = "TEN_DICH_VU";
             this.gridColumnServiceName.Name = "gridColumnServiceName";
             this.gridColumnServiceName.Visible = true;
@@ -108,7 +107,7 @@
             this.gridColumnServicePrice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.gridColumnServicePrice.AppearanceHeader.Options.UseFont = true;
             this.gridColumnServicePrice.Caption = "Đơn Giá";
-            this.gridColumnServicePrice.DisplayFormat.FormatString = " ###,### VND";
+            this.gridColumnServicePrice.DisplayFormat.FormatString = " KH ###,### VND";
             this.gridColumnServicePrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumnServicePrice.FieldName = "DON_GIA";
             this.gridColumnServicePrice.Name = "gridColumnServicePrice";
@@ -129,15 +128,42 @@
             this.gridColumnServiceState.VisibleIndex = 2;
             this.gridColumnServiceState.Width = 107;
             // 
+            // radioGroupViewMode
+            // 
+            this.radioGroupViewMode.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.radioGroupViewMode.Location = new System.Drawing.Point(0, 440);
+            this.radioGroupViewMode.Name = "radioGroupViewMode";
+            this.radioGroupViewMode.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(new decimal(new int[] {
+                            0,
+                            0,
+                            0,
+                            0}), "Tất cả các dịch vụ"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(new decimal(new int[] {
+                            1,
+                            0,
+                            0,
+                            0}), "Các dịch vụ đang hoạt động"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(new decimal(new int[] {
+                            2,
+                            0,
+                            0,
+                            0}), "Các dịch vụ ngừng hoạt động")});
+            this.radioGroupViewMode.Size = new System.Drawing.Size(580, 50);
+            this.radioGroupViewMode.TabIndex = 1;
+            this.radioGroupViewMode.SelectedIndexChanged += new System.EventHandler(this.radioGroupViewMode_SelectedIndexChanged);
+            // 
             // UIServiceGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControlServices);
+            this.Controls.Add(this.radioGroupViewMode);
             this.Name = "UIServiceGridView";
-            this.Size = new System.Drawing.Size(580, 400);
+            this.Size = new System.Drawing.Size(580, 490);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewServices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupViewMode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,5 +175,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnServiceName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnServicePrice;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnServiceState;
+        private DevExpress.XtraEditors.RadioGroup radioGroupViewMode;
     }
 }

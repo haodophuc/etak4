@@ -18,8 +18,16 @@ namespace QLKS_DichVu.UIControl
         {
             InitializeComponent();
             isLoaded = false;
-            LoadControls();
+            LoadControls();           
+           
         }//end default constructor
+
+        public UIServicesManagement(Form parent) : this()
+        {
+            this.Parent = parent;
+            UIServicesInputAdd panel = (UIServicesInputAdd)tabAddService.Controls[0];
+            SetParentAcceptButton(panel.AcceptButton);
+        }//end constructor
 
        #endregion //end region Constructors
 
@@ -80,10 +88,30 @@ namespace QLKS_DichVu.UIControl
             return isLoaded;
         }//end method IsLoaded
 
+        public void SetParentAcceptButton(Button button)
+        {
+            Form parentForm = (Form)this.Parent;
+            parentForm.AcceptButton = button;
+        }//end method SetParentAcceptButton
+
        #endregion //end region Methods
 
 
        #region Event Handling Methods
+
+        private void tabContainer_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (tabContainer.SelectedTabPage.Name == "tabAddService")
+            {
+                UIServicesInputAdd panel = (UIServicesInputAdd)tabAddService.Controls[0];
+                SetParentAcceptButton(panel.AcceptButton);
+            }//end if
+            else
+            {
+                UIServicesInputUpdate panel = (UIServicesInputUpdate)tabUpdateService.Controls[0];
+                SetParentAcceptButton(panel.AcceptButton);
+            }//end else                
+        }//end method tabContainer_SelectedPageChanged
 
        #endregion //end region Event Handling Methods
 
@@ -98,6 +126,7 @@ namespace QLKS_DichVu.UIControl
         private UIServicesInputUpdate inputUpdateUI;
         private bool isLoaded;
        #endregion Instance Fields
+
 
     }//end class UIServicesManagement
 }//end namespace QLKS_DichVu.UIControl
