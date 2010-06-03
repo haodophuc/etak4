@@ -59,5 +59,61 @@ namespace QLKS_DichVu.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Icon down_arrow {
+            get {
+                object obj = ResourceManager.GetObject("down_arrow", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap down_arrow1 {
+            get {
+                object obj = ResourceManager.GetObject("down_arrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon down1 {
+            get {
+                object obj = ResourceManager.GetObject("down1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon down2 {
+            get {
+                object obj = ResourceManager.GetObject("down2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon up_arrow {
+            get {
+                object obj = ResourceManager.GetObject("up_arrow", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap up_arrow1 {
+            get {
+                object obj = ResourceManager.GetObject("up_arrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon up1 {
+            get {
+                object obj = ResourceManager.GetObject("up1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon up2 {
+            get {
+                object obj = ResourceManager.GetObject("up2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
