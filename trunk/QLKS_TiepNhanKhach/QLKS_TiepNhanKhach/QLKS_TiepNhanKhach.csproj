@@ -144,6 +144,12 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Form_TraCuuThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TraCuuThongTinKhachHang.Designer.cs">
+      <DependentUpon>Form_TraCuuThongTinKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,6 +176,10 @@
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_TraCuuThongTinKhachHang.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TraCuuThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -200,6 +210,10 @@
     <EmbeddedResource Include="UI\DatPhong_UI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TraCuuKhachHangUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -251,6 +265,12 @@
     </Compile>
     <Compile Include="UI\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TraCuuKhachHangUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TraCuuKhachHangUI.Designer.cs">
+      <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VO\CongtyVO.cs" />
     <Compile Include="VO\DoanKhachVO.cs" />
