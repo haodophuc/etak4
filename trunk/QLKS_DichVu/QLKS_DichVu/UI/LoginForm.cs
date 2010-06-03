@@ -22,32 +22,16 @@ namespace QLKS_DichVu.UI
             String connectionString = "server=" + txtServerName.Text +
                                ";database=" + txtDBName.Text +
                                ";uid=" + txtUserName.Text +
-                               ";pwd=" + txtPassword.Text;                    
-            /*
+                               ";pwd=" + txtPassword.Text;
+            
             try {
                 Program.DBConnection = new DBConnection(connectionString);
                 Program.DBConnection.Connect();
                 Program.DBConnection.Disconnect();
+
                 this.Close();
             }// end try
             catch( Exception exception ) {
-                MessageBox.Show(exception.Message, "Error Encountered", MessageBoxButtons.OK);
-            }// end catch;
-            */
-
-
-
-            /////////// Hieu's //////////////
-            try
-            {
-                Program.DBConnection.Connect();
-                Program.DBConnection.Disconnect();
-                ServicesOrderForm serviceOrderForm = new ServicesOrderForm(this);
-                serviceOrderForm.Show();                
-                this.Hide();
-            }// end try
-            catch (Exception exception)
-            {
                 MessageBox.Show(exception.Message, "Error Encountered", MessageBoxButtons.OK);
             }// end catch;
         }
