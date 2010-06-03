@@ -76,5 +76,10 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             } 
         }
+
+        public DataTable GetKhachHangByIndicator(KhachHangVO khachHangVO, bool bMKH, bool bMaQG, bool bHo, bool bTen, bool bCMND, bool bHochieu, bool bDienThoai)
+        {
+            return khachHangDAO.SearchByIndicator( khachHangVO, bMKH, bMaQG, bHo, bTen, bCMND, bHochieu, bDienThoai);
+        }
     }
 }

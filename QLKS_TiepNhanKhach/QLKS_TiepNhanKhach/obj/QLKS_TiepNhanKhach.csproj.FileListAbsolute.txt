@@ -163,3 +163,7 @@ E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_Ti
 E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.exe.licenses
 E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Release\QLKS_TiepNhanKhach.exe
 E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Release\QLKS_TiepNhanKhach.pdb
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.TraCuuKhachHangUI.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_TraCuuThongTinKhachHang.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_TraCuuThongTinKhachHang.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.TraCuuKhachHangUI.resources

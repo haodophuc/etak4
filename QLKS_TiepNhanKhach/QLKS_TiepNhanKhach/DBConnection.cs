@@ -108,6 +108,30 @@ namespace QLKS_TiepNhanKhach
             }
             return dataTable;
         }
+        public DataTable ExecuteSelectQuery(string query, SqlParameter[] sqlParameters)
+        {
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            try
+            {
+                command = new SqlCommand();
+                command.CommandText = query;
+                command.Connection = connection;
+                command.Parameters.AddRange(sqlParameters);
+                dataAdapter.SelectCommand = command;
+                dataAdapter.Fill(dataTable);
+              
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dataAdapter.Dispose();
+            }
+            return dataTable;
+        }
 
         public int ExecuteNonQuery(String query, SqlParameter[] sqlParameters)
         {
