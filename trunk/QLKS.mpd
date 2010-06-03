@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{C45BA604-2C52-457F-8D4B-EB25972D4507}" Label="" LastModificationDate="1274771763" Name="MHVLQLKS" Objects="234" Symbols="43" Target="Microsoft SQL Server 2005" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{C45BA604-2C52-457F-8D4B-EB25972D4507}" Label="" LastModificationDate="1274912179" Name="MHVLQLKS" Objects="237" Symbols="43" Target="Microsoft SQL Server 2005" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -3063,9 +3063,9 @@ Shadow=0</a:DisplayPreferences>
 <c:Symbols>
 <o:ReferenceSymbol Id="o11">
 <a:CreationDate>1274181252</a:CreationDate>
-<a:ModificationDate>1274358203</a:ModificationDate>
-<a:Rect>((-20212,31537), (-8887,31987))</a:Rect>
-<a:ListOfPoints>((-20212,31762),(-8887,31762))</a:ListOfPoints>
+<a:ModificationDate>1274911176</a:ModificationDate>
+<a:Rect>((-20212,31404), (-8887,31854))</a:Rect>
+<a:ListOfPoints>((-20212,31629),(-8887,31629))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3084,9 +3084,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o15">
 <a:CreationDate>1274181872</a:CreationDate>
-<a:ModificationDate>1274440519</a:ModificationDate>
-<a:Rect>((-21112,28420), (-3637,28870))</a:Rect>
-<a:ListOfPoints>((-3637,28562),(-10982,28562),(-10982,28727),(-21112,28727))</a:ListOfPoints>
+<a:ModificationDate>1274911176</a:ModificationDate>
+<a:Rect>((-21112,28125), (-3637,28575))</a:Rect>
+<a:ListOfPoints>((-3637,28562),(-10982,28562),(-10982,28138),(-21112,28138))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3106,8 +3106,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <o:ReferenceSymbol Id="o18">
 <a:CreationDate>1274181963</a:CreationDate>
 <a:ModificationDate>1274200422</a:ModificationDate>
-<a:Rect>((-3823,17796), (-3373,25438))</a:Rect>
-<a:ListOfPoints>((-3598,25438),(-3598,17796))</a:ListOfPoints>
+<a:Rect>((-3823,17751), (-3373,25438))</a:Rect>
+<a:ListOfPoints>((-3598,25438),(-3598,17751))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3148,8 +3148,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <o:ReferenceSymbol Id="o25">
 <a:CreationDate>1274183880</a:CreationDate>
 <a:ModificationDate>1274183880</a:ModificationDate>
-<a:Rect>((-21337,18450), (-20887,30075))</a:Rect>
-<a:ListOfPoints>((-21112,18450),(-21112,30075))</a:ListOfPoints>
+<a:Rect>((-21337,18450), (-20887,29629))</a:Rect>
+<a:ListOfPoints>((-21112,18450),(-21112,29629))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3252,9 +3252,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o40">
 <a:CreationDate>1274184494</a:CreationDate>
-<a:ModificationDate>1274767716</a:ModificationDate>
-<a:Rect>((-9187,17282), (-5137,21504))</a:Rect>
-<a:ListOfPoints>((-5137,17282),(-5137,21504),(-9187,21504))</a:ListOfPoints>
+<a:ModificationDate>1274911186</a:ModificationDate>
+<a:Rect>((-9187,17215), (-5137,21442))</a:Rect>
+<a:ListOfPoints>((-5137,17215),(-5137,21442),(-9187,21442))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3273,9 +3273,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o43">
 <a:CreationDate>1274185276</a:CreationDate>
-<a:ModificationDate>1274185276</a:ModificationDate>
-<a:Rect>((-25762,9600), (-23212,30750))</a:Rect>
-<a:ListOfPoints>((-25762,9600),(-25762,30750),(-23212,30750))</a:ListOfPoints>
+<a:ModificationDate>1274911176</a:ModificationDate>
+<a:Rect>((-25762,9600), (-23212,30376))</a:Rect>
+<a:ListOfPoints>((-25762,9600),(-25762,30376),(-23212,30376))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3295,8 +3295,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <o:ReferenceSymbol Id="o46">
 <a:CreationDate>1274185278</a:CreationDate>
 <a:ModificationDate>1274185278</a:ModificationDate>
-<a:Rect>((-16987,9150), (-5287,16547))</a:Rect>
-<a:ListOfPoints>((-16987,9150),(-5287,9150),(-5287,16547))</a:ListOfPoints>
+<a:Rect>((-16987,9150), (-5287,16449))</a:Rect>
+<a:ListOfPoints>((-16987,9150),(-5287,9150),(-5287,16449))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3421,8 +3421,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <o:ReferenceSymbol Id="o63">
 <a:CreationDate>1274185936</a:CreationDate>
 <a:ModificationDate>1274200668</a:ModificationDate>
-<a:Rect>((-2287,7186), (16013,15591))</a:Rect>
-<a:ListOfPoints>((16013,7186),(-2287,7186),(-2287,15591))</a:ListOfPoints>
+<a:Rect>((-2287,7186), (16013,15453))</a:Rect>
+<a:ListOfPoints>((16013,7186),(-2287,7186),(-2287,15453))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3462,9 +3462,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o68">
 <a:CreationDate>1274187129</a:CreationDate>
-<a:ModificationDate>1274767716</a:ModificationDate>
-<a:Rect>((-18037,21586), (-16837,27300))</a:Rect>
-<a:ListOfPoints>((-16837,21586),(-18037,21586),(-18037,27300))</a:ListOfPoints>
+<a:ModificationDate>1274911186</a:ModificationDate>
+<a:Rect>((-18037,21529), (-16837,26559))</a:Rect>
+<a:ListOfPoints>((-16837,21529),(-18037,21529),(-18037,26559))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3484,8 +3484,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <o:ReferenceSymbol Id="o70">
 <a:CreationDate>1274187157</a:CreationDate>
 <a:ModificationDate>1274358203</a:ModificationDate>
-<a:Rect>((-12261,21751), (-11811,32400))</a:Rect>
-<a:ListOfPoints>((-12036,21751),(-12036,32400))</a:ListOfPoints>
+<a:Rect>((-12261,21703), (-11811,32400))</a:Rect>
+<a:ListOfPoints>((-12036,21703),(-12036,32400))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3546,9 +3546,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o76">
 <a:CreationDate>1274440474</a:CreationDate>
-<a:ModificationDate>1274440505</a:ModificationDate>
-<a:Rect>((-27000,-3075), (14925,31500))</a:Rect>
-<a:ListOfPoints>((14925,-3075),(-27000,-3075),(-27000,31500),(-20475,31500))</a:ListOfPoints>
+<a:ModificationDate>1274911176</a:ModificationDate>
+<a:Rect>((-27000,-3075), (14925,31206))</a:Rect>
+<a:ListOfPoints>((14925,-3075),(-27000,-3075),(-27000,31206),(-20475,31206))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615680</a:LineColor>
@@ -3567,9 +3567,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:ReferenceSymbol>
 <o:TableSymbol Id="o12">
 <a:CreationDate>1273898560</a:CreationDate>
-<a:ModificationDate>1274181164</a:ModificationDate>
+<a:ModificationDate>1274911176</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-23982,25800), (-15966,34268))</a:Rect>
+<a:Rect>((-23982,24900), (-15966,34268))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>12615680</a:LineColor>
 <a:FillColor>16570034</a:FillColor>
@@ -3621,9 +3621,9 @@ LABL 0 Arial,8,N</a:FontList>
 </o:TableSymbol>
 <o:TableSymbol Id="o41">
 <a:CreationDate>1273898562</a:CreationDate>
-<a:ModificationDate>1274767716</a:ModificationDate>
+<a:ModificationDate>1274911186</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-16952,10950), (-8016,22566))</a:Rect>
+<a:Rect>((-16952,10275), (-8016,22565))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>12615680</a:LineColor>
 <a:FillColor>16570034</a:FillColor>
@@ -3675,9 +3675,9 @@ LABL 0 Arial,8,N</a:FontList>
 </o:TableSymbol>
 <o:TableSymbol Id="o19">
 <a:CreationDate>1273898563</a:CreationDate>
-<a:ModificationDate>1274200451</a:ModificationDate>
+<a:ModificationDate>1274911208</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-6495,13500), (1433,18860))</a:Rect>
+<a:Rect>((-6495,13275), (1433,18859))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>12615680</a:LineColor>
 <a:FillColor>16570034</a:FillColor>
@@ -4096,7 +4096,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>KHACH_HANG</a:Code>
 <a:CreationDate>1273898560</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274685193</a:ModificationDate>
+<a:ModificationDate>1274911173</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
@@ -4177,9 +4177,21 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(20)</a:DataType>
 <a:Length>20</a:Length>
 </o:Column>
+<o:Column Id="o105">
+<a:ObjectID>7E92E718-4F49-4AF1-8142-7A41E3ADF718</a:ObjectID>
+<a:Name>Hieu luc</a:Name>
+<a:Code>HIEU_LUC</a:Code>
+<a:CreationDate>1274911087</a:CreationDate>
+<a:Creator>Administrator</a:Creator>
+<a:ModificationDate>1274912135</a:ModificationDate>
+<a:Modifier>Administrator</a:Modifier>
+<a:DefaultValue>1</a:DefaultValue>
+<a:DataType>bit</a:DataType>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o105">
+<o:Key Id="o106">
 <a:ObjectID>3416F7C0-2189-4A03-B04C-44A5A2A37782</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4193,7 +4205,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o106">
+<o:Index Id="o107">
 <a:ObjectID>5E0FC8B5-F233-4707-8FAC-0AB023123112</a:ObjectID>
 <a:Name>KHANH_HANG_PK</a:Name>
 <a:Code>KHANH_HANG_PK</a:Code>
@@ -4203,10 +4215,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o107">
+<o:IndexColumn Id="o108">
 <a:ObjectID>16309133-D2DE-4166-82DF-A30AE16585BD</a:ObjectID>
 <a:CreationDate>1274182823</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
@@ -4220,10 +4232,10 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o106"/>
+<o:Index Ref="o107"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o79">
@@ -4236,7 +4248,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o108">
+<o:Column Id="o109">
 <a:ObjectID>DC56DE68-1A63-49DF-BD39-D06D4F0FD4B8</a:ObjectID>
 <a:Name>Ma quoc gia</a:Name>
 <a:Code>MA_QUOC_GIA</a:Code>
@@ -4248,7 +4260,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o109">
+<o:Column Id="o110">
 <a:ObjectID>692BDE70-8F8F-4665-BF1D-13D6E5356E08</a:ObjectID>
 <a:Name>Ten quoc gia</a:Name>
 <a:Code>TEN_QUOC_GIA</a:Code>
@@ -4261,7 +4273,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o110">
+<o:Key Id="o111">
 <a:ObjectID>27C01D73-943C-452E-B952-2416F4A12B89</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4270,12 +4282,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274183184</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o108"/>
+<o:Column Ref="o109"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o111">
+<o:Index Id="o112">
 <a:ObjectID>1CF05E2D-FB1C-4A25-A7B3-840E4B7E1FB9</a:ObjectID>
 <a:Name>QUOC_GIA_PK</a:Name>
 <a:Code>QUOC_GIA_PK</a:Code>
@@ -4285,27 +4297,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o110"/>
+<o:Key Ref="o111"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o112">
+<o:IndexColumn Id="o113">
 <a:ObjectID>E77B171C-6DC5-4E2E-A5AB-314E90E73CBF</a:ObjectID>
 <a:CreationDate>1274183181</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274183184</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o108"/>
+<o:Column Ref="o109"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o110"/>
+<o:Key Ref="o111"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o111"/>
+<o:Index Ref="o112"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o80">
@@ -4314,11 +4326,11 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>CONG_TY</a:Code>
 <a:CreationDate>1273898562</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274765689</a:ModificationDate>
+<a:ModificationDate>1274911184</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o113">
+<o:Column Id="o114">
 <a:ObjectID>440B864D-58F1-4376-8A65-BB390AB208B8</a:ObjectID>
 <a:Name>Ma cong ty</a:Name>
 <a:Code>MA_CONG_TY</a:Code>
@@ -4330,7 +4342,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o114">
+<o:Column Id="o115">
 <a:ObjectID>78255868-D35F-4DEC-86B0-8F0B13D06D44</a:ObjectID>
 <a:Name>Ten cong ty</a:Name>
 <a:Code>TEN_CONG_TY</a:Code>
@@ -4341,7 +4353,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o115">
+<o:Column Id="o116">
 <a:ObjectID>FE907309-F47C-4954-93B4-AD9F2997164F</a:ObjectID>
 <a:Name>Ma quoc gia</a:Name>
 <a:Code>MA_QUOC_GIA</a:Code>
@@ -4351,7 +4363,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o116">
+<o:Column Id="o117">
 <a:ObjectID>430354D5-8E63-4662-AF84-2BF6B6379BCB</a:ObjectID>
 <a:Name>Ma nguoi dai dien</a:Name>
 <a:Code>MA_NGUOI_DAI_DIEN</a:Code>
@@ -4361,7 +4373,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o117">
+<o:Column Id="o118">
 <a:ObjectID>DB45C407-6880-4CC3-82A7-8001FF241190</a:ObjectID>
 <a:Name>Dia chi</a:Name>
 <a:Code>DIA_CHI</a:Code>
@@ -4372,7 +4384,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o118">
+<o:Column Id="o119">
 <a:ObjectID>D13C04A2-099A-429C-882A-06D31BE28BCC</a:ObjectID>
 <a:Name>Dien thoai</a:Name>
 <a:Code>DIEN_THOAI</a:Code>
@@ -4383,7 +4395,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(20)</a:DataType>
 <a:Length>20</a:Length>
 </o:Column>
-<o:Column Id="o119">
+<o:Column Id="o120">
 <a:ObjectID>CCD3E4CC-C8EF-4ABF-AEA2-C58752A518A9</a:ObjectID>
 <a:Name>Email</a:Name>
 <a:Code>EMAIL</a:Code>
@@ -4394,7 +4406,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o120">
+<o:Column Id="o121">
 <a:ObjectID>C5E1EA63-9972-49C3-82A1-1BEFDE5B6572</a:ObjectID>
 <a:Name>Fax</a:Name>
 <a:Code>FAX</a:Code>
@@ -4405,7 +4417,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(20)</a:DataType>
 <a:Length>20</a:Length>
 </o:Column>
-<o:Column Id="o121">
+<o:Column Id="o122">
 <a:ObjectID>992763C0-036C-4E85-8B0C-B2DCE85E520B</a:ObjectID>
 <a:Name>So tai khoan</a:Name>
 <a:Code>SO_TAI_KHOAN</a:Code>
@@ -4416,7 +4428,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(20)</a:DataType>
 <a:Length>20</a:Length>
 </o:Column>
-<o:Column Id="o122">
+<o:Column Id="o123">
 <a:ObjectID>C9AFC299-CEDE-4B89-95F3-3AAEF89E68CB</a:ObjectID>
 <a:Name>Ma so thue</a:Name>
 <a:Code>MA_SO_THUE</a:Code>
@@ -4427,9 +4439,21 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(20)</a:DataType>
 <a:Length>20</a:Length>
 </o:Column>
+<o:Column Id="o124">
+<a:ObjectID>8D0A501B-B913-4522-A263-8E2FB125F515</a:ObjectID>
+<a:Name>Hieu luc</a:Name>
+<a:Code>HIEU_LUC</a:Code>
+<a:CreationDate>1274911178</a:CreationDate>
+<a:Creator>Administrator</a:Creator>
+<a:ModificationDate>1274912169</a:ModificationDate>
+<a:Modifier>Administrator</a:Modifier>
+<a:DefaultValue>1</a:DefaultValue>
+<a:DataType>bit</a:DataType>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o123">
+<o:Key Id="o125">
 <a:ObjectID>2C4A37F2-F43B-4316-A09D-3A0367ED2E01</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4438,12 +4462,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273987479</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o113"/>
+<o:Column Ref="o114"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o124">
+<o:Index Id="o126">
 <a:ObjectID>4E35F1B4-5FE6-477E-8DB2-B98E39ABD177</a:ObjectID>
 <a:Name>CONG_TY_PK</a:Name>
 <a:Code>CONG_TY_PK</a:Code>
@@ -4453,27 +4477,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o123"/>
+<o:Key Ref="o125"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o125">
+<o:IndexColumn Id="o127">
 <a:ObjectID>7A3633E2-472F-4FF6-9341-612AAACA7BF0</a:ObjectID>
 <a:CreationDate>1273987475</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273987479</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o113"/>
+<o:Column Ref="o114"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o123"/>
+<o:Key Ref="o125"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o124"/>
+<o:Index Ref="o126"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o81">
@@ -4486,7 +4510,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o126">
+<o:Column Id="o128">
 <a:ObjectID>3C22D0C1-135C-47D3-9A34-B807747DA636</a:ObjectID>
 <a:Name>Ma tien nghi</a:Name>
 <a:Code>MA_TIEN_NGHI</a:Code>
@@ -4498,7 +4522,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o127">
+<o:Column Id="o129">
 <a:ObjectID>B8C0B115-8EDE-4862-9C0E-0A31B1A4657C</a:ObjectID>
 <a:Name>Tien nghi</a:Name>
 <a:Code>TIEN_NGHI</a:Code>
@@ -4511,7 +4535,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o128">
+<o:Key Id="o130">
 <a:ObjectID>A4E5FF01-5C83-4DD1-9EBF-9772ADF130F1</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4520,12 +4544,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273975715</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o126"/>
+<o:Column Ref="o128"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o129">
+<o:Index Id="o131">
 <a:ObjectID>52511FEE-6BAB-47C0-AF75-48C5B18DA0A7</a:ObjectID>
 <a:Name>TIEN_NGHI_PK</a:Name>
 <a:Code>TIEN_NGHI_PK</a:Code>
@@ -4535,27 +4559,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o128"/>
+<o:Key Ref="o130"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o130">
+<o:IndexColumn Id="o132">
 <a:ObjectID>8DE8A5C3-5715-42F2-ACEC-27A477751B19</a:ObjectID>
 <a:CreationDate>1273975710</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273975715</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o126"/>
+<o:Column Ref="o128"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o128"/>
+<o:Key Ref="o130"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o129"/>
+<o:Index Ref="o131"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o82">
@@ -4564,11 +4588,11 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>DOAN_KHACH</a:Code>
 <a:CreationDate>1273898563</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274200466</a:ModificationDate>
+<a:ModificationDate>1274911206</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o131">
+<o:Column Id="o133">
 <a:ObjectID>0B99EEB1-9C38-45DF-BE0D-F6A9511163D6</a:ObjectID>
 <a:Name>Ma doan khach</a:Name>
 <a:Code>MA_DOAN_KHACH</a:Code>
@@ -4580,7 +4604,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o132">
+<o:Column Id="o134">
 <a:ObjectID>FD590575-EF26-4B2D-9C3B-9EB80C0B4262</a:ObjectID>
 <a:Name>Ma cong ty</a:Name>
 <a:Code>MA_CONG_TY</a:Code>
@@ -4590,7 +4614,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o133">
+<o:Column Id="o135">
 <a:ObjectID>4D158DA3-8ADE-49E3-B30B-4F8360A2F604</a:ObjectID>
 <a:Name>Ngay den</a:Name>
 <a:Code>NGAY_DEN</a:Code>
@@ -4600,9 +4624,21 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
+<o:Column Id="o136">
+<a:ObjectID>EE6D2662-88E6-49CB-8CAE-4302110F3DFC</a:ObjectID>
+<a:Name>Hieu luc</a:Name>
+<a:Code>HIEU_LUC</a:Code>
+<a:CreationDate>1274911196</a:CreationDate>
+<a:Creator>Administrator</a:Creator>
+<a:ModificationDate>1274912179</a:ModificationDate>
+<a:Modifier>Administrator</a:Modifier>
+<a:DefaultValue>1</a:DefaultValue>
+<a:DataType>bit</a:DataType>
+<a:Mandatory>1</a:Mandatory>
+</o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o134">
+<o:Key Id="o137">
 <a:ObjectID>A043E7E9-69A1-433F-A50A-46BB16B4EE40</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4611,12 +4647,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274183292</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o131"/>
+<o:Column Ref="o133"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o135">
+<o:Index Id="o138">
 <a:ObjectID>1646CA2D-8F29-4279-90CD-CEB556DF1C74</a:ObjectID>
 <a:Name>DOANH_KHACH_PK</a:Name>
 <a:Code>DOANH_KHACH_PK</a:Code>
@@ -4626,27 +4662,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o134"/>
+<o:Key Ref="o137"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o136">
+<o:IndexColumn Id="o139">
 <a:ObjectID>AFEC9A7D-6801-43C0-9FDB-71CF5E388B2D</a:ObjectID>
 <a:CreationDate>1274183288</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274183292</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o131"/>
+<o:Column Ref="o133"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o134"/>
+<o:Key Ref="o137"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o135"/>
+<o:Index Ref="o138"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o83">
@@ -4659,7 +4695,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o137">
+<o:Column Id="o140">
 <a:ObjectID>E8FF71F0-4809-451C-8247-5E25BF81E3EF</a:ObjectID>
 <a:Name>Ma loai phong</a:Name>
 <a:Code>MA_LOAI_PHONG</a:Code>
@@ -4671,7 +4707,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o138">
+<o:Column Id="o141">
 <a:ObjectID>A0927796-BCB8-48C6-9795-EE65710ADD66</a:ObjectID>
 <a:Name>Ten loai phong</a:Name>
 <a:Code>TEN_LOAI_PHONG</a:Code>
@@ -4682,7 +4718,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o139">
+<o:Column Id="o142">
 <a:ObjectID>E3032182-5B82-463E-A543-0664D6DE9E2E</a:ObjectID>
 <a:Name>So giuong</a:Name>
 <a:Code>SO_GIUONG</a:Code>
@@ -4693,7 +4729,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:LowValue>0</a:LowValue>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o140">
+<o:Column Id="o143">
 <a:ObjectID>0935E820-3725-43F2-B916-67EDF9E328BB</a:ObjectID>
 <a:Name>So luong phong</a:Name>
 <a:Code>SO_LUONG_PHONG</a:Code>
@@ -4704,7 +4740,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:LowValue>0</a:LowValue>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o141">
+<o:Column Id="o144">
 <a:ObjectID>47931B3D-94E1-412D-8EF4-F8D0EC1A0855</a:ObjectID>
 <a:Name>Gia tham khao</a:Name>
 <a:Code>GIA_THAM_KHAO</a:Code>
@@ -4716,7 +4752,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o142">
+<o:Key Id="o145">
 <a:ObjectID>782C15EC-4292-4A28-A391-D1C4C133B303</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4725,12 +4761,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273988258</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o137"/>
+<o:Column Ref="o140"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o143">
+<o:Index Id="o146">
 <a:ObjectID>C52DBA32-0334-4796-8B3A-5B83DA57C527</a:ObjectID>
 <a:Name>LOAI_PHONG_PK</a:Name>
 <a:Code>LOAI_PHONG_PK</a:Code>
@@ -4740,27 +4776,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o142"/>
+<o:Key Ref="o145"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o144">
+<o:IndexColumn Id="o147">
 <a:ObjectID>C4B80227-F332-4BED-AB5A-C3F7AA03CF1A</a:ObjectID>
 <a:CreationDate>1273988255</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273988258</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o137"/>
+<o:Column Ref="o140"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o142"/>
+<o:Key Ref="o145"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o143"/>
+<o:Index Ref="o146"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o84">
@@ -4773,7 +4809,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o145">
+<o:Column Id="o148">
 <a:ObjectID>DE19A3C6-0E68-4E15-8644-976DDFC07C12</a:ObjectID>
 <a:Name>Ma dich vu</a:Name>
 <a:Code>MA_DICH_VU</a:Code>
@@ -4785,7 +4821,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o146">
+<o:Column Id="o149">
 <a:ObjectID>03F6817B-51B7-44AA-A354-8FFAF7258F78</a:ObjectID>
 <a:Name>Ten dich vu</a:Name>
 <a:Code>TEN_DICH_VU</a:Code>
@@ -4796,7 +4832,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o147">
+<o:Column Id="o150">
 <a:ObjectID>BA6B1850-7D7E-40EA-BCB0-F2A05E5B6CE1</a:ObjectID>
 <a:Name>Don gia</a:Name>
 <a:Code>DON_GIA</a:Code>
@@ -4806,20 +4842,21 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>money</a:DataType>
 </o:Column>
-<o:Column Id="o148">
+<o:Column Id="o151">
 <a:ObjectID>49E2C847-D6A8-4F22-9925-F0FB406F8434</a:ObjectID>
 <a:Name>Hieu luc</a:Name>
 <a:Code>HIEU_LUC</a:Code>
 <a:CreationDate>1274770973</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274771763</a:ModificationDate>
+<a:ModificationDate>1274911367</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
+<a:DefaultValue>1</a:DefaultValue>
 <a:DataType>bit</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o149">
+<o:Key Id="o152">
 <a:ObjectID>3D97E0AA-7BDF-49EA-93F8-6EDC0AB18ADB</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4828,12 +4865,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273989563</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o145"/>
+<o:Column Ref="o148"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o150">
+<o:Index Id="o153">
 <a:ObjectID>039C98A0-4437-401C-B77B-D381066099C6</a:ObjectID>
 <a:Name>DICH_VU_PK</a:Name>
 <a:Code>DICH_VU_PK</a:Code>
@@ -4843,27 +4880,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o149"/>
+<o:Key Ref="o152"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o151">
+<o:IndexColumn Id="o154">
 <a:ObjectID>B6D5A397-C0C0-4CDC-908A-1EA790F8C8F4</a:ObjectID>
 <a:CreationDate>1273989558</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273989563</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o145"/>
+<o:Column Ref="o148"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o149"/>
+<o:Key Ref="o152"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o150"/>
+<o:Index Ref="o153"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o85">
@@ -4876,7 +4913,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o152">
+<o:Column Id="o155">
 <a:ObjectID>C07CC008-04B2-4D2D-ABCD-E6C7B91FEF20</a:ObjectID>
 <a:Name>Ma tinh trang</a:Name>
 <a:Code>MA_TINH_TRANG</a:Code>
@@ -4888,7 +4925,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o153">
+<o:Column Id="o156">
 <a:ObjectID>EA8E6506-DAA9-4C61-BC51-BA1AFC199980</a:ObjectID>
 <a:Name>Tinh trang</a:Name>
 <a:Code>TINH_TRANG</a:Code>
@@ -4901,7 +4938,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o154">
+<o:Key Id="o157">
 <a:ObjectID>AD09BBDE-D9CC-47AC-878C-A9C3C9BCC95B</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -4910,12 +4947,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273980977</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o152"/>
+<o:Column Ref="o155"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o155">
+<o:Index Id="o158">
 <a:ObjectID>0189D311-E8E7-4840-BF96-593ABB655F5C</a:ObjectID>
 <a:Name>TINH_TRANG_PK</a:Name>
 <a:Code>TINH_TRANG_PK</a:Code>
@@ -4925,27 +4962,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o154"/>
+<o:Key Ref="o157"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o156">
+<o:IndexColumn Id="o159">
 <a:ObjectID>BCBBBE1C-24BA-4765-8B37-ED88B5374F09</a:ObjectID>
 <a:CreationDate>1273980972</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273980977</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o152"/>
+<o:Column Ref="o155"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o154"/>
+<o:Key Ref="o157"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o155"/>
+<o:Index Ref="o158"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o86">
@@ -4958,7 +4995,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o157">
+<o:Column Id="o160">
 <a:ObjectID>C2F647E0-4737-4288-BC44-F156494AA666</a:ObjectID>
 <a:Name>Ma phong</a:Name>
 <a:Code>MA_PHONG</a:Code>
@@ -4970,7 +5007,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o158">
+<o:Column Id="o161">
 <a:ObjectID>7AF678D0-7003-4B1E-8449-2EEE92DDFCBC</a:ObjectID>
 <a:Name>Ma loai phong</a:Name>
 <a:Code>MA_LOAI_PHONG</a:Code>
@@ -4980,7 +5017,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o159">
+<o:Column Id="o162">
 <a:ObjectID>259061D1-692E-4ACB-AFFA-7FCE27010AEB</a:ObjectID>
 <a:Name>Ma tinh trang</a:Name>
 <a:Code>MA_TINH_TRANG</a:Code>
@@ -4990,7 +5027,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o160">
+<o:Column Id="o163">
 <a:ObjectID>9E936A79-F248-4115-BD6C-52432FADA7BD</a:ObjectID>
 <a:Name>So phong</a:Name>
 <a:Code>SO_PHONG</a:Code>
@@ -5003,7 +5040,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o161">
+<o:Key Id="o164">
 <a:ObjectID>E94AFDC3-9BA4-4C3C-A0F2-4EA8A82B81E5</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5012,12 +5049,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273981641</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o157"/>
+<o:Column Ref="o160"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o162">
+<o:Index Id="o165">
 <a:ObjectID>B4718B18-A7EA-4088-8C8A-1A28277BE05B</a:ObjectID>
 <a:Name>PHONG_PK</a:Name>
 <a:Code>PHONG_PK</a:Code>
@@ -5027,27 +5064,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o161"/>
+<o:Key Ref="o164"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o163">
+<o:IndexColumn Id="o166">
 <a:ObjectID>65EDAA26-9BEE-4389-BA6E-425D44F25F4C</a:ObjectID>
 <a:CreationDate>1273981633</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273981641</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o157"/>
+<o:Column Ref="o160"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o161"/>
+<o:Key Ref="o164"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o162"/>
+<o:Index Ref="o165"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o87">
@@ -5060,7 +5097,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o164">
+<o:Column Id="o167">
 <a:ObjectID>F366B190-E8FF-4589-BED9-692A3627F20E</a:ObjectID>
 <a:Name>Ma phieu</a:Name>
 <a:Code>MA_PHIEU</a:Code>
@@ -5072,7 +5109,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o165">
+<o:Column Id="o168">
 <a:ObjectID>E16C13D2-AC99-4572-95F1-1C0C8A6081C0</a:ObjectID>
 <a:Name>Ma Khach Hang</a:Name>
 <a:Code>MA_KHACH_HANG</a:Code>
@@ -5082,7 +5119,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o166">
+<o:Column Id="o169">
 <a:ObjectID>23E74CF5-60A8-4349-9CC7-2D84B26B5495</a:ObjectID>
 <a:Name>Ma doan khach</a:Name>
 <a:Code>MA_DOAN_KHACH</a:Code>
@@ -5092,7 +5129,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o167">
+<o:Column Id="o170">
 <a:ObjectID>D25884E5-0FB0-4575-85EA-4CB9CF12D45F</a:ObjectID>
 <a:Name>Tien coc</a:Name>
 <a:Code>TIEN_COC</a:Code>
@@ -5104,7 +5141,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o168">
+<o:Key Id="o171">
 <a:ObjectID>591AA836-34B0-4020-929D-9E00166FF887</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5113,12 +5150,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274184672</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o164"/>
+<o:Column Ref="o167"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o169">
+<o:Index Id="o172">
 <a:ObjectID>A2D2E5DD-012A-45EB-9276-058A6C770EF3</a:ObjectID>
 <a:Name>PHIEU_DAT_PHONG_PK</a:Name>
 <a:Code>PHIEU_DAT_PHONG_PK</a:Code>
@@ -5128,27 +5165,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o168"/>
+<o:Key Ref="o171"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o170">
+<o:IndexColumn Id="o173">
 <a:ObjectID>53D6737D-53F4-4059-8C89-8323524FB58E</a:ObjectID>
 <a:CreationDate>1274184668</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184672</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o164"/>
+<o:Column Ref="o167"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o168"/>
+<o:Key Ref="o171"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o169"/>
+<o:Index Ref="o172"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o88">
@@ -5161,7 +5198,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o171">
+<o:Column Id="o174">
 <a:ObjectID>B3E507E3-EDAF-4CD7-98D5-5F225B06B585</a:ObjectID>
 <a:Name>Ma phieu</a:Name>
 <a:Code>MA_PHIEU</a:Code>
@@ -5172,7 +5209,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o172">
+<o:Column Id="o175">
 <a:ObjectID>36CD34A1-6392-4DBA-86E9-74F06C480249</a:ObjectID>
 <a:Name>Ma loai phong</a:Name>
 <a:Code>MA_LOAI_PHONG</a:Code>
@@ -5183,7 +5220,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o173">
+<o:Column Id="o176">
 <a:ObjectID>25275945-92C8-4E8E-8074-7356C0D32341</a:ObjectID>
 <a:Name>Ngay den</a:Name>
 <a:Code>NGAY_DEN</a:Code>
@@ -5193,7 +5230,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o174">
+<o:Column Id="o177">
 <a:ObjectID>4ABEB937-F96C-45F7-BC8E-7D5D7660E217</a:ObjectID>
 <a:Name>Ngay di</a:Name>
 <a:Code>NGAY_DI</a:Code>
@@ -5203,7 +5240,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o175">
+<o:Column Id="o178">
 <a:ObjectID>B0AE755D-899B-4DB9-BC77-383A56A05141</a:ObjectID>
 <a:Name>So luong</a:Name>
 <a:Code>SO_LUONG</a:Code>
@@ -5216,7 +5253,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o176">
+<o:Key Id="o179">
 <a:ObjectID>33CE7FE6-DB50-4E8F-B99E-E33BB2DF7B6F</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5225,13 +5262,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274187826</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o171"/>
-<o:Column Ref="o172"/>
+<o:Column Ref="o174"/>
+<o:Column Ref="o175"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o177">
+<o:Index Id="o180">
 <a:ObjectID>E75C7DEE-1B6A-4836-8A1F-659B2FF0B1A8</a:ObjectID>
 <a:Name>CHI_TIET_DAT_PHONG_PK</a:Name>
 <a:Code>CHI_TIET_DAT_PHONG_PK</a:Code>
@@ -5241,37 +5278,37 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o176"/>
+<o:Key Ref="o179"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o178">
+<o:IndexColumn Id="o181">
 <a:ObjectID>0BBE5466-8C59-4568-B024-45676FBCA632</a:ObjectID>
 <a:CreationDate>1274187822</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274187826</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o171"/>
+<o:Column Ref="o174"/>
 </c:Column>
 </o:IndexColumn>
-<o:IndexColumn Id="o179">
+<o:IndexColumn Id="o182">
 <a:ObjectID>95AF524F-2597-4866-9DA7-67751CE4A837</a:ObjectID>
 <a:CreationDate>1274187822</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274187826</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o172"/>
+<o:Column Ref="o175"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o176"/>
+<o:Key Ref="o179"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o177"/>
+<o:Index Ref="o180"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o89">
@@ -5284,7 +5321,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o180">
+<o:Column Id="o183">
 <a:ObjectID>D75CF225-E99E-4ED7-96DF-E955E42F1DAD</a:ObjectID>
 <a:Name>Ma tien nghi</a:Name>
 <a:Code>MA_TIEN_NGHI</a:Code>
@@ -5295,7 +5332,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o181">
+<o:Column Id="o184">
 <a:ObjectID>B049440B-C977-4CCB-BD5B-5C0221185CF6</a:ObjectID>
 <a:Name>Ma loai phong</a:Name>
 <a:Code>MA_LOAI_PHONG</a:Code>
@@ -5308,7 +5345,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o182">
+<o:Key Id="o185">
 <a:ObjectID>1B79A67A-25A8-42F9-B316-2B08C1933CCF</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5317,13 +5354,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274188126</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o180"/>
-<o:Column Ref="o181"/>
+<o:Column Ref="o183"/>
+<o:Column Ref="o184"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o183">
+<o:Index Id="o186">
 <a:ObjectID>88DB5F60-D482-4C18-A9D9-440630E582BA</a:ObjectID>
 <a:Name>TIEN_NGHI_LOAI_PHONG_PK</a:Name>
 <a:Code>TIEN_NGHI_LOAI_PHONG_PK</a:Code>
@@ -5333,37 +5370,37 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o182"/>
+<o:Key Ref="o185"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o184">
+<o:IndexColumn Id="o187">
 <a:ObjectID>C31407EB-1BFB-4ED7-A044-7CC9ADADAC67</a:ObjectID>
 <a:CreationDate>1274184137</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184147</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o180"/>
+<o:Column Ref="o183"/>
 </c:Column>
 </o:IndexColumn>
-<o:IndexColumn Id="o185">
+<o:IndexColumn Id="o188">
 <a:ObjectID>8C576BA9-03F5-4387-B04D-8A073642EC19</a:ObjectID>
 <a:CreationDate>1274184137</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184147</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o181"/>
+<o:Column Ref="o184"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o182"/>
+<o:Key Ref="o185"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o183"/>
+<o:Index Ref="o186"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o90">
@@ -5376,7 +5413,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o186">
+<o:Column Id="o189">
 <a:ObjectID>D26C4548-18DC-4937-9236-78DE44D336EE</a:ObjectID>
 <a:Name>Ma Khach Hang</a:Name>
 <a:Code>MA_KHACH_HANG</a:Code>
@@ -5387,7 +5424,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>int</a:DataType>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o187">
+<o:Column Id="o190">
 <a:ObjectID>169DFE43-BE35-4F14-B1E3-BCF2D1F6FABA</a:ObjectID>
 <a:Name>Ma phieu</a:Name>
 <a:Code>MA_PHIEU</a:Code>
@@ -5400,7 +5437,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o188">
+<o:Key Id="o191">
 <a:ObjectID>A56F826F-38A0-48AA-A2C4-98526C2F9B95</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5409,13 +5446,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274188216</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o186"/>
-<o:Column Ref="o187"/>
+<o:Column Ref="o189"/>
+<o:Column Ref="o190"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o189">
+<o:Index Id="o192">
 <a:ObjectID>A575B21A-7DD2-445F-ADD9-988EB98A7C58</a:ObjectID>
 <a:Name>KHACH_TRO_PK</a:Name>
 <a:Code>KHACH_TRO_PK</a:Code>
@@ -5425,37 +5462,37 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o188"/>
+<o:Key Ref="o191"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o190">
+<o:IndexColumn Id="o193">
 <a:ObjectID>13D4DADA-300D-4671-B03F-F71575C807C0</a:ObjectID>
 <a:CreationDate>1274188210</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274188216</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o186"/>
+<o:Column Ref="o189"/>
 </c:Column>
 </o:IndexColumn>
-<o:IndexColumn Id="o191">
+<o:IndexColumn Id="o194">
 <a:ObjectID>771315EE-32E9-466C-9F69-B89E6ABE2EBB</a:ObjectID>
 <a:CreationDate>1274188210</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274188216</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o187"/>
+<o:Column Ref="o190"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o188"/>
+<o:Key Ref="o191"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o189"/>
+<o:Index Ref="o192"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o91">
@@ -5468,7 +5505,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o192">
+<o:Column Id="o195">
 <a:ObjectID>F224A0BA-C767-419F-B88D-7C8404A39C71</a:ObjectID>
 <a:Name>Ma phieu</a:Name>
 <a:Code>MA_PHIEU</a:Code>
@@ -5480,7 +5517,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o193">
+<o:Column Id="o196">
 <a:ObjectID>81899A88-5919-4E9D-8198-4BB70A1ED66C</a:ObjectID>
 <a:Name>Ma Khach Hang</a:Name>
 <a:Code>MA_KHACH_HANG</a:Code>
@@ -5490,7 +5527,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o194">
+<o:Column Id="o197">
 <a:ObjectID>63BD48A2-6364-40F6-B7E0-9A7B1A76A134</a:ObjectID>
 <a:Name>Ma doan khach</a:Name>
 <a:Code>MA_DOAN_KHACH</a:Code>
@@ -5500,7 +5537,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o195">
+<o:Column Id="o198">
 <a:ObjectID>F8C2AB89-3E11-4BA9-A2B2-37AB363A5486</a:ObjectID>
 <a:Name>Ma phong</a:Name>
 <a:Code>MA_PHONG</a:Code>
@@ -5510,7 +5547,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o196">
+<o:Column Id="o199">
 <a:ObjectID>C90FF485-B872-414A-986D-3B2D511A1F69</a:ObjectID>
 <a:Name>Ngay nhan phong</a:Name>
 <a:Code>NGAY_NHAN_PHONG</a:Code>
@@ -5520,7 +5557,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o197">
+<o:Column Id="o200">
 <a:ObjectID>6D6826C7-1B4A-42A1-85D1-718E029070E9</a:ObjectID>
 <a:Name>Ngay tra phong</a:Name>
 <a:Code>NGAY_TRA_PHONG</a:Code>
@@ -5530,7 +5567,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o198">
+<o:Column Id="o201">
 <a:ObjectID>3A17EFB0-FF39-44FD-B609-7B5DB3EA533E</a:ObjectID>
 <a:Name>Don gia phong</a:Name>
 <a:Code>DON_GIA_PHONG</a:Code>
@@ -5540,7 +5577,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>money</a:DataType>
 </o:Column>
-<o:Column Id="o199">
+<o:Column Id="o202">
 <a:ObjectID>8731CBC9-24EE-4CAE-A85E-BC0FA96CDBDC</a:ObjectID>
 <a:Name>Ghi chu</a:Name>
 <a:Code>GHI_CHU</a:Code>
@@ -5551,7 +5588,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o200">
+<o:Column Id="o203">
 <a:ObjectID>BB51D399-B786-434D-B5AF-F95A1A88A527</a:ObjectID>
 <a:Name>Thanh toan tien phong</a:Name>
 <a:Code>THANH_TOAN_TIEN_PHONG</a:Code>
@@ -5561,7 +5598,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>bit</a:DataType>
 </o:Column>
-<o:Column Id="o201">
+<o:Column Id="o204">
 <a:ObjectID>5FA2A3F3-7CCD-4106-969D-6A67A05A88EA</a:ObjectID>
 <a:Name>Thanh toan dich vu</a:Name>
 <a:Code>THANH_TOAN_DICH_VU</a:Code>
@@ -5571,19 +5608,20 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>bit</a:DataType>
 </o:Column>
-<o:Column Id="o202">
+<o:Column Id="o205">
 <a:ObjectID>0E2B976F-EB38-4C42-899A-BC66CF468FEF</a:ObjectID>
 <a:Name>Da tra phong</a:Name>
 <a:Code>DA_TRA_PHONG</a:Code>
 <a:CreationDate>1273905970</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273906120</a:ModificationDate>
+<a:ModificationDate>1274911405</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
+<a:DefaultValue>1</a:DefaultValue>
 <a:DataType>bit</a:DataType>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o203">
+<o:Key Id="o206">
 <a:ObjectID>4BF120A5-3FB2-4BF0-BE3F-8938A8B1F385</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5592,12 +5630,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1274185371</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o192"/>
+<o:Column Ref="o195"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o204">
+<o:Index Id="o207">
 <a:ObjectID>57FCC619-8F2A-4410-A700-995E8BD1C992</a:ObjectID>
 <a:Name>PHIEU_THUE_PHONG_PK</a:Name>
 <a:Code>PHIEU_THUE_PHONG_PK</a:Code>
@@ -5607,27 +5645,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o203"/>
+<o:Key Ref="o206"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o205">
+<o:IndexColumn Id="o208">
 <a:ObjectID>7E9BB342-34F2-4FBF-96FB-2D13F928FA8D</a:ObjectID>
 <a:CreationDate>1274185355</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185371</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o192"/>
+<o:Column Ref="o195"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o203"/>
+<o:Key Ref="o206"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o204"/>
+<o:Index Ref="o207"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o92">
@@ -5640,7 +5678,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o206">
+<o:Column Id="o209">
 <a:ObjectID>419787C9-4AB8-4880-B5AE-7918DE9434A7</a:ObjectID>
 <a:Name>So phieu</a:Name>
 <a:Code>SO_PHIEU</a:Code>
@@ -5652,7 +5690,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o207">
+<o:Column Id="o210">
 <a:ObjectID>BEA5614A-6561-494B-AAF0-691C6C237E0F</a:ObjectID>
 <a:Name>Ma doan khach</a:Name>
 <a:Code>MA_DOAN_KHACH</a:Code>
@@ -5662,7 +5700,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o208">
+<o:Column Id="o211">
 <a:ObjectID>5E535531-C7FA-4A2B-9B91-16B271259A2C</a:ObjectID>
 <a:Name>Ma ca truc</a:Name>
 <a:Code>MA_CA_TRUC</a:Code>
@@ -5672,7 +5710,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o209">
+<o:Column Id="o212">
 <a:ObjectID>1F2333C5-4D50-4542-A097-57C8F6B0DF38</a:ObjectID>
 <a:Name>Ngay phieu</a:Name>
 <a:Code>NGAY_PHIEU</a:Code>
@@ -5682,7 +5720,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o210">
+<o:Column Id="o213">
 <a:ObjectID>DD53258F-66AF-4D9D-9EAC-C2BD224D263D</a:ObjectID>
 <a:Name>So tien</a:Name>
 <a:Code>SO_TIEN</a:Code>
@@ -5692,7 +5730,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>money</a:DataType>
 </o:Column>
-<o:Column Id="o211">
+<o:Column Id="o214">
 <a:ObjectID>FA183F50-7675-4049-8F71-3CAC9633F16D</a:ObjectID>
 <a:Name>Noi dung thu</a:Name>
 <a:Code>NOI_DUNG_THU</a:Code>
@@ -5703,7 +5741,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o212">
+<o:Column Id="o215">
 <a:ObjectID>39D9311B-BA08-42F7-9613-979BA2617278</a:ObjectID>
 <a:Name>Hinh thuc thu</a:Name>
 <a:Code>HINH_THUC_THU</a:Code>
@@ -5716,7 +5754,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o213">
+<o:Key Id="o216">
 <a:ObjectID>D4F5654E-6906-4D8D-A666-D15B45B96D67</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5725,12 +5763,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273989860</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o206"/>
+<o:Column Ref="o209"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o214">
+<o:Index Id="o217">
 <a:ObjectID>0A04D024-ACEE-45AE-A51F-06A3E99E8F6B</a:ObjectID>
 <a:Name>PHIEU_THU_DOAN_KHACH_PK</a:Name>
 <a:Code>PHIEU_THU_DOAN_KHACH_PK</a:Code>
@@ -5740,27 +5778,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o213"/>
+<o:Key Ref="o216"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o215">
+<o:IndexColumn Id="o218">
 <a:ObjectID>2D179B8C-7CC0-478C-BEAE-5447A1DAFDBF</a:ObjectID>
 <a:CreationDate>1273989857</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273989860</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o206"/>
+<o:Column Ref="o209"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o213"/>
+<o:Key Ref="o216"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o214"/>
+<o:Index Ref="o217"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o93">
@@ -5773,7 +5811,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o216">
+<o:Column Id="o219">
 <a:ObjectID>080A12E3-B2DE-42CD-8315-957F5688A94F</a:ObjectID>
 <a:Name>Ma ca truc</a:Name>
 <a:Code>MA_CA_TRUC</a:Code>
@@ -5785,7 +5823,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o217">
+<o:Column Id="o220">
 <a:ObjectID>BA3C01EB-F2C4-4333-91FC-6BC640452B07</a:ObjectID>
 <a:Name>Ma thu ngân</a:Name>
 <a:Code>MA_THU_NGAN</a:Code>
@@ -5795,7 +5833,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o218">
+<o:Column Id="o221">
 <a:ObjectID>9DFA4E40-6F70-44D5-84F0-3C21C152F6EC</a:ObjectID>
 <a:Name>Gio vao ca</a:Name>
 <a:Code>GIO_VAO_CA</a:Code>
@@ -5805,7 +5843,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o219">
+<o:Column Id="o222">
 <a:ObjectID>CD0E6A96-98A6-4AD8-A377-2964C5FBE8B5</a:ObjectID>
 <a:Name>Gio xuong ca</a:Name>
 <a:Code>GIO_XUONG_CA</a:Code>
@@ -5815,7 +5853,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o220">
+<o:Column Id="o223">
 <a:ObjectID>02425A77-9B90-442E-9745-28AF4DCC68A9</a:ObjectID>
 <a:Name>Da ket toan</a:Name>
 <a:Code>DA_KET_TOAN</a:Code>
@@ -5827,7 +5865,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o221">
+<o:Key Id="o224">
 <a:ObjectID>E5BDDAC6-27CF-4450-A1D3-01DDB219A2DF</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5836,12 +5874,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273994365</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o216"/>
+<o:Column Ref="o219"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o222">
+<o:Index Id="o225">
 <a:ObjectID>B8FB7D00-B91A-4571-AF0B-5724525732E0</a:ObjectID>
 <a:Name>CA_TRUC_PK</a:Name>
 <a:Code>CA_TRUC_PK</a:Code>
@@ -5851,27 +5889,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o221"/>
+<o:Key Ref="o224"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o223">
+<o:IndexColumn Id="o226">
 <a:ObjectID>6635307F-F380-4D00-8F0E-719CDBCBD3C7</a:ObjectID>
 <a:CreationDate>1273971741</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273971775</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o216"/>
+<o:Column Ref="o219"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o221"/>
+<o:Key Ref="o224"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o222"/>
+<o:Index Ref="o225"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o94">
@@ -5884,7 +5922,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o224">
+<o:Column Id="o227">
 <a:ObjectID>E20BC65F-9880-4E84-B574-312E4A476B19</a:ObjectID>
 <a:Name>Ma thu ngân</a:Name>
 <a:Code>MA_THU_NGAN</a:Code>
@@ -5896,7 +5934,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o225">
+<o:Column Id="o228">
 <a:ObjectID>02714A86-0915-42DC-A965-3559771E68A2</a:ObjectID>
 <a:Name>Ten dang nhap</a:Name>
 <a:Code>TEN_DANG_NHAP</a:Code>
@@ -5908,7 +5946,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Length>50</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o226">
+<o:Column Id="o229">
 <a:ObjectID>D92D43FE-6D93-4696-9C15-22E6E8110C11</a:ObjectID>
 <a:Name>Mat khau</a:Name>
 <a:Code>MAT_KHAU</a:Code>
@@ -5920,7 +5958,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Length>50</a:Length>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o227">
+<o:Column Id="o230">
 <a:ObjectID>3B02D365-195B-4512-B31A-45E5E82DD971</a:ObjectID>
 <a:Name>Ho ten</a:Name>
 <a:Code>HO_TEN</a:Code>
@@ -5931,7 +5969,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o228">
+<o:Column Id="o231">
 <a:ObjectID>5FDFCC69-7A99-461C-A417-E4EB2F881FDB</a:ObjectID>
 <a:Name>Dia chi</a:Name>
 <a:Code>DIA_CHI</a:Code>
@@ -5942,7 +5980,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o229">
+<o:Column Id="o232">
 <a:ObjectID>2B4F0942-ED84-4D88-B6FB-D189C3E0F854</a:ObjectID>
 <a:Name>Dien thoai</a:Name>
 <a:Code>DIEN_THOAI</a:Code>
@@ -5955,7 +5993,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o230">
+<o:Key Id="o233">
 <a:ObjectID>31639973-3DC7-4A0D-BE16-82D682A37FED</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -5964,12 +6002,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273989529</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o224"/>
+<o:Column Ref="o227"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o231">
+<o:Index Id="o234">
 <a:ObjectID>024B3145-64F7-4893-A704-EE99F41E9F79</a:ObjectID>
 <a:Name>THU_NGAN_PK</a:Name>
 <a:Code>THU_NGAN_PK</a:Code>
@@ -5979,27 +6017,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o230"/>
+<o:Key Ref="o233"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o232">
+<o:IndexColumn Id="o235">
 <a:ObjectID>2928CEB7-6C29-4E21-ACBF-B79B3DB89F21</a:ObjectID>
 <a:CreationDate>1273989523</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273989529</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o224"/>
+<o:Column Ref="o227"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o230"/>
+<o:Key Ref="o233"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o231"/>
+<o:Index Ref="o234"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o95">
@@ -6012,7 +6050,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o233">
+<o:Column Id="o236">
 <a:ObjectID>D60C56AC-2305-41ED-B723-D32B0FA133CB</a:ObjectID>
 <a:Name>So phieu</a:Name>
 <a:Code>SO_PHIEU</a:Code>
@@ -6024,7 +6062,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o234">
+<o:Column Id="o237">
 <a:ObjectID>CC92BBFF-5188-45E6-9C04-538A35A3CF57</a:ObjectID>
 <a:Name>Ma phieu</a:Name>
 <a:Code>MA_PHIEU</a:Code>
@@ -6034,7 +6072,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o235">
+<o:Column Id="o238">
 <a:ObjectID>812F9E72-524C-41D3-A9F6-26CEF04254C1</a:ObjectID>
 <a:Name>Ma dich vu</a:Name>
 <a:Code>MA_DICH_VU</a:Code>
@@ -6044,7 +6082,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o236">
+<o:Column Id="o239">
 <a:ObjectID>59431D38-9C09-4037-9647-33B38795192A</a:ObjectID>
 <a:Name>Ngay phuc vu</a:Name>
 <a:Code>NGAY_PHUC_VU</a:Code>
@@ -6054,7 +6092,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o237">
+<o:Column Id="o240">
 <a:ObjectID>5C5D6932-CD7A-48DB-96E0-A8719A419ACB</a:ObjectID>
 <a:Name>So luong</a:Name>
 <a:Code>SO_LUONG</a:Code>
@@ -6064,7 +6102,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o238">
+<o:Column Id="o241">
 <a:ObjectID>9DBF758E-FD65-447B-9203-33F736637C08</a:ObjectID>
 <a:Name>Ghi chu</a:Name>
 <a:Code>GHI_CHU</a:Code>
@@ -6077,7 +6115,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o239">
+<o:Key Id="o242">
 <a:ObjectID>99F2E2A8-AFEB-4E18-B6D6-837E6A5315DB</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -6086,12 +6124,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273989265</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o233"/>
+<o:Column Ref="o236"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o240">
+<o:Index Id="o243">
 <a:ObjectID>20BFEC64-A06D-4D5A-B978-87F8D6EBF84E</a:ObjectID>
 <a:Name>DANG_KY_DICH_VU_PK</a:Name>
 <a:Code>DANG_KY_DICH_VU_PK</a:Code>
@@ -6101,27 +6139,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o239"/>
+<o:Key Ref="o242"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o241">
+<o:IndexColumn Id="o244">
 <a:ObjectID>82051DBE-C4C0-4CA9-B8E7-D93FEA7EF9E3</a:ObjectID>
 <a:CreationDate>1273989260</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273989265</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o233"/>
+<o:Column Ref="o236"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o239"/>
+<o:Key Ref="o242"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o240"/>
+<o:Index Ref="o243"/>
 </c:ClusterObject>
 </o:Table>
 <o:Table Id="o96">
@@ -6134,7 +6172,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:TotalSavingCurrency/>
 <c:Columns>
-<o:Column Id="o242">
+<o:Column Id="o245">
 <a:ObjectID>BE0F98E7-AB4B-43C1-9E5E-2FD542F88A63</a:ObjectID>
 <a:Name>So phieu</a:Name>
 <a:Code>SO_PHIEU</a:Code>
@@ -6146,7 +6184,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Identity>1</a:Identity>
 <a:Mandatory>1</a:Mandatory>
 </o:Column>
-<o:Column Id="o243">
+<o:Column Id="o246">
 <a:ObjectID>E503B96A-D6A1-4E19-9CCE-53E7A76EF25C</a:ObjectID>
 <a:Name>Ma Khach Hang</a:Name>
 <a:Code>MA_KHACH_HANG</a:Code>
@@ -6156,7 +6194,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>cddthd</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o244">
+<o:Column Id="o247">
 <a:ObjectID>EC15B222-7FC7-496D-B2A1-45B4E7A768B8</a:ObjectID>
 <a:Name>Ma ca truc</a:Name>
 <a:Code>MA_CA_TRUC</a:Code>
@@ -6166,7 +6204,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
 </o:Column>
-<o:Column Id="o245">
+<o:Column Id="o248">
 <a:ObjectID>E1C5AFF7-4643-463D-AE57-B651A215EB2B</a:ObjectID>
 <a:Name>Ngay phieu</a:Name>
 <a:Code>NGAY_PHIEU</a:Code>
@@ -6176,7 +6214,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
 </o:Column>
-<o:Column Id="o246">
+<o:Column Id="o249">
 <a:ObjectID>AE6E757E-C8AA-4535-A254-50BD505DBE7C</a:ObjectID>
 <a:Name>So tien</a:Name>
 <a:Code>SO_TIEN</a:Code>
@@ -6186,7 +6224,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>money</a:DataType>
 </o:Column>
-<o:Column Id="o247">
+<o:Column Id="o250">
 <a:ObjectID>E46CD981-D0D2-479D-ABB2-9E34D8F8FE7C</a:ObjectID>
 <a:Name>Noi dung thu</a:Name>
 <a:Code>NOI_DUNG_THU</a:Code>
@@ -6197,7 +6235,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
 </o:Column>
-<o:Column Id="o248">
+<o:Column Id="o251">
 <a:ObjectID>372CF107-9400-4BCF-9772-2BB62EA84500</a:ObjectID>
 <a:Name>Hinh thuc thu</a:Name>
 <a:Code>HINH_THUC_THU</a:Code>
@@ -6210,7 +6248,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Column>
 </c:Columns>
 <c:Keys>
-<o:Key Id="o249">
+<o:Key Id="o252">
 <a:ObjectID>86A435CA-5489-4F60-9609-1ED93C93AC80</a:ObjectID>
 <a:Name>Cle_1</a:Name>
 <a:Code>CLE_1</a:Code>
@@ -6219,12 +6257,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1273990153</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Key.Columns>
-<o:Column Ref="o242"/>
+<o:Column Ref="o245"/>
 </c:Key.Columns>
 </o:Key>
 </c:Keys>
 <c:Indexes>
-<o:Index Id="o250">
+<o:Index Id="o253">
 <a:ObjectID>57E0CE93-0CCD-4518-BC6C-B74269529785</a:ObjectID>
 <a:Name>PHIEU_THU_KHACH_HANG_PK</a:Name>
 <a:Code>PHIEU_THU_KHACH_HANG_PK</a:Code>
@@ -6234,27 +6272,27 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Administrator</a:Modifier>
 <a:Unique>1</a:Unique>
 <c:LinkedObject>
-<o:Key Ref="o249"/>
+<o:Key Ref="o252"/>
 </c:LinkedObject>
 <c:IndexColumns>
-<o:IndexColumn Id="o251">
+<o:IndexColumn Id="o254">
 <a:ObjectID>112645D3-873F-4D16-81BF-9287DEF4AB49</a:ObjectID>
 <a:CreationDate>1273990149</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1273990153</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Column>
-<o:Column Ref="o242"/>
+<o:Column Ref="o245"/>
 </c:Column>
 </o:IndexColumn>
 </c:IndexColumns>
 </o:Index>
 </c:Indexes>
 <c:PrimaryKey>
-<o:Key Ref="o249"/>
+<o:Key Ref="o252"/>
 </c:PrimaryKey>
 <c:ClusterObject>
-<o:Index Ref="o250"/>
+<o:Index Ref="o253"/>
 </c:ClusterObject>
 </o:Table>
 </c:Tables>
@@ -6275,17 +6313,17 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o78"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o110"/>
+<o:Key Ref="o111"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o252">
+<o:ReferenceJoin Id="o255">
 <a:ObjectID>209EA041-D262-4CF4-ADB2-50AE72B4E5AC</a:ObjectID>
 <a:CreationDate>1274181252</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274181252</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o108"/>
+<o:Column Ref="o109"/>
 </c:Object1>
 <c:Object2>
 <o:Column Ref="o99"/>
@@ -6309,10 +6347,10 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o87"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o253">
+<o:ReferenceJoin Id="o256">
 <a:ObjectID>6AF226A0-D58D-4878-B7D7-1EE93D9508F3</a:ObjectID>
 <a:CreationDate>1274181872</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
@@ -6322,7 +6360,7 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Column Ref="o98"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o165"/>
+<o:Column Ref="o168"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6343,20 +6381,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o87"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o134"/>
+<o:Key Ref="o137"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o254">
+<o:ReferenceJoin Id="o257">
 <a:ObjectID>88ADE8CB-5B74-4076-94B3-10ACC266FD98</a:ObjectID>
 <a:CreationDate>1274181963</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274181963</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o131"/>
+<o:Column Ref="o133"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o166"/>
+<o:Column Ref="o169"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6377,20 +6415,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o86"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o154"/>
+<o:Key Ref="o157"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o255">
+<o:ReferenceJoin Id="o258">
 <a:ObjectID>2A65DCD9-739B-44FA-8EAD-58747AAAAE91</a:ObjectID>
 <a:CreationDate>1274183376</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274183376</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o152"/>
+<o:Column Ref="o155"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o159"/>
+<o:Column Ref="o162"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6411,10 +6449,10 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o90"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o256">
+<o:ReferenceJoin Id="o259">
 <a:ObjectID>5F1E9C55-AE4F-4644-B415-A7D2874A46C9</a:ObjectID>
 <a:CreationDate>1274183880</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
@@ -6424,7 +6462,7 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Column Ref="o98"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o186"/>
+<o:Column Ref="o189"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6445,20 +6483,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o89"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o142"/>
+<o:Key Ref="o145"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o257">
+<o:ReferenceJoin Id="o260">
 <a:ObjectID>310FD6EF-2499-48CA-AA61-902C595BC3E4</a:ObjectID>
 <a:CreationDate>1274184072</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184072</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o137"/>
+<o:Column Ref="o140"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o181"/>
+<o:Column Ref="o184"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6479,20 +6517,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o89"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o128"/>
+<o:Key Ref="o130"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o258">
+<o:ReferenceJoin Id="o261">
 <a:ObjectID>CD0A6D8A-306E-4291-B494-5E0471A52E91</a:ObjectID>
 <a:CreationDate>1274184074</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184074</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o126"/>
+<o:Column Ref="o128"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o180"/>
+<o:Column Ref="o183"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6513,20 +6551,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o88"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o168"/>
+<o:Key Ref="o171"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o259">
+<o:ReferenceJoin Id="o262">
 <a:ObjectID>8E792048-94AB-4680-A514-CF89520FE3D9</a:ObjectID>
 <a:CreationDate>1274184374</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184374</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o164"/>
+<o:Column Ref="o167"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o171"/>
+<o:Column Ref="o174"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6547,20 +6585,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o88"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o142"/>
+<o:Key Ref="o145"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o260">
+<o:ReferenceJoin Id="o263">
 <a:ObjectID>BF5CF0AD-B70E-4C49-8CB5-E0783CBED8A7</a:ObjectID>
 <a:CreationDate>1274184377</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184377</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o137"/>
+<o:Column Ref="o140"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o172"/>
+<o:Column Ref="o175"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6581,20 +6619,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o82"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o123"/>
+<o:Key Ref="o125"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o261">
+<o:ReferenceJoin Id="o264">
 <a:ObjectID>0893C2B4-0B26-4C9A-8509-39D5E354CC87</a:ObjectID>
 <a:CreationDate>1274184494</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274184494</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o113"/>
+<o:Column Ref="o114"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o132"/>
+<o:Column Ref="o134"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6615,10 +6653,10 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o91"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o262">
+<o:ReferenceJoin Id="o265">
 <a:ObjectID>D64BDCBF-DDFE-47DF-8CCD-38B29E709527</a:ObjectID>
 <a:CreationDate>1274185276</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
@@ -6628,7 +6666,7 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Column Ref="o98"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o193"/>
+<o:Column Ref="o196"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6649,20 +6687,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o91"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o134"/>
+<o:Key Ref="o137"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o263">
+<o:ReferenceJoin Id="o266">
 <a:ObjectID>D26040C8-DDAE-4390-9A85-E4AEBA20F00C</a:ObjectID>
 <a:CreationDate>1274185278</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185278</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o131"/>
+<o:Column Ref="o133"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o194"/>
+<o:Column Ref="o197"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6683,20 +6721,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o91"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o161"/>
+<o:Key Ref="o164"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o264">
+<o:ReferenceJoin Id="o267">
 <a:ObjectID>C5DF603F-706B-4CFC-8F69-35BAE2A49CAE</a:ObjectID>
 <a:CreationDate>1274185281</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185281</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o157"/>
+<o:Column Ref="o160"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o195"/>
+<o:Column Ref="o198"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6717,20 +6755,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o95"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o203"/>
+<o:Key Ref="o206"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o265">
+<o:ReferenceJoin Id="o268">
 <a:ObjectID>6ED84E3A-4CF1-4A28-A533-F99D4133B647</a:ObjectID>
 <a:CreationDate>1274185475</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185475</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o192"/>
+<o:Column Ref="o195"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o234"/>
+<o:Column Ref="o237"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6751,20 +6789,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o95"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o149"/>
+<o:Key Ref="o152"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o266">
+<o:ReferenceJoin Id="o269">
 <a:ObjectID>79F6B27A-CDCC-4CB1-B83F-8F000DD2F695</a:ObjectID>
 <a:CreationDate>1274185579</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185579</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o145"/>
+<o:Column Ref="o148"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o235"/>
+<o:Column Ref="o238"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6785,20 +6823,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o93"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o230"/>
+<o:Key Ref="o233"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o267">
+<o:ReferenceJoin Id="o270">
 <a:ObjectID>85C5DAAF-83B1-4644-9592-40A2DB9E5909</a:ObjectID>
 <a:CreationDate>1274185679</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185679</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o224"/>
+<o:Column Ref="o227"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o217"/>
+<o:Column Ref="o220"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6819,20 +6857,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o96"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o221"/>
+<o:Key Ref="o224"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o268">
+<o:ReferenceJoin Id="o271">
 <a:ObjectID>70C5D4DE-08EB-440F-8640-4FAB2C65F302</a:ObjectID>
 <a:CreationDate>1274185786</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185786</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o216"/>
+<o:Column Ref="o219"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o244"/>
+<o:Column Ref="o247"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6853,20 +6891,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o92"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o134"/>
+<o:Key Ref="o137"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o269">
+<o:ReferenceJoin Id="o272">
 <a:ObjectID>80073BC7-07F1-48DE-9E0F-673F92634E93</a:ObjectID>
 <a:CreationDate>1274185936</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185936</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o131"/>
+<o:Column Ref="o133"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o207"/>
+<o:Column Ref="o210"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6887,20 +6925,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o92"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o221"/>
+<o:Key Ref="o224"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o270">
+<o:ReferenceJoin Id="o273">
 <a:ObjectID>8BCF57C2-7E85-442C-8FAF-DB4CC0B5DA7B</a:ObjectID>
 <a:CreationDate>1274185937</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274185937</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o216"/>
+<o:Column Ref="o219"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o208"/>
+<o:Column Ref="o211"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6921,10 +6959,10 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o80"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o271">
+<o:ReferenceJoin Id="o274">
 <a:ObjectID>CF3C9AC2-39EE-4BDB-8D39-78DC7673C699</a:ObjectID>
 <a:CreationDate>1274187129</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
@@ -6934,7 +6972,7 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Column Ref="o98"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o116"/>
+<o:Column Ref="o117"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6955,20 +6993,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o80"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o110"/>
+<o:Key Ref="o111"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o272">
+<o:ReferenceJoin Id="o275">
 <a:ObjectID>D383A3B5-D080-4538-AFDB-35501FEFC372</a:ObjectID>
 <a:CreationDate>1274187157</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274187157</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o108"/>
+<o:Column Ref="o109"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o115"/>
+<o:Column Ref="o116"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -6989,20 +7027,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o86"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o142"/>
+<o:Key Ref="o145"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o273">
+<o:ReferenceJoin Id="o276">
 <a:ObjectID>8A1AA1BC-FC3E-480B-B14F-B7CE979D5F0E</a:ObjectID>
 <a:CreationDate>1274187306</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1274187306</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <c:Object1>
-<o:Column Ref="o137"/>
+<o:Column Ref="o140"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o158"/>
+<o:Column Ref="o161"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -7023,20 +7061,20 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o90"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o203"/>
+<o:Key Ref="o206"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o274">
+<o:ReferenceJoin Id="o277">
 <a:ObjectID>6FB157A7-5188-4290-8B70-6249C399A04E</a:ObjectID>
 <a:CreationDate>1274430819</a:CreationDate>
 <a:Creator>cddthd</a:Creator>
 <a:ModificationDate>1274430819</a:ModificationDate>
 <a:Modifier>cddthd</a:Modifier>
 <c:Object1>
-<o:Column Ref="o192"/>
+<o:Column Ref="o195"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o187"/>
+<o:Column Ref="o190"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
@@ -7057,10 +7095,10 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Table Ref="o96"/>
 </c:ChildTable>
 <c:ParentKey>
-<o:Key Ref="o105"/>
+<o:Key Ref="o106"/>
 </c:ParentKey>
 <c:Joins>
-<o:ReferenceJoin Id="o275">
+<o:ReferenceJoin Id="o278">
 <a:ObjectID>86AF4660-6FCC-41EA-ACF7-EB20D4DA0AB1</a:ObjectID>
 <a:CreationDate>1274440474</a:CreationDate>
 <a:Creator>cddthd</a:Creator>
@@ -7070,14 +7108,14 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Column Ref="o98"/>
 </c:Object1>
 <c:Object2>
-<o:Column Ref="o243"/>
+<o:Column Ref="o246"/>
 </c:Object2>
 </o:ReferenceJoin>
 </c:Joins>
 </o:Reference>
 </c:References>
 <c:DefaultGroups>
-<o:Group Id="o276">
+<o:Group Id="o279">
 <a:ObjectID>40693780-5D0E-4E6B-BBF4-942F0DD15561</a:ObjectID>
 <a:Name>PUBLIC</a:Name>
 <a:Code>PUBLIC</a:Code>
@@ -7088,7 +7126,7 @@ LABL 0 Arial,8,N</a:FontList>
 </o:Group>
 </c:DefaultGroups>
 <c:TargetModels>
-<o:TargetModel Id="o277">
+<o:TargetModel Id="o280">
 <a:ObjectID>43E4CDF0-5FBA-4A2F-98EB-269B8B0B3EBD</a:ObjectID>
 <a:Name>Microsoft SQL Server 2005</a:Name>
 <a:Code>MSSQLSRV2005</a:Code>
@@ -7108,7 +7146,7 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Shortcut Ref="o9"/>
 </c:SessionShortcuts>
 </o:TargetModel>
-<o:TargetModel Id="o278">
+<o:TargetModel Id="o281">
 <a:ObjectID>AF6B3DDC-E604-4DD8-A506-2F38A1CE957B</a:ObjectID>
 <a:Name>MHYNQLKS</a:Name>
 <a:Code>MHYNQLKS</a:Code>

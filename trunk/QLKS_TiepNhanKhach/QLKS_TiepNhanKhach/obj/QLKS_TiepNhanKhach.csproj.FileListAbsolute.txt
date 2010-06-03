@@ -142,3 +142,24 @@ C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach
 C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.CapNhatDoanKhach_UI.resources
 C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.CapNhatDoanKhachChiTiet_UI.resources
 C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.CapNhatDoanKhachChiTiet_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Release\QLKS_TiepNhanKhach.exe.config
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.exe
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.pdb
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\ResolveAssemblyReference.cache
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_CapNhatKhachHang.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_CapNhatPhong.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_DatPhong.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_Main.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_CapNhatDoanKhach.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_Connect.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Properties.Resources.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.CapNhatCongTy_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.CapNhatDoanKhachChiTiet_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.CapNhatDoanKhach_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.CapNhatKhachHang_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.CapNhatPhong_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.DatPhong_UI.resources
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.csproj.GenerateResource.Cache
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.exe.licenses
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Release\QLKS_TiepNhanKhach.exe
+E:\Hieu\Temp\Etak_QLKS\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\bin\Release\QLKS_TiepNhanKhach.pdb
