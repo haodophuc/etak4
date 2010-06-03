@@ -52,13 +52,13 @@
             this.menuSM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemRunSM});
             this.menuSM.Name = "menuSM";
-            this.menuSM.Size = new System.Drawing.Size(107, 20);
+            this.menuSM.Size = new System.Drawing.Size(97, 20);
             this.menuSM.Text = "Quản Lý Dịch Vụ";
             // 
             // menuItemRunSM
             // 
             this.menuItemRunSM.Name = "menuItemRunSM";
-            this.menuItemRunSM.Size = new System.Drawing.Size(103, 22);
+            this.menuItemRunSM.Size = new System.Drawing.Size(104, 22);
             this.menuItemRunSM.Text = "Run";
             this.menuItemRunSM.Click += new System.EventHandler(this.menuItemRunSM_Click);
             // 
@@ -67,13 +67,13 @@
             this.menuSR.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemRunSR});
             this.menuSR.Name = "menuSR";
-            this.menuSR.Size = new System.Drawing.Size(198, 20);
+            this.menuSR.Size = new System.Drawing.Size(178, 20);
             this.menuSR.Text = "Đăng Ký Dịch Vụ cho Khách Hàng";
             // 
             // menuItemRunSR
             // 
             this.menuItemRunSR.Name = "menuItemRunSR";
-            this.menuItemRunSR.Size = new System.Drawing.Size(103, 22);
+            this.menuItemRunSR.Size = new System.Drawing.Size(104, 22);
             this.menuItemRunSR.Text = "Run";
             this.menuItemRunSR.Click += new System.EventHandler(this.menuItemRunSR_Click);
             // 
@@ -87,6 +87,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Khách Sạn - Module Quản Lý Dịch Vụ";
             this.Load += new System.EventHandler(this.MainForm_Enter);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
             this.ResumeLayout(false);

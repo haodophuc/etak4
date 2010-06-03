@@ -23,7 +23,7 @@ namespace QLKS_DichVu.UI
                                ";database=" + txtDBName.Text +
                                ";uid=" + txtUserName.Text +
                                ";pwd=" + txtPassword.Text;                    
-
+            /*
             try {
                 Program.DBConnection = new DBConnection(connectionString);
                 Program.DBConnection.Connect();
@@ -33,7 +33,23 @@ namespace QLKS_DichVu.UI
             catch( Exception exception ) {
                 MessageBox.Show(exception.Message, "Error Encountered", MessageBoxButtons.OK);
             }// end catch;
-            
+            */
+
+
+
+            /////////// Hieu's //////////////
+            try
+            {
+                Program.DBConnection.Connect();
+                Program.DBConnection.Disconnect();
+                ServicesOrderForm serviceOrderForm = new ServicesOrderForm(this);
+                serviceOrderForm.Show();                
+                this.Hide();
+            }// end try
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error Encountered", MessageBoxButtons.OK);
+            }// end catch;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

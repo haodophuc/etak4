@@ -10,9 +10,11 @@ namespace QLKS_DichVu.UI
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        
+        public MainForm(LoginForm loginForm)
         {
             InitializeComponent();
+            
         }
 
         private void menuItemRunSM_Click(object sender, EventArgs e)
@@ -24,7 +26,9 @@ namespace QLKS_DichVu.UI
 
         private void menuItemRunSR_Click(object sender, EventArgs e)
         {
-            //ServiceOrderForm so = new ServiceOrderForm();
+            ServicesOrderForm so = new ServicesOrderForm();
+            so.MdiParent = this;
+            so.Show();
         }
 
         private void MainForm_Enter(object sender, EventArgs e)
@@ -32,6 +36,11 @@ namespace QLKS_DichVu.UI
             LoginForm loginForm = new LoginForm();
             loginForm.MdiParent = this;
             loginForm.Show();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
 
 
