@@ -19,7 +19,7 @@ namespace QLKS_TiepNhanKhach.UI
         {
             InitializeComponent();
             LoadComboBoxQuocGia();
-            AcceptButton = btt_Search;
+          
         }
 
         private void btt_Search_Click(object sender, EventArgs e)
@@ -76,126 +76,11 @@ namespace QLKS_TiepNhanKhach.UI
             return khachHangVO;
         }
 
-        private void txt_MaKhachHang_TextChanged(object sender, EventArgs e)
+       
+
+        private void btt_Cancel_Click(object sender, EventArgs e)
         {
-            //nothing to do
-        }
-
-        private void Checkbox_Validate(object sender, EventArgs e)
-        {
-            int numOfCheckBoxes = panelControl2.Controls.Count;
-            int checkedBoxes = 0;
-            for (int i = 0; i < numOfCheckBoxes; i++) {
-                if (panelControl2.Controls[i] is CheckEdit)
-                {
-                    CheckEdit checkbox = (CheckEdit)panelControl2.Controls[i];
-                    if (checkbox.Checked)
-                        checkedBoxes++;
-                }//end if control is CheckEdit
-            }//end for
-
-            if (checkedBoxes != 0)
-                btt_Search.Enabled = true;
-            else
-                btt_Search.Enabled = false;
-        }//end method Checkbox_Validate
-
-        public SimpleButton AcceptButton
-        {
-            get { return this.acceptButton; }
-            set { this.acceptButton = value; }
-        }//end attribute AcceptButotn
-
-        private SimpleButton acceptButton;
-
-        private void grdCtrlKhachHang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelControl3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbo_QuocGia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk_HoKhachHang_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_MaKhachHang_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk_TenKhachHang_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_HoChieu_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk_DienThoai_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_HoKhachHang_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk_MaQG_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_DienThoai_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk_CMND_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_SoCMND_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk_HoCHieu_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_TenKhachHang_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void chk_MaKhachHang_CheckedChanged(object sender, EventArgs e)
-        {
-
+            this.ParentForm.Dispose();
         }
     }
 }

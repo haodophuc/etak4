@@ -76,6 +76,12 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             }
         }
+        public DataTable GetCongTyByIndicator(CongtyVO congtyVO, bool bMaCT, bool bMaQG, bool bMNDD, bool bTenCT, bool bDiaChi,bool bDienThoai, bool bEmail, bool bFax,bool bSoTaiKhoan,bool bMaSoThue)
+        {
+            return congtyDAO.SearchByIndicator(congtyVO, bMaCT, bMaQG, bMNDD, bTenCT, bDiaChi, bDienThoai, bEmail, bFax, bSoTaiKhoan, bMaSoThue);
+        }
+
+        
        #endregion
     }
 }
