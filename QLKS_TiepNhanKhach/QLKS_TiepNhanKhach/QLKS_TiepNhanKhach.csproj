@@ -266,6 +266,9 @@
     <Compile Include="UI\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TextBoxCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\TraCuuKhachHangUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
