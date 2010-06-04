@@ -107,35 +107,95 @@ namespace QLKS_TiepNhanKhach.UI
         }//end attribute AcceptButotn
 
         private SimpleButton acceptButton;
-    }
-}
-     /*   private KhachHangVO GetKhachHangVO()
+
+        private void grdCtrlKhachHang_Click(object sender, EventArgs e)
         {
-            KhachHangVO khachHangVO = new KhachHangVO();
-            khachHangVO.MA_KHACH_HANG = int.Parse(txt_MaKhachHang.Text.Substring(2));
-            khachHangVO.MA_QUOC_GIA = int.Parse(cbo_QuocGia.SelectedValue.ToString());
-            khachHangVO.HO_KHACH_HANG = txt_HoKhachHang.Text;
-            khachHangVO.TEN_KHACH_HANG = txt_TenKhachHang.Text;
-            khachHangVO.CMND = txt_TenKhachHang.Text;
-            khachHangVO.HO_CHIEU = txt_HoChieu.Text;
-            khachHangVO.DIEN_THOAI = txt_DienThoai.Text;
-            khachHangVO.HIEU_LUC = true;
-            return khachHangVO;
+
         }
 
-   private void LoadComboBoxQuocGia()
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
         {
-            try
-            {
-                DataTable dtTableQG = new DataTable();
-                dtTableQG = quocGiaBUS.GetAll();
 
-                cbo_QuocGia.DataSource = dtTableQG;
-                cbo_QuocGia.DisplayMember = "TEN_QUOC_GIA";
-                cbo_QuocGia.ValueMember = "MA_QUOC_GIA";
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
+        }
+
+        private void panelControl3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbo_QuocGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_HoKhachHang_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_MaKhachHang_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_TenKhachHang_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_HoChieu_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_DienThoai_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_HoKhachHang_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_MaQG_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_DienThoai_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_CMND_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_SoCMND_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_HoCHieu_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TenKhachHang_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chk_MaKhachHang_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
