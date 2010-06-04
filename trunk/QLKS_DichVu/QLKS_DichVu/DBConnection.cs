@@ -151,6 +151,28 @@ namespace QLKS_DichVu
             return result;
         }//end method ExecuteScalar
 
+        public int ExecuteScalar(String query)
+        {
+            int result = 0;
+            try
+            {
+                Connect();
+                Command = new SqlCommand(query, Connection);
+                result = (Int32)Command.ExecuteScalar();
+            }//end try
+            catch (SqlException e)
+            {
+                throw e;
+            }//end catch
+            finally
+            {
+                Command.Dispose();
+                Disconnect();
+            }//end finally
+
+            return result;    
+        }
+
        #endregion //end region Methods
         
        #region Attributes
