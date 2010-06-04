@@ -22,5 +22,6 @@ namespace QLKS_TiepNhanKhach
             this.Controls.Add(tracuukhachhangUI);
             tracuukhachhangUI.Dock = DockStyle.Fill;
         }
+       
     }
 }

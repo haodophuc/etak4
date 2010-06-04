@@ -167,3 +167,9 @@ C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach
 C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_TraCuuThongTinKhachHang.resources
 C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_TraCuuThongTinKhachHang.resources
 C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.TraCuuKhachHangUI.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.UI.TimkiemvaChonKhachHangUI.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.UI.TimkiemvaChonKhachHangUI.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_TimKiemVaChonKhachHang.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Release\QLKS_TiepNhanKhach.Form_DemoSelect.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_DemoSelect.resources
+C:\Documents and Settings\Administrator\Desktop\Group Project\QLKS_TiepNhanKhach\QLKS_TiepNhanKhach\obj\Debug\QLKS_TiepNhanKhach.Form_TimKiemVaChonKhachHang.resources
