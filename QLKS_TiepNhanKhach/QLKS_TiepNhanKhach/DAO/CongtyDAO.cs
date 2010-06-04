@@ -111,6 +111,73 @@ namespace QLKS_TiepNhanKhach.DAO
             }
         }
 
+        public DataTable SearchByIndicator(CongtyVO congtyVO, bool bMaCT, bool bMaQG, bool bMNDD, bool bTenCT, bool bDiaChi,bool bDienThoai, bool bEmail, bool bFax,bool bSoTaiKhoan,bool bMaSoThue)
+        {
+
+            string query = " SELECT 'CT' + REPLACE(STR(MA_CONG_TY,4),' ','0') AS MaCT," +
+                                "'QG' + REPLACE(STR(MA_QUOC_GIA,2),' ','0') AS MaQG," +
+                                "'KH' + REPLACE(STR(MA_NGUOI_DAI_DIEN,4),' ','0') AS MaKH," +
+                                "TEN_CONG_TY,DIA_CHI,DIEN_THOAI,EMAIL,FAX,SO_TAI_KHOAN,MA_SO_THUE " +
+                                "FROM CONG_TY " +
+                                "WHERE HIEU_LUC = '1'";
+            if (bMaCT)
+            {
+                query = query + " AND MA_CONG_TY = @MA_CONG_TY";
+            }
+            if (bMaQG)
+            {
+                query = query + " AND MA_QUOC_GIA = @MA_QUOC_GIA";
+            }
+            if (bMNDD)
+            {
+                query = query + " AND MA_NGUOI_DAI_DIEN = @MA_NGUOI_DAI_DIEN";
+            }
+            if (bTenCT)
+            {
+                query = query + " AND TEN_CONG_TY = @TEN_CONG_TY";
+            }
+            if (bDiaChi)
+            {
+                query = query + " AND DIA_CHI = @DIA_CHI";
+
+            }
+            if (bDienThoai)
+            {
+                query = query + " AND DIEN_THOAI = @DIEN_THOAI";
+            }
+
+            if (bEmail)
+            {
+                query = query + " AND EMAIL = @EMAIL";
+            }
+            if (bFax)
+            {
+                query = query + " AND FAX = @FAX";
+            }
+            if (bSoTaiKhoan)
+            {
+                query = query + " AND SO_TAI_KHOAN = @SO_TAI_KHOAN";
+            }
+            if (bMaSoThue)
+            {
+                query = query + " AND MA_SO_THUE = @MA_SO_THUE";
+            }
+            
+            SqlParameter[] sqlParameters = new SqlParameter[10];
+            sqlParameters[0] = new SqlParameter("@MA_CONG_TY", congtyVO.MA_CONG_TY);
+            sqlParameters[1] = new SqlParameter("@MA_QUOC_GIA", congtyVO.MA_QUOC_GIA);
+            sqlParameters[2] = new SqlParameter("@MA_NGUOI_DAI_DIEN", congtyVO.MA_NGUOI_DAI_DIEN);
+            sqlParameters[3] = new SqlParameter("@TEN_CONG_TY", congtyVO.TEN_CONG_TY);
+            sqlParameters[4] = new SqlParameter("@DIA_CHI", congtyVO.DIA_CHI);
+            sqlParameters[5] = new SqlParameter("@DIEN_THOAI", congtyVO.DIEN_THOAI);
+            sqlParameters[6] = new SqlParameter("@EMAIL", congtyVO.EMAIL);
+            sqlParameters[7] = new SqlParameter("@FAX", congtyVO.FAX);
+            sqlParameters[8] = new SqlParameter("@SO_TAI_KHOAN", congtyVO.SO_TAI_KHOAN);
+            sqlParameters[9] = new SqlParameter("@MA_SO_THUE", congtyVO.MA_SO_THUE);
+
+            return Program.dbConnection.ExecuteSelectQuery(query, sqlParameters);
+        }
+
 
     }
 }

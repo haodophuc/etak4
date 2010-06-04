@@ -108,6 +108,18 @@
     <Compile Include="DAO\QuocGiaDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form\Form_TimKiemVaChonCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TimKiemVaChonCongTy.Designer.cs">
+      <DependentUpon>Form_TimKiemVaChonCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_TimKiemVaChonDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TimKiemVaChonDoanKhach.Designer.cs">
+      <DependentUpon>Form_TimKiemVaChonDoanKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Form_CapNhatKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +174,29 @@
     <Compile Include="Form\Form_TimKiemVaChonKhachHang.Designer.cs">
       <DependentUpon>Form_TimKiemVaChonKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Form_TraCuuThongTinCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TraCuuThongTinCongTy.Designer.cs">
+      <DependentUpon>Form_TraCuuThongTinCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form_TraCuuThongTinDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TraCuuThongTinDoanKhach.Designer.cs">
+      <DependentUpon>Form_TraCuuThongTinDoanKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\Form_TimKiemVaChonCongTy.resx">
+      <DependentUpon>Form_TimKiemVaChonCongTy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_TimKiemVaChonDoanKhach.resx">
+      <DependentUpon>Form_TimKiemVaChonDoanKhach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Form_CapNhatKhachHang.resx">
       <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -201,10 +233,26 @@
       <SubType>Designer</SubType>
       <DependentUpon>Form_TimKiemVaChonKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_TraCuuThongTinCongTy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TraCuuThongTinCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_TraCuuThongTinDoanKhach.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TraCuuThongTinDoanKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TimkiemvaChonCongTyUI.resx">
+      <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TimkiemvaChonDoanKhachUI.resx">
+      <DependentUpon>TimkiemvaChonDoanKhachUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CapNhatCongTy_UI.resx">
@@ -231,9 +279,17 @@
       <SubType>Designer</SubType>
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TraCuuCongTyUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TraCuuCongTyUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TimkiemvaChonKhachHangUI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>TimkiemvaChonKhachHangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TraCuuDoanKhachUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TraCuuDoanKhachUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TraCuuKhachHangUI.resx">
       <SubType>Designer</SubType>
@@ -253,6 +309,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\TimkiemvaChonCongTyUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TimkiemvaChonCongTyUI.Designer.cs">
+      <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TimkiemvaChonDoanKhachUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TimkiemvaChonDoanKhachUI.Designer.cs">
+      <DependentUpon>TimkiemvaChonDoanKhachUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CapNhatCongTy_UI.cs">
       <SubType>UserControl</SubType>
@@ -290,6 +358,12 @@
     <Compile Include="UI\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TraCuuCongTyUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TraCuuCongTyUI.Designer.cs">
+      <DependentUpon>TraCuuCongTyUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TimkiemvaChonKhachHangUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -298,6 +372,12 @@
     </Compile>
     <Compile Include="UI\TextBoxCustomer.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\TraCuuDoanKhachUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TraCuuDoanKhachUI.Designer.cs">
+      <DependentUpon>TraCuuDoanKhachUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TraCuuKhachHangUI.cs">
       <SubType>UserControl</SubType>
