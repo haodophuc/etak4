@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -22,19 +22,20 @@ namespace QLKS_TiepNhanKhach.UI
 
         private void btt_Search_Click(object sender, EventArgs e)
         {
-            DataTable dtTable = new DataTable();
-            KhachHangVO khachHangVO = GetKhachHangVO();
+            try {
+                KhachHangVO khachHangVO = GetKhachHangVO();
+                DataTable dtTable = new DataTable();
+                dtTable = khachhangBUS.GetKhachHangByIndicator(khachHangVO, chk_MaKhachHang.Checked, chk_MaQG.Checked, chk_HoKhachHang.Checked, chk_TenKhachHang.Checked, chk_CMND.Checked, chk_HoCHieu.Checked, chk_DienThoai.Checked);
 
+                if (dtTable.Rows.Count == 0)
+                    MessageBox.Show("Không tìm thấy khách hàng");
+                grdCtrlKhachHang.DataSource = dtTable;
+            }//end try
+            catch( FormatException ex ) {
+                MessageBox.Show(ex.Message);
+            }//end catch
+        }//end method btt_Search_Click
 
-
-
-            dtTable = khachhangBUS.GetKhachHangByIndicator(khachHangVO, chk_MaKhachHang.Checked, chk_MaQG.Checked, chk_HoKhachHang.Checked, chk_TenKhachHang.Checked, chk_CMND.Checked, chk_HoCHieu.Checked, chk_DienThoai.Checked);
-
-            
-
-
-            grdCtrlKhachHang.DataSource = dtTable;
-        }
         private void LoadComboBoxQuocGia()
         {
             try
@@ -53,8 +54,16 @@ namespace QLKS_TiepNhanKhach.UI
         }
         private KhachHangVO GetKhachHangVO()
         {
+            int id = 0;
+            try {
+                id = int.Parse(txt_MaKhachHang.Text.Substring(2));
+            }//end try
+            catch( Exception e ) {
+                if (e is FormatException)
+                    throw new FormatException("Nhập sai Mã Khách Hàng", e);
+            }//end catch
             KhachHangVO khachHangVO = new KhachHangVO();
-            khachHangVO.MA_KHACH_HANG = int.Parse(txt_MaKhachHang.Text.Substring(2));
+            khachHangVO.MA_KHACH_HANG = id;
             khachHangVO.MA_QUOC_GIA = int.Parse(cbo_QuocGia.SelectedValue.ToString());
             khachHangVO.HO_KHACH_HANG = txt_HoKhachHang.Text;
             khachHangVO.TEN_KHACH_HANG = txt_TenKhachHang.Text;
@@ -67,18 +76,13 @@ namespace QLKS_TiepNhanKhach.UI
 
         private void txt_MaKhachHang_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                Int32.Parse(txt_MaKhachHang.Text.Substring(2));
-            }
-            catch
-            {
-                txt_MaKhachHang.Text = "KH0";
-                txt_MaKhachHang.Focus();
-            }
+            //nothing to do
         }
 
-     
+        private void Checkbox_Validate(object sender, EventArgs e)
+        {
+
+        }//end method Checkbox_Validate
         
     }
 }
