@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  5/26/2010 3:17:08 PM                     */
+/* Date de création :  04-06-2010 1:11:10 PM                    */
 /*==============================================================*/
 
 
@@ -321,10 +321,10 @@ go
 /*==============================================================*/
 create table CA_TRUC (
    MA_CA_TRUC           int                  identity,
-   MA_THU_NGAN          int                  null,
+   MA_THU_NGAN          int                  not null,
    GIO_VAO_CA           datetime             null,
    GIO_XUONG_CA         datetime             null,
-   DA_KET_TOAN          bit                  null,
+   DA_KET_TOAN          bit                  not null,
    constraint PK_CA_TRUC primary key (MA_CA_TRUC)
 )
 go
@@ -367,8 +367,8 @@ go
 /*==============================================================*/
 create table DICH_VU (
    MA_DICH_VU           int                  identity,
-   TEN_DICH_VU          nvarchar(50)         null,
-   DON_GIA              money                null,
+   TEN_DICH_VU          nvarchar(50)         not null,
+   DON_GIA              money                not null,
    HIEU_LUC             bit                  not null default 1,
    constraint PK_DICH_VU primary key (MA_DICH_VU)
 )
@@ -432,10 +432,10 @@ go
 /*==============================================================*/
 create table PHIEU_DANG_KY_DICH_VU (
    SO_PHIEU             int                  identity,
-   MA_PHIEU             int                  null,
-   MA_DICH_VU           int                  null,
-   NGAY_PHUC_VU         datetime             null,
-   SO_LUONG             int                  null,
+   MA_PHIEU             int                  not null,
+   MA_DICH_VU           int                  not null,
+   NGAY_PHUC_VU         datetime             not null,
+   SO_LUONG             int                  not null,
    GHI_CHU              nvarchar(50)         null,
    constraint PK_PHIEU_DANG_KY_DICH_VU primary key (SO_PHIEU)
 )
@@ -492,9 +492,9 @@ go
 /*==============================================================*/
 create table PHIEU_THU_KHACH_HANG (
    SO_PHIEU             int                  identity,
-   MA_KHACH_HANG        int                  null,
-   MA_CA_TRUC           int                  null,
-   NGAY_PHIEU           datetime             null,
+   MA_KHACH_HANG        int                  not null,
+   MA_CA_TRUC           int                  not null,
+   NGAY_PHIEU           datetime             not null,
    SO_TIEN              money                null,
    NOI_DUNG_THU         nvarchar(50)         null,
    HINH_THUC_THU        nvarchar(50)         null,
@@ -531,7 +531,7 @@ create table THU_NGAN (
    MA_THU_NGAN          int                  identity,
    TEN_DANG_NHAP        nvarchar(50)         not null,
    MAT_KHAU             nvarchar(50)         not null,
-   HO_TEN               nvarchar(50)         null,
+   HO_TEN               nvarchar(50)         not null,
    DIA_CHI              nvarchar(50)         null,
    DIEN_THOAI           nvarchar(20)         null,
    constraint PK_THU_NGAN primary key (MA_THU_NGAN)
