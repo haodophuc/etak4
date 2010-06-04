@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{C45BA604-2C52-457F-8D4B-EB25972D4507}" Label="" LastModificationDate="1274912179" Name="MHVLQLKS" Objects="237" Symbols="43" Target="Microsoft SQL Server 2005" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{C45BA604-2C52-457F-8D4B-EB25972D4507}" Label="" LastModificationDate="1275681894" Name="MHVLQLKS" Objects="237" Symbols="43" Target="Microsoft SQL Server 2005" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -4827,10 +4827,11 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>TEN_DICH_VU</a:Code>
 <a:CreationDate>1273904710</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273904834</a:ModificationDate>
+<a:ModificationDate>1275681835</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o150">
 <a:ObjectID>BA6B1850-7D7E-40EA-BCB0-F2A05E5B6CE1</a:ObjectID>
@@ -4838,9 +4839,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>DON_GIA</a:Code>
 <a:CreationDate>1273904710</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273904834</a:ModificationDate>
+<a:ModificationDate>1275681835</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>money</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o151">
 <a:ObjectID>49E2C847-D6A8-4F22-9925-F0FB406F8434</a:ObjectID>
@@ -5829,9 +5831,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>MA_THU_NGAN</a:Code>
 <a:CreationDate>1274185679</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274185679</a:ModificationDate>
+<a:ModificationDate>1275681875</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o221">
 <a:ObjectID>9DFA4E40-6F70-44D5-84F0-3C21C152F6EC</a:ObjectID>
@@ -5859,9 +5862,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>DA_KET_TOAN</a:Code>
 <a:CreationDate>1273907275</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273907389</a:ModificationDate>
+<a:ModificationDate>1275681875</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>bit</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 </c:Columns>
 <c:Keys>
@@ -5964,10 +5968,11 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>HO_TEN</a:Code>
 <a:CreationDate>1273907398</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273907482</a:ModificationDate>
+<a:ModificationDate>1275681842</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>nvarchar(50)</a:DataType>
 <a:Length>50</a:Length>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o231">
 <a:ObjectID>5FDFCC69-7A99-461C-A417-E4EB2F881FDB</a:ObjectID>
@@ -6068,9 +6073,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>MA_PHIEU</a:Code>
 <a:CreationDate>1274185475</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274185475</a:ModificationDate>
+<a:ModificationDate>1275681894</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o238">
 <a:ObjectID>812F9E72-524C-41D3-A9F6-26CEF04254C1</a:ObjectID>
@@ -6078,9 +6084,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>MA_DICH_VU</a:Code>
 <a:CreationDate>1274185579</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274185579</a:ModificationDate>
+<a:ModificationDate>1275681894</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o239">
 <a:ObjectID>59431D38-9C09-4037-9647-33B38795192A</a:ObjectID>
@@ -6088,9 +6095,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>NGAY_PHUC_VU</a:Code>
 <a:CreationDate>1273907512</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273907624</a:ModificationDate>
+<a:ModificationDate>1275681894</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o240">
 <a:ObjectID>5C5D6932-CD7A-48DB-96E0-A8719A419ACB</a:ObjectID>
@@ -6098,9 +6106,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>SO_LUONG</a:Code>
 <a:CreationDate>1273907512</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273907624</a:ModificationDate>
+<a:ModificationDate>1275681894</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o241">
 <a:ObjectID>9DBF758E-FD65-447B-9203-33F736637C08</a:ObjectID>
@@ -6190,9 +6199,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>MA_KHACH_HANG</a:Code>
 <a:CreationDate>1274440474</a:CreationDate>
 <a:Creator>cddthd</a:Creator>
-<a:ModificationDate>1274440474</a:ModificationDate>
-<a:Modifier>cddthd</a:Modifier>
+<a:ModificationDate>1275681858</a:ModificationDate>
+<a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o247">
 <a:ObjectID>EC15B222-7FC7-496D-B2A1-45B4E7A768B8</a:ObjectID>
@@ -6200,9 +6210,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>MA_CA_TRUC</a:Code>
 <a:CreationDate>1274185786</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1274185786</a:ModificationDate>
+<a:ModificationDate>1275681858</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>int</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o248">
 <a:ObjectID>E1C5AFF7-4643-463D-AE57-B651A215EB2B</a:ObjectID>
@@ -6210,9 +6221,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>NGAY_PHIEU</a:Code>
 <a:CreationDate>1273906276</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273907265</a:ModificationDate>
+<a:ModificationDate>1275681858</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>datetime</a:DataType>
+<a:Mandatory>1</a:Mandatory>
 </o:Column>
 <o:Column Id="o249">
 <a:ObjectID>AE6E757E-C8AA-4535-A254-50BD505DBE7C</a:ObjectID>
@@ -6220,7 +6232,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>SO_TIEN</a:Code>
 <a:CreationDate>1273906276</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
-<a:ModificationDate>1273907265</a:ModificationDate>
+<a:ModificationDate>1275681858</a:ModificationDate>
 <a:Modifier>Administrator</a:Modifier>
 <a:DataType>money</a:DataType>
 </o:Column>
