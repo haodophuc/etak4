@@ -105,7 +105,7 @@ namespace QLKS_DichVu
                 Connect();
                 // Construct SqlCommand
                 Command = new SqlCommand(query, Connection);
-                Command.Parameters.AddRange(sqlParameters);
+                Command.Parameters.AddRange(sqlParameters);                
 
                 // Execute query
                 result = Command.ExecuteNonQuery();
