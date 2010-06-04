@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using QLKS_TiepNhanKhach.BUS;
 using QLKS_TiepNhanKhach.VO;
+using DevExpress.XtraEditors;
 
 namespace QLKS_TiepNhanKhach.UI
 {
@@ -18,6 +19,7 @@ namespace QLKS_TiepNhanKhach.UI
         {
             InitializeComponent();
             LoadComboBoxQuocGia();
+            AcceptButton = btt_Search;
         }
 
         private void btt_Search_Click(object sender, EventArgs e)
@@ -81,9 +83,30 @@ namespace QLKS_TiepNhanKhach.UI
 
         private void Checkbox_Validate(object sender, EventArgs e)
         {
+            int numOfCheckBoxes = panelControl2.Controls.Count;
+            int checkedBoxes = 0;
+            for (int i = 0; i < numOfCheckBoxes; i++) {
+                if (panelControl2.Controls[i] is CheckEdit)
+                {
+                    CheckEdit checkbox = (CheckEdit)panelControl2.Controls[i];
+                    if (checkbox.Checked)
+                        checkedBoxes++;
+                }//end if control is CheckEdit
+            }//end for
 
+            if (checkedBoxes != 0)
+                btt_Search.Enabled = true;
+            else
+                btt_Search.Enabled = false;
         }//end method Checkbox_Validate
-        
+
+        public SimpleButton AcceptButton
+        {
+            get { return this.acceptButton; }
+            set { this.acceptButton = value; }
+        }//end attribute AcceptButotn
+
+        private SimpleButton acceptButton;
     }
 }
      /*   private KhachHangVO GetKhachHangVO()
