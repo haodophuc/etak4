@@ -8,5 +8,4 @@
 		<Model Expanded="Yes" ID="{75507E2B-5286-4317-B1DE-67B8241C3144}" Loaded="No" Name="QUAN_LY_UNG_UNG_VAT_TU_XI_NGHIEP" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="../../Cong Cu Phan Tich TKHT/Exercises/Bai 3/MHYNDL.mcd"/>
 		<Model Expanded="Yes" ID="{C45BA604-2C52-457F-8D4B-EB25972D4507}" Loaded="No" Name="MHVLDLQLKS" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="../../QLKS.mpd"/>
 	</Local>
-	<BrowserModule Name="Référentiel"/>
 </Workspace>
