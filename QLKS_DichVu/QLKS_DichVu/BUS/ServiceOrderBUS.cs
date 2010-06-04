@@ -15,9 +15,8 @@ namespace QLKS_DichVu.BUS
             serviceOrderDAO = new ServiceOrderDAO(dbConnection);
         }
 
-        public ServiceOrderVO read()
-        {
-            serviceOrderDAO.read();
+        public ServiceOrderVO getVO()
+        {            
             ServiceOrderVO serviceOrderVO = new ServiceOrderVO();
 
             serviceOrderVO.PhieuThuePhongDataTable =
