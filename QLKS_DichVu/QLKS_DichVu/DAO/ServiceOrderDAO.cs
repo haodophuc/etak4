@@ -76,7 +76,9 @@ namespace QLKS_DichVu.DAO
         public void update()
         {            
             SqlCommandBuilder cb = new SqlCommandBuilder(phieuDangKyDichVuAdapter);            
-            phieuDangKyDichVuAdapter.Update(dataSet, "PHIEU_DANG_KY_DICH_VU");
+            cb.ConflictOption = ConflictOption.OverwriteChanges;
+            phieuDangKyDichVuAdapter.ContinueUpdateOnError = true;
+            phieuDangKyDichVuAdapter.Update(dataSet, "PHIEU_DANG_KY_DICH_VU");            
         }
         #endregion
     }
