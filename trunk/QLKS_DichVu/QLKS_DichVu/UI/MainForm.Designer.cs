@@ -33,6 +33,7 @@
             this.menuItemRunSM = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSR = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemRunSR = new System.Windows.Forms.ToolStripMenuItem();
+            this.thanhToánKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             // 
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuSM,
-            this.menuSR});
+            this.menuSR,
+            this.thanhToánKháchHàngToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
             this.menuMain.Size = new System.Drawing.Size(657, 24);
@@ -77,6 +79,12 @@
             this.menuItemRunSR.Text = "Run";
             this.menuItemRunSR.Click += new System.EventHandler(this.menuItemRunSR_Click);
             // 
+            // thanhToánKháchHàngToolStripMenuItem
+            // 
+            this.thanhToánKháchHàngToolStripMenuItem.Name = "thanhToánKháchHàngToolStripMenuItem";
+            this.thanhToánKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.thanhToánKháchHàngToolStripMenuItem.Text = "Thanh toán";
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(657, 444);
@@ -103,6 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemRunSM;
         private System.Windows.Forms.ToolStripMenuItem menuSR;
         private System.Windows.Forms.ToolStripMenuItem menuItemRunSR;
+        private System.Windows.Forms.ToolStripMenuItem thanhToánKháchHàngToolStripMenuItem;
 
 
     }
