@@ -40,7 +40,7 @@ namespace QLKS_DichVu
             {
                 try
                 {
-                    Connection.Open();
+                    Connection.Open();                        
                 }
                 catch (Exception e)
                 {
@@ -52,6 +52,8 @@ namespace QLKS_DichVu
                 throw new Exception("Cannot connect with connection");
             }// end else
         }//end method Connect
+
+
 
         public void Disconnect()
         {
@@ -122,9 +124,9 @@ namespace QLKS_DichVu
             return result;
         }//end method ExecuteNonQuery
 
-        public int ExecuteScalar(String query, SqlParameter[] sqlParameters)
+        public object ExecuteScalar(String query, SqlParameter[] sqlParameters)
         {
-            int result = 0;
+            object result = null;
             try
             {
                 // Open a connection
@@ -135,7 +137,7 @@ namespace QLKS_DichVu
                 Command.Parameters.AddRange(sqlParameters);
 
                 // Execute query
-                result = (Int32)Command.ExecuteScalar();
+                result = Command.ExecuteScalar();
 
             }//end try
             catch (SqlException e)
@@ -151,14 +153,14 @@ namespace QLKS_DichVu
             return result;
         }//end method ExecuteScalar
 
-        public int ExecuteScalar(String query)
+        public object ExecuteScalar(String query)
         {
-            int result = 0;
+            object result = null;
             try
             {
                 Connect();
                 Command = new SqlCommand(query, Connection);
-                result = (Int32)Command.ExecuteScalar();
+                result = Command.ExecuteScalar();
             }//end try
             catch (SqlException e)
             {
