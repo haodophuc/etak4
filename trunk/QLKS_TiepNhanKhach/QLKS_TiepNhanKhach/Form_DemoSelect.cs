@@ -18,7 +18,7 @@ namespace QLKS_TiepNhanKhach
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Form_TimKiemVaChonCongTy frm = new Form_TimKiemVaChonCongTy();
+            Form_TimKiemVaChonDoanKhach frm = new Form_TimKiemVaChonDoanKhach();
 
             DataRow dtrow = frm.ShowModal();
             if (dtrow != null)

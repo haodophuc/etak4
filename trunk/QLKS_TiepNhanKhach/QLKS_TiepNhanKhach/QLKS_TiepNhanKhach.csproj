@@ -247,6 +247,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\temp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>temp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TimkiemvaChonCongTyUI.resx">
       <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -309,6 +313,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\temp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\temp.Designer.cs">
+      <DependentUpon>temp.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TimkiemvaChonCongTyUI.cs">
       <SubType>UserControl</SubType>
