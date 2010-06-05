@@ -69,7 +69,7 @@ namespace QLKS_DichVu.DAO
 
         public int getLastIdentity()
         {
-            int last_id = dbConnection.ExecuteScalar("SELECT last_value FROM sys.identity_columns WHERE object_id = object_id('PHIEU_DANG_KY_DICH_VU')");
+            int last_id = (int)dbConnection.ExecuteScalar("SELECT last_value FROM sys.identity_columns WHERE object_id = object_id('PHIEU_DANG_KY_DICH_VU')");
             return last_id;
         }
 

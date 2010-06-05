@@ -10,11 +10,11 @@ namespace QLKS_DichVu.UI
 {
     public partial class MainForm : Form
     {
-        
+        private LoginForm loginForm;
         public MainForm()
         {
             InitializeComponent();
-            
+            loginForm = new LoginForm(this);
         }
 
         private void menuItemRunSM_Click(object sender, EventArgs e)
@@ -31,16 +31,21 @@ namespace QLKS_DichVu.UI
             so.Show();
         }
 
-        private void MainForm_Enter(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.MdiParent = this;
-            loginForm.Show();
+            // show login form as modal dialog
+            loginForm.ShowDialog();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            loginForm.Close();
+        }
+
+        private void menuItemRunLogin_Click(object sender, EventArgs e)
+        {
+            // show login form as modal dialog
+            loginForm.ShowDialog();
         }
 
 
