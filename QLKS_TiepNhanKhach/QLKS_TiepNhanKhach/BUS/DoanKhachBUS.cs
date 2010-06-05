@@ -75,10 +75,7 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             }
         }
-        public DataTable GetDoanKhachByIndicator(DoanKhachVO doankhachVO, bool bMaDK, bool bMaCT, bool bNgayDen)
-        {
-                return doankhachDAO.SearchByIndicator(doankhachVO,bMaDK,bMaCT,bNgayDen);
-        }
+      
         #endregion
     }
 }

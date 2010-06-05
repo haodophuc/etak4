@@ -99,37 +99,7 @@ namespace QLKS_TiepNhanKhach.DAO
                 throw e;
             }
         }
-        public DataTable SearchByIndicator(DoanKhachVO doankhachVO, bool bMaDK,bool bMaCT,bool bNgayDen)
-        {
-
-            string query = " SELECT 'DK' + REPLACE(STR(MA_DOAN_KHACH,4),' ','0') AS MaDK," +
-                                 "'CT' + REPLACE(STR(MA_CONG_TY,4),' ','0') AS MaCT," +
-                                 "NGAY_DEN " +
-                                 "FROM DOAN_KHACH " +
-                                 "WHERE HIEU_LUC = '1'";
-            if (bMaDK)
-            {
-                query = query + " AND MA_DOAN_KHACH = @MA_DOAN_KHACH";
-            }
-            if (bMaCT)
-            {
-                query = query + " AND MA_CONG_TY = @MA_CONG_TY";
-            }
-            if (bNgayDen)
-            {
-                query = query + " AND CONVERT(VARCHAR(10),NGAY_DEN,103)=CONVERT(VARCHAR(10),@Ngay_DEN,103)";
-            }
-         
-    
-
-            SqlParameter[] sqlParameters = new SqlParameter[3];
-            sqlParameters[0] = new SqlParameter("@MA_DOAN_KHACH", doankhachVO.MA_DOAN_KHACH);
-            sqlParameters[1] = new SqlParameter("@MA_CONG_TY", doankhachVO.MA_CONG_TY);
-            sqlParameters[2] = new SqlParameter("@NGAY_DEN", doankhachVO.NGAY_DEN);
-  
-
-            return Program.dbConnection.ExecuteSelectQuery(query, sqlParameters);
-        }
+       
     }
 
 }
