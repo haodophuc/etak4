@@ -111,8 +111,6 @@ namespace QLKS_TiepNhanKhach.DAO
             }
         }
 
-       
-
 
     }
 }

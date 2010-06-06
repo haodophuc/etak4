@@ -106,7 +106,55 @@ namespace QLKS_TiepNhanKhach.DAO
 
         }
 
-    
+        public DataTable SearchByIndicator(KhachHangVO khachHangVO, bool bMKH, bool bMaQG, bool bHo, bool bTen, bool bCMND, bool bHochieu, bool bDienThoai)
+        {
+          
+            string query = " SELECT 'KH' + REPLACE(STR(MA_KHACH_HANG,4),' ','0') AS MaKH," +
+                               "'QG' + REPLACE(STR(MA_QUOC_GIA,2),' ','0') AS MaQG," +
+                               "HO_KHACH_HANG,TEN_KHACH_HANG,CMND,HO_CHIEU,DIEN_THOAI " +
+                               "FROM KHACH_HANG " +
+                               "WHERE HIEU_LUC = '1'";
+            if (bMKH)
+            {
+                query = query + " AND MA_KHACH_HANG = @MA_KHACH_HANG";
+            }
+            if (bMaQG)
+            {
+                query = query + " AND MA_QUOC_GIA = @MA_QUOC_GIA";
+            }
+            if (bHo)
+            {
+                query = query + " AND HO_KHACH_HANG = @HO_KHACH_HANG";
+            }
+            if (bTen)
+            {
+                query = query + " AND TEN_KHACH_HANG = @TEN_KHACH_HANG";
+            }
+            if (bHochieu)
+            {
+                query = query + " AND HO_CHIEU = @HO_CHIEU";
+                
+            }
+            if (bCMND)
+            {
+                query = query + " AND CMND = @CMND";
+            }
+          
+            if (bDienThoai)
+            {
+                query = query + " AND DIEN_THOAI = @DIEN_THOAI";
+            }
+            SqlParameter[] sqlParameters = new SqlParameter[7];
+            sqlParameters[0] = new SqlParameter("@Ma_KHACH_HANG", khachHangVO.MA_KHACH_HANG);
+            sqlParameters[1] = new SqlParameter("@MA_QUOC_GIA", khachHangVO.MA_QUOC_GIA);
+            sqlParameters[2] = new SqlParameter("@HO_KHACH_HANG", khachHangVO.HO_KHACH_HANG);
+            sqlParameters[3] = new SqlParameter("@TEN_KHACH_HANG", khachHangVO.TEN_KHACH_HANG);
+            sqlParameters[4] = new SqlParameter("@HO_CHIEU", khachHangVO.HO_CHIEU);
+            sqlParameters[5] = new SqlParameter("@CMND", khachHangVO.CMND);
+            sqlParameters[6] = new SqlParameter("@DIEN_THOAI", khachHangVO.DIEN_THOAI);
+
+            return Program.dbConnection.ExecuteSelectQuery(query, sqlParameters);
+        }
 
       
 
