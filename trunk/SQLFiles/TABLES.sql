@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  6/6/2010 1:21:25 PM                      */
+/* Date de création :  6/6/2010 3:09:54 PM                      */
 /*==============================================================*/
 
 
@@ -160,6 +160,34 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUYEN_ADMIN') and o.name = 'FK_QUYEN_AD_REFERENCE_ADMINS')
+alter table QUYEN_ADMIN
+   drop constraint FK_QUYEN_AD_REFERENCE_ADMINS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUYEN_ADMIN') and o.name = 'FK_QUYEN_AD_REFERENCE_QUYEN')
+alter table QUYEN_ADMIN
+   drop constraint FK_QUYEN_AD_REFERENCE_QUYEN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUYEN_THU_NGAN') and o.name = 'FK_QUYEN_TH_REFERENCE_THU_NGAN')
+alter table QUYEN_THU_NGAN
+   drop constraint FK_QUYEN_TH_REFERENCE_THU_NGAN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUYEN_THU_NGAN') and o.name = 'FK_QUYEN_TH_REFERENCE_QUYEN')
+alter table QUYEN_THU_NGAN
+   drop constraint FK_QUYEN_TH_REFERENCE_QUYEN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('TIEN_NGHI_LOAI_PHONG') and o.name = 'FK_TIEN_NGH_TNLP_LOAI_PHO')
 alter table TIEN_NGHI_LOAI_PHONG
    drop constraint FK_TIEN_NGH_TNLP_LOAI_PHO
@@ -170,6 +198,13 @@ if exists (select 1
    where r.fkeyid = object_id('TIEN_NGHI_LOAI_PHONG') and o.name = 'FK_TIEN_NGH_TNLP_TIEN_NGH')
 alter table TIEN_NGHI_LOAI_PHONG
    drop constraint FK_TIEN_NGH_TNLP_TIEN_NGH
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ADMINS')
+            and   type = 'U')
+   drop table ADMINS
 go
 
 if exists (select 1
@@ -279,6 +314,27 @@ go
 
 if exists (select 1
             from  sysobjects
+           where  id = object_id('QUYEN')
+            and   type = 'U')
+   drop table QUYEN
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUYEN_ADMIN')
+            and   type = 'U')
+   drop table QUYEN_ADMIN
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUYEN_THU_NGAN')
+            and   type = 'U')
+   drop table QUYEN_THU_NGAN
+go
+
+if exists (select 1
+            from  sysobjects
            where  id = object_id('THU_NGAN')
             and   type = 'U')
    drop table THU_NGAN
@@ -305,15 +361,117 @@ if exists (select 1
    drop table TINH_TRANG
 go
 
-if exists(select 1 from systypes where name='NVARCHAR6')
-   drop type NVARCHAR6
+if exists(select 1 from systypes where name='DIA_CHI')
+   drop type DIA_CHI
+go
+
+if exists(select 1 from systypes where name='DIEN_THOAI')
+   drop type DIEN_THOAI
+go
+
+if exists(select 1 from systypes where name='EMAIL')
+   drop type EMAIL
+go
+
+if exists(select 1 from systypes where name='FAX')
+   drop type FAX
+go
+
+if exists(select 1 from systypes where name='MAT_KHAU')
+   drop type MAT_KHAU
+go
+
+if exists(select 1 from systypes where name='TEN')
+   drop type TEN
+go
+
+if exists(select 1 from systypes where name='TEN_DANG_NHAP')
+   drop type TEN_DANG_NHAP
+go
+
+if exists(select 1 from systypes where name='TIEN_TE')
+   drop type TIEN_TE
+go
+
+if exists(select 1 from systypes where name='YES_OR_NO')
+   drop type YES_OR_NO
 go
 
 /*==============================================================*/
-/* Domaine : NVARCHAR6                                          */
+/* Domaine : DIA_CHI                                            */
 /*==============================================================*/
-create type NVARCHAR6
-   from nvarchar(6)
+create type DIA_CHI
+   from nvarchar(50)
+go
+
+/*==============================================================*/
+/* Domaine : DIEN_THOAI                                         */
+/*==============================================================*/
+create type DIEN_THOAI
+   from nvarchar(50)
+go
+
+/*==============================================================*/
+/* Domaine : EMAIL                                              */
+/*==============================================================*/
+create type EMAIL
+   from nvarchar(50)
+go
+
+/*==============================================================*/
+/* Domaine : FAX                                                */
+/*==============================================================*/
+create type FAX
+   from nvarchar(50)
+go
+
+/*==============================================================*/
+/* Domaine : MAT_KHAU                                           */
+/*==============================================================*/
+create type MAT_KHAU
+   from nvarchar(20) not null
+go
+
+/*==============================================================*/
+/* Domaine : TEN                                                */
+/*==============================================================*/
+create type TEN
+   from nvarchar(50) not null
+go
+
+/*==============================================================*/
+/* Domaine : TEN_DANG_NHAP                                      */
+/*==============================================================*/
+create type TEN_DANG_NHAP
+   from nvarchar(50) not null
+go
+
+/*==============================================================*/
+/* Domaine : TIEN_TE                                            */
+/*==============================================================*/
+create type TIEN_TE
+   from money
+go
+
+/*==============================================================*/
+/* Domaine : YES_OR_NO                                          */
+/*==============================================================*/
+create type YES_OR_NO
+   from bit not null
+go
+
+/*==============================================================*/
+/* Table : ADMINS                                               */
+/*==============================================================*/
+create table ADMINS (
+   MA_ADMIN             int                  identity,
+   TEN_DANG_NHAP        TEN_DANG_NHAP        not null,
+   MAT_KHAU             MAT_KHAU             not null,
+   TEN_ADMIN            TEN                  not null,
+   DIA_CHI              DIA_CHI              null,
+   DIEN_THOAI           DIEN_THOAI           null,
+   constraint PK_ADMINS primary key (MA_ADMIN)
+)
 go
 
 /*==============================================================*/
@@ -324,7 +482,7 @@ create table CA_TRUC (
    MA_THU_NGAN          int                  not null,
    GIO_VAO_CA           datetime             null,
    GIO_XUONG_CA         datetime             null,
-   DA_KET_TOAN          bit                  not null,
+   DA_KET_TOAN          YES_OR_NO            not null default 0,
    constraint PK_CA_TRUC primary key (MA_CA_TRUC)
 )
 go
@@ -348,16 +506,16 @@ go
 /*==============================================================*/
 create table CONG_TY (
    MA_CONG_TY           int                  identity,
-   TEN_CONG_TY          nvarchar(50)         null,
+   TEN_CONG_TY          TEN                  not null,
    MA_QUOC_GIA          int                  null,
    MA_NGUOI_DAI_DIEN    int                  null,
-   DIA_CHI              nvarchar(50)         null,
-   DIEN_THOAI           nvarchar(20)         null,
-   EMAIL                nvarchar(50)         null,
-   FAX                  nvarchar(20)         null,
+   DIA_CHI              DIA_CHI              null,
+   DIEN_THOAI           DIEN_THOAI           null,
+   EMAIL                EMAIL                null,
+   FAX                  FAX                  null,
    SO_TAI_KHOAN         nvarchar(20)         null,
    MA_SO_THUE           nvarchar(20)         null,
-   HIEU_LUC             bit                  not null default 1,
+   HIEU_LUC             YES_OR_NO            not null default 1,
    constraint PK_CONG_TY primary key (MA_CONG_TY)
 )
 go
@@ -367,9 +525,9 @@ go
 /*==============================================================*/
 create table DICH_VU (
    MA_DICH_VU           int                  identity,
-   TEN_DICH_VU          nvarchar(50)         not null,
-   DON_GIA              money                not null,
-   HIEU_LUC             bit                  not null default 1,
+   TEN_DICH_VU          TEN                  not null,
+   DON_GIA              TIEN_TE              not null,
+   HIEU_LUC             YES_OR_NO            not null default 1,
    constraint PK_DICH_VU primary key (MA_DICH_VU)
 )
 go
@@ -381,7 +539,7 @@ create table DOAN_KHACH (
    MA_DOAN_KHACH        int                  identity,
    MA_CONG_TY           int                  null,
    NGAY_DEN             datetime             null,
-   HIEU_LUC             bit                  not null default 1,
+   HIEU_LUC             YES_OR_NO            not null default 1,
    constraint PK_DOAN_KHACH primary key (MA_DOAN_KHACH)
 )
 go
@@ -392,12 +550,12 @@ go
 create table KHACH_HANG (
    MA_KHACH_HANG        int                  identity,
    MA_QUOC_GIA          int                  null,
-   HO_KHACH_HANG        nvarchar(50)         null,
-   TEN_KHACH_HANG       nvarchar(50)         null,
+   HO_KHACH_HANG        TEN                  not null,
+   TEN_KHACH_HANG       TEN                  not null,
    CMND                 nvarchar(20)         null,
    HO_CHIEU             nvarchar(20)         null,
-   DIEN_THOAI           nvarchar(20)         null,
-   HIEU_LUC             bit                  not null default 1,
+   DIEN_THOAI           DIEN_THOAI           null,
+   HIEU_LUC             YES_OR_NO            not null default 1,
    constraint PK_KHACH_HANG primary key (MA_KHACH_HANG)
 )
 go
@@ -417,12 +575,12 @@ go
 /*==============================================================*/
 create table LOAI_PHONG (
    MA_LOAI_PHONG        int                  identity,
-   TEN_LOAI_PHONG       nvarchar(50)         null,
+   TEN_LOAI_PHONG       TEN                  not null,
    SO_GIUONG            int                  null
       constraint CKC_SO_GIUONG_LOAI_PHO check (SO_GIUONG is null or (SO_GIUONG >= 0)),
    SO_LUONG_PHONG       int                  null
       constraint CKC_SO_LUONG_PHONG_LOAI_PHO check (SO_LUONG_PHONG is null or (SO_LUONG_PHONG >= 0)),
-   GIA_THAM_KHAO        money                null,
+   GIA_THAM_KHAO        TIEN_TE              null,
    constraint PK_LOAI_PHONG primary key (MA_LOAI_PHONG)
 )
 go
@@ -448,7 +606,7 @@ create table PHIEU_DAT_PHONG (
    MA_PHIEU             int                  identity,
    MA_KHACH_HANG        int                  null,
    MA_DOAN_KHACH        int                  null,
-   TIEN_COC             money                null,
+   TIEN_COC             TIEN_TE              null,
    constraint PK_PHIEU_DAT_PHONG primary key (MA_PHIEU)
 )
 go
@@ -464,9 +622,9 @@ create table PHIEU_THUE_PHONG (
    NGAY_NHAN_PHONG      datetime             not null,
    NGAY_TRA_PHONG       datetime             null,
    GHI_CHU              nvarchar(50)         null,
-   THANH_TOAN_TIEN_PHONG bit                  not null default 0,
-   THANH_TOAN_DICH_VU   bit                  not null default 0,
-   DA_TRA_PHONG         bit                  not null default 0,
+   THANH_TOAN_TIEN_PHONG YES_OR_NO            not null default 0,
+   THANH_TOAN_DICH_VU   YES_OR_NO            not null default 0,
+   DA_TRA_PHONG         YES_OR_NO            not null default 0,
    constraint PK_PHIEU_THUE_PHONG primary key (MA_PHIEU)
 )
 go
@@ -479,7 +637,7 @@ create table PHIEU_THU_DOAN_KHACH (
    MA_DOAN_KHACH        int                  null,
    MA_CA_TRUC           int                  null,
    NGAY_PHIEU           datetime             null,
-   SO_TIEN              money                null,
+   SO_TIEN              TIEN_TE              null,
    NOI_DUNG_THU         nvarchar(50)         null,
    HINH_THUC_THU        nvarchar(50)         null,
    constraint PK_PHIEU_THU_DOAN_KHACH primary key (SO_PHIEU)
@@ -494,7 +652,7 @@ create table PHIEU_THU_KHACH_HANG (
    MA_KHACH_HANG        int                  not null,
    MA_CA_TRUC           int                  not null,
    NGAY_PHIEU           datetime             not null,
-   SO_TIEN              money                null,
+   SO_TIEN              TIEN_TE              null,
    NOI_DUNG_THU         nvarchar(50)         null,
    HINH_THUC_THU        nvarchar(50)         null,
    constraint PK_PHIEU_THU_KHACH_HANG primary key (SO_PHIEU)
@@ -518,8 +676,40 @@ go
 /*==============================================================*/
 create table QUOC_GIA (
    MA_QUOC_GIA          int                  identity,
-   TEN_QUOC_GIA         nvarchar(50)         null,
+   TEN_QUOC_GIA         TEN                  not null,
    constraint PK_QUOC_GIA primary key (MA_QUOC_GIA)
+)
+go
+
+/*==============================================================*/
+/* Table : QUYEN                                                */
+/*==============================================================*/
+create table QUYEN (
+   MA_QUYEN             int                  identity,
+   TEN_QUYEN            TEN                  not null,
+   QUYEN_LUC            TEN                  not null,
+   GHI_CHU              nvarchar(50)         null,
+   constraint PK_QUYEN primary key (MA_QUYEN)
+)
+go
+
+/*==============================================================*/
+/* Table : QUYEN_ADMIN                                          */
+/*==============================================================*/
+create table QUYEN_ADMIN (
+   MA_ADMIN             int                  not null,
+   MA_QUYEN             int                  not null,
+   constraint PK_QUYEN_ADMIN primary key (MA_ADMIN, MA_QUYEN)
+)
+go
+
+/*==============================================================*/
+/* Table : QUYEN_THU_NGAN                                       */
+/*==============================================================*/
+create table QUYEN_THU_NGAN (
+   MA_THU_NGAN          int                  not null,
+   MA_QUYEN             int                  not null,
+   constraint PK_QUYEN_THU_NGAN primary key (MA_THU_NGAN, MA_QUYEN)
 )
 go
 
@@ -528,11 +718,11 @@ go
 /*==============================================================*/
 create table THU_NGAN (
    MA_THU_NGAN          int                  identity,
-   TEN_DANG_NHAP        nvarchar(50)         not null,
-   MAT_KHAU             nvarchar(50)         not null,
-   HO_TEN               nvarchar(50)         not null,
-   DIA_CHI              nvarchar(50)         null,
-   DIEN_THOAI           nvarchar(20)         null,
+   TEN_DANG_NHAP        TEN_DANG_NHAP        not null,
+   MAT_KHAU             MAT_KHAU             not null,
+   HO_TEN               TEN                  not null,
+   DIA_CHI              DIA_CHI              null,
+   DIEN_THOAI           DIEN_THOAI           null,
    constraint PK_THU_NGAN primary key (MA_THU_NGAN)
 )
 go
@@ -542,7 +732,7 @@ go
 /*==============================================================*/
 create table TIEN_NGHI (
    MA_TIEN_NGHI         int                  identity,
-   TIEN_NGHI            nvarchar(50)         null,
+   TIEN_NGHI            TEN                  not null,
    constraint PK_TIEN_NGHI primary key (MA_TIEN_NGHI)
 )
 go
@@ -562,7 +752,7 @@ go
 /*==============================================================*/
 create table TINH_TRANG (
    MA_TINH_TRANG        int                  identity,
-   TINH_TRANG           nvarchar(50)         null,
+   TINH_TRANG           TEN                  not null,
    constraint PK_TINH_TRANG primary key (MA_TINH_TRANG)
 )
 go
@@ -675,6 +865,26 @@ go
 alter table PHONG
    add constraint FK_PHONG_TRONG_TIN_TINH_TRA foreign key (MA_TINH_TRANG)
       references TINH_TRANG (MA_TINH_TRANG)
+go
+
+alter table QUYEN_ADMIN
+   add constraint FK_QUYEN_AD_REFERENCE_ADMINS foreign key (MA_ADMIN)
+      references ADMINS (MA_ADMIN)
+go
+
+alter table QUYEN_ADMIN
+   add constraint FK_QUYEN_AD_REFERENCE_QUYEN foreign key (MA_QUYEN)
+      references QUYEN (MA_QUYEN)
+go
+
+alter table QUYEN_THU_NGAN
+   add constraint FK_QUYEN_TH_REFERENCE_THU_NGAN foreign key (MA_THU_NGAN)
+      references THU_NGAN (MA_THU_NGAN)
+go
+
+alter table QUYEN_THU_NGAN
+   add constraint FK_QUYEN_TH_REFERENCE_QUYEN foreign key (MA_QUYEN)
+      references QUYEN (MA_QUYEN)
 go
 
 alter table TIEN_NGHI_LOAI_PHONG
