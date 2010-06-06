@@ -30,6 +30,8 @@ namespace QLKS_TiepNhanKhach
                 Program.dbConnection.Disconnect();
                 Form_Main frmMain = new Form_Main();
                 frmMain.Show();
+
+          
             }
             catch (Exception exception)
             {

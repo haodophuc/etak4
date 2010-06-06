@@ -14,7 +14,7 @@ namespace QLKS_TiepNhanKhach.VO
         private DateTime ngay_nhan_phong;
         private bool da_tra_phong;
         private DateTime ngay_tra_phong;
-        private int don_gia_phong;
+
         private String ghi_chu;
         private bool thanh_toan_tien_phong;
         private bool thanh_toan_dich_vu; 
@@ -65,14 +65,6 @@ namespace QLKS_TiepNhanKhach.VO
             get { return ngay_tra_phong; }
             set { ngay_tra_phong = value; }
         }
-
-
-        public int DON_GIA_PHONG
-        {
-            get { return don_gia_phong; }
-            set { don_gia_phong = value; }
-        }
-
 
 
         public String GHI_CHU
