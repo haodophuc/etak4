@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  6/6/2010 3:09:54 PM                      */
+/* Date de création :  6/7/2010 12:23:47 AM                     */
 /*==============================================================*/
 
 
@@ -666,7 +666,7 @@ create table PHONG (
    MA_PHONG             int                  identity,
    MA_LOAI_PHONG        int                  null,
    MA_TINH_TRANG        int                  null,
-   SO_PHONG             nvarchar(10)         null,
+   SO_PHONG             nvarchar(10)         not null,
    constraint PK_PHONG primary key (MA_PHONG)
 )
 go
