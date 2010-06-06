@@ -12,7 +12,7 @@ namespace QLKS_TiepNhanKhach
 {
     public partial class Form_Test : Form
     {
-        private TimKiemVaChonPhongTrong ui = new TimKiemVaChonPhongTrong();
+        private TimKiemVaChonPhongTrongUI ui = new TimKiemVaChonPhongTrongUI();
         public Form_Test()
         {
             InitializeComponent();

@@ -139,6 +139,12 @@
     <Compile Include="DAO\QuocGiaDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form\Form_TimKiemvaChonPhongTrong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_TimKiemvaChonPhongTrong.Designer.cs">
+      <DependentUpon>Form_TimKiemvaChonPhongTrong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormCheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,10 @@
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\Form_TimKiemvaChonPhongTrong.resx">
+      <DependentUpon>Form_TimKiemvaChonPhongTrong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCheckIn.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormCheckIn.cs</DependentUpon>
@@ -362,8 +372,8 @@
       <SubType>Designer</SubType>
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\TimKiemVaChonPhongTrong.resx">
-      <DependentUpon>TimKiemVaChonPhongTrong.cs</DependentUpon>
+    <EmbeddedResource Include="UI\TimKiemVaChonPhongTrongUI.resx">
+      <DependentUpon>TimKiemVaChonPhongTrongUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TraCuuCongTyUI.resx">
@@ -519,11 +529,11 @@
     <Compile Include="UI\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\TimKiemVaChonPhongTrong.cs">
+    <Compile Include="UI\TimKiemVaChonPhongTrongUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\TimKiemVaChonPhongTrong.Designer.cs">
-      <DependentUpon>TimKiemVaChonPhongTrong.cs</DependentUpon>
+    <Compile Include="UI\TimKiemVaChonPhongTrongUI.Designer.cs">
+      <DependentUpon>TimKiemVaChonPhongTrongUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TraCuuCongTyUI.cs">
       <SubType>UserControl</SubType>
