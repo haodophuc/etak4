@@ -58,6 +58,28 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             }
         }
+        public DataTable GetUnPaidRoomByKhachHang(int maKhachHang)
+        {
+            try
+            {
+                return phieuthuephongDAO.SelectAllwithDaTraPhongByFalseAndMaKhachHang(maKhachHang);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public DataTable GetUnPaidRoomByDoanKhach(int maDoanKhach)
+        {
+            try
+            {
+                return phieuthuephongDAO.SelectAllwithDaTraPhongByFalseAndMaDoanKhach(maDoanKhach);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
     }
 }
