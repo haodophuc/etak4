@@ -28,6 +28,18 @@ namespace QLKS_TiepNhanKhach.DAO
                 throw e;
             }
         }
+        public DataTable SelectAllWithMaTinhTrangByOne()
+        {
+            try
+            {
+                string query = "Select SO_PHONG,MA_LOAI_PHONG From Phong Where MA_TINH_TRANG=1";
+                return Program.dbConnection.ExecuteSelectQuery(query);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
         public int Insert(PhongVO phongVO)
         {

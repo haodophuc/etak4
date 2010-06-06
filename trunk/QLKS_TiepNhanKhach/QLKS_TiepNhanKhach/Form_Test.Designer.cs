@@ -1,6 +1,6 @@
 namespace QLKS_TiepNhanKhach
 {
-    partial class FormTest
+    partial class Form_Test
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,18 @@ namespace QLKS_TiepNhanKhach
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Form_Test
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "FormTest";
+            this.ClientSize = new System.Drawing.Size(503, 403);
+            this.Name = "Form_Test";
+            this.Text = "Form_Test";
+            this.Load += new System.EventHandler(this.Form_Test_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

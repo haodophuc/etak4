@@ -28,6 +28,17 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             }
         }
+        public DataTable GetEmptyRoom()
+        {
+            try
+            {
+                return phongDAO.SelectAllWithMaTinhTrangByOne();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
         public int Insert(PhongVO phongVO)
         {
