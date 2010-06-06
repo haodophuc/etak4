@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  6/6/2010 12:34:02 AM                     */
+/* Date de création :  6/6/2010 1:21:25 PM                      */
 /*==============================================================*/
 
 
@@ -460,14 +460,13 @@ create table PHIEU_THUE_PHONG (
    MA_PHIEU             int                  identity,
    MA_KHACH_HANG        int                  null,
    MA_DOAN_KHACH        int                  null,
-   MA_PHONG             int                  null,
-   NGAY_NHAN_PHONG      datetime             null,
+   MA_PHONG             int                  not null,
+   NGAY_NHAN_PHONG      datetime             not null,
    NGAY_TRA_PHONG       datetime             null,
-   DON_GIA_PHONG        money                null,
    GHI_CHU              nvarchar(50)         null,
-   THANH_TOAN_TIEN_PHONG bit                  null,
-   THANH_TOAN_DICH_VU   bit                  null,
-   DA_TRA_PHONG         bit                  null default 1,
+   THANH_TOAN_TIEN_PHONG bit                  not null default 0,
+   THANH_TOAN_DICH_VU   bit                  not null default 0,
+   DA_TRA_PHONG         bit                  not null default 0,
    constraint PK_PHIEU_THUE_PHONG primary key (MA_PHIEU)
 )
 go
