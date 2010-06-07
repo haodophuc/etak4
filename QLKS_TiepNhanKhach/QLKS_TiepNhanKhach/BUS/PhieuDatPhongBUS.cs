@@ -6,80 +6,82 @@ using System.Data;
 using System.Data.SqlClient;
 using QLKS_TiepNhanKhach.VO;
 
-
 namespace QLKS_TiepNhanKhach.BUS
 {
-    class DoanKhachBUS
+     
+    class PhieuDatPhongBUS
     {
-        #region Properties
-        private DoanKhachDAO doankhachDAO;
-        #endregion
-
-        #region Methos
-        public DoanKhachBUS()
+        private PhieuDatPhongDAO phieuDatPhongDAO;
+        public PhieuDatPhongBUS()
         {
-            doankhachDAO = new DoanKhachDAO();
+            phieuDatPhongDAO = new PhieuDatPhongDAO();
         }
         public DataTable GetAll()
         {
             try
             {
-                return doankhachDAO.SelectAll();
+                return phieuDatPhongDAO.SelectAll();
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-        public int Insert(DoanKhachVO doankhachVO)
+        public int UpdateDaGiaiQuyetForCustomerAfterCheckOut(int makhachhang)
         {
-            try
-            {
-                return doankhachDAO.Insert(doankhachVO);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            return phieuDatPhongDAO.UpdateFieldDA_GIAI_QUYETNotTruebyMaKH(makhachhang, true);
+        }
+        public int UpdateDaGiaiQuyetForGroupAfterCheckOut(int madoankhach)
+        {
+            return phieuDatPhongDAO.UpdateFieldDA_GIAI_QUYETNotTruebyMaDK(madoankhach, true);
         }
         public int GetNewIndentity()
         {
             try
             {
-                return doankhachDAO.GetLastIdentity() + 1;
+                return phieuDatPhongDAO.GetLastIdentity() + 1;
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-        public int Update(DoanKhachVO doankhachVO)
+        public int Insert(PhieuDatPhongVO phieuDatPhongVO)
         {
             try
             {
-                return doankhachDAO.Update(doankhachVO);
+                return phieuDatPhongDAO.Insert(phieuDatPhongVO);
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-        public int Delete(int maDoanKhach)
+        public int Update(PhieuDatPhongVO phieuDatPhongVO)
         {
             try
             {
-                return doankhachDAO.Delete(maDoanKhach);
+                return phieuDatPhongDAO.Update(phieuDatPhongVO);
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-        public Int64 GetTienCoc(int madoankhach)
+        public int Delete(int maPhieu)
         {
-            return doankhachDAO.TienCoc(madoankhach);
+            try
+            {
+                return phieuDatPhongDAO.Delete(maPhieu);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
-      
-        #endregion
+
+
     }
 }
+
+

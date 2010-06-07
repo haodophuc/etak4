@@ -96,8 +96,8 @@ namespace QLKS_TiepNhanKhach.DAO
         {
             try
             {
-                String query = "INSERT INTO PHIEU_THUE_PHONG VALUES(@MA_KHACH_HANG,@MA_DOAN_KHACH,@MA_PHONG,@NGAY_NHAN_PHONG,@NGAY_TRA_PHONG,@GHI_CHU,@THANH_TOAN_TIEN_PHONG,@THANH_TOAN_DICH_VU )";
-                SqlParameter[] sqlParameters = new SqlParameter[8];
+                String query = "INSERT INTO PHIEU_THUE_PHONG VALUES(@MA_KHACH_HANG,@MA_DOAN_KHACH,@MA_PHONG,@NGAY_NHAN_PHONG,@NGAY_TRA_PHONG,@GHI_CHU,@THANH_TOAN_TIEN_PHONG,@THANH_TOAN_DICH_VU,@DA_TRA_PHONG )";
+                SqlParameter[] sqlParameters = new SqlParameter[9];
 
                 sqlParameters[0] = new SqlParameter("@MA_KHACH_HANG", phieuthuephongVO.MA_KHACH_HANG);
                 sqlParameters[1] = new SqlParameter("@MA_DOAN_KHACH", phieuthuephongVO.MA_DOAN_KHACH);
@@ -107,6 +107,7 @@ namespace QLKS_TiepNhanKhach.DAO
                 sqlParameters[5] = new SqlParameter("@GHI_CHU", phieuthuephongVO.GHI_CHU);
                 sqlParameters[6] = new SqlParameter("@THANH_TOAN_TIEN_PHONG", phieuthuephongVO.THANH_TOAN_TIEN_PHONG);
                 sqlParameters[7] = new SqlParameter("@THANH_TOAN_DICH_VU", phieuthuephongVO.THANH_TOAN_DICH_VU);
+                sqlParameters[8] = new SqlParameter("@DA_TRA_PHONG", phieuthuephongVO.DA_TRA_PHONG);
 
                 return Program.dbConnection.ExecuteNonQuery(query, sqlParameters);
             }
@@ -131,6 +132,20 @@ namespace QLKS_TiepNhanKhach.DAO
                 sqlParameters[7] = new SqlParameter("@THANH_TOAN_DICH_VU", phieuthuephongVO.THANH_TOAN_DICH_VU);
                 sqlParameters[8] = new SqlParameter("@DA_TRA_PHONG", phieuthuephongVO.DA_TRA_PHONG);
                 sqlParameters[9] = new SqlParameter("@MA_PHIEU", phieuthuephongVO.MA_PHIEU);
+                return Program.dbConnection.ExecuteNonQuery(query, sqlParameters);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public int Delete(int maPhieu)
+        {
+            try
+            {
+                String query = "DELETE FROM PHIEU_THUE_PHONG WHERE MA_PHIEU = @MA_PHIEU";
+                SqlParameter[] sqlParameters = new SqlParameter[1];
+                sqlParameters[0] = new SqlParameter("@MA_PHIEU", maPhieu);
                 return Program.dbConnection.ExecuteNonQuery(query, sqlParameters);
             }
             catch (Exception e)

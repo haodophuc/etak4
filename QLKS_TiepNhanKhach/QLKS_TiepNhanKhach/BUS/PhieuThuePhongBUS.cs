@@ -47,6 +47,17 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             }
         }
+        public int Delete(int maPhieu)
+        {
+            try
+            {
+                return phieuthuephongDAO.Delete(maPhieu);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public int Update(PhieuThuePhongVO phieuthuephongVO)
         {
             try

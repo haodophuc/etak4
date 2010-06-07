@@ -35,7 +35,7 @@ namespace QLKS_TiepNhanKhach
             {
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+    
         }
 
         private void btnExit_Click(object sender, EventArgs e)

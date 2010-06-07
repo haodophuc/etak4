@@ -7,12 +7,12 @@ using System.Text;
 using System.Windows.Forms;
 using QLKS_TiepNhanKhach.BUS;
 using QLKS_TiepNhanKhach.UI;
-
+using QLKS_TiepNhanKhach.VO;
 namespace QLKS_TiepNhanKhach
 {
     public partial class Form_Test : Form
     {
-        private TimKiemVaChonPhongTrongUI ui = new TimKiemVaChonPhongTrongUI();
+        private PhieuDatPhongBUS p = new PhieuDatPhongBUS();
         public Form_Test()
         {
             InitializeComponent();
@@ -20,8 +20,11 @@ namespace QLKS_TiepNhanKhach
 
         private void Form_Test_Load(object sender, EventArgs e)
         {
-            this.Controls.Add(ui);
-            ui.Dock = DockStyle.Fill;
+
+
+           
+
+  
         }
     }
 }

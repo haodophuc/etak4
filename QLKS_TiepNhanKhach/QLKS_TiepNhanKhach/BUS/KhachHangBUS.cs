@@ -76,6 +76,10 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             } 
         }
+        public Int64 GetTienCoc(int makhachhang)
+        {
+            return khachHangDAO.TienCoc(makhachhang);
+        }
 
        
     }
