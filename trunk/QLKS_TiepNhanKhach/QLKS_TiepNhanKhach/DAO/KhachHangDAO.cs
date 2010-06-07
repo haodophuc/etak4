@@ -105,8 +105,13 @@ namespace QLKS_TiepNhanKhach.DAO
             }
 
         }
-
-    
+      
+        public Int64 TienCoc(int makhachhang)
+        {
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@MA_KHACH_HANG", makhachhang);
+            return Program.dbConnection.ExecuteScalarByProcedue("sp_tiencocKH", sqlParameters);
+        }
 
       
 

@@ -34,7 +34,8 @@ namespace QLKS_TiepNhanKhach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 611);
+            this.ClientSize = new System.Drawing.Size(1028, 611);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 645);
             this.Name = "Form_CheckOut";
             this.Text = "Form_CheckOut";

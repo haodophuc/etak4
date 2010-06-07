@@ -59,5 +59,12 @@ namespace QLKS_TiepNhanKhach.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Resources.ResXFileRef images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Resources.ResXFileRef)(obj));
+            }
+        }
     }
 }

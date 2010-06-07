@@ -99,6 +99,12 @@ namespace QLKS_TiepNhanKhach.DAO
                 throw e;
             }
         }
+        public Int64 TienCoc(int madoankhach)
+        {
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@MA_DOAN_KHACH", madoankhach);
+            return Program.dbConnection.ExecuteScalarByProcedue("sp_tiencocDK", sqlParameters);
+        }
        
     }
 
