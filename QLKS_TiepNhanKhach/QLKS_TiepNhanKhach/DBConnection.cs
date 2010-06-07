@@ -176,6 +176,29 @@ namespace QLKS_TiepNhanKhach
             }
             return result;
         }
+
+        public Int64 ExecuteScalarByProcedue(string storeprocedure, SqlParameter[] sqlParameters)
+        {
+            Int64 result = 0;
+            try
+            {
+                Connect();
+                command = new SqlCommand(storeprocedure, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddRange(sqlParameters);
+                result = Int64.Parse(command.ExecuteScalar().ToString());
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                command.Dispose();
+                Disconnect();
+            }
+            return result;
+        }
         #endregion
     }
 }
