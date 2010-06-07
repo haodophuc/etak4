@@ -6,7 +6,7 @@ using System.Data.Common;
 
 namespace QLKS_TiepNhanKhach.Base
 {
-    class RegData
+    public class RegData
     {
        #region Constructors
 
@@ -19,15 +19,17 @@ namespace QLKS_TiepNhanKhach.Base
             Customers = new TableCustomers();
             Groups = new TableGroups();
             Rooms = new TableRooms();
+            Companies = new TableCompanies();
 
             // Add tables to dataset
-            CheckInData.Tables.AddRange( new DataTable[] { Customers, Groups, Rooms } );
+            CheckInData.Tables.AddRange( new DataTable[] { Customers, Groups, Rooms, Companies } );
 
-            string selectCmd = Customers.SelectCommand;
+            string selectCmd = @Customers.SelectCommand + " " + Companies.SelectCommand +";";
 
             agent = new RegDataDAO(selectCmd);
+            agent.Initialize(this);
 
-            agent.FillDataSet(CheckInData, Customers.GetTableMapping(), Customers.SourceTableName);
+            //agent.FillDataSet(CheckInData, Customers.GetTableMapping(), Customers.SourceTableName);
 
         }//end method RegData
 
@@ -41,7 +43,7 @@ namespace QLKS_TiepNhanKhach.Base
         }//end method CreateTables
 
         public void Update() {
-            //agent.Update(DataSet);
+            agent.Update();
         }//emd method Update
 
        #endregion //end region Methods
@@ -78,10 +80,17 @@ namespace QLKS_TiepNhanKhach.Base
             set { this.customers = value; }
         }//end 
 
+        public TableCompanies Companies
+        {
+            get { return companies; }
+            set { this.companies = value; }
+        }//end attribute Companies
+
        #endregion //end region Attributes
 
 
        #region Instance Fields
+        private TableCompanies companies;
         private TableCustomers customers;
         private TableGroups groups;
         private TableRooms rooms;

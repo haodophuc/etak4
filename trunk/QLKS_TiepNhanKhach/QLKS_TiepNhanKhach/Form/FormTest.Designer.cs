@@ -33,7 +33,6 @@ namespace QLKS_TiepNhanKhach
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -113,19 +112,10 @@ namespace QLKS_TiepNhanKhach
             this.textBox5.Size = new System.Drawing.Size(185, 20);
             this.textBox5.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ID";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 55);
+            this.label2.Location = new System.Drawing.Point(37, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 6;
@@ -134,7 +124,7 @@ namespace QLKS_TiepNhanKhach
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 82);
+            this.label3.Location = new System.Drawing.Point(37, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 7;
@@ -143,7 +133,7 @@ namespace QLKS_TiepNhanKhach
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 109);
+            this.label4.Location = new System.Drawing.Point(37, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 8;
@@ -152,7 +142,7 @@ namespace QLKS_TiepNhanKhach
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 136);
+            this.label5.Location = new System.Drawing.Point(41, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 9;
@@ -226,7 +216,6 @@ namespace QLKS_TiepNhanKhach
             this.panelControl1.Controls.Add(this.textBox8);
             this.panelControl1.Controls.Add(this.textBox9);
             this.panelControl1.Controls.Add(this.textBox10);
-            this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.buttonReset);
             this.panelControl1.Controls.Add(this.textBox1);
             this.panelControl1.Controls.Add(this.textBox2);
@@ -406,7 +395,6 @@ namespace QLKS_TiepNhanKhach
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

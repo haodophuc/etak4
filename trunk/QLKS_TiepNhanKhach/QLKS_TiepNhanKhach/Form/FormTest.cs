@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using QLKS_TiepNhanKhach.Base;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Controls;
+using QLKS_TiepNhanKhach.VO;
+using QLKS_TiepNhanKhach.BUS;
 
 namespace QLKS_TiepNhanKhach
 {
@@ -24,8 +26,9 @@ namespace QLKS_TiepNhanKhach
         {
             gridControl1.DataSource = regdata.Customers;
             gridView1.Columns[0].Visible = false;
-            gridControl2.DataSource = regdata.Groups;
+            //gridControl2.DataSource = regdata.Groups;
             gridControl3.DataSource = regdata.Rooms;
+
             RepositoryItemLookUpEdit lookupRoom = new RepositoryItemLookUpEdit();
             lookupRoom.DataSource = regdata.Rooms;
             lookupRoom.DisplayMember = "RoomNumber";
@@ -38,6 +41,10 @@ namespace QLKS_TiepNhanKhach
             lookupRoom.BestFitMode = BestFitMode.BestFitResizePopup;
             lookupRoom.NullText = "Chưa chọn phòng";
             gridView1.Columns["RoomNumber"].ColumnEdit = lookupRoom;
+
+            gridControl2.DataSource = regdata.Companies;
+            //gridView2.Columns[0].Visible = false;
+
         }
         
         private RegData regdata;
@@ -54,12 +61,24 @@ namespace QLKS_TiepNhanKhach
             //values[1] = textBox2.Text;
             //values[2] = textBox3.Text;
             //values[3] = textBox4.Text;
-            String value = textBox5.Text;
+            //String value = textBox5.Text;
             //values[5] = textBox6.Text;
             //values[6] = textBox7.Text;
             //values[7] = textBox8.Text;
             //values[8] = textBox9.Text;
-            AddRow(value);
+            //AddRow(value);
+
+            //regdata.Update();
+
+            //PhieuThuePhongBUS bus = new PhieuThuePhongBUS();
+            //PhieuThuePhongVO pack = new PhieuThuePhongVO();
+
+            DataRow row = gridView1.GetFocusedDataRow();
+
+            MessageBox.Show(row["CustomerID"].ToString());
+
+
+
         }
 
         public void AddRow(String value) {

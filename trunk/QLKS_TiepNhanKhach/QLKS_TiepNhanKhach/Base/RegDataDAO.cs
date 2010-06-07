@@ -20,6 +20,10 @@ namespace QLKS_TiepNhanKhach.Base
             Adapter = new SqlDataAdapter(selectCommand, Connection.Connection);
         }//end default constructor
 
+        public RegDataDAO(RegData regdata)
+        {
+
+        }//end constructor
         #endregion //end region Constructors
 
 
@@ -33,10 +37,19 @@ namespace QLKS_TiepNhanKhach.Base
 
         }//end method 
 
-        public void Update(DataSet dataset)
+        public void Initialize(RegData dataset)
         {
-            Adapter.Update(dataset.Tables["Customers"]);
-            dataset.AcceptChanges();
+            DataSource = dataset;
+            Adapter.TableMappings.Add(dataset.Customers.GetTableMapping());
+            Adapter.TableMappings.Add(dataset.Companies.GetTableMapping());
+            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(Adapter);
+            Adapter.Fill(dataset.CheckInData, dataset.Customers.SourceTableName);
+        }//end method Initialize
+
+        public void Update()
+        {
+            Adapter.Update(DataSource.CheckInData, DataSource.Customers.SourceTableName);
+            DataSource.CheckInData.AcceptChanges();
         }//end method Update(DataSet)
 
         public void Update(DataTable datatable)
@@ -62,10 +75,17 @@ namespace QLKS_TiepNhanKhach.Base
             set { this.adapter = value; }
         }//end attribute Adapter
 
+        public RegData DataSource
+        {
+            get { return this.dataSource; }
+            set { this.dataSource = value; }
+        }//end attribute CheckInData
+
         #endregion //end region Attributes
 
 
         #region Instance Fields
+        private RegData dataSource;
         private SqlDataAdapter adapter;
         private DBConnection connection;
         #endregion Instance Fields
