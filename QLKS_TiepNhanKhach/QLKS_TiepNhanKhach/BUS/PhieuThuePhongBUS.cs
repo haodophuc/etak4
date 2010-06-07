@@ -58,36 +58,78 @@ namespace QLKS_TiepNhanKhach.BUS
                 throw e;
             }
         }
-        public DataTable GetUnPaidRoomByKhachHang(int maKhachHang)
-        {
-            try
-            {
-                return phieuthuephongDAO.SelectUnpaidRoomByMaKhachHang(maKhachHang);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-        public DataTable GetUnPaidRoomByDoanKhach(int maDoanKhach)
-        {
-            try
-            {
-                return phieuthuephongDAO.SelectUnpaidRoomByMaDoanKhach(maDoanKhach);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-        public Int64 GetTienPhong(int maPhieu)
-        {
-           return phieuthuephongDAO.TienPhong(maPhieu);
-        }
-        public Int64 GetTienDichVu(int maPhieu)
-        {
-            return phieuthuephongDAO.TienDichVU(maPhieu);
-        }
 
     }
 }
+/*
+class CongtyBus
+{
+    #region Properties
+    private CongtyDAO congtyDAO;
+    #endregion
+
+    #region methods
+    public CongtyBus()
+    {
+        congtyDAO = new CongtyDAO();
+    }
+    public DataTable GetAll()
+    {
+        try
+        {
+            return congtyDAO.SelectAll();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+    public int Insert(CongtyVO congtyVO)
+    {
+        try
+        {
+            return congtyDAO.Insert(congtyVO);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+    public int Update(CongtyVO congtyVO)
+    {
+        try
+        {
+            return congtyDAO.Update(congtyVO);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+    public int Delete(int maCongty)
+    {
+        try
+        {
+            return congtyDAO.Delete(maCongty);
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+    public int GetNewIndentity()
+    {
+        try
+        {
+            return congtyDAO.GetLastIdentity() + 1;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+
+
+    #endregion
+}
+*/

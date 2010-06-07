@@ -43,12 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v9.3.Core, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DevExpress\DevExpress.Data.v9.3.dll</HintPath>
@@ -61,7 +55,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DevExpress\DevExpress.XtraBars.v9.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DevExpress\DevExpress.XtraEditors.v9.3.dll</HintPath>
@@ -78,10 +71,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DevExpress\DevExpress.XtraNavBar.v9.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v9.3.Core, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DevExpress\DevExpress.XtraScheduler.v9.3.dll</HintPath>
@@ -104,6 +93,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Interfaces\IDataSubmit.cs" />
+    <Compile Include="Base\Mode.cs" />
+    <Compile Include="Base\RegData.cs">
+    </Compile>
+    <Compile Include="Base\RegDataDAO.cs" />
+    <Compile Include="Base\SubmitBooking.cs" />
+    <Compile Include="Base\SubmitChecking.cs" />
+    <Compile Include="Base\TableData\TableCustomers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\TableData\TableRooms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\TableData\TableGroups.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\TestData.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BUS\CongtyBus.cs" />
     <Compile Include="BUS\DoanKhachBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
@@ -119,6 +127,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\StyledComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StyledLookUpEdit.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\StyledPanel.cs">
@@ -139,29 +150,17 @@
     <Compile Include="DAO\QuocGiaDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="Form\Form_TimKiemvaChonPhongTrong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_TimKiemvaChonPhongTrong.Designer.cs">
-      <DependentUpon>Form_TimKiemvaChonPhongTrong.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormCheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormCheckIn.Designer.cs">
       <DependentUpon>FormCheckIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Form_CheckOut.cs">
+    <Compile Include="Form\FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form_CheckOut.designer.cs">
-      <DependentUpon>Form_CheckOut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Form_ReportKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Form_ReportKhachHang.designer.cs">
-      <DependentUpon>Form_ReportKhachHang.cs</DependentUpon>
+    <Compile Include="Form\FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Form_TimKiemVaChonCongTy.cs">
       <SubType>Form</SubType>
@@ -241,30 +240,16 @@
     <Compile Include="Form\Form_TraCuuThongTinDoanKhach.Designer.cs">
       <DependentUpon>Form_TraCuuThongTinDoanKhach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Test.Designer.cs">
-      <DependentUpon>Form_Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\Form_TimKiemvaChonPhongTrong.resx">
-      <DependentUpon>Form_TimKiemvaChonPhongTrong.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCheckIn.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormCheckIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_CheckOut.resx">
-      <DependentUpon>Form_CheckOut.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormTest.resx">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form_ReportKhachHang.resx">
-      <DependentUpon>Form_ReportKhachHang.cs</DependentUpon>
-      <SubType>Designer</SubType>
+      <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Form_TimKiemVaChonCongTy.resx">
       <DependentUpon>Form_TimKiemVaChonCongTy.cs</DependentUpon>
@@ -318,26 +303,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>Form_TraCuuThongTinDoanKhach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Test.resx">
-      <DependentUpon>Form_Test.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Report_TongSoKhachHang.resx">
-      <DependentUpon>Report_TongSoKhachHang.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\Report_TSKhachHangFilterRoom.resx">
-      <DependentUpon>Report_TSKhachHangFilterRoom.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\CheckOutUI.resx">
-      <DependentUpon>CheckOutUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TimkiemvaChonCongTyUI.resx">
@@ -372,10 +341,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\TimKiemVaChonPhongTrongUI.resx">
-      <DependentUpon>TimKiemVaChonPhongTrongUI.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\TraCuuCongTyUI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>TraCuuCongTyUI.cs</DependentUpon>
@@ -392,9 +357,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UICheckIn.resx">
+    <EmbeddedResource Include="UI\UITransaction.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>UICheckIn.cs</DependentUpon>
+      <DependentUpon>UITransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UICustomerInfoPanel.resx">
       <DependentUpon>UICustomerInfoPanel.cs</DependentUpon>
@@ -404,8 +369,12 @@
       <DependentUpon>UIGroupInfoPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UIRoomInfoPanelcs.resx">
-      <DependentUpon>UIRoomInfoPanelcs.cs</DependentUpon>
+    <EmbeddedResource Include="UI\UIRegData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UIRegData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIRoomInfoPanel.resx">
+      <DependentUpon>UIRoomInfoPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -418,68 +387,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="QLKSDataSet\QLKSDataSet_KhachHang.xsc">
-      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
-    </None>
-    <None Include="QLKSDataSet\QLKSDataSet_KhachHang.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLKSDataSet_KhachHang.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="QLKSDataSet\QLKSDataSet_KhachHang.xss">
-      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
-    </None>
-    <None Include="QLKSDataSet\QLKSDataSet_TSKHFilterRoom.xsc">
-      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
-    </None>
-    <None Include="QLKSDataSet\QLKSDataSet_TSKHFilterRoom.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLKSDataSet_TSKHFilterRoom.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="QLKSDataSet\QLKSDataSet_TSKHFilterRoom.xss">
-      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
-    </None>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="QLKSDataSet\QLKSDataSet_KhachHang.cs">
-      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="QLKSDataSet\QLKSDataSet_KhachHang.designer.cs">
-      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="QLKSDataSet\QLKSDataSet_TSKHFilterRoom.cs">
-      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="QLKSDataSet\QLKSDataSet_TSKHFilterRoom.designer.cs">
-      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Report\Report_TongSoKhachHang.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Report_TongSoKhachHang.Designer.cs">
-      <DependentUpon>Report_TongSoKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\Report_TSKhachHangFilterRoom.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\Report_TSKhachHangFilterRoom.Designer.cs">
-      <DependentUpon>Report_TSKhachHangFilterRoom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\CheckOutUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\CheckOutUI.Designer.cs">
-      <DependentUpon>CheckOutUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\TimkiemvaChonCongTyUI.cs">
       <SubType>UserControl</SubType>
@@ -529,12 +440,6 @@
     <Compile Include="UI\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\TimKiemVaChonPhongTrongUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\TimKiemVaChonPhongTrongUI.Designer.cs">
-      <DependentUpon>TimKiemVaChonPhongTrongUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\TraCuuCongTyUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -559,11 +464,11 @@
     <Compile Include="UI\TraCuuKhachHangUI.Designer.cs">
       <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UICheckIn.cs">
+    <Compile Include="UI\UITransaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UICheckIn.Designer.cs">
-      <DependentUpon>UICheckIn.cs</DependentUpon>
+    <Compile Include="UI\UITransaction.Designer.cs">
+      <DependentUpon>UITransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UICustomerInfoPanel.cs">
       <SubType>UserControl</SubType>
@@ -577,11 +482,17 @@
     <Compile Include="UI\UIGroupInfoPanel.designer.cs">
       <DependentUpon>UIGroupInfoPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UIRoomInfoPanelcs.cs">
+    <Compile Include="UI\UIRegData.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UIRoomInfoPanelcs.designer.cs">
-      <DependentUpon>UIRoomInfoPanelcs.cs</DependentUpon>
+    <Compile Include="UI\UIRegData.Designer.cs">
+      <DependentUpon>UIRegData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIRoomInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UIRoomInfoPanel.designer.cs">
+      <DependentUpon>UIRoomInfoPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="VO\CongtyVO.cs" />
     <Compile Include="VO\DoanKhachVO.cs" />
@@ -605,9 +516,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

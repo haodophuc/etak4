@@ -15,27 +15,15 @@ namespace QLKS_TiepNhanKhach.DAO
         {
            
         }
-       
+
         public DataTable SelectAll()
         {
             try
             {
-                string query = "Select SO_PHONG,'LP' + REPLACE(STR(MA_LOAI_PHONG,2),' ','0') AS MA_LOAI_PHONG,MA_TINH_TRANG From Phong";
+                string query = "Select SO_PHONG,MA_LOAI_PHONG,MA_TINH_TRANG From Phong";
                 return Program.dbConnection.ExecuteSelectQuery(query);
             }
             catch(Exception e)
-            {
-                throw e;
-            }
-        }
-        public DataTable SelectAllWithMaTinhTrangByOne()
-        {
-            try
-            {
-                string query = "Select SO_PHONG,'LP' + REPLACE(STR(MA_LOAI_PHONG,2),' ','0') AS MA_LOAI_PHONG From Phong Where MA_TINH_TRANG=1";
-                return Program.dbConnection.ExecuteSelectQuery(query);
-            }
-            catch (Exception e)
             {
                 throw e;
             }
@@ -45,12 +33,11 @@ namespace QLKS_TiepNhanKhach.DAO
         {
             try
             {
-                String query = "INSERT INTO PHONG VALUES(@MA_LOAI_PHONG,@MA_TINH_TRANG,@SO_PHONG)";
-                SqlParameter[] sqlParameters = new SqlParameter[3];
+                String query = "INSERT INTO PHONG VALUES(@MA_LOAIPHONG,@MA_TINH_TRANG)";
+                SqlParameter[] sqlParameters = new SqlParameter[2];
 
-                sqlParameters[0] = new SqlParameter("@MA_LOAI_PHONG", phongVO.MaLoaiPhong);
+                sqlParameters[0] = new SqlParameter("@MA_LOAIPHONG", phongVO.MaLoaiPhong);
                 sqlParameters[1] = new SqlParameter("@MA_TINH_TRANG", phongVO.MaTinhTrang);
-                sqlParameters[2 ] = new SqlParameter("@SO_PHONG", phongVO.SoPhong);
                 
                 return Program.dbConnection.ExecuteNonQuery(query, sqlParameters);
             }

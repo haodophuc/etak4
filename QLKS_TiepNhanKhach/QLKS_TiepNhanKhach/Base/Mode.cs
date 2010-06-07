@@ -1,0 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace QLKS_TiepNhanKhach.Base
+{
+    public class Mode
+    {
+
+        public enum SubmitMode { CheckIn, Booking };
+
+        public enum CustomerMode { Customer, Group };
+
+    }//end class Mode
+
+}//end namespace
