@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  6/7/2010 8:01:15 PM                      */
+/* Date de création :  6/8/2010 1:46:58 AM                      */
 /*==============================================================*/
 
 
@@ -552,8 +552,8 @@ create table KHACH_HANG (
    MA_QUOC_GIA          int                  null,
    HO_KHACH_HANG        TEN                  not null,
    TEN_KHACH_HANG       TEN                  not null,
-   CMND                 nvarchar(20)         null,
-   HO_CHIEU             nvarchar(20)         null,
+   CMND                 nvarchar(50)         not null,
+   HO_CHIEU             nvarchar(50)         not null,
    DIEN_THOAI           DIEN_THOAI           null,
    HIEU_LUC             YES_OR_NO            not null default 1,
    constraint PK_KHACH_HANG primary key (MA_KHACH_HANG)
@@ -625,7 +625,7 @@ create table PHIEU_THUE_PHONG (
    GHI_CHU              nvarchar(50)         null,
    THANH_TOAN_TIEN_PHONG YES_OR_NO            not null default 0,
    THANH_TOAN_DICH_VU   YES_OR_NO            not null default 0,
-   DA_TRA_PHONG         YES_OR_NO            not null,
+   DA_TRA_PHONG         YES_OR_NO            not null default 0,
    constraint PK_PHIEU_THUE_PHONG primary key (MA_PHIEU)
 )
 go
