@@ -43,56 +43,125 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v9.3.Core, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Charts.v9.3.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.Data.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Data.v9.3.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Utils.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.Utils.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Utils.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Bars.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Bars.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Bars.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Bars.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Carousel.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Carousel.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Carousel.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Carousel.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Charts.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Charts.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Charts.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Charts.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Docking.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Docking.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Docking.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Docking.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Grid.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Grid.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Grid.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Grid.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Printing.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Printing.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Printing.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.Wpf.Printing.v9.3.dll.VisualStudio.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraBars.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraBars.v9.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraCharts.v9.3.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraEditors.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraEditors.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.3.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraEditors.v9.3.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraGrid.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraGrid.v9.3.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraLayout.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraLayout.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraLayout.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.3.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraLayout.v9.3.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraNavBar.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraNavBar.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraNavBar.v9.3.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v9.3.Core, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v9.3, Version=9.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraPivotGrid.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraPivotGrid.v9.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraPrinting.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraReports.v9.3.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraScheduler.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraScheduler.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraScheduler.v9.3.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraScheduler.v9.3.Extensions, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraScheduler.v9.3.Extensions.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraScheduler.v9.3.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraWizard.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DevExpress\DevExpress.XtraWizard.v9.3.dll</HintPath>
+      <HintPath>C:\Documents and Settings\Administrator\Desktop\References\DevExpress.XtraWizard.v9.3.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
