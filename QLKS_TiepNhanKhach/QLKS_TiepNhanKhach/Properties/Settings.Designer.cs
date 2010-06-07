@@ -23,14 +23,16 @@ namespace QLKS_TiepNhanKhach.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrate" +
-            "d Security=True;User Instance=True")]
-        public string Database1ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=QLKS;User ID=ADMIN;PASSWORD=1234")]
+        public string QLKSConnectionString {
             get {
-                return ((string)(this["Database1ConnectionString"]));
+                return ((string)(this["QLKSConnectionString"]));
+            }
+            set {
+                this["QLKSConnectionString"] = value;
             }
         }
     }

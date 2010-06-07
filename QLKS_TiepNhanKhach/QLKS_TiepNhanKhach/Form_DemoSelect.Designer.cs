@@ -46,7 +46,7 @@ namespace QLKS_TiepNhanKhach
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(127, 150);
+            this.textEdit1.Location = new System.Drawing.Point(49, 29);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(100, 20);
             this.textEdit1.TabIndex = 1;
@@ -54,7 +54,7 @@ namespace QLKS_TiepNhanKhach
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 195);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 2;
