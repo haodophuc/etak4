@@ -13,7 +13,7 @@ namespace QLKS_TiepNhanKhach
         public FormCheckIn()
         {
             InitializeComponent();
-            UI.UICheckIn mainUI = new QLKS_TiepNhanKhach.UI.UICheckIn();
+            UI.UITransaction mainUI = new QLKS_TiepNhanKhach.UI.UITransaction();
             mainUI.Dock = DockStyle.Fill;
             this.Size = mainUI.Size;
             this.panelMainContainer.Controls.Add(mainUI);

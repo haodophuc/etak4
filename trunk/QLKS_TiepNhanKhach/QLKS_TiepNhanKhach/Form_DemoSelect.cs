@@ -18,13 +18,17 @@ namespace QLKS_TiepNhanKhach
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Form_TimKiemvaChonPhongTrong frm = new Form_TimKiemvaChonPhongTrong();
+            Form_TimKiemVaChonDoanKhach frm = new Form_TimKiemVaChonDoanKhach();
 
             DataRow dtrow = frm.ShowModal();
             if (dtrow != null)
             {
                 textEdit1.Text = dtrow[0].ToString();
             }
+
+       
+         
+
 
         }
     }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -19,7 +19,8 @@ namespace QLKS_TiepNhanKhach.DAO
         {
             try
             {
-                string query = "Select * From LOAI_PHONG";
+                string query = "Select * " + 
+                               "From LOAI_PHONG";
                 return Program.dbConnection.ExecuteSelectQuery(query);
             }
             catch (Exception e)
