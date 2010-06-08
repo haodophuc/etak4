@@ -301,6 +301,10 @@
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ReportKhachHang_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\TimkiemvaChonCongTyUI.resx">
       <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -520,6 +524,12 @@
     </Compile>
     <Compile Include="UIControl\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\ReportKhachHang_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ReportKhachHang_UI.Designer.cs">
+      <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\TextBoxCustomer.cs">
       <SubType>Component</SubType>
