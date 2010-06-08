@@ -221,6 +221,8 @@ namespace QLKS
             return result;
         }
 
+        //public Int32 ExecuteSPReturnsID() { }
+
         public bool databaseContainsUser(String username, String password)
         {
             SqlCommand cmd = new SqlCommand("", Program.DBConnection.Connection);

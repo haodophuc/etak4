@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using QLKS.Base;
 using QLKS.Controls;
+using QLKS.UI;
 
 namespace QLKS.UIControl
 {
@@ -23,6 +24,7 @@ namespace QLKS.UIControl
         public UIGroupInfoPanel(Mode.SubmitMode mode) : this()
         {
             SubmitMode = mode;
+            groupMode = false;
         }//end constructor
 
        #endregion //end region Constructors
@@ -61,18 +63,41 @@ namespace QLKS.UIControl
 
         private StyledTextBox[] GetAllTextBox()
         {
-            StyledTextBox[] textboxes = new StyledTextBox[11];
+            StyledTextBox[] textboxes = new StyledTextBox[10];
            
-            for (int i = 0, j = 0; j < 11; i++)
+            for (int i = 0, j = 0; j < 10; i++)
             {
-                if (groupControl.Controls[i] is StyledTextBox)
+                if (panelCenter.Controls[i] is StyledTextBox)
                 {
-                    textboxes[j++] = (StyledTextBox)groupControl.Controls[i];
+                    textboxes[j++] = (StyledTextBox)panelCenter.Controls[i];
                 }
             }//end for
 
             return textboxes;
         }//end method GetAllTextBox
+
+        public Int32 GetGroupID()
+        {
+            if (groupMode)
+                return groupID;
+            else
+                return -1;
+        }//end method GetData();
+
+        private void LoadData( DataRow row )
+        {
+            groupID = Int32.Parse(row["MA_DOAN_KHACH"].ToString());
+            textBoxGroupID.Text = row["MA_DOAN_KHACH"].ToString();
+            textBoxCheckInDay.Text = row["NGAY_DEN"].ToString();
+            textBoxCompanyName.Text = row["TEN_CONG_TY"].ToString();
+            groupMode = true;
+            
+        }//end method LoadData
+
+        public bool IsAGroup()
+        {
+            return groupMode;
+        }//end method IsAGroup
 
        #endregion //end region Methods
 
@@ -81,8 +106,18 @@ namespace QLKS.UIControl
 
         private void buttonLoadGroup_Click(object sender, EventArgs e)
         {
-
+            Form_TimKiemVaChonDoanKhach findGroup = new Form_TimKiemVaChonDoanKhach();
+            DataRow row = findGroup.ShowModal();
+            if (row != null)
+            {
+                LoadData(row);
+            }//end if
         }//end method buttonLoadGroup_Click
+
+        private void buttonNewGroup_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(GetGroupID().ToString());
+        }//end method buttonNewGroup_Click
 
        #endregion //end region Event Handling Methods
 
@@ -110,19 +145,12 @@ namespace QLKS.UIControl
 
        #region Instance Fields
         private Mode.SubmitMode submitMode;
-
+        private Int32 groupID;
+        private bool groupMode;
        #endregion Instance Fields
-
-        private void styledButton1_Click(object sender, EventArgs e)
-        {
-            if (SubmitMode == Mode.SubmitMode.Booking)
-                SubmitMode = Mode.SubmitMode.CheckIn;
-            else
-                SubmitMode = Mode.SubmitMode.Booking;
-        }
-
 
 
 
     }//end class UIGroupInfoPanel
+
 }//end namespace

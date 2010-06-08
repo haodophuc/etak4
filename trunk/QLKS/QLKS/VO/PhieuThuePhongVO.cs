@@ -93,8 +93,7 @@ namespace QLKS.VO
             set { da_tra_phong = value; }
         }
 
-        #endregion
-	
+        #endregion	
 	
     }
 }

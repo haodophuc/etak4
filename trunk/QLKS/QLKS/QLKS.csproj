@@ -194,11 +194,11 @@
     <Compile Include="Base\RegDataDAO.cs" />
     <Compile Include="Base\SubmitBooking.cs" />
     <Compile Include="Base\SubmitChecking.cs" />
-    <Compile Include="Base\TestData.cs" />
     <Compile Include="BUS\AdminBUS.cs" />
     <Compile Include="BUS\CongtyBus.cs" />
     <Compile Include="BUS\DoanKhachBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\KhachTroBUS.cs" />
     <Compile Include="BUS\LoaiPhongBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhieuThuePhongBUS.cs" />
@@ -232,6 +232,7 @@
     <Compile Include="DAO\CongtyDAO.cs" />
     <Compile Include="DAO\DoanKhachDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhachTroDAO.cs" />
     <Compile Include="DAO\LoaiPhongDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhieuThuePhongDAO.cs" />
@@ -775,6 +776,7 @@
     <Compile Include="VO\CongtyVO.cs" />
     <Compile Include="VO\DoanKhachVO.cs" />
     <Compile Include="VO\KhachHangVO.cs" />
+    <Compile Include="VO\KhachTroVO.cs" />
     <Compile Include="VO\PhieuDatPhongVO.cs" />
     <Compile Include="VO\PhieuThuePhongVO.cs" />
     <Compile Include="VO\PhongVO.cs" />

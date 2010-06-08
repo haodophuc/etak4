@@ -30,7 +30,15 @@
         {
             this.groupControl = new DevExpress.XtraEditors.GroupControl();
             this.panelView = new QLKS.Controls.StyledPanel();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelEditor = new QLKS.Controls.StyledPanel();
+            this.panelCenter = new QLKS.Controls.StyledPanel();
+            this.styledButton2 = new QLKS.Controls.StyledButton();
+            this.styledButton1 = new QLKS.Controls.StyledButton();
+            this.labelPassPort = new System.Windows.Forms.Label();
+            this.labelCMND = new System.Windows.Forms.Label();
+            this.textBoxCountry = new QLKS.Controls.StyledLookUpEdit();
             this.buttonDel = new QLKS.Controls.StyledButton();
             this.buttonAdd = new QLKS.Controls.StyledButton();
             this.buttonNew = new QLKS.Controls.StyledButton();
@@ -38,30 +46,29 @@
             this.textBoxPhone = new QLKS.Controls.NumberTextBox();
             this.textBoxPassPort = new QLKS.Controls.NumberTextBox();
             this.textBoxCMND = new QLKS.Controls.NumberTextBox();
-            this.radioBtnPassPort = new System.Windows.Forms.RadioButton();
-            this.radioBtnCMND = new System.Windows.Forms.RadioButton();
             this.labelPhone = new System.Windows.Forms.Label();
-            this.labelGender = new System.Windows.Forms.Label();
             this.labelCountry = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelCustomerID = new System.Windows.Forms.Label();
             this.textBoxCustomerID = new QLKS.Controls.TextBoxCustomer();
-            this.textBoxGender = new QLKS.Controls.StyledComboBox();
-            this.textBoxCountry = new QLKS.Controls.StyledComboBox();
             this.textBoxLastName = new QLKS.Controls.StyledTextBox();
             this.textBoxFirstName = new QLKS.Controls.StyledTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).BeginInit();
             this.groupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelView)).BeginInit();
+            this.panelView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelEditor)).BeginInit();
             this.panelEditor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).BeginInit();
+            this.panelCenter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPassPort.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCMND.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCustomerID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxGender.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstName.Properties)).BeginInit();
             this.SuspendLayout();
@@ -82,44 +89,130 @@
             // panelView
             // 
             this.panelView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelView.Controls.Add(this.gridControl);
             this.panelView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelView.Location = new System.Drawing.Point(2, 228);
+            this.panelView.Location = new System.Drawing.Point(2, 232);
             this.panelView.LookAndFeel.SkinName = "Blue";
             this.panelView.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelView.Name = "panelView";
-            this.panelView.Size = new System.Drawing.Size(726, 270);
+            this.panelView.Size = new System.Drawing.Size(726, 266);
             this.panelView.TabIndex = 1;
+            // 
+            // gridControl
+            // 
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 0);
+            this.gridControl.LookAndFeel.SkinName = "Blue";
+            this.gridControl.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gridControl.MainView = this.gridView;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(726, 266);
+            this.gridControl.TabIndex = 0;
+            this.gridControl.UseEmbeddedNavigator = true;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView});
+            // 
+            // gridView
+            // 
+            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            this.gridView.OptionsView.ShowFooter = true;
             // 
             // panelEditor
             // 
             this.panelEditor.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelEditor.Controls.Add(this.buttonDel);
-            this.panelEditor.Controls.Add(this.buttonAdd);
-            this.panelEditor.Controls.Add(this.buttonNew);
-            this.panelEditor.Controls.Add(this.buttonFind);
-            this.panelEditor.Controls.Add(this.textBoxPhone);
-            this.panelEditor.Controls.Add(this.textBoxPassPort);
-            this.panelEditor.Controls.Add(this.textBoxCMND);
-            this.panelEditor.Controls.Add(this.radioBtnPassPort);
-            this.panelEditor.Controls.Add(this.radioBtnCMND);
-            this.panelEditor.Controls.Add(this.labelPhone);
-            this.panelEditor.Controls.Add(this.labelGender);
-            this.panelEditor.Controls.Add(this.labelCountry);
-            this.panelEditor.Controls.Add(this.labelLastName);
-            this.panelEditor.Controls.Add(this.labelFirstName);
-            this.panelEditor.Controls.Add(this.labelCustomerID);
-            this.panelEditor.Controls.Add(this.textBoxCustomerID);
-            this.panelEditor.Controls.Add(this.textBoxGender);
-            this.panelEditor.Controls.Add(this.textBoxCountry);
-            this.panelEditor.Controls.Add(this.textBoxLastName);
-            this.panelEditor.Controls.Add(this.textBoxFirstName);
+            this.panelEditor.Controls.Add(this.panelCenter);
             this.panelEditor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEditor.Location = new System.Drawing.Point(2, 22);
             this.panelEditor.LookAndFeel.SkinName = "Blue";
             this.panelEditor.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelEditor.Name = "panelEditor";
-            this.panelEditor.Size = new System.Drawing.Size(726, 206);
-            this.panelEditor.TabIndex = 0;
+            this.panelEditor.Size = new System.Drawing.Size(726, 210);
+            this.panelEditor.TabIndex = 2;
+            // 
+            // panelCenter
+            // 
+            this.panelCenter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelCenter.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelCenter.Controls.Add(this.styledButton2);
+            this.panelCenter.Controls.Add(this.styledButton1);
+            this.panelCenter.Controls.Add(this.labelPassPort);
+            this.panelCenter.Controls.Add(this.labelCMND);
+            this.panelCenter.Controls.Add(this.textBoxCountry);
+            this.panelCenter.Controls.Add(this.buttonDel);
+            this.panelCenter.Controls.Add(this.buttonAdd);
+            this.panelCenter.Controls.Add(this.buttonNew);
+            this.panelCenter.Controls.Add(this.buttonFind);
+            this.panelCenter.Controls.Add(this.textBoxPhone);
+            this.panelCenter.Controls.Add(this.textBoxPassPort);
+            this.panelCenter.Controls.Add(this.textBoxCMND);
+            this.panelCenter.Controls.Add(this.labelPhone);
+            this.panelCenter.Controls.Add(this.labelCountry);
+            this.panelCenter.Controls.Add(this.labelLastName);
+            this.panelCenter.Controls.Add(this.labelFirstName);
+            this.panelCenter.Controls.Add(this.labelCustomerID);
+            this.panelCenter.Controls.Add(this.textBoxCustomerID);
+            this.panelCenter.Controls.Add(this.textBoxLastName);
+            this.panelCenter.Controls.Add(this.textBoxFirstName);
+            this.panelCenter.Location = new System.Drawing.Point(3, 3);
+            this.panelCenter.LookAndFeel.SkinName = "Blue";
+            this.panelCenter.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelCenter.Name = "panelCenter";
+            this.panelCenter.Size = new System.Drawing.Size(720, 204);
+            this.panelCenter.TabIndex = 0;
+            // 
+            // styledButton2
+            // 
+            this.styledButton2.Location = new System.Drawing.Point(541, 118);
+            this.styledButton2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.styledButton2.LookAndFeel.UseWindowsXPTheme = true;
+            this.styledButton2.Name = "styledButton2";
+            this.styledButton2.Size = new System.Drawing.Size(75, 23);
+            this.styledButton2.TabIndex = 30;
+            this.styledButton2.Text = "styledButton2";
+            this.styledButton2.Click += new System.EventHandler(this.styledButton2_Click);
+            // 
+            // styledButton1
+            // 
+            this.styledButton1.Location = new System.Drawing.Point(448, 118);
+            this.styledButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.styledButton1.LookAndFeel.UseWindowsXPTheme = true;
+            this.styledButton1.Name = "styledButton1";
+            this.styledButton1.Size = new System.Drawing.Size(75, 23);
+            this.styledButton1.TabIndex = 29;
+            this.styledButton1.Text = "styledButton1";
+            this.styledButton1.Click += new System.EventHandler(this.styledButton1_Click);
+            // 
+            // labelPassPort
+            // 
+            this.labelPassPort.AutoSize = true;
+            this.labelPassPort.Location = new System.Drawing.Point(23, 124);
+            this.labelPassPort.Name = "labelPassPort";
+            this.labelPassPort.Size = new System.Drawing.Size(51, 13);
+            this.labelPassPort.TabIndex = 28;
+            this.labelPassPort.Text = "Hộ Chiếu";
+            // 
+            // labelCMND
+            // 
+            this.labelCMND.AutoSize = true;
+            this.labelCMND.Location = new System.Drawing.Point(23, 98);
+            this.labelCMND.Name = "labelCMND";
+            this.labelCMND.Size = new System.Drawing.Size(39, 13);
+            this.labelCMND.TabIndex = 27;
+            this.labelCMND.Text = "CMND";
+            // 
+            // textBoxCountry
+            // 
+            this.textBoxCountry.Location = new System.Drawing.Point(469, 17);
+            this.textBoxCountry.Name = "textBoxCountry";
+            this.textBoxCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textBoxCountry.Properties.LookAndFeel.SkinName = "Blue";
+            this.textBoxCountry.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxCountry.Properties.NullText = "Chọn quốc gia";
+            this.textBoxCountry.Size = new System.Drawing.Size(246, 20);
+            this.textBoxCountry.TabIndex = 26;
             // 
             // buttonDel
             // 
@@ -140,6 +233,7 @@
             this.buttonAdd.Size = new System.Drawing.Size(86, 23);
             this.buttonAdd.TabIndex = 24;
             this.buttonAdd.Text = "Thêm";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonNew
             // 
@@ -150,6 +244,7 @@
             this.buttonNew.Size = new System.Drawing.Size(120, 40);
             this.buttonNew.TabIndex = 23;
             this.buttonNew.Text = "Khách Hàng Mới";
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // buttonFind
             // 
@@ -160,12 +255,13 @@
             this.buttonFind.Size = new System.Drawing.Size(120, 40);
             this.buttonFind.TabIndex = 22;
             this.buttonFind.Text = "Tìm Kiếm";
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
             // 
             // textBoxPhone
             // 
             this.textBoxPhone.AllowSpace = false;
             this.textBoxPhone.Length = 10;
-            this.textBoxPhone.Location = new System.Drawing.Point(469, 69);
+            this.textBoxPhone.Location = new System.Drawing.Point(469, 42);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.textBoxPhone.Properties.Appearance.Options.UseBorderColor = true;
@@ -183,6 +279,7 @@
             this.textBoxPhone.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.textBoxPhone.Properties.Mask.EditMask = "\\d{1,10}";
             this.textBoxPhone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxPhone.Properties.ReadOnly = true;
             this.textBoxPhone.Size = new System.Drawing.Size(246, 20);
             this.textBoxPhone.TabIndex = 21;
             // 
@@ -208,6 +305,7 @@
             this.textBoxPassPort.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.textBoxPassPort.Properties.Mask.EditMask = "\\d{1,10}";
             this.textBoxPassPort.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxPassPort.Properties.ReadOnly = true;
             this.textBoxPassPort.Size = new System.Drawing.Size(246, 20);
             this.textBoxPassPort.TabIndex = 20;
             // 
@@ -233,48 +331,18 @@
             this.textBoxCMND.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.textBoxCMND.Properties.Mask.EditMask = "\\d{1,9}";
             this.textBoxCMND.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxCMND.Properties.ReadOnly = true;
             this.textBoxCMND.Size = new System.Drawing.Size(246, 20);
             this.textBoxCMND.TabIndex = 19;
-            // 
-            // radioBtnPassPort
-            // 
-            this.radioBtnPassPort.AutoSize = true;
-            this.radioBtnPassPort.Location = new System.Drawing.Point(20, 122);
-            this.radioBtnPassPort.Name = "radioBtnPassPort";
-            this.radioBtnPassPort.Size = new System.Drawing.Size(69, 17);
-            this.radioBtnPassPort.TabIndex = 18;
-            this.radioBtnPassPort.TabStop = true;
-            this.radioBtnPassPort.Text = "Hộ Chiếu";
-            this.radioBtnPassPort.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnCMND
-            // 
-            this.radioBtnCMND.AutoSize = true;
-            this.radioBtnCMND.Location = new System.Drawing.Point(20, 96);
-            this.radioBtnCMND.Name = "radioBtnCMND";
-            this.radioBtnCMND.Size = new System.Drawing.Size(57, 17);
-            this.radioBtnCMND.TabIndex = 17;
-            this.radioBtnCMND.TabStop = true;
-            this.radioBtnCMND.Text = "CMND";
-            this.radioBtnCMND.UseVisualStyleBackColor = true;
             // 
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(382, 72);
+            this.labelPhone.Location = new System.Drawing.Point(382, 45);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(75, 13);
             this.labelPhone.TabIndex = 16;
             this.labelPhone.Text = "Số Điện Thoại";
-            // 
-            // labelGender
-            // 
-            this.labelGender.AutoSize = true;
-            this.labelGender.Location = new System.Drawing.Point(382, 46);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(51, 13);
-            this.labelGender.TabIndex = 15;
-            this.labelGender.Text = "Giới Tính";
             // 
             // labelCountry
             // 
@@ -331,35 +399,11 @@
             this.textBoxCustomerID.Properties.LookAndFeel.SkinName = "Blue";
             this.textBoxCustomerID.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.textBoxCustomerID.Properties.Mask.EditMask = "KH0000";
-            this.textBoxCustomerID.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.textBoxCustomerID.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textBoxCustomerID.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.textBoxCustomerID.Properties.ReadOnly = true;
             this.textBoxCustomerID.Size = new System.Drawing.Size(246, 20);
             this.textBoxCustomerID.TabIndex = 8;
-            // 
-            // textBoxGender
-            // 
-            this.textBoxGender.Location = new System.Drawing.Point(469, 43);
-            this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textBoxGender.Properties.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.textBoxGender.Properties.LookAndFeel.SkinName = "Blue";
-            this.textBoxGender.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.textBoxGender.Size = new System.Drawing.Size(246, 20);
-            this.textBoxGender.TabIndex = 7;
-            // 
-            // textBoxCountry
-            // 
-            this.textBoxCountry.Location = new System.Drawing.Point(469, 17);
-            this.textBoxCountry.Name = "textBoxCountry";
-            this.textBoxCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textBoxCountry.Properties.LookAndFeel.SkinName = "Blue";
-            this.textBoxCountry.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.textBoxCountry.Size = new System.Drawing.Size(246, 20);
-            this.textBoxCountry.TabIndex = 6;
             // 
             // textBoxLastName
             // 
@@ -379,6 +423,7 @@
             this.textBoxLastName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.textBoxLastName.Properties.LookAndFeel.SkinName = "Blue";
             this.textBoxLastName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxLastName.Properties.ReadOnly = true;
             this.textBoxLastName.Size = new System.Drawing.Size(246, 20);
             this.textBoxLastName.TabIndex = 2;
             // 
@@ -400,6 +445,7 @@
             this.textBoxFirstName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.textBoxFirstName.Properties.LookAndFeel.SkinName = "Blue";
             this.textBoxFirstName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxFirstName.Properties.ReadOnly = true;
             this.textBoxFirstName.Size = new System.Drawing.Size(246, 20);
             this.textBoxFirstName.TabIndex = 1;
             // 
@@ -413,15 +459,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).EndInit();
             this.groupControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelView)).EndInit();
+            this.panelView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelEditor)).EndInit();
             this.panelEditor.ResumeLayout(false);
-            this.panelEditor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).EndInit();
+            this.panelCenter.ResumeLayout(false);
+            this.panelCenter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPassPort.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCMND.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCustomerID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxGender.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstName.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -432,20 +482,15 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl;
         private Controls.StyledPanel panelView;
-        private Controls.StyledPanel panelEditor;
-        private Controls.StyledComboBox textBoxGender;
-        private Controls.StyledComboBox textBoxCountry;
+        private Controls.StyledPanel panelCenter;
         private Controls.StyledTextBox textBoxLastName;
         private Controls.StyledTextBox textBoxFirstName;
         private System.Windows.Forms.Label labelPhone;
-        private System.Windows.Forms.Label labelGender;
         private System.Windows.Forms.Label labelCountry;
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.Label labelFirstName;
         private System.Windows.Forms.Label labelCustomerID;
         private Controls.TextBoxCustomer textBoxCustomerID;
-        private System.Windows.Forms.RadioButton radioBtnPassPort;
-        private System.Windows.Forms.RadioButton radioBtnCMND;
         private Controls.NumberTextBox textBoxPhone;
         private Controls.NumberTextBox textBoxPassPort;
         private Controls.NumberTextBox textBoxCMND;
@@ -453,5 +498,13 @@
         private Controls.StyledButton buttonNew;
         private Controls.StyledButton buttonAdd;
         private Controls.StyledButton buttonDel;
+        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private Controls.StyledPanel panelEditor;
+        private Controls.StyledLookUpEdit textBoxCountry;
+        private System.Windows.Forms.Label labelPassPort;
+        private System.Windows.Forms.Label labelCMND;
+        private Controls.StyledButton styledButton2;
+        private Controls.StyledButton styledButton1;
     }
 }

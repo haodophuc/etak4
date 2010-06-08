@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using QLKS.UIControl;
 
 namespace QLKS.UI
 {
@@ -14,7 +13,7 @@ namespace QLKS.UI
         public FormCheckIn()
         {
             InitializeComponent();
-            UITransaction panel = new UITransaction();
+            UIControl.UITransaction panel = new QLKS.UIControl.UITransaction(Base.Mode.SubmitMode.CheckIn);
             panel.Dock = DockStyle.Fill;
             this.Size = panel.Size;
             this.panelMainContainer.Controls.Add(panel);

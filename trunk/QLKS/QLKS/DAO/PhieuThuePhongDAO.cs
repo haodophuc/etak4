@@ -9,6 +9,7 @@ namespace QLKS.DAO
 {
     class PhieuThuePhongDAO
     {
+
         public PhieuThuePhongDAO()
         {
            
@@ -166,6 +167,36 @@ namespace QLKS.DAO
             return Program.DBConnection.ExecuteScalarByProcedure("sp_tiendichvu", sqlParameters);
         }
 
-    }
-}
+        // Created by G
+        public Int64 InsertBySP(PhieuThuePhongVO value)
+        {
+            try
+            {
+                // Set procedure name
+                String sp = "SP_INSERT_PHIEU_THUE_PHONG";
+
+                // Create parameters
+                SqlParameter[] param = new SqlParameter[6];
+
+                // Return value
+                param[0] = new SqlParameter("@IDENTITY", value.MA_PHIEU);
+                param[0].Direction = ParameterDirection.Output;
+
+                param[1] = new SqlParameter("@MA_KHACH_HANG", value.MA_KHACH_HANG);
+                param[2] = new SqlParameter("@MA_DOAN_KHACH", value.MA_DOAN_KHACH);
+                param[3] = new SqlParameter("@MA_PHONG", value.MA_PHONG);
+                param[4] = new SqlParameter("@NGAY_NHAN_PHONG", value.NGAY_NHAN_PHONG);
+                param[5] = new SqlParameter("@NGAY_TRA_PHONG", value.NGAY_TRA_PHONG);
+
+                return Program.DBConnection.ExecuteScalarByProcedure(sp, param);
+
+            }//end try
+            catch (Exception e)
+            {
+                throw e;
+            }//end catch
+        }//end method InsertBySP
+
+    }//end class PhieuThuePhongDAO
+}//end namespace
 

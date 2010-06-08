@@ -29,25 +29,30 @@
         private void InitializeComponent()
         {
             this.groupControl = new DevExpress.XtraEditors.GroupControl();
-            this.panelView = new QLKS.Controls.StyledPanel();
-            this.panelEditor = new QLKS.Controls.StyledPanel();
-            this.panelCenter = new QLKS.Controls.StyledPanel();
-            this.textBoxRoomNumber = new QLKS.Controls.StyledTextBox();
-            this.buttonDel = new QLKS.Controls.StyledButton();
-            this.textBoxRoomType = new QLKS.Controls.StyledLookUpEdit();
-            this.buttonAdd = new QLKS.Controls.StyledButton();
-            this.textBoxBeds = new QLKS.Controls.StyledTextBox();
+            this.panelView = new Controls.StyledPanel();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelEditor = new Controls.StyledPanel();
+            this.panelCenter = new Controls.StyledPanel();
+            this.textBoxRoomNumber = new Controls.StyledTextBox();
+            this.buttonDel = new Controls.StyledButton();
+            this.textBoxRoomType = new Controls.StyledLookUpEdit();
+            this.buttonAdd = new Controls.StyledButton();
+            this.textBoxBeds = new Controls.StyledTextBox();
             this.labelQuatity = new System.Windows.Forms.Label();
-            this.textBoxPrice = new QLKS.Controls.StyledTextBox();
-            this.textBoxQuantity = new QLKS.Controls.StyledTextBox();
+            this.textBoxPrice = new Controls.StyledTextBox();
+            this.textBoxQuantity = new Controls.StyledTextBox();
             this.labelRoomType = new System.Windows.Forms.Label();
             this.labelRoomNumber = new System.Windows.Forms.Label();
             this.labelBeds = new System.Windows.Forms.Label();
-            this.buttonPick = new QLKS.Controls.StyledButton();
+            this.buttonPick = new Controls.StyledButton();
             this.labelPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).BeginInit();
             this.groupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelView)).BeginInit();
+            this.panelView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelEditor)).BeginInit();
             this.panelEditor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).BeginInit();
@@ -75,6 +80,7 @@
             // panelView
             // 
             this.panelView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelView.Controls.Add(this.gridControl);
             this.panelView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelView.Location = new System.Drawing.Point(2, 238);
             this.panelView.LookAndFeel.SkinName = "Blue";
@@ -82,6 +88,27 @@
             this.panelView.Name = "panelView";
             this.panelView.Size = new System.Drawing.Size(726, 260);
             this.panelView.TabIndex = 1;
+            // 
+            // gridControl
+            // 
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 0);
+            this.gridControl.LookAndFeel.SkinName = "Blue";
+            this.gridControl.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.gridControl.MainView = this.gridView;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(726, 260);
+            this.gridControl.TabIndex = 0;
+            this.gridControl.UseEmbeddedNavigator = true;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView});
+            // 
+            // gridView
+            // 
+            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            this.gridView.OptionsView.ShowFooter = true;
             // 
             // panelEditor
             // 
@@ -150,6 +177,7 @@
             this.buttonDel.Size = new System.Drawing.Size(86, 23);
             this.buttonDel.TabIndex = 11;
             this.buttonDel.Text = "Xóa";
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // textBoxRoomType
             // 
@@ -173,6 +201,7 @@
             this.buttonAdd.Size = new System.Drawing.Size(86, 23);
             this.buttonAdd.TabIndex = 10;
             this.buttonAdd.Text = "Thêm";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxBeds
             // 
@@ -245,6 +274,7 @@
             this.textBoxQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.textBoxQuantity.Properties.LookAndFeel.SkinName = "Blue";
             this.textBoxQuantity.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxQuantity.Properties.ReadOnly = true;
             this.textBoxQuantity.Size = new System.Drawing.Size(246, 20);
             this.textBoxQuantity.TabIndex = 12;
             // 
@@ -284,6 +314,7 @@
             this.buttonPick.Size = new System.Drawing.Size(120, 40);
             this.buttonPick.TabIndex = 9;
             this.buttonPick.Text = "Chọn Phòng";
+            this.buttonPick.Click += new System.EventHandler(this.buttonPick_Click);
             // 
             // labelPrice
             // 
@@ -304,6 +335,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).EndInit();
             this.groupControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelView)).EndInit();
+            this.panelView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelEditor)).EndInit();
             this.panelEditor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).EndInit();
@@ -335,7 +369,9 @@
         private Controls.StyledButton buttonAdd;
         private System.Windows.Forms.Label labelQuatity;
         private Controls.StyledTextBox textBoxQuantity;
-        private QLKS.Controls.StyledLookUpEdit textBoxRoomType;
-        private QLKS.Controls.StyledPanel panelCenter;
+        private Controls.StyledLookUpEdit textBoxRoomType;
+        private Controls.StyledPanel panelCenter;
+        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
     }
 }

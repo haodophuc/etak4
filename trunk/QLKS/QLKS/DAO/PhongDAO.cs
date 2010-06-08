@@ -8,8 +8,7 @@ using QLKS.VO;
 namespace QLKS.DAO
 {
     class PhongDAO
-    {
-       
+    {      
 
         public PhongDAO()
         {
@@ -41,6 +40,22 @@ namespace QLKS.DAO
                 throw e;
             }
         }
+
+        public DataTable SelectAvailableRooms()
+        {
+            try
+            {
+                String query = "SELECT PHONG.MA_PHONG, PHONG.SO_PHONG, TEN_LOAI_PHONG, SO_GIUONG, GIA_THAM_KHAO " +
+                               "FROM PHONG, LOAI_PHONG " +
+                               "WHERE PHONG.MA_LOAI_PHONG = LOAI_PHONG.MA_LOAI_PHONG";
+                return Program.DBConnection.ExecuteSelectQuery(query);
+            }//end try
+            catch (Exception e)
+            {
+                throw e;
+            }//end catch
+
+        }//end method SelectAvailableRoom
 
         public int Insert(PhongVO phongVO)
         {

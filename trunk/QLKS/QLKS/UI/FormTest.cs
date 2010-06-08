@@ -10,6 +10,7 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Controls;
 using QLKS.VO;
 using QLKS.BUS;
+using System.Data.Sql;
 
 namespace QLKS.UI
 {
@@ -24,25 +25,26 @@ namespace QLKS.UI
 
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            gridControl1.DataSource = regdata.Customers;
-            gridView1.Columns[0].Visible = false;
-            //gridControl2.DataSource = regdata.Groups;
-            gridControl3.DataSource = regdata.Rooms;
+            
+            //gridControl1.DataSource = regdata.Customers;
+            //gridView1.Columns[0].Visible = false;
+            ////gridControl2.DataSource = regdata.Groups;
+            //gridControl3.DataSource = regdata.Rooms;
 
-            RepositoryItemLookUpEdit lookupRoom = new RepositoryItemLookUpEdit();
-            lookupRoom.DataSource = regdata.Rooms;
-            lookupRoom.DisplayMember = "RoomNumber";
-            lookupRoom.ValueMember = "RoomID";
+            //RepositoryItemLookUpEdit lookupRoom = new RepositoryItemLookUpEdit();
+            //lookupRoom.DataSource = regdata.Rooms;
+            //lookupRoom.DisplayMember = "RoomNumber";
+            //lookupRoom.ValueMember = "RoomID";
 
-            LookUpColumnInfoCollection cols = lookupRoom.Columns;
-            cols.Add( new LookUpColumnInfo("RoomNumber", "Số Phòng", 0));
-            cols.Add(new LookUpColumnInfo("RoomType", "Loại Phòng", 0));
-            cols.Add(new LookUpColumnInfo("Beds", "Số Giường", 0));
-            lookupRoom.BestFitMode = BestFitMode.BestFitResizePopup;
-            lookupRoom.NullText = "Chưa chọn phòng";
-            gridView1.Columns["RoomNumber"].ColumnEdit = lookupRoom;
+            //LookUpColumnInfoCollection cols = lookupRoom.Columns;
+            //cols.Add( new LookUpColumnInfo("RoomNumber", "Số Phòng", 0));
+            //cols.Add(new LookUpColumnInfo("RoomType", "Loại Phòng", 0));
+            //cols.Add(new LookUpColumnInfo("Beds", "Số Giường", 0));
+            //lookupRoom.BestFitMode = BestFitMode.BestFitResizePopup;
+            //lookupRoom.NullText = "Chưa chọn phòng";
+            //gridView1.Columns["RoomNumber"].ColumnEdit = lookupRoom;
 
-            gridControl2.DataSource = regdata.Companies;
+            //gridControl2.DataSource = regdata.Companies;
             //gridView2.Columns[0].Visible = false;
 
         }
@@ -51,7 +53,9 @@ namespace QLKS.UI
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            regdata.Update();
+            //regdata.Update();
+            
+            gridControl1.DataSource = regdata.Rooms;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

@@ -26,7 +26,7 @@ namespace QLKS.Base
             customerId.AutoIncrement = true;
             customerId.AutoIncrementSeed = -1;
             customerId.AutoIncrementStep = -1;
-            customerId.ReadOnly = true;
+            //customerId.ReadOnly = true;
             customerId.Caption = "Mã Khách Hàng";
 
             // Add other columns
@@ -39,6 +39,7 @@ namespace QLKS.Base
             cols.Add("SocialID", typeof(String)).Caption = "CMND";
             cols.Add("PassPort", typeof(String)).Caption = "Hộ Chiếu";
             cols.Add("Phone", typeof(String)).Caption = "Điện Thoại";
+            cols.Add("IsNew", typeof(Boolean));
 
             // Add primary column
             this.PrimaryKey = new DataColumn[] { cols["CustomerID"] };
