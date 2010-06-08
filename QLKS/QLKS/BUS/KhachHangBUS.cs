@@ -29,6 +29,20 @@ namespace QLKS.BUS
             }
         }
 
+        public DataTable LoadFind()
+        {
+            try
+            {
+                return khachHangDAO.LoadFind();
+
+            }//end try
+            catch
+            {
+                throw;
+            }//end catch
+
+        }//end method LoadFind
+
         public Int64 GetTienCoc(int makhachhang)
         {
             return khachHangDAO.GetTienCoc(makhachhang);

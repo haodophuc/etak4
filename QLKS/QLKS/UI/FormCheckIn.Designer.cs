@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMainContainer = new QLKS.Controls.StyledPanel();
+            this.panelMainContainer = new Controls.StyledPanel();
             ((System.ComponentModel.ISupportInitialize)(this.panelMainContainer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,6 @@
 
         #endregion
 
-        private QLKS.Controls.StyledPanel panelMainContainer;
+        private Controls.StyledPanel panelMainContainer;
     }
 }

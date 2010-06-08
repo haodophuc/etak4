@@ -31,6 +31,20 @@ namespace QLKS.BUS
                 throw e;
             }
         }
+
+        public DataTable LoadFind()
+        {
+
+            try
+            {
+                return doankhachDAO.LoadFind();
+            }//end try
+            catch
+            {
+                throw;
+            }//end catch
+        }//end method LoadFind
+
         public int Insert(DoanKhachVO doankhachVO)
         {
             try

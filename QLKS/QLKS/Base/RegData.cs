@@ -38,12 +38,15 @@ namespace QLKS.Base
 
        #region Methods
 
-        public void CreateTables() { 
-                   
-        }//end method CreateTables
+        public void UpdateCustomers() {
 
-        public void Update() {
-            agent.Update();
+            try {
+                agent.UpdateCustomers();
+            }//end try
+            catch {
+                throw;
+            }//end catch          
+            
         }//emd method Update
 
        #endregion //end region Methods

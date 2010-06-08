@@ -11,6 +11,7 @@ namespace QLKS.Base
 
         public enum CustomerMode { Customer, Group };
 
+
     }//end class Mode
 
 }//end namespace

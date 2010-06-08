@@ -9,18 +9,25 @@ namespace QLKS.DAO
 {
     class KhachHangDAO
     {
+       #region Constructors
+
         public KhachHangDAO()
         {
-           
+
         }
+
+       #endregion //end region Constructors
+
+
+       #region Methods
 
         public DataTable SelectAll()
         {
             try
             {
-                string query = " SELECT 'KH' + REPLACE(STR(MA_KHACH_HANG,4),' ','0') AS MaKH,"+
-                               "'QG' + REPLACE(STR(MA_QUOC_GIA,2),' ','0') AS MaQG,"+
-                               "HO_KHACH_HANG,TEN_KHACH_HANG,CMND,HO_CHIEU,DIEN_THOAI "+
+                string query = " SELECT 'KH' + REPLACE(STR(MA_KHACH_HANG,4),' ','0') AS MaKH," +
+                               "'QG' + REPLACE(STR(MA_QUOC_GIA,2),' ','0') AS MaQG," +
+                               "HO_KHACH_HANG,TEN_KHACH_HANG,CMND,HO_CHIEU,DIEN_THOAI " +
                                "FROM KHACH_HANG " +
                                "WHERE HIEU_LUC = '1'";
 
@@ -53,6 +60,7 @@ namespace QLKS.DAO
                 throw e;
             }
         }
+        
         public int Delete(int maKhachHang)
         {
             try
@@ -67,6 +75,7 @@ namespace QLKS.DAO
                 throw e;
             }
         }
+        
         public int Update(KhachHangVO khachHangVO)
         {
             try
@@ -108,7 +117,7 @@ namespace QLKS.DAO
 
         public DataTable SearchByIndicator(KhachHangVO khachHangVO, bool bMKH, bool bMaQG, bool bHo, bool bTen, bool bCMND, bool bHochieu, bool bDienThoai)
         {
-          
+
             string query = " SELECT 'KH' + REPLACE(STR(MA_KHACH_HANG,4),' ','0') AS MaKH," +
                                "'QG' + REPLACE(STR(MA_QUOC_GIA,2),' ','0') AS MaQG," +
                                "HO_KHACH_HANG,TEN_KHACH_HANG,CMND,HO_CHIEU,DIEN_THOAI " +
@@ -133,13 +142,13 @@ namespace QLKS.DAO
             if (bHochieu)
             {
                 query = query + " AND HO_CHIEU = @HO_CHIEU";
-                
+
             }
             if (bCMND)
             {
                 query = query + " AND CMND = @CMND";
             }
-          
+
             if (bDienThoai)
             {
                 query = query + " AND DIEN_THOAI = @DIEN_THOAI";
@@ -163,5 +172,33 @@ namespace QLKS.DAO
             return Program.DBConnection.ExecuteScalarByProcedure("sp_tiencocKH", sqlParameters);
         }
 
-    }
-}
+        public DataTable LoadFind()
+        {
+            try
+            {
+                String query = "SELECT KHACH_HANG.MA_KHACH_HANG, KHACH_HANG.MA_QUOC_GIA, TEN_QUOC_GIA, HO_KHACH_HANG, TEN_KHACH_HANG, CMND, HO_CHIEU, DIEN_THOAI " +
+                               "FROM KHACH_HANG, QUOC_GIA " +
+                               "WHERE KHACH_HANG.MA_QUOC_GIA = QUOC_GIA.MA_QUOC_GIA AND KHACH_HANG.HIEU_LUC = '1' ";
+                return Program.DBConnection.ExecuteSelectQuery(query);
+
+            }//end try
+            catch
+            {
+                throw;
+            }//end catch
+        }//end method LoadFind
+        
+       #endregion //end region Methods
+
+       #region Attributes
+
+       #endregion //end region Attributes
+
+
+       #region Instance Fields
+
+       #endregion Instance Fields
+
+        
+    }//end class KhachHangDAO
+}//end namespace

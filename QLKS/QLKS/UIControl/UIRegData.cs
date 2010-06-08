@@ -6,6 +6,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using QLKS.Base.Interfaces;
+using QLKS.UIControl;
 
 namespace QLKS.UIControl
 {
@@ -17,9 +18,11 @@ namespace QLKS.UIControl
         {
             InitializeComponent();
 
-            // default submitmode is Checking
+            // Set default submitmode is Checking
             submitMode = new Base.SubmitChecking();
 
+            // Contruct register data
+            RegDataSource = new Base.RegData();
 
         }//end default constructor
 
@@ -33,6 +36,29 @@ namespace QLKS.UIControl
             SubmitMode.Submit( new DataSet() );
         }//end method SubmitData
 
+        public void SwitchPanel(PaneInfo panel)
+        {
+            switch (panel) { 
+                case PaneInfo.CustomerPanel:
+                    LoadPanelCustomer();
+                    break;
+
+                case PaneInfo.RoomPanel:
+                    LoadPanelRoom();
+                    break;            
+            }//end switch
+        }//end method SwitchPanel
+
+        private void LoadPanelCustomer()
+        {
+            gridControl.DataSource = RegDataSource.Customers;
+        }//end method LoadPanelCustomer
+
+        private void LoadPanelRoom()
+        {
+            gridControl.DataSource = RegDataSource.Rooms;
+        }//end method LoadPanelRoom
+
        #endregion //end region Methods
 
 
@@ -42,6 +68,9 @@ namespace QLKS.UIControl
 
 
        #region Attributes
+
+        public enum PaneInfo { CustomerPanel, RoomPanel };
+
 
         public IDataSubmit SubmitMode
         {
@@ -68,11 +97,19 @@ namespace QLKS.UIControl
             set { this.panelRoom = value; }
         }//end attribute PanelRoom
 
+        public Base.RegData RegDataSource
+        {
+            get { return regDataSource; }
+            set { this.regDataSource = value; }
+        }//end attribute DataSource
+
        #endregion //end region Attributes
 
 
        #region Instance Fields
         private IDataSubmit submitMode;
+
+        private Base.RegData regDataSource;
 
         private UIGroupInfoPanel panelGroup;
         private UICustomerInfoPanel panelCustomer;

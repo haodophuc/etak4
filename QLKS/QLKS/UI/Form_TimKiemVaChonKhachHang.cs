@@ -12,7 +12,7 @@ namespace QLKS.UI
    
     public partial class Form_TimKiemVaChonKhachHang : Form
     {
-        private TimkiemVaChonKhachHangUI timkiemvachonkhachhangUI = new TimkiemVaChonKhachHangUI();
+        private TimkiemvaChonKhachHangUI timkiemvachonkhachhangUI = new TimkiemvaChonKhachHangUI();
         static public DataRow dtRow;
         static public int i;
         public Form_TimKiemVaChonKhachHang()
