@@ -11,7 +11,7 @@ namespace QLKS.UI
 {
     public partial class Form_CapNhatKhachHang : Form
     {
-        CapNhatKhachHang_UI khachHangUI;
+        private CapNhatKhachHang_UI khachHangUI;
 
         public Form_CapNhatKhachHang()
         {
