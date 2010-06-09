@@ -1,0 +1,932 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2C222C4-EDB3-446D-9FD6-BD813DCB6D6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLKS</RootNamespace>
+    <AssemblyName>QLKS</AssemblyName>
+    <StartupObject>QLKS.Program</StartupObject>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/QLKS/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Charts.v9.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Data.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Utils.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Bars.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Bars.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Bars.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Bars.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Carousel.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Carousel.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Carousel.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Carousel.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Charts.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Charts.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Charts.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Charts.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Docking.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Docking.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Docking.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Docking.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Grid.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Grid.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Grid.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Grid.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Printing.v9.3.dll.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Printing.v9.3.dll.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Wpf.Printing.v9.3.dll.VisualStudio.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.Wpf.Printing.v9.3.dll.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraBars.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraCharts.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraEditors.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.3.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraEditors.v9.3.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraGrid.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraLayout.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.3.Design, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraLayout.v9.3.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraNavBar.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraPivotGrid.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraPivotGrid.v9.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraPrinting.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraReports.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraScheduler.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.3.Extensions, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraScheduler.v9.3.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DevExpress.XtraWizard.v9.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\DataTables\TableCompanies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\DataTables\TableCustomers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\DataTables\TableGroups.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\DataTables\TableRooms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Interfaces\IDataSubmit.cs" />
+    <Compile Include="Base\Mode.cs" />
+    <Compile Include="Base\RegData.cs" />
+    <Compile Include="Base\RegDataDAO.cs" />
+    <Compile Include="Base\SubmitBooking.cs" />
+    <Compile Include="Base\SubmitChecking.cs" />
+    <Compile Include="BUS\AdminBUS.cs" />
+    <Compile Include="BUS\CongtyBus.cs" />
+    <Compile Include="BUS\DoanKhachBUS.cs" />
+    <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\KhachTroBUS.cs" />
+    <Compile Include="BUS\LoaiPhongBUS.cs" />
+    <Compile Include="BUS\PhieuDatPhongBUS.cs" />
+    <Compile Include="BUS\PhieuThuePhongBUS.cs" />
+    <Compile Include="BUS\PhongBUS.cs" />
+    <Compile Include="BUS\QuocGiaBUS.cs" />
+    <Compile Include="BUS\ServiceBUS.cs" />
+    <Compile Include="BUS\ServiceOrderBUS.cs" />
+    <Compile Include="BUS\TellerBUS.cs" />
+    <Compile Include="BUS\TinhTrangBUS.cs" />
+    <Compile Include="Controls\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StyledButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StyledComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StyledLookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StyledPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StyledTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAO\CongtyDAO.cs" />
+    <Compile Include="DAO\DoanKhachDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhachTroDAO.cs" />
+    <Compile Include="DAO\LoaiPhongDAO.cs" />
+    <Compile Include="DAO\PhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\PhieuThuePhongDAO.cs" />
+    <Compile Include="DAO\PhongDAO.cs" />
+    <Compile Include="DAO\QuocGiaDAO.cs" />
+    <Compile Include="DAO\ServiceDAO.cs" />
+    <Compile Include="DAO\ServiceOrderDAO.cs" />
+    <Compile Include="DAO\AdminDAO.cs" />
+    <Compile Include="DAO\TellerDAO.cs" />
+    <Compile Include="DAO\TinhTrangDAO.cs" />
+    <Compile Include="DataSets\QLKSDataSet_HeSoPhong.cs">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\QLKSDataSet_HeSoPhong.designer.cs">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataSets\QLKSDataSet_KhachHang.cs">
+      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\QLKSDataSet_KhachHang.designer.cs">
+      <DependentUpon>QLKSDataSet_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\QLKSDataSet_TSKHFilterRoom.cs">
+      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\QLKSDataSet_TSKHFilterRoom.designer.cs">
+      <DependentUpon>QLKSDataSet_TSKHFilterRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="UI\Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUtilities.cs" />
+    <Compile Include="Program.cs" />
+    <EmbeddedResource Include="Controls\NumberTextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NumberTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyledPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyledPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxCustomer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextBoxCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_HeSoSuDungPhong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Report_HeSoSuDungPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_TongSoKhachHang.resx">
+      <DependentUpon>Report_TongSoKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_TSKhachHangFilterRoom.resx">
+      <DependentUpon>Report_TSKhachHangFilterRoom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatCongTy_UI.resx">
+      <DependentUpon>CapNhatCongTy_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatDoanKhachChiTiet_UI.resx">
+      <DependentUpon>CapNhatDoanKhachChiTiet_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatDoanKhach_UI.resx">
+      <DependentUpon>CapNhatDoanKhach_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatKhachHang_UI.resx">
+      <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatPhieuThuePhong_UI.resx">
+      <DependentUpon>CapNhatPhieuThuePhong_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatPhong_UI.resx">
+      <DependentUpon>CapNhatPhong_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CheckOutUI.resx">
+      <DependentUpon>CheckOutUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\DatPhong_UI.resx">
+      <DependentUpon>DatPhong_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ReportKhachHang_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ReportHeSoPhong_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportHeSoPhong_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TimkiemvaChonCongTyUI.resx">
+      <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TimkiemvaChonDoanKhachUI.resx">
+      <DependentUpon>TimkiemvaChonDoanKhachUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TimkiemvaChonKhachHangUI.resx">
+      <DependentUpon>TimkiemvaChonKhachHangUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TimKiemVaChonPhongTrong.resx">
+      <DependentUpon>TimKiemVaChonPhongTrong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TimKiemVaChonPhongTrongUI.resx">
+      <DependentUpon>TimKiemVaChonPhongTrongUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TraCuuCongTyUI.resx">
+      <DependentUpon>TraCuuCongTyUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TraCuuDoanKhachUI.resx">
+      <DependentUpon>TraCuuDoanKhachUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\TraCuuKhachHangUI.resx">
+      <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIAdminManagement.resx">
+      <DependentUpon>UIAdminManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UICustomerInfoPanel.resx">
+      <DependentUpon>UICustomerInfoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIGroupInfoPanel.resx">
+      <DependentUpon>UIGroupInfoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIRegData.resx">
+      <DependentUpon>UIRegData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIRoomInfoPanel.resx">
+      <DependentUpon>UIRoomInfoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServiceGridView.resx">
+      <DependentUpon>UIServiceGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServiceManagement.resx">
+      <DependentUpon>UIServiceManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServicesInputAdd.resx">
+      <DependentUpon>UIServicesInputAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UIServicesInputUpdate.resx">
+      <DependentUpon>UIServicesInputUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UITellerManagement.resx">
+      <DependentUpon>UITellerManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\UITransaction.resx">
+      <DependentUpon>UITransaction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormCheckIn.resx">
+      <DependentUpon>FormCheckIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CapNhatDoanKhach.resx">
+      <DependentUpon>Form_CapNhatDoanKhach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CapNhatKhachHang.resx">
+      <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CapNhatPhieuThuePhong.resx">
+      <DependentUpon>Form_CapNhatPhieuThuePhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CapNhatPhong.resx">
+      <DependentUpon>Form_CapNhatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CheckOut.resx">
+      <DependentUpon>Form_CheckOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_DatPhong.resx">
+      <DependentUpon>Form_DatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_ReportHeSoPhong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ReportHeSoPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_ReportKhachHang.resx">
+      <DependentUpon>Form_ReportKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TimKiemVaChonCongTy.resx">
+      <DependentUpon>Form_TimKiemVaChonCongTy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TimKiemVaChonDoanKhach.resx">
+      <DependentUpon>Form_TimKiemVaChonDoanKhach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TimKiemVaChonKhachHang.resx">
+      <DependentUpon>Form_TimKiemVaChonKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TimKiemvaChonPhongTrong.resx">
+      <DependentUpon>Form_TimKiemvaChonPhongTrong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TraCuuThongTinCongTy.resx">
+      <DependentUpon>Form_TraCuuThongTinCongTy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TraCuuThongTinDoanKhach.resx">
+      <DependentUpon>Form_TraCuuThongTinDoanKhach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_TraCuuThongTinKhachHang.resx">
+      <DependentUpon>Form_TraCuuThongTinKhachHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ServicesManagementForm.resx">
+      <DependentUpon>ServicesManagementForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ServicesOrderForm.resx">
+      <DependentUpon>ServicesOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\Report_HeSoSuDungPhong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_HeSoSuDungPhong.Designer.cs">
+      <DependentUpon>Report_HeSoSuDungPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_TongSoKhachHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_TongSoKhachHang.designer.cs">
+      <DependentUpon>Report_TongSoKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_TSKhachHangFilterRoom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_TSKhachHangFilterRoom.designer.cs">
+      <DependentUpon>Report_TSKhachHangFilterRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatCongTy_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatCongTy_UI.Designer.cs">
+      <DependentUpon>CapNhatCongTy_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatDoanKhachChiTiet_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatDoanKhachChiTiet_UI.Designer.cs">
+      <DependentUpon>CapNhatDoanKhachChiTiet_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatDoanKhach_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatDoanKhach_UI.Designer.cs">
+      <DependentUpon>CapNhatDoanKhach_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatKhachHang_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatKhachHang_UI.designer.cs">
+      <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhieuThuePhong_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhieuThuePhong_UI.Designer.cs">
+      <DependentUpon>CapNhatPhieuThuePhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhong_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhong_UI.Designer.cs">
+      <DependentUpon>CapNhatPhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CheckOutUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CheckOutUI.designer.cs">
+      <DependentUpon>CheckOutUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\DatPhong_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\DatPhong_UI.Designer.cs">
+      <DependentUpon>DatPhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\ReportKhachHang_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ReportKhachHang_UI.Designer.cs">
+      <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\ReportHeSoPhong_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ReportHeSoPhong_UI.Designer.cs">
+      <DependentUpon>ReportHeSoPhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TimkiemvaChonCongTyUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TimkiemvaChonCongTyUI.Designer.cs">
+      <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TimkiemvaChonDoanKhachUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TimkiemvaChonDoanKhachUI.Designer.cs">
+      <DependentUpon>TimkiemvaChonDoanKhachUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TimkiemvaChonKhachHangUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TimkiemvaChonKhachHangUI.Designer.cs">
+      <DependentUpon>TimkiemvaChonKhachHangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TimKiemVaChonPhongTrong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TimKiemVaChonPhongTrong.Designer.cs">
+      <DependentUpon>TimKiemVaChonPhongTrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TimKiemVaChonPhongTrongUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TimKiemVaChonPhongTrongUI.Designer.cs">
+      <DependentUpon>TimKiemVaChonPhongTrongUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TraCuuCongTyUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TraCuuCongTyUI.Designer.cs">
+      <DependentUpon>TraCuuCongTyUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TraCuuDoanKhachUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TraCuuDoanKhachUI.Designer.cs">
+      <DependentUpon>TraCuuDoanKhachUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\TraCuuKhachHangUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\TraCuuKhachHangUI.Designer.cs">
+      <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIAdminManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIAdminManagement.Designer.cs">
+      <DependentUpon>UIAdminManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UICustomerInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UICustomerInfoPanel.designer.cs">
+      <DependentUpon>UICustomerInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIGroupInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIGroupInfoPanel.designer.cs">
+      <DependentUpon>UIGroupInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIRegData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIRegData.Designer.cs">
+      <DependentUpon>UIRegData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIRoomInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIRoomInfoPanel.designer.cs">
+      <DependentUpon>UIRoomInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServiceGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServiceGridView.Designer.cs">
+      <DependentUpon>UIServiceGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServiceManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServiceManagement.Designer.cs">
+      <DependentUpon>UIServiceManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputAdd.Designer.cs">
+      <DependentUpon>UIServicesInputAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UIServicesInputUpdate.Designer.cs">
+      <DependentUpon>UIServicesInputUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UITellerManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UITellerManagement.Designer.cs">
+      <DependentUpon>UITellerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\UITransaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UITransaction.Designer.cs">
+      <DependentUpon>UITransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormCheckIn.Designer.cs">
+      <DependentUpon>FormCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatDoanKhach.Designer.cs">
+      <DependentUpon>Form_CapNhatDoanKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatKhachHang.designer.cs">
+      <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhieuThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhieuThuePhong.Designer.cs">
+      <DependentUpon>Form_CapNhatPhieuThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhong.designer.cs">
+      <DependentUpon>Form_CapNhatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CheckOut.Designer.cs">
+      <DependentUpon>Form_CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_DatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_DatPhong.designer.cs">
+      <DependentUpon>Form_DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_ReportHeSoPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_ReportHeSoPhong.Designer.cs">
+      <DependentUpon>Form_ReportHeSoPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_ReportKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_ReportKhachHang.Designer.cs">
+      <DependentUpon>Form_ReportKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemVaChonCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemVaChonCongTy.designer.cs">
+      <DependentUpon>Form_TimKiemVaChonCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemVaChonDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemVaChonDoanKhach.Designer.cs">
+      <DependentUpon>Form_TimKiemVaChonDoanKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemVaChonKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemVaChonKhachHang.Designer.cs">
+      <DependentUpon>Form_TimKiemVaChonKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemvaChonPhongTrong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TimKiemvaChonPhongTrong.Designer.cs">
+      <DependentUpon>Form_TimKiemvaChonPhongTrong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TraCuuThongTinCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TraCuuThongTinCongTy.Designer.cs">
+      <DependentUpon>Form_TraCuuThongTinCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TraCuuThongTinDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TraCuuThongTinDoanKhach.Designer.cs">
+      <DependentUpon>Form_TraCuuThongTinDoanKhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_TraCuuThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_TraCuuThongTinKhachHang.Designer.cs">
+      <DependentUpon>Form_TraCuuThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ServicesManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ServicesManagementForm.Designer.cs">
+      <DependentUpon>ServicesManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ServicesOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ServicesOrderForm.Designer.cs">
+      <DependentUpon>ServicesOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserManagementForm.Designer.cs">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VO\AdminVO.cs" />
+    <Compile Include="VO\CongtyVO.cs" />
+    <Compile Include="VO\DoanKhachVO.cs" />
+    <Compile Include="VO\KhachHangVO.cs" />
+    <Compile Include="VO\KhachTroVO.cs" />
+    <Compile Include="VO\PhieuDatPhongVO.cs" />
+    <Compile Include="VO\PhieuThuePhongVO.cs" />
+    <Compile Include="VO\PhongVO.cs" />
+    <Compile Include="VO\ServiceOrderVO.cs" />
+    <Compile Include="VO\ServiceVO.cs" />
+    <Compile Include="VO\TellerVO.cs" />
+    <Compile Include="VO\UserManagementVO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_arrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSets\QLKSDataSet_HeSoPhong.xsc">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_HeSoPhong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSet_HeSoPhong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\QLKSDataSet_HeSoPhong.xss">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_KhachHang.xsc">
+      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_KhachHang.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\QLKSDataSet_KhachHang.xss">
+      <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_TSKHFilterRoom.xsc">
+      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_TSKHFilterRoom.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\QLKSDataSet_TSKHFilterRoom.xss">
+      <DependentUpon>QLKSDataSet_TSKHFilterRoom.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\up_arrow.png" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
