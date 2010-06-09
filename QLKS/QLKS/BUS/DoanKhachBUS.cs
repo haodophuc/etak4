@@ -94,6 +94,18 @@ namespace QLKS.BUS
         {
             return doankhachDAO.GetTienCoc(madoankhach);
         }
+        public DataTable GetAllDetail()
+        {
+
+            try
+            {
+                return doankhachDAO.SelectAllDetail();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         #endregion
     }
 }

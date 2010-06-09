@@ -107,6 +107,24 @@ namespace QLKS.DAO
             sqlParameters[0] = new SqlParameter("@MA_DOAN_KHACH", madoankhach);
             return Program.DBConnection.ExecuteScalarByProcedure("sp_tiencocDK", sqlParameters);
         }
+        public DataTable SelectAllDetail()
+        {
+            try
+            {
+                string query = " SELECT 'DK' + REPLACE(STR(DOAN_KHACH.MA_DOAN_KHACH,4),' ','0') AS MaDK," +
+                               "CONG_TY.*,KHACH_HANG.*" +
+                               "FROM DOAN_KHACH,CONG_TY,KHACH_HANG " +
+                               "WHERE DOAN_KHACH.HIEU_LUC = '1' AND DOAN_KHACH.MA_CONG_TY=CONG_TY.MA_CONG_TY AND CONG_TY.MA_NGUOI_DAI_DIEN=KHACH_HANG.MA_KHACH_HANG";
+
+                return Program.DBConnection.ExecuteSelectQuery(query);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
 
         public DataTable LoadFind()
         {

@@ -40,6 +40,8 @@
             this.receiveCustomerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.bookRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rentRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +55,7 @@
             this.adminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tellerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transactMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.transactMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuThuêPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,7 +105,8 @@
             this.customerMenuItem,
             this.customerGroupMenuItem,
             this.serviceMenuItem,
-            this.roomMenuItem});
+            this.roomMenuItem,
+            this.phiếuThuêPhòngToolStripMenuItem});
             this.updateMenu.Name = "updateMenu";
             this.updateMenu.Size = new System.Drawing.Size(63, 20);
             this.updateMenu.Text = "Cập nhật";
@@ -112,28 +114,28 @@
             // customerMenuItem
             // 
             this.customerMenuItem.Name = "customerMenuItem";
-            this.customerMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.customerMenuItem.Size = new System.Drawing.Size(171, 22);
             this.customerMenuItem.Text = "Khách hàng";
             this.customerMenuItem.Click += new System.EventHandler(this.customerMenuItem_Click);
             // 
             // customerGroupMenuItem
             // 
             this.customerGroupMenuItem.Name = "customerGroupMenuItem";
-            this.customerGroupMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.customerGroupMenuItem.Size = new System.Drawing.Size(171, 22);
             this.customerGroupMenuItem.Text = "Đoàn khách";
             this.customerGroupMenuItem.Click += new System.EventHandler(this.customerGroupMenuItem_Click);
             // 
             // serviceMenuItem
             // 
             this.serviceMenuItem.Name = "serviceMenuItem";
-            this.serviceMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.serviceMenuItem.Size = new System.Drawing.Size(171, 22);
             this.serviceMenuItem.Text = "Dịch vụ";
             this.serviceMenuItem.Click += new System.EventHandler(this.serviceMenuItem_Click);
             // 
             // roomMenuItem
             // 
             this.roomMenuItem.Name = "roomMenuItem";
-            this.roomMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.roomMenuItem.Size = new System.Drawing.Size(171, 22);
             this.roomMenuItem.Text = "Phòng";
             this.roomMenuItem.Click += new System.EventHandler(this.roomMenuItem_Click);
             // 
@@ -159,6 +161,21 @@
             this.rentRoomMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rentRoomMenuItem.Text = "Thuê phòng";
             this.rentRoomMenuItem.Click += new System.EventHandler(this.rentRoomMenuItem_Click);
+            // 
+            // transactMenu
+            // 
+            this.transactMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transactMenuItem});
+            this.transactMenu.Name = "transactMenu";
+            this.transactMenu.Size = new System.Drawing.Size(62, 20);
+            this.transactMenu.Text = "Giao dịch";
+            // 
+            // transactMenuItem
+            // 
+            this.transactMenuItem.Name = "transactMenuItem";
+            this.transactMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.transactMenuItem.Text = "Thanh toán";
+            this.transactMenuItem.Click += new System.EventHandler(this.transactMenuItem_Click);
             // 
             // serviceMenu
             // 
@@ -257,20 +274,12 @@
             this.roleMenuItem.Size = new System.Drawing.Size(175, 22);
             this.roleMenuItem.Text = "Quyền hạn";
             // 
-            // transactMenu
+            // phiếuThuêPhòngToolStripMenuItem
             // 
-            this.transactMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transactMenuItem});
-            this.transactMenu.Name = "transactMenu";
-            this.transactMenu.Size = new System.Drawing.Size(62, 20);
-            this.transactMenu.Text = "Giao dịch";
-            // 
-            // transactMenuItem
-            // 
-            this.transactMenuItem.Name = "transactMenuItem";
-            this.transactMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.transactMenuItem.Text = "Thanh toán";
-            this.transactMenuItem.Click += new System.EventHandler(this.transactMenuItem_Click);
+            this.phiếuThuêPhòngToolStripMenuItem.Name = "phiếuThuêPhòngToolStripMenuItem";
+            this.phiếuThuêPhòngToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.phiếuThuêPhòngToolStripMenuItem.Text = "Phiếu Thuê Phòng";
+            this.phiếuThuêPhòngToolStripMenuItem.Click += new System.EventHandler(this.phiếuThuêPhòngToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -320,6 +329,7 @@
         private System.Windows.Forms.ToolStripMenuItem StatisticCustomerMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactMenu;
         private System.Windows.Forms.ToolStripMenuItem transactMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuThuêPhòngToolStripMenuItem;
 
 
     }
