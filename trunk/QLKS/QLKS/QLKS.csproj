@@ -243,6 +243,15 @@
     <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\TellerDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
+    <Compile Include="DataSets\QLKSDataSet_HeSoPhong.cs">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\QLKSDataSet_HeSoPhong.designer.cs">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="DataSets\QLKSDataSet_KhachHang.cs">
       <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -265,6 +274,10 @@
       <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_HeSoSuDungPhong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Report_HeSoSuDungPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report_TongSoKhachHang.resx">
       <DependentUpon>Report_TongSoKhachHang.cs</DependentUpon>
@@ -309,6 +322,10 @@
     <EmbeddedResource Include="UIControl\ReportKhachHang_UI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ReportHeSoPhong_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportHeSoPhong_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\TimkiemvaChonCongTyUI.resx">
       <DependentUpon>TimkiemvaChonCongTyUI.cs</DependentUpon>
@@ -418,6 +435,10 @@
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_ReportHeSoPhong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ReportHeSoPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_ReportKhachHang.resx">
       <DependentUpon>Form_ReportKhachHang.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -479,6 +500,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\Report_HeSoSuDungPhong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_HeSoSuDungPhong.Designer.cs">
+      <DependentUpon>Report_HeSoSuDungPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Report_TongSoKhachHang.cs">
       <SubType>Component</SubType>
@@ -545,6 +572,12 @@
     </Compile>
     <Compile Include="UIControl\ReportKhachHang_UI.Designer.cs">
       <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\ReportHeSoPhong_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ReportHeSoPhong_UI.Designer.cs">
+      <DependentUpon>ReportHeSoPhong_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\TimkiemvaChonCongTyUI.cs">
       <SubType>UserControl</SubType>
@@ -708,6 +741,12 @@
     <Compile Include="UI\Form_DatPhong.designer.cs">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Form_ReportHeSoPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_ReportHeSoPhong.Designer.cs">
+      <DependentUpon>Form_ReportHeSoPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form_ReportKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -824,6 +863,17 @@
     <None Include="Resources\up_arrow.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSets\QLKSDataSet_HeSoPhong.xsc">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_HeSoPhong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSet_HeSoPhong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\QLKSDataSet_HeSoPhong.xss">
+      <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
+    </None>
     <None Include="DataSets\QLKSDataSet_KhachHang.xsc">
       <DependentUpon>QLKSDataSet_KhachHang.xsd</DependentUpon>
     </None>
