@@ -115,7 +115,7 @@ namespace QLKS.DAO
             {
                 throw e;
             }
-        }
+        } //By zu~
         public int Update(PhieuThuePhongVO phieuthuephongVO)
         {
             try
