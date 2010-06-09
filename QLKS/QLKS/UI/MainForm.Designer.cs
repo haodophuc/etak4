@@ -37,6 +37,7 @@
             this.customerGroupMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuThuêPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receiveCustomerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.bookRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rentRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,12 +51,12 @@
             this.searchCustomerGroupMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StatisticRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.userMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tellerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roleMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phiếuThuêPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,20 +83,20 @@
             this.loginMenuItem,
             this.logoutMenuItem});
             this.loginLogoutMenu.Name = "loginLogoutMenu";
-            this.loginLogoutMenu.Size = new System.Drawing.Size(69, 20);
+            this.loginLogoutMenu.Size = new System.Drawing.Size(71, 20);
             this.loginLogoutMenu.Text = "Vào ra =))";
             // 
             // loginMenuItem
             // 
             this.loginMenuItem.Name = "loginMenuItem";
-            this.loginMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.loginMenuItem.Size = new System.Drawing.Size(132, 22);
             this.loginMenuItem.Text = "Đăng nhập";
             this.loginMenuItem.Click += new System.EventHandler(this.loginMenuItem_Click);
             // 
             // logoutMenuItem
             // 
             this.logoutMenuItem.Name = "logoutMenuItem";
-            this.logoutMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.logoutMenuItem.Size = new System.Drawing.Size(132, 22);
             this.logoutMenuItem.Text = "Đăng xuất";
             this.logoutMenuItem.Click += new System.EventHandler(this.logoutMenuItem_Click);
             // 
@@ -108,36 +109,43 @@
             this.roomMenuItem,
             this.phiếuThuêPhòngToolStripMenuItem});
             this.updateMenu.Name = "updateMenu";
-            this.updateMenu.Size = new System.Drawing.Size(63, 20);
+            this.updateMenu.Size = new System.Drawing.Size(67, 20);
             this.updateMenu.Text = "Cập nhật";
             // 
             // customerMenuItem
             // 
             this.customerMenuItem.Name = "customerMenuItem";
-            this.customerMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.customerMenuItem.Size = new System.Drawing.Size(172, 22);
             this.customerMenuItem.Text = "Khách hàng";
             this.customerMenuItem.Click += new System.EventHandler(this.customerMenuItem_Click);
             // 
             // customerGroupMenuItem
             // 
             this.customerGroupMenuItem.Name = "customerGroupMenuItem";
-            this.customerGroupMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.customerGroupMenuItem.Size = new System.Drawing.Size(172, 22);
             this.customerGroupMenuItem.Text = "Đoàn khách";
             this.customerGroupMenuItem.Click += new System.EventHandler(this.customerGroupMenuItem_Click);
             // 
             // serviceMenuItem
             // 
             this.serviceMenuItem.Name = "serviceMenuItem";
-            this.serviceMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.serviceMenuItem.Size = new System.Drawing.Size(172, 22);
             this.serviceMenuItem.Text = "Dịch vụ";
             this.serviceMenuItem.Click += new System.EventHandler(this.serviceMenuItem_Click);
             // 
             // roomMenuItem
             // 
             this.roomMenuItem.Name = "roomMenuItem";
-            this.roomMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.roomMenuItem.Size = new System.Drawing.Size(172, 22);
             this.roomMenuItem.Text = "Phòng";
             this.roomMenuItem.Click += new System.EventHandler(this.roomMenuItem_Click);
+            // 
+            // phiếuThuêPhòngToolStripMenuItem
+            // 
+            this.phiếuThuêPhòngToolStripMenuItem.Name = "phiếuThuêPhòngToolStripMenuItem";
+            this.phiếuThuêPhòngToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.phiếuThuêPhòngToolStripMenuItem.Text = "Phiếu Thuê Phòng";
+            this.phiếuThuêPhòngToolStripMenuItem.Click += new System.EventHandler(this.phiếuThuêPhòngToolStripMenuItem_Click);
             // 
             // receiveCustomerMenu
             // 
@@ -145,20 +153,20 @@
             this.bookRoomMenuItem,
             this.rentRoomMenuItem});
             this.receiveCustomerMenu.Name = "receiveCustomerMenu";
-            this.receiveCustomerMenu.Size = new System.Drawing.Size(97, 20);
+            this.receiveCustomerMenu.Size = new System.Drawing.Size(107, 20);
             this.receiveCustomerMenu.Text = "Tiếp nhận khách";
             // 
             // bookRoomMenuItem
             // 
             this.bookRoomMenuItem.Name = "bookRoomMenuItem";
-            this.bookRoomMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bookRoomMenuItem.Size = new System.Drawing.Size(139, 22);
             this.bookRoomMenuItem.Text = "Đặt phòng";
             this.bookRoomMenuItem.Click += new System.EventHandler(this.bookRoomMenuItem_Click);
             // 
             // rentRoomMenuItem
             // 
             this.rentRoomMenuItem.Name = "rentRoomMenuItem";
-            this.rentRoomMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rentRoomMenuItem.Size = new System.Drawing.Size(139, 22);
             this.rentRoomMenuItem.Text = "Thuê phòng";
             this.rentRoomMenuItem.Click += new System.EventHandler(this.rentRoomMenuItem_Click);
             // 
@@ -167,13 +175,13 @@
             this.transactMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.transactMenuItem});
             this.transactMenu.Name = "transactMenu";
-            this.transactMenu.Size = new System.Drawing.Size(62, 20);
+            this.transactMenu.Size = new System.Drawing.Size(69, 20);
             this.transactMenu.Text = "Giao dịch";
             // 
             // transactMenuItem
             // 
             this.transactMenuItem.Name = "transactMenuItem";
-            this.transactMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.transactMenuItem.Size = new System.Drawing.Size(135, 22);
             this.transactMenuItem.Text = "Thanh toán";
             this.transactMenuItem.Click += new System.EventHandler(this.transactMenuItem_Click);
             // 
@@ -182,13 +190,13 @@
             this.serviceMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.serviceOrderMenuItem});
             this.serviceMenu.Name = "serviceMenu";
-            this.serviceMenu.Size = new System.Drawing.Size(54, 20);
+            this.serviceMenu.Size = new System.Drawing.Size(59, 20);
             this.serviceMenu.Text = "Dịch vụ";
             // 
             // serviceOrderMenuItem
             // 
             this.serviceOrderMenuItem.Name = "serviceOrderMenuItem";
-            this.serviceOrderMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.serviceOrderMenuItem.Size = new System.Drawing.Size(159, 22);
             this.serviceOrderMenuItem.Text = "Đăng ký dịch vụ";
             this.serviceOrderMenuItem.Click += new System.EventHandler(this.serviceOrderMenuItem_Click);
             // 
@@ -199,44 +207,52 @@
             this.searchCompanyMenuItem,
             this.searchCustomerGroupMenuItem});
             this.searchMenu.Name = "searchMenu";
-            this.searchMenu.Size = new System.Drawing.Size(56, 20);
+            this.searchMenu.Size = new System.Drawing.Size(59, 20);
             this.searchMenu.Text = "Tra cứu";
             // 
             // searchCustomerMenuItem
             // 
             this.searchCustomerMenuItem.Name = "searchCustomerMenuItem";
-            this.searchCustomerMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.searchCustomerMenuItem.Size = new System.Drawing.Size(137, 22);
             this.searchCustomerMenuItem.Text = "Khách hàng";
             this.searchCustomerMenuItem.Click += new System.EventHandler(this.searchCustomerMenuItem_Click_1);
             // 
             // searchCompanyMenuItem
             // 
             this.searchCompanyMenuItem.Name = "searchCompanyMenuItem";
-            this.searchCompanyMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.searchCompanyMenuItem.Size = new System.Drawing.Size(137, 22);
             this.searchCompanyMenuItem.Text = "Công ty";
             this.searchCompanyMenuItem.Click += new System.EventHandler(this.searchCompanyMenuItem_Click);
             // 
             // searchCustomerGroupMenuItem
             // 
             this.searchCustomerGroupMenuItem.Name = "searchCustomerGroupMenuItem";
-            this.searchCustomerGroupMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.searchCustomerGroupMenuItem.Size = new System.Drawing.Size(137, 22);
             this.searchCustomerGroupMenuItem.Text = "Đoàn khách";
             this.searchCustomerGroupMenuItem.Click += new System.EventHandler(this.searchCustomerGroupMenuItem_Click);
             // 
             // statisticMenu
             // 
             this.statisticMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StatisticCustomerMenuItem});
+            this.StatisticCustomerMenuItem,
+            this.StatisticRoomMenuItem});
             this.statisticMenu.Name = "statisticMenu";
-            this.statisticMenu.Size = new System.Drawing.Size(63, 20);
+            this.statisticMenu.Size = new System.Drawing.Size(69, 20);
             this.statisticMenu.Text = "Thống kê";
             // 
             // StatisticCustomerMenuItem
             // 
             this.StatisticCustomerMenuItem.Name = "StatisticCustomerMenuItem";
-            this.StatisticCustomerMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.StatisticCustomerMenuItem.Size = new System.Drawing.Size(191, 22);
             this.StatisticCustomerMenuItem.Text = "Số lượng khách";
             this.StatisticCustomerMenuItem.Click += new System.EventHandler(this.StatisticCustomerMenuItem_Click);
+            // 
+            // StatisticRoomMenuItem
+            // 
+            this.StatisticRoomMenuItem.Name = "StatisticRoomMenuItem";
+            this.StatisticRoomMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.StatisticRoomMenuItem.Text = "Hệ Số Sử Dụng Phòng";
+            this.StatisticRoomMenuItem.Click += new System.EventHandler(this.StatisticRoomMenuItem_Click);
             // 
             // userManagementMenu
             // 
@@ -246,40 +262,33 @@
             this.tellerMenuItem,
             this.roleMenuItem});
             this.userManagementMenu.Name = "userManagementMenu";
-            this.userManagementMenu.Size = new System.Drawing.Size(103, 20);
+            this.userManagementMenu.Size = new System.Drawing.Size(112, 20);
             this.userManagementMenu.Text = "Quản lý tài khoản";
             // 
             // userMenuItem
             // 
             this.userMenuItem.Name = "userMenuItem";
-            this.userMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.userMenuItem.Size = new System.Drawing.Size(176, 22);
             this.userMenuItem.Text = "Admin và thu ngân";
             this.userMenuItem.Click += new System.EventHandler(this.userMenuItem_Click);
             // 
             // adminMenuItem
             // 
             this.adminMenuItem.Name = "adminMenuItem";
-            this.adminMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.adminMenuItem.Size = new System.Drawing.Size(176, 22);
             this.adminMenuItem.Text = "Admin";
             // 
             // tellerMenuItem
             // 
             this.tellerMenuItem.Name = "tellerMenuItem";
-            this.tellerMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.tellerMenuItem.Size = new System.Drawing.Size(176, 22);
             this.tellerMenuItem.Text = "Thu ngân";
             // 
             // roleMenuItem
             // 
             this.roleMenuItem.Name = "roleMenuItem";
-            this.roleMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.roleMenuItem.Size = new System.Drawing.Size(176, 22);
             this.roleMenuItem.Text = "Quyền hạn";
-            // 
-            // phiếuThuêPhòngToolStripMenuItem
-            // 
-            this.phiếuThuêPhòngToolStripMenuItem.Name = "phiếuThuêPhòngToolStripMenuItem";
-            this.phiếuThuêPhòngToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.phiếuThuêPhòngToolStripMenuItem.Text = "Phiếu Thuê Phòng";
-            this.phiếuThuêPhòngToolStripMenuItem.Click += new System.EventHandler(this.phiếuThuêPhòngToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -330,6 +339,7 @@
         private System.Windows.Forms.ToolStripMenuItem transactMenu;
         private System.Windows.Forms.ToolStripMenuItem transactMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuThuêPhòngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem StatisticRoomMenuItem;
 
 
     }
