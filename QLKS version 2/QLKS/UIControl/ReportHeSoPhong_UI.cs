@@ -16,6 +16,8 @@ namespace QLKS.UIControl
         public ReportHeSoPhong_UI()
         {
             InitializeComponent();
+            InitControl();
+            EnableControl();
         }
 
         private void InitControl()
