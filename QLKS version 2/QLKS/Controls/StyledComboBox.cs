@@ -9,7 +9,7 @@ namespace QLKS.Controls
        #region Constructors
 
         public StyledComboBox() : base() {
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.LookAndFeel.SkinName = "Blue";        
         }//end default constructor
 

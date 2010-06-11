@@ -33,7 +33,7 @@ namespace QLKS.BUS
         {
             try
             {
-                return phongDAO.SelectAllWithMaTinhTrangByOne();
+                return phongDAO.SelectAvailableRooms();
             }
             catch (Exception e)
             {
@@ -52,8 +52,7 @@ namespace QLKS.BUS
                 throw e;
             }
         }
-
-        
+                
         public int Delete(string soPhong)
         {
             try

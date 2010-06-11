@@ -11,7 +11,7 @@ using QLKS.UI;
 
 namespace QLKS.UIControl
 {
-    public partial class UIGroupInfoPanel : DevExpress.XtraEditors.XtraUserControl
+    public partial class UIGroupInfoPanel : UserControl
     {
 
        #region Constructors

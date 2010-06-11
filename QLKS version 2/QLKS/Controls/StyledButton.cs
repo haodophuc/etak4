@@ -11,7 +11,7 @@ namespace QLKS.Controls
         public StyledButton()
             : base()
         {
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.LookAndFeel.UseWindowsXPTheme = true;
         }//end default constructor
 

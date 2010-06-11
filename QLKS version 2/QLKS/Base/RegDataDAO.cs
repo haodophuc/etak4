@@ -12,30 +12,40 @@ namespace QLKS.Base
     {
         #region Constructors
 
-        public RegDataDAO(String selectCommand)
+        public RegDataDAO()
         {
             // Get the connection to the database
             Connection = Program.DBConnection;
-            // Contruct the DataAdapter
-            Adapter = new SqlDataAdapter(selectCommand, Connection.Connection);
+
         }//end default constructor
 
-        public RegDataDAO(RegData regdata)
+        public RegDataDAO(String selectCommand) : this()
         {
+                       
+            // Contruct the DataAdapter
+            Adapter = new SqlDataAdapter(selectCommand, Connection.Connection);
 
-        }//end constructor
+        }//end constructor with a select command
+
+        public RegDataDAO(RegData regdata) : this()
+        {
+            Initialize(regdata);
+        }//end constructor with a register data package
+
         #endregion //end region Constructors
 
 
         #region Methods
 
-        public void Initialize(RegData dataset)
+        private void Initialize(RegData dataset)
         {
-            DataSource = dataset;
-            Adapter.TableMappings.Add(dataset.Customers.GetTableMapping());
-            Adapter.TableMappings.Add(dataset.Companies.GetTableMapping());
-            SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(Adapter);
-            //Adapter.Fill(dataset.CheckInData, dataset.Customers.SourceTableName);
+            RegData = dataset;
+
+            //Adapter.TableMappings.Add(RegData.Customers.GetTableMapping());
+            //Adapter.TableMappings.Add(RegData.Companies.GetTableMapping());
+            //SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(Adapter);
+            //Adapter.Fill(RegData.CheckInData, RegData.Customers.SourceTableName);
+
         }//end method Initialize
 
         public void UpdateCustomers()
@@ -43,31 +53,33 @@ namespace QLKS.Base
 
             try
             {
-                Program.DBConnection.Connect();
+                // Open connection
+                Connection.Connect();
 
-                int numOfRows = DataSource.Customers.Rows.Count;
+
+                int numOfRows = RegData.Customers.Rows.Count;
 
                 for (int i = 0; i < numOfRows; i++)
                 {
-                    if (DataSource.Customers.Rows[i]["IsNew"].ToString().Equals(Boolean.TrueString))
+                    if (RegData.Customers.Rows[i]["IsNew"].ToString().Equals(Boolean.TrueString))
                     {
                         SqlCommand cmd = new SqlCommand("SP_INSERT_CUSTOMER", Program.DBConnection.Connection);
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        SqlParameter param = cmd.Parameters.AddWithValue("@IDENTITY", DataSource.Customers.Rows[i]["CustomerID"]);
+                        SqlParameter param = cmd.Parameters.AddWithValue("@IDENTITY", RegData.Customers.Rows[i]["CustomerID"]);
 
                         param.Direction = ParameterDirection.Output;
 
-                        cmd.Parameters.AddWithValue("@MA_QUOC_GIA", DataSource.Customers.Rows[i]["CountryID"]);
-                        cmd.Parameters.AddWithValue("@HO_KHACH_HANG", DataSource.Customers.Rows[i]["LastName"]);
-                        cmd.Parameters.AddWithValue("@TEN_KHACH_HANG", DataSource.Customers.Rows[i]["FirstName"]);
-                        cmd.Parameters.AddWithValue("@CMND", DataSource.Customers.Rows[i]["SocialID"]);
-                        cmd.Parameters.AddWithValue("@HO_CHIEU", DataSource.Customers.Rows[i]["PassPort"]);
-                        cmd.Parameters.AddWithValue("@DIEN_THOAI", DataSource.Customers.Rows[i]["Phone"]);
+                        cmd.Parameters.AddWithValue("@MA_QUOC_GIA", RegData.Customers.Rows[i]["CountryID"]);
+                        cmd.Parameters.AddWithValue("@HO_KHACH_HANG", RegData.Customers.Rows[i]["LastName"]);
+                        cmd.Parameters.AddWithValue("@TEN_KHACH_HANG", RegData.Customers.Rows[i]["FirstName"]);
+                        cmd.Parameters.AddWithValue("@CMND", RegData.Customers.Rows[i]["SocialID"]);
+                        cmd.Parameters.AddWithValue("@HO_CHIEU", RegData.Customers.Rows[i]["PassPort"]);
+                        cmd.Parameters.AddWithValue("@DIEN_THOAI", RegData.Customers.Rows[i]["Phone"]);
                         cmd.ExecuteNonQuery();
-                        DataSource.Customers.Rows[i]["CustomerID"] = cmd.Parameters["@IDENTITY"].Value;
+                        RegData.Customers.Rows[i]["CustomerID"] = cmd.Parameters["@IDENTITY"].Value;
 
-                        DataSource.Customers.Rows[i]["IsNew"] = false;
+                        RegData.Customers.Rows[i]["IsNew"] = false;
                     }//end if
                 }//end for
             }//end try
@@ -78,7 +90,7 @@ namespace QLKS.Base
             }//end catch
             finally
             {
-                Program.DBConnection.Disconnect();
+                Connection.Disconnect();
             }//end finally
         }//end method Update(DataSet)
 
@@ -99,17 +111,17 @@ namespace QLKS.Base
             set { this.adapter = value; }
         }//end attribute Adapter
 
-        public RegData DataSource
+        public RegData RegData
         {
-            get { return this.dataSource; }
-            set { this.dataSource = value; }
+            get { return this.regData; }
+            set { this.regData = value; }
         }//end attribute CheckInData
 
         #endregion //end region Attributes
 
 
         #region Instance Fields
-        private RegData dataSource;
+        private RegData regData;
         private SqlDataAdapter adapter;
         private DBConnection connection;
         #endregion Instance Fields

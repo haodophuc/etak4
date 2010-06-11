@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +12,7 @@ namespace QLKS.Controls
 
             this.Properties.AutoHeight = false;
             this.LookAndFeel.UseDefaultLookAndFeel = true;
-            this.LookAndFeel.SkinName = "Blue";
+            //this.LookAndFeel.SkinName = "Blue";
 
             this.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             
@@ -25,7 +25,15 @@ namespace QLKS.Controls
             // Set read-only appearance
             this.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
             this.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
-            this.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Gray;
+            this.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+
+            // Set disable appearance
+            this.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkGray;
+            this.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.Gray;
+
+            // Set nulltext
+            this.Properties.NullText = StyledTextBox.DefaultNullText;
 
         }//end default constructor
 
@@ -43,12 +51,16 @@ namespace QLKS.Controls
 
 
        #region Attributes
+        public static String DefaultNullText {
+            get { return "Chưa có thông tin."; }
+        }//end attribute NullText
+
 
        #endregion //end region Attributes
 
 
        #region Instance Fields
-
+        
        #endregion Instance Fields
 
 

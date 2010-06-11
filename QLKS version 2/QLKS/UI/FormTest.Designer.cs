@@ -44,11 +44,11 @@ namespace QLKS.UI
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.buttonReset = new System.Windows.Forms.Button();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.textBoxCustomer1 = new QLKS.Controls.TextBoxCustomer();
             this.textBox6 = new DevExpress.XtraEditors.TextEdit();
             this.textBox7 = new DevExpress.XtraEditors.TextEdit();
             this.textBox8 = new DevExpress.XtraEditors.TextEdit();
             this.textBox9 = new DevExpress.XtraEditors.TextEdit();
-            this.textBox10 = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.tabContainer = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -59,10 +59,20 @@ namespace QLKS.UI
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxCustomer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabContainer)).BeginInit();
@@ -114,37 +124,33 @@ namespace QLKS.UI
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Company Name";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(37, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Country ID";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(37, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Agent ID";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(41, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Address";
             // 
@@ -183,7 +189,6 @@ namespace QLKS.UI
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.LookAndFeel.SkinName = "Blue";
-            this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = true;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(736, 347);
@@ -211,11 +216,11 @@ namespace QLKS.UI
             // panelControl1
             // 
             this.panelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelControl1.Controls.Add(this.textBoxCustomer1);
             this.panelControl1.Controls.Add(this.textBox6);
             this.panelControl1.Controls.Add(this.textBox7);
             this.panelControl1.Controls.Add(this.textBox8);
             this.panelControl1.Controls.Add(this.textBox9);
-            this.panelControl1.Controls.Add(this.textBox10);
             this.panelControl1.Controls.Add(this.buttonReset);
             this.panelControl1.Controls.Add(this.textBox1);
             this.panelControl1.Controls.Add(this.textBox2);
@@ -233,6 +238,32 @@ namespace QLKS.UI
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(719, 235);
             this.panelControl1.TabIndex = 15;
+            // 
+            // textBoxCustomer1
+            // 
+            this.textBoxCustomer1.EditValue = "";
+            this.textBoxCustomer1.Location = new System.Drawing.Point(488, 148);
+            this.textBoxCustomer1.Name = "textBoxCustomer1";
+            this.textBoxCustomer1.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxCustomer1.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxCustomer1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxCustomer1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxCustomer1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxCustomer1.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxCustomer1.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxCustomer1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxCustomer1.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxCustomer1.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxCustomer1.Properties.AutoHeight = false;
+            this.textBoxCustomer1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxCustomer1.Properties.LookAndFeel.SkinName = "Blue";
+            this.textBoxCustomer1.Properties.Mask.EditMask = "KH0000";
+            this.textBoxCustomer1.Properties.Mask.IgnoreMaskBlank = false;
+            this.textBoxCustomer1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textBoxCustomer1.Properties.Mask.SaveLiteral = false;
+            this.textBoxCustomer1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.textBoxCustomer1.Size = new System.Drawing.Size(185, 20);
+            this.textBoxCustomer1.TabIndex = 19;
             // 
             // textBox6
             // 
@@ -261,13 +292,6 @@ namespace QLKS.UI
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(185, 20);
             this.textBox9.TabIndex = 18;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(488, 129);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(185, 20);
-            this.textBox10.TabIndex = 19;
             // 
             // panelControl2
             // 
@@ -334,7 +358,6 @@ namespace QLKS.UI
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
-            this.gridControl3.LookAndFeel.UseDefaultLookAndFeel = true;
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -367,11 +390,21 @@ namespace QLKS.UI
             this.MinimumSize = new System.Drawing.Size(751, 572);
             this.Name = "FormTest";
             this.Text = "FormTest";
+            ((System.ComponentModel.ISupportInitialize)(this.textBox1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxCustomer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabContainer)).EndInit();
@@ -411,7 +444,6 @@ namespace QLKS.UI
         private DevExpress.XtraEditors.TextEdit textBox7;
         private DevExpress.XtraEditors.TextEdit textBox8;
         private DevExpress.XtraEditors.TextEdit textBox9;
-        private DevExpress.XtraEditors.TextEdit textBox10;
         private DevExpress.XtraTab.XtraTabControl tabContainer;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
@@ -421,5 +453,6 @@ namespace QLKS.UI
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private QLKS.Controls.TextBoxCustomer textBoxCustomer1;
     }
 }

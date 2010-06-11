@@ -190,6 +190,7 @@
     </Compile>
     <Compile Include="Base\Interfaces\IDataSubmit.cs" />
     <Compile Include="Base\Mode.cs" />
+    <Compile Include="Base\Notice.cs" />
     <Compile Include="Base\RegData.cs" />
     <Compile Include="Base\RegDataDAO.cs" />
     <Compile Include="Base\SubmitBooking.cs" />
@@ -267,29 +268,17 @@
       <DependentUpon>QLKSDataSet_TSKHFilterRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="UI\Form_Main.cs">
+    <Compile Include="UI\FormBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form_Main.Designer.cs">
-      <DependentUpon>Form_Main.cs</DependentUpon>
+    <Compile Include="UI\FormBooking.Designer.cs">
+      <DependentUpon>FormBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
-    <EmbeddedResource Include="Controls\NumberTextBox.resx">
+    <EmbeddedResource Include="UI\FormBooking.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>NumberTextBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\StyledPanel.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>StyledPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TextBoxCustomer.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>TextBoxCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form_Main.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Form_Main.cs</DependentUpon>
+      <DependentUpon>FormBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -393,10 +382,6 @@
       <DependentUpon>UIGroupInfoPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIControl\UIRegData.resx">
-      <DependentUpon>UIRegData.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UIRoomInfoPanel.resx">
       <DependentUpon>UIRoomInfoPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -455,6 +440,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_DatPhong.resx">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_ReportHeSoPhong.resx">
@@ -663,12 +652,6 @@
     <Compile Include="UIControl\UIGroupInfoPanel.designer.cs">
       <DependentUpon>UIGroupInfoPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIControl\UIRegData.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIControl\UIRegData.Designer.cs">
-      <DependentUpon>UIRegData.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIControl\UIRoomInfoPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -758,6 +741,12 @@
     </Compile>
     <Compile Include="UI\Form_DatPhong.designer.cs">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form_ReportHeSoPhong.cs">
       <SubType>Form</SubType>

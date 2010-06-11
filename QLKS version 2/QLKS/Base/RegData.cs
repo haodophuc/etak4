@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -17,19 +17,14 @@ namespace QLKS.Base
 
             // Create tables
             Customers = new TableCustomers();
-            Groups = new TableGroups();
             Rooms = new TableRooms();
-            Companies = new TableCompanies();
+            //Groups = new TableGroups();           
+            //Companies = new TableCompanies();
 
             // Add tables to dataset
-            CheckInData.Tables.AddRange( new DataTable[] { Customers, Groups, Rooms, Companies } );
+            CheckInDataSet.Tables.AddRange( new DataTable[] { Customers, Rooms } );
 
-            string selectCmd = @Customers.SelectCommand + " " + Companies.SelectCommand +";";
-
-            agent = new RegDataDAO(selectCmd);
-            agent.Initialize(this);
-
-            //agent.FillDataSet(CheckInData, Customers.GetTableMapping(), Customers.SourceTableName);
+            agent = new RegDataDAO(this);
 
         }//end method RegData
 
@@ -38,7 +33,38 @@ namespace QLKS.Base
 
        #region Methods
 
-        public void UpdateCustomers() {
+        public void VerifyData()
+        {
+            //bool hasErrors = false;
+
+            if (Customers.Rows.Count == 0)
+            {
+                //errorMessage = "Chưa có khách hàng";
+                //hasErrors = true;
+                throw new Exception("Chưa có khách hàng");
+            }//end if : no customer
+
+            if( Rooms.Rows.Count == 0 )
+            {
+                throw new Exception("Chưa có phòng");
+            }//end 
+
+            int item = 0;
+            for (int i = 0; i < Customers.Rows.Count; i++)
+            {
+                String text = Customers.Rows[i]["RoomNumber"].ToString();
+                if ( text == String.Empty)
+                    item++;
+            }//end for
+            if (item > 0)
+            {
+                String message = String.Format("Có {0} khách hàng chưa được sắp phòng.", item);
+                throw new Exception(message);
+            }//end if
+        }//end method VerifyData
+
+        public void UpdateCustomers()
+        {
 
             try {
                 agent.UpdateCustomers();
@@ -52,14 +78,9 @@ namespace QLKS.Base
        #endregion //end region Methods
 
 
-       #region Event Handling Methods
-
-       #endregion //end region Event Handling Methods
-
-
        #region Attributes
 
-        public DataSet CheckInData
+        public DataSet CheckInDataSet
         { 
            get { return checkInData; }
            //set { this.dataset = value; }
@@ -97,7 +118,9 @@ namespace QLKS.Base
         private TableCustomers customers;
         private TableGroups groups;
         private TableRooms rooms;
+
         private DataSet checkInData;
+
         private RegDataDAO agent;
        #endregion Instance Fields
 

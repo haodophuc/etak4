@@ -180,7 +180,7 @@ namespace QLKS.DAO
         }
 
         // Created by G
-        public Int64 InsertBySP(PhieuThuePhongVO value)
+        public int InsertBySP(PhieuThuePhongVO value)
         {
             try
             {
@@ -200,7 +200,7 @@ namespace QLKS.DAO
                 param[4] = new SqlParameter("@NGAY_NHAN_PHONG", value.NGAY_NHAN_PHONG);
                 param[5] = new SqlParameter("@NGAY_TRA_PHONG", value.NGAY_TRA_PHONG);
 
-                return Program.DBConnection.ExecuteScalarByProcedure(sp, param);
+                return (int)Program.DBConnection.ExecuteScalarByProcedure(sp, param);
 
             }//end try
             catch (Exception e)

@@ -78,9 +78,9 @@ namespace QLKS.UI
 
         private void bookRoomMenuItem_Click(object sender, EventArgs e)
         {
-            Form_DatPhong bookRoomForm = new Form_DatPhong();
-            bookRoomForm.MdiParent = this;
-            bookRoomForm.Show();
+            FormBooking booking = new FormBooking();
+            booking.MdiParent = this;
+            booking.Show();
         }
 
         private void rentRoomMenuItem_Click(object sender, EventArgs e)
@@ -119,35 +119,6 @@ namespace QLKS.UI
 
             Text = Resources.ApplicationName;
         }
-        #endregion
-
-        #region Helpers
-        public void enableAllMenuItems()
-        {
-            foreach (ToolStripMenuItem item in mainMenu.Items)
-                item.Enabled = true;
-        }
-
-        private void disableAllMenuItems()
-        {
-            foreach (ToolStripMenuItem item in mainMenu.Items)
-                item.Enabled = false;
-        }
-
-        public void enableTellerMenuItems()
-        {
-            enableAllMenuItems();
-            userManagementMenu.Enabled = false;
-        }
-
-        private void enableLoginMenuItems()
-        {
-            loginLogoutMenu.Enabled = true;
-            loginMenuItem.Enabled = true;
-            logoutMenuItem.Enabled = true;
-        }
-
-        #endregion
 
         private void searchCustomerMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -213,7 +184,37 @@ namespace QLKS.UI
             defaultLookAndFeel1.LookAndFeel.SkinName = "Lilian";
         }
 
-       
+        #endregion
+
+        #region Helpers
+        public void enableAllMenuItems()
+        {
+            foreach (ToolStripMenuItem item in mainMenu.Items)
+                item.Enabled = true;
+        }
+
+        private void disableAllMenuItems()
+        {
+            foreach (ToolStripMenuItem item in mainMenu.Items)
+                item.Enabled = false;
+        }
+
+        public void enableTellerMenuItems()
+        {
+            enableAllMenuItems();
+            userManagementMenu.Enabled = false;
+        }
+
+        private void enableLoginMenuItems()
+        {
+            loginLogoutMenu.Enabled = true;
+            loginMenuItem.Enabled = true;
+            logoutMenuItem.Enabled = true;
+        }
+
+        #endregion
+
+              
 
       
 
