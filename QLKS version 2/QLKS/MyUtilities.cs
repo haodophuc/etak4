@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Security.Cryptography;
 
 namespace QLKS
 {
@@ -38,6 +39,21 @@ namespace QLKS
               result = "0";
           }
           return result = type + result + id;
+      }
+
+
+      public static String encrypt(String str)
+      {
+          ////////////// encrypt password //////////////////////////
+          Byte[] rawBytes = Encoding.UTF8.GetBytes(str);
+          MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+          Byte[] hashedBytes = md5.ComputeHash(rawBytes);
+
+          StringBuilder sb = new StringBuilder();
+          for (int i = 0; i < hashedBytes.Length; ++i)
+              sb.Append(hashedBytes[i]);
+
+          return sb.ToString();
       }
     }
 }

@@ -10,9 +10,9 @@ namespace QLKS.BUS
     public class ServiceOrderBUS
     {
         private ServiceOrderDAO serviceOrderDAO;
-        public ServiceOrderBUS(DBConnection dbConnection)
+        public ServiceOrderBUS()
         {
-            serviceOrderDAO = new ServiceOrderDAO(dbConnection);
+            serviceOrderDAO = new ServiceOrderDAO();
         }
 
         public ServiceOrderVO getVO()
@@ -31,11 +31,6 @@ namespace QLKS.BUS
             serviceOrderVO.DataSet = serviceOrderDAO.DataSet;
 
             return serviceOrderVO;
-        }
-
-        public int getLastIdentity()
-        {
-            return serviceOrderDAO.getLastIdentity();
         }
 
         public void update()

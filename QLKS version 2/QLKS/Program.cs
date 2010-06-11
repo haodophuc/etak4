@@ -15,7 +15,7 @@ namespace QLKS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UI.Form_Main());
+            Application.Run(new UI.MainForm());
         }
 
         public static DBConnection DBConnection

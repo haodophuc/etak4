@@ -5,20 +5,20 @@ using System.Data;
 
 namespace QLKS.VO
 {
-    class AdminVO
+    class UserVO
     {
-        private DataTable adminDataTable;
-        public DataTable AdminDataTable
+        private DataTable userDataTable;
+        public DataTable UserDataTable
         {
-            get { return adminDataTable; }
-            set { adminDataTable = value; }
+            get { return userDataTable; }
+            set { userDataTable = value; }
         }
 
-        private DataTable adminRoleDataTable;
-        public DataTable AdminRoleDataTable
+        private DataTable userRoleDataTable;
+        public DataTable UserRoleDataTable
         {
-            get { return adminRoleDataTable; }
-            set { adminRoleDataTable = value; }
+            get { return userRoleDataTable; }
+            set { userRoleDataTable = value; }
         }
 
         private DataTable roleDataTable;
@@ -34,5 +34,6 @@ namespace QLKS.VO
             get { return dataSet; }
             set { dataSet = value; }
         }
+	
     }
 }

@@ -18,6 +18,8 @@ namespace QLKS.Controls
             this.Properties.Mask.IgnoreMaskBlank = false;
 
             // Size Settings
+
+            // Size Settings
             this.Properties.AutoHeight = false;
 
             // NullText Settings

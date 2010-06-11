@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=.\SQLEXPRESS;database=QLKS;uid=ADMIN;pwd=1234</Value>
     </Setting>
+    <Setting Name="InitialPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

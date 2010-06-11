@@ -9,7 +9,7 @@ namespace QLKS.Controls
        #region Constructors
 
         public StyledPanel() : base() {
-            this.LookAndFeel.UseDefaultLookAndFeel = true;
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             //this.LookAndFeel.SkinName = "Blue";
             this.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
         }//end default constructor
