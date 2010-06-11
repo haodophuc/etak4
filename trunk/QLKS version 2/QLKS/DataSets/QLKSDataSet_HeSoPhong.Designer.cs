@@ -262,11 +262,15 @@ namespace QLKS.DataSets {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SP_HE_SO_SU_DUNG_PHONGDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
             
-            private global::System.Data.DataColumn columnSO_PHONG;
-            
             private global::System.Data.DataColumn columnTEN_LOAI_PHONG;
             
-            private global::System.Data.DataColumn columnSO_LAN_SU_DUNG;
+            private global::System.Data.DataColumn columnSO_GIUONG;
+            
+            private global::System.Data.DataColumn columnSO_LUONG_PHONG;
+            
+            private global::System.Data.DataColumn columnGIA_THAM_KHAO;
+            
+            private global::System.Data.DataColumn columnHE_SO_SU_DUNG;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public SP_HE_SO_SU_DUNG_PHONGDataTable() {
@@ -299,13 +303,6 @@ namespace QLKS.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn SO_PHONGColumn {
-                get {
-                    return this.columnSO_PHONG;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public global::System.Data.DataColumn TEN_LOAI_PHONGColumn {
                 get {
                     return this.columnTEN_LOAI_PHONG;
@@ -313,9 +310,30 @@ namespace QLKS.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn SO_LAN_SU_DUNGColumn {
+            public global::System.Data.DataColumn SO_GIUONGColumn {
                 get {
-                    return this.columnSO_LAN_SU_DUNG;
+                    return this.columnSO_GIUONG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SO_LUONG_PHONGColumn {
+                get {
+                    return this.columnSO_LUONG_PHONG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GIA_THAM_KHAOColumn {
+                get {
+                    return this.columnGIA_THAM_KHAO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn HE_SO_SU_DUNGColumn {
+                get {
+                    return this.columnHE_SO_SU_DUNG;
                 }
             }
             
@@ -348,21 +366,23 @@ namespace QLKS.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SP_HE_SO_SU_DUNG_PHONGRow AddSP_HE_SO_SU_DUNG_PHONGRow(string SO_PHONG, string TEN_LOAI_PHONG, int SO_LAN_SU_DUNG) {
+            public SP_HE_SO_SU_DUNG_PHONGRow AddSP_HE_SO_SU_DUNG_PHONGRow(string TEN_LOAI_PHONG, int SO_GIUONG, int SO_LUONG_PHONG, decimal GIA_THAM_KHAO, double HE_SO_SU_DUNG) {
                 SP_HE_SO_SU_DUNG_PHONGRow rowSP_HE_SO_SU_DUNG_PHONGRow = ((SP_HE_SO_SU_DUNG_PHONGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        SO_PHONG,
                         TEN_LOAI_PHONG,
-                        SO_LAN_SU_DUNG};
+                        SO_GIUONG,
+                        SO_LUONG_PHONG,
+                        GIA_THAM_KHAO,
+                        HE_SO_SU_DUNG};
                 rowSP_HE_SO_SU_DUNG_PHONGRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSP_HE_SO_SU_DUNG_PHONGRow);
                 return rowSP_HE_SO_SU_DUNG_PHONGRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SP_HE_SO_SU_DUNG_PHONGRow FindBySO_PHONG(string SO_PHONG) {
+            public SP_HE_SO_SU_DUNG_PHONGRow FindByTEN_LOAI_PHONG(string TEN_LOAI_PHONG) {
                 return ((SP_HE_SO_SU_DUNG_PHONGRow)(this.Rows.Find(new object[] {
-                            SO_PHONG})));
+                            TEN_LOAI_PHONG})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -384,27 +404,31 @@ namespace QLKS.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.columnSO_PHONG = base.Columns["SO_PHONG"];
                 this.columnTEN_LOAI_PHONG = base.Columns["TEN_LOAI_PHONG"];
-                this.columnSO_LAN_SU_DUNG = base.Columns["SO_LAN_SU_DUNG"];
+                this.columnSO_GIUONG = base.Columns["SO_GIUONG"];
+                this.columnSO_LUONG_PHONG = base.Columns["SO_LUONG_PHONG"];
+                this.columnGIA_THAM_KHAO = base.Columns["GIA_THAM_KHAO"];
+                this.columnHE_SO_SU_DUNG = base.Columns["HE_SO_SU_DUNG"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnSO_PHONG = new global::System.Data.DataColumn("SO_PHONG", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSO_PHONG);
                 this.columnTEN_LOAI_PHONG = new global::System.Data.DataColumn("TEN_LOAI_PHONG", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_LOAI_PHONG);
-                this.columnSO_LAN_SU_DUNG = new global::System.Data.DataColumn("SO_LAN_SU_DUNG", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSO_LAN_SU_DUNG);
+                this.columnSO_GIUONG = new global::System.Data.DataColumn("SO_GIUONG", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSO_GIUONG);
+                this.columnSO_LUONG_PHONG = new global::System.Data.DataColumn("SO_LUONG_PHONG", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSO_LUONG_PHONG);
+                this.columnGIA_THAM_KHAO = new global::System.Data.DataColumn("GIA_THAM_KHAO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGIA_THAM_KHAO);
+                this.columnHE_SO_SU_DUNG = new global::System.Data.DataColumn("HE_SO_SU_DUNG", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHE_SO_SU_DUNG);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnSO_PHONG}, true));
-                this.columnSO_PHONG.AllowDBNull = false;
-                this.columnSO_PHONG.Unique = true;
-                this.columnSO_PHONG.MaxLength = 10;
+                                this.columnTEN_LOAI_PHONG}, true));
                 this.columnTEN_LOAI_PHONG.AllowDBNull = false;
+                this.columnTEN_LOAI_PHONG.Unique = true;
                 this.columnTEN_LOAI_PHONG.MaxLength = 50;
-                this.columnSO_LAN_SU_DUNG.ReadOnly = true;
+                this.columnHE_SO_SU_DUNG.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -537,16 +561,6 @@ namespace QLKS.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string SO_PHONG {
-                get {
-                    return ((string)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_PHONGColumn]));
-                }
-                set {
-                    this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_PHONGColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public string TEN_LOAI_PHONG {
                 get {
                     return ((string)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.TEN_LOAI_PHONGColumn]));
@@ -557,29 +571,106 @@ namespace QLKS.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int SO_LAN_SU_DUNG {
+            public int SO_GIUONG {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LAN_SU_DUNGColumn]));
+                        return ((int)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_GIUONGColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SO_LAN_SU_DUNG\' in table \'SP_HE_SO_SU_DUNG_PHONG\' is DBNull" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'SO_GIUONG\' in table \'SP_HE_SO_SU_DUNG_PHONG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_GIUONGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int SO_LUONG_PHONG {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LUONG_PHONGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SO_LUONG_PHONG\' in table \'SP_HE_SO_SU_DUNG_PHONG\' is DBNull" +
                                 ".", e);
                     }
                 }
                 set {
-                    this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LAN_SU_DUNGColumn] = value;
+                    this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LUONG_PHONGColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsSO_LAN_SU_DUNGNull() {
-                return this.IsNull(this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LAN_SU_DUNGColumn);
+            public decimal GIA_THAM_KHAO {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.GIA_THAM_KHAOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GIA_THAM_KHAO\' in table \'SP_HE_SO_SU_DUNG_PHONG\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_HE_SO_SU_DUNG_PHONG.GIA_THAM_KHAOColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetSO_LAN_SU_DUNGNull() {
-                this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LAN_SU_DUNGColumn] = global::System.Convert.DBNull;
+            public double HE_SO_SU_DUNG {
+                get {
+                    try {
+                        return ((double)(this[this.tableSP_HE_SO_SU_DUNG_PHONG.HE_SO_SU_DUNGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HE_SO_SU_DUNG\' in table \'SP_HE_SO_SU_DUNG_PHONG\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_HE_SO_SU_DUNG_PHONG.HE_SO_SU_DUNGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSO_GIUONGNull() {
+                return this.IsNull(this.tableSP_HE_SO_SU_DUNG_PHONG.SO_GIUONGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSO_GIUONGNull() {
+                this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_GIUONGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSO_LUONG_PHONGNull() {
+                return this.IsNull(this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LUONG_PHONGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSO_LUONG_PHONGNull() {
+                this[this.tableSP_HE_SO_SU_DUNG_PHONG.SO_LUONG_PHONGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsGIA_THAM_KHAONull() {
+                return this.IsNull(this.tableSP_HE_SO_SU_DUNG_PHONG.GIA_THAM_KHAOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetGIA_THAM_KHAONull() {
+                this[this.tableSP_HE_SO_SU_DUNG_PHONG.GIA_THAM_KHAOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsHE_SO_SU_DUNGNull() {
+                return this.IsNull(this.tableSP_HE_SO_SU_DUNG_PHONG.HE_SO_SU_DUNGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetHE_SO_SU_DUNGNull() {
+                this[this.tableSP_HE_SO_SU_DUNG_PHONG.HE_SO_SU_DUNGColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -706,9 +797,11 @@ namespace QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "SP_HE_SO_SU_DUNG_PHONG";
-            tableMapping.ColumnMappings.Add("SO_PHONG", "SO_PHONG");
             tableMapping.ColumnMappings.Add("TEN_LOAI_PHONG", "TEN_LOAI_PHONG");
-            tableMapping.ColumnMappings.Add("SO_LAN_SU_DUNG", "SO_LAN_SU_DUNG");
+            tableMapping.ColumnMappings.Add("SO_GIUONG", "SO_GIUONG");
+            tableMapping.ColumnMappings.Add("SO_LUONG_PHONG", "SO_LUONG_PHONG");
+            tableMapping.ColumnMappings.Add("GIA_THAM_KHAO", "GIA_THAM_KHAO");
+            tableMapping.ColumnMappings.Add("HE_SO_SU_DUNG", "HE_SO_SU_DUNG");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

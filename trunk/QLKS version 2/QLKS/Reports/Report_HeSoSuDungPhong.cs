@@ -11,8 +11,15 @@ namespace QLKS.Reports
         public Report_HeSoSuDungPhong(DateTime fromTime,DateTime toTime)
         {
             InitializeComponent();
-            QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters.SP_HE_SO_SU_DUNG_PHONGTableAdapter adapter = new QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters.SP_HE_SO_SU_DUNG_PHONGTableAdapter();
-            adapter.Fill(this.qlksDataSet_HeSoPhong1.SP_HE_SO_SU_DUNG_PHONG, fromTime, toTime);
+            try
+            {
+                QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters.SP_HE_SO_SU_DUNG_PHONGTableAdapter adapter = new QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters.SP_HE_SO_SU_DUNG_PHONGTableAdapter();
+                adapter.Fill(this.qlksDataSet_HeSoPhong1.SP_HE_SO_SU_DUNG_PHONG, fromTime, toTime);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
     }

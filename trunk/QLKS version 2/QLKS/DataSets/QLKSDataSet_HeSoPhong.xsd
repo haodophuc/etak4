@@ -29,9 +29,11 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="SO_PHONG" DataSetColumn="SO_PHONG" />
               <Mapping SourceColumn="TEN_LOAI_PHONG" DataSetColumn="TEN_LOAI_PHONG" />
-              <Mapping SourceColumn="SO_LAN_SU_DUNG" DataSetColumn="SO_LAN_SU_DUNG" />
+              <Mapping SourceColumn="SO_GIUONG" DataSetColumn="SO_GIUONG" />
+              <Mapping SourceColumn="SO_LUONG_PHONG" DataSetColumn="SO_LUONG_PHONG" />
+              <Mapping SourceColumn="GIA_THAM_KHAO" DataSetColumn="GIA_THAM_KHAO" />
+              <Mapping SourceColumn="HE_SO_SU_DUNG" DataSetColumn="HE_SO_SU_DUNG" />
             </Mappings>
             <Sources>
             </Sources>
@@ -48,13 +50,6 @@
         <xs:element name="SP_HE_SO_SU_DUNG_PHONG" msprop:Generator_UserTableName="SP_HE_SO_SU_DUNG_PHONG" msprop:Generator_RowDeletedName="SP_HE_SO_SU_DUNG_PHONGRowDeleted" msprop:Generator_TableClassName="SP_HE_SO_SU_DUNG_PHONGDataTable" msprop:Generator_RowChangedName="SP_HE_SO_SU_DUNG_PHONGRowChanged" msprop:Generator_RowClassName="SP_HE_SO_SU_DUNG_PHONGRow" msprop:Generator_RowChangingName="SP_HE_SO_SU_DUNG_PHONGRowChanging" msprop:Generator_RowEvArgName="SP_HE_SO_SU_DUNG_PHONGRowChangeEvent" msprop:Generator_RowEvHandlerName="SP_HE_SO_SU_DUNG_PHONGRowChangeEventHandler" msprop:Generator_TablePropName="SP_HE_SO_SU_DUNG_PHONG" msprop:Generator_TableVarName="tableSP_HE_SO_SU_DUNG_PHONG" msprop:Generator_RowDeletingName="SP_HE_SO_SU_DUNG_PHONGRowDeleting">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="SO_PHONG" msprop:Generator_UserColumnName="SO_PHONG" msprop:Generator_ColumnPropNameInRow="SO_PHONG" msprop:Generator_ColumnVarNameInTable="columnSO_PHONG" msprop:Generator_ColumnPropNameInTable="SO_PHONGColumn">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="TEN_LOAI_PHONG" msprop:Generator_UserColumnName="TEN_LOAI_PHONG" msprop:Generator_ColumnPropNameInRow="TEN_LOAI_PHONG" msprop:Generator_ColumnVarNameInTable="columnTEN_LOAI_PHONG" msprop:Generator_ColumnPropNameInTable="TEN_LOAI_PHONGColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -62,7 +57,10 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SO_LAN_SU_DUNG" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SO_LAN_SU_DUNG" msprop:Generator_ColumnPropNameInRow="SO_LAN_SU_DUNG" msprop:Generator_ColumnVarNameInTable="columnSO_LAN_SU_DUNG" msprop:Generator_ColumnPropNameInTable="SO_LAN_SU_DUNGColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SO_GIUONG" msprop:Generator_UserColumnName="SO_GIUONG" msprop:Generator_ColumnPropNameInRow="SO_GIUONG" msprop:Generator_ColumnVarNameInTable="columnSO_GIUONG" msprop:Generator_ColumnPropNameInTable="SO_GIUONGColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SO_LUONG_PHONG" msprop:Generator_UserColumnName="SO_LUONG_PHONG" msprop:Generator_ColumnPropNameInRow="SO_LUONG_PHONG" msprop:Generator_ColumnVarNameInTable="columnSO_LUONG_PHONG" msprop:Generator_ColumnPropNameInTable="SO_LUONG_PHONGColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="GIA_THAM_KHAO" msprop:Generator_UserColumnName="GIA_THAM_KHAO" msprop:Generator_ColumnPropNameInRow="GIA_THAM_KHAO" msprop:Generator_ColumnVarNameInTable="columnGIA_THAM_KHAO" msprop:Generator_ColumnPropNameInTable="GIA_THAM_KHAOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HE_SO_SU_DUNG" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HE_SO_SU_DUNG" msprop:Generator_ColumnPropNameInRow="HE_SO_SU_DUNG" msprop:Generator_ColumnVarNameInTable="columnHE_SO_SU_DUNG" msprop:Generator_ColumnPropNameInTable="HE_SO_SU_DUNGColumn" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -70,7 +68,7 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:SP_HE_SO_SU_DUNG_PHONG" />
-      <xs:field xpath="mstns:SO_PHONG" />
+      <xs:field xpath="mstns:TEN_LOAI_PHONG" />
     </xs:unique>
   </xs:element>
 </xs:schema>

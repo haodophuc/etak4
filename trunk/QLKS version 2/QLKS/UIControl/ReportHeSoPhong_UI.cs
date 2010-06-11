@@ -109,14 +109,28 @@ namespace QLKS.UIControl
 
         private void btn_preview_Click(object sender, EventArgs e)
         {
-            LoadDataReport();
-            reportPhong.ShowPreview();
+            try
+            {
+                LoadDataReport();
+                reportPhong.ShowPreview();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
-            LoadDataReport();
-            reportPhong.Print();
+            try
+            {
+                LoadDataReport();
+                reportPhong.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void radioButton_FromTo_CheckedChanged(object sender, EventArgs e)
