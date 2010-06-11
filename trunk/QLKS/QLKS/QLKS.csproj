@@ -208,6 +208,8 @@
     <Compile Include="BUS\ServiceOrderBUS.cs" />
     <Compile Include="BUS\TellerBUS.cs" />
     <Compile Include="BUS\TinhTrangBUS.cs" />
+    <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="BUS\UserInfoBUS.cs" />
     <Compile Include="Controls\NumberTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -243,6 +245,9 @@
     <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\TellerDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DAO\UserInfoDAO.cs" />
+
     <Compile Include="DataSets\QLKSDataSet_HeSoPhong.cs">
       <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -318,10 +323,6 @@
     <EmbeddedResource Include="UIControl\DatPhong_UI.resx">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIControl\ReportKhachHang_UI.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\ReportHeSoPhong_UI.resx">
       <SubType>Designer</SubType>
@@ -486,6 +487,10 @@
     <EmbeddedResource Include="UI\ServicesOrderForm.resx">
       <DependentUpon>ServicesOrderForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControlPanelForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControlPanelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
@@ -822,6 +827,12 @@
     <Compile Include="UI\ServicesOrderForm.Designer.cs">
       <DependentUpon>ServicesOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserControlPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlPanelForm.Designer.cs">
+      <DependentUpon>UserControlPanelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -840,6 +851,7 @@
     <Compile Include="VO\ServiceVO.cs" />
     <Compile Include="VO\TellerVO.cs" />
     <Compile Include="VO\UserManagementVO.cs" />
+    <Compile Include="VO\UserVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down1.ico" />

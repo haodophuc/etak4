@@ -188,27 +188,62 @@
     <Compile Include="Base\DataTables\TableRooms.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Base\Interfaces\IDataSubmit.cs" />
-    <Compile Include="Base\Mode.cs" />
-    <Compile Include="Base\Notice.cs" />
-    <Compile Include="Base\RegData.cs" />
-    <Compile Include="Base\RegDataDAO.cs" />
-    <Compile Include="Base\SubmitBooking.cs" />
-    <Compile Include="Base\SubmitChecking.cs" />
-    <Compile Include="BUS\AdminBUS.cs" />
-    <Compile Include="BUS\CongtyBus.cs" />
-    <Compile Include="BUS\DoanKhachBUS.cs" />
-    <Compile Include="BUS\KhachHangBUS.cs" />
-    <Compile Include="BUS\KhachTroBUS.cs" />
-    <Compile Include="BUS\LoaiPhongBUS.cs" />
-    <Compile Include="BUS\PhieuDatPhongBUS.cs" />
-    <Compile Include="BUS\PhieuThuePhongBUS.cs" />
-    <Compile Include="BUS\PhongBUS.cs" />
-    <Compile Include="BUS\QuocGiaBUS.cs" />
-    <Compile Include="BUS\ServiceBUS.cs" />
-    <Compile Include="BUS\ServiceOrderBUS.cs" />
-    <Compile Include="BUS\TellerBUS.cs" />
-    <Compile Include="BUS\TinhTrangBUS.cs" />
+    <Compile Include="Base\Interfaces\IDataSubmit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\Mode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\RegData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\RegDataDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\SubmitBooking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\SubmitChecking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\CongtyBus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\DoanKhachBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\KhachHangBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\KhachTroBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\LoaiPhongBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\PhieuDatPhongBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\PhieuThuePhongBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\PhongBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\QuocGiaBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\ServiceBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\ServiceOrderBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\TinhTrangBUS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="BUS\UserInfoBUS.cs" />
     <Compile Include="Controls\NumberTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -230,20 +265,44 @@
     <Compile Include="Controls\TextBoxCustomer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DAO\CongtyDAO.cs" />
-    <Compile Include="DAO\DoanKhachDAO.cs" />
-    <Compile Include="DAO\KhachHangDAO.cs" />
-    <Compile Include="DAO\KhachTroDAO.cs" />
-    <Compile Include="DAO\LoaiPhongDAO.cs" />
-    <Compile Include="DAO\PhieuDatPhongDAO.cs" />
-    <Compile Include="DAO\PhieuThuePhongDAO.cs" />
-    <Compile Include="DAO\PhongDAO.cs" />
-    <Compile Include="DAO\QuocGiaDAO.cs" />
-    <Compile Include="DAO\ServiceDAO.cs" />
-    <Compile Include="DAO\ServiceOrderDAO.cs" />
-    <Compile Include="DAO\AdminDAO.cs" />
-    <Compile Include="DAO\TellerDAO.cs" />
-    <Compile Include="DAO\TinhTrangDAO.cs" />
+    <Compile Include="DAO\CongtyDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\DoanKhachDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\KhachHangDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\KhachTroDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\LoaiPhongDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\PhieuDatPhongDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\PhieuThuePhongDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\PhongDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\QuocGiaDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\ServiceDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\ServiceOrderDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\TinhTrangDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DAO\UserInfoDAO.cs" />
     <Compile Include="DataSets\QLKSDataSet_HeSoPhong.cs">
       <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -279,6 +338,14 @@
     <EmbeddedResource Include="UI\FormBooking.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FormBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StyledPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyledPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxCustomer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextBoxCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -370,10 +437,6 @@
       <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIControl\UIAdminManagement.resx">
-      <DependentUpon>UIAdminManagement.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UICustomerInfoPanel.resx">
       <DependentUpon>UICustomerInfoPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -400,10 +463,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UIServicesInputUpdate.resx">
       <DependentUpon>UIServicesInputUpdate.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIControl\UITellerManagement.resx">
-      <DependentUpon>UITellerManagement.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UITransaction.resx">
@@ -438,13 +497,13 @@
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form_Main.resx">
-      <DependentUpon>Form_Main.cs</DependentUpon>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_ReportHeSoPhong.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>Form_ReportHeSoPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_ReportKhachHang.resx">
       <DependentUpon>Form_ReportKhachHang.cs</DependentUpon>
@@ -488,6 +547,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ServicesOrderForm.resx">
       <DependentUpon>ServicesOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControlPanelForm.resx">
+      <DependentUpon>UserControlPanelForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserManagementForm.resx">
@@ -630,12 +693,6 @@
     <Compile Include="UIControl\TraCuuKhachHangUI.Designer.cs">
       <DependentUpon>TraCuuKhachHangUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIControl\UIAdminManagement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIControl\UIAdminManagement.Designer.cs">
-      <DependentUpon>UIAdminManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIControl\UICustomerInfoPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -677,12 +734,6 @@
     </Compile>
     <Compile Include="UIControl\UIServicesInputUpdate.Designer.cs">
       <DependentUpon>UIServicesInputUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIControl\UITellerManagement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIControl\UITellerManagement.Designer.cs">
-      <DependentUpon>UITellerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\UITransaction.cs">
       <SubType>UserControl</SubType>
@@ -732,11 +783,11 @@
     <Compile Include="UI\Form_DatPhong.designer.cs">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Form_Main.cs">
+    <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form_Main.Designer.cs">
-      <DependentUpon>Form_Main.cs</DependentUpon>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form_ReportHeSoPhong.cs">
       <SubType>Form</SubType>
@@ -810,13 +861,18 @@
     <Compile Include="UI\ServicesOrderForm.Designer.cs">
       <DependentUpon>ServicesOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserControlPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserControlPanelForm.Designer.cs">
+      <DependentUpon>UserControlPanelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VO\AdminVO.cs" />
     <Compile Include="VO\CongtyVO.cs" />
     <Compile Include="VO\DoanKhachVO.cs" />
     <Compile Include="VO\KhachHangVO.cs" />
@@ -826,8 +882,8 @@
     <Compile Include="VO\PhongVO.cs" />
     <Compile Include="VO\ServiceOrderVO.cs" />
     <Compile Include="VO\ServiceVO.cs" />
-    <Compile Include="VO\TellerVO.cs" />
     <Compile Include="VO\UserManagementVO.cs" />
+    <Compile Include="VO\UserVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down1.ico" />

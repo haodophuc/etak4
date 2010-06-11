@@ -1,14 +1,14 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  6/8/2010 1:46:58 AM                      */
+/* Date de création :  6/11/2010 4:11:42 AM                     */
 /*==============================================================*/
 
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('CA_TRUC') and o.name = 'FK_CA_TRUC_CTTN_THU_NGAN')
+   where r.fkeyid = object_id('CA_TRUC') and o.name = 'FK_CA_TRUC_REFERENCE_USERS')
 alter table CA_TRUC
-   drop constraint FK_CA_TRUC_CTTN_THU_NGAN
+   drop constraint FK_CA_TRUC_REFERENCE_USERS
 go
 
 if exists (select 1
@@ -160,34 +160,6 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('QUYEN_ADMIN') and o.name = 'FK_QUYEN_AD_REFERENCE_ADMINS')
-alter table QUYEN_ADMIN
-   drop constraint FK_QUYEN_AD_REFERENCE_ADMINS
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('QUYEN_ADMIN') and o.name = 'FK_QUYEN_AD_REFERENCE_QUYEN')
-alter table QUYEN_ADMIN
-   drop constraint FK_QUYEN_AD_REFERENCE_QUYEN
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('QUYEN_THU_NGAN') and o.name = 'FK_QUYEN_TH_REFERENCE_THU_NGAN')
-alter table QUYEN_THU_NGAN
-   drop constraint FK_QUYEN_TH_REFERENCE_THU_NGAN
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('QUYEN_THU_NGAN') and o.name = 'FK_QUYEN_TH_REFERENCE_QUYEN')
-alter table QUYEN_THU_NGAN
-   drop constraint FK_QUYEN_TH_REFERENCE_QUYEN
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('TIEN_NGHI_LOAI_PHONG') and o.name = 'FK_TIEN_NGH_TNLP_LOAI_PHO')
 alter table TIEN_NGHI_LOAI_PHONG
    drop constraint FK_TIEN_NGH_TNLP_LOAI_PHO
@@ -201,10 +173,17 @@ alter table TIEN_NGHI_LOAI_PHONG
 go
 
 if exists (select 1
-            from  sysobjects
-           where  id = object_id('ADMINS')
-            and   type = 'U')
-   drop table ADMINS
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('USER2ROLE') and o.name = 'FK_USER2ROL_REFERENCE_USERS')
+alter table USER2ROLE
+   drop constraint FK_USER2ROL_REFERENCE_USERS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('USER2ROLE') and o.name = 'FK_USER2ROL_REFERENCE_ROLES')
+alter table USER2ROLE
+   drop constraint FK_USER2ROL_REFERENCE_ROLES
 go
 
 if exists (select 1
@@ -314,30 +293,9 @@ go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('QUYEN')
+           where  id = object_id('ROLES')
             and   type = 'U')
-   drop table QUYEN
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('QUYEN_ADMIN')
-            and   type = 'U')
-   drop table QUYEN_ADMIN
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('QUYEN_THU_NGAN')
-            and   type = 'U')
-   drop table QUYEN_THU_NGAN
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('THU_NGAN')
-            and   type = 'U')
-   drop table THU_NGAN
+   drop table ROLES
 go
 
 if exists (select 1
@@ -359,6 +317,20 @@ if exists (select 1
            where  id = object_id('TINH_TRANG')
             and   type = 'U')
    drop table TINH_TRANG
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('USER2ROLE')
+            and   type = 'U')
+   drop table USER2ROLE
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('USERS')
+            and   type = 'U')
+   drop table USERS
 go
 
 if exists(select 1 from systypes where name='DIA_CHI')
@@ -429,7 +401,7 @@ go
 /* Domaine : MAT_KHAU                                           */
 /*==============================================================*/
 create type MAT_KHAU
-   from nvarchar(20) not null
+   from nvarchar(255) not null
 go
 
 /*==============================================================*/
@@ -443,7 +415,7 @@ go
 /* Domaine : TEN_DANG_NHAP                                      */
 /*==============================================================*/
 create type TEN_DANG_NHAP
-   from nvarchar(50) not null
+   from nvarchar(255) not null
 go
 
 /*==============================================================*/
@@ -461,25 +433,11 @@ create type YES_OR_NO
 go
 
 /*==============================================================*/
-/* Table : ADMINS                                               */
-/*==============================================================*/
-create table ADMINS (
-   MA_ADMIN             int                  identity,
-   TEN_DANG_NHAP        TEN_DANG_NHAP        not null,
-   MAT_KHAU             MAT_KHAU             not null,
-   TEN_ADMIN            TEN                  not null,
-   DIA_CHI              DIA_CHI              null,
-   DIEN_THOAI           DIEN_THOAI           null,
-   constraint PK_ADMINS primary key (MA_ADMIN)
-)
-go
-
-/*==============================================================*/
 /* Table : CA_TRUC                                              */
 /*==============================================================*/
 create table CA_TRUC (
    MA_CA_TRUC           int                  identity,
-   MA_THU_NGAN          int                  not null,
+   USERID               int                  null,
    GIO_VAO_CA           datetime             null,
    GIO_XUONG_CA         datetime             null,
    DA_KET_TOAN          YES_OR_NO            not null default 0,
@@ -683,48 +641,13 @@ create table QUOC_GIA (
 go
 
 /*==============================================================*/
-/* Table : QUYEN                                                */
+/* Table : ROLES                                                */
 /*==============================================================*/
-create table QUYEN (
-   MA_QUYEN             int                  identity,
-   TEN_QUYEN            TEN                  not null,
-   QUYEN_LUC            TEN                  not null,
-   GHI_CHU              nvarchar(50)         null,
-   constraint PK_QUYEN primary key (MA_QUYEN)
-)
-go
-
-/*==============================================================*/
-/* Table : QUYEN_ADMIN                                          */
-/*==============================================================*/
-create table QUYEN_ADMIN (
-   MA_ADMIN             int                  not null,
-   MA_QUYEN             int                  not null,
-   constraint PK_QUYEN_ADMIN primary key (MA_ADMIN, MA_QUYEN)
-)
-go
-
-/*==============================================================*/
-/* Table : QUYEN_THU_NGAN                                       */
-/*==============================================================*/
-create table QUYEN_THU_NGAN (
-   MA_THU_NGAN          int                  not null,
-   MA_QUYEN             int                  not null,
-   constraint PK_QUYEN_THU_NGAN primary key (MA_THU_NGAN, MA_QUYEN)
-)
-go
-
-/*==============================================================*/
-/* Table : THU_NGAN                                             */
-/*==============================================================*/
-create table THU_NGAN (
-   MA_THU_NGAN          int                  identity,
-   TEN_DANG_NHAP        TEN_DANG_NHAP        not null,
-   MAT_KHAU             MAT_KHAU             not null,
-   HO_TEN               TEN                  not null,
-   DIA_CHI              DIA_CHI              null,
-   DIEN_THOAI           DIEN_THOAI           null,
-   constraint PK_THU_NGAN primary key (MA_THU_NGAN)
+create table ROLES (
+   ROLEID               int                  identity,
+   ROLE_NAME            nvarchar(255)        not null,
+   DETAILS              nvarchar(255)        null,
+   constraint PK_ROLES primary key (ROLEID)
 )
 go
 
@@ -758,9 +681,38 @@ create table TINH_TRANG (
 )
 go
 
+/*==============================================================*/
+/* Table : USER2ROLE                                            */
+/*==============================================================*/
+create table USER2ROLE (
+   USERID               int                  not null,
+   ROLEID               int                  not null,
+   constraint PK_USER2ROLE primary key (USERID, ROLEID)
+)
+go
+
+/*==============================================================*/
+/* Table : USERS                                                */
+/*==============================================================*/
+create table USERS (
+   USERID               int                  identity,
+   USER_NAME            TEN_DANG_NHAP        not null,
+   USER_PASSWORD        MAT_KHAU             not null,
+   FIRST_NAME           TEN                  not null,
+   LAST_NAME            TEN                  not null,
+   IS_ADMIN             YES_OR_NO            not null default 0,
+   ADDRESS_STREET       DIA_CHI              null,
+   PHONE                DIEN_THOAI           null,
+   EMAIL                EMAIL                null,
+   DETAILS              nvarchar(255)        null,
+   DELETED              YES_OR_NO            not null default 0,
+   constraint PK_USERS primary key (USERID)
+)
+go
+
 alter table CA_TRUC
-   add constraint FK_CA_TRUC_CTTN_THU_NGAN foreign key (MA_THU_NGAN)
-      references THU_NGAN (MA_THU_NGAN)
+   add constraint FK_CA_TRUC_REFERENCE_USERS foreign key (USERID)
+      references USERS (USERID)
 go
 
 alter table CHI_TIET_DAT_PHONG
@@ -868,26 +820,6 @@ alter table PHONG
       references TINH_TRANG (MA_TINH_TRANG)
 go
 
-alter table QUYEN_ADMIN
-   add constraint FK_QUYEN_AD_REFERENCE_ADMINS foreign key (MA_ADMIN)
-      references ADMINS (MA_ADMIN)
-go
-
-alter table QUYEN_ADMIN
-   add constraint FK_QUYEN_AD_REFERENCE_QUYEN foreign key (MA_QUYEN)
-      references QUYEN (MA_QUYEN)
-go
-
-alter table QUYEN_THU_NGAN
-   add constraint FK_QUYEN_TH_REFERENCE_THU_NGAN foreign key (MA_THU_NGAN)
-      references THU_NGAN (MA_THU_NGAN)
-go
-
-alter table QUYEN_THU_NGAN
-   add constraint FK_QUYEN_TH_REFERENCE_QUYEN foreign key (MA_QUYEN)
-      references QUYEN (MA_QUYEN)
-go
-
 alter table TIEN_NGHI_LOAI_PHONG
    add constraint FK_TIEN_NGH_TNLP_LOAI_PHO foreign key (MA_LOAI_PHONG)
       references LOAI_PHONG (MA_LOAI_PHONG)
@@ -896,5 +828,15 @@ go
 alter table TIEN_NGHI_LOAI_PHONG
    add constraint FK_TIEN_NGH_TNLP_TIEN_NGH foreign key (MA_TIEN_NGHI)
       references TIEN_NGHI (MA_TIEN_NGHI)
+go
+
+alter table USER2ROLE
+   add constraint FK_USER2ROL_REFERENCE_USERS foreign key (USERID)
+      references USERS (USERID)
+go
+
+alter table USER2ROLE
+   add constraint FK_USER2ROL_REFERENCE_ROLES foreign key (ROLEID)
+      references ROLES (ROLEID)
 go
 

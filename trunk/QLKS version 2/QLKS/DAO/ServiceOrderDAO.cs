@@ -8,8 +8,7 @@ namespace QLKS.DAO
 {
     public class ServiceOrderDAO
     {       
-        #region data members
-        private DBConnection dbConnection;    
+        #region data members 
         private SqlDataAdapter phieuThuePhongAdapter;
         private SqlDataAdapter phieuDangKyDichVuAdapter;
         private SqlDataAdapter dichVuAdapter;
@@ -25,11 +24,9 @@ namespace QLKS.DAO
         #endregion
 
         #region constructors
-        public ServiceOrderDAO(DBConnection dbConnection)
+        public ServiceOrderDAO()
         {
-            this.dbConnection = dbConnection;
             dataSet = new DataSet();
-
             initTablesAndRelations();
         }
         #endregion
@@ -37,13 +34,13 @@ namespace QLKS.DAO
         #region methods
         private void initTablesAndRelations()
         {
-            phieuThuePhongAdapter = new SqlDataAdapter("SELECT MA_PHIEU, SO_PHONG, NGAY_NHAN_PHONG, NGAY_TRA_PHONG FROM PHIEU_THUE_PHONG A INNER JOIN PHONG B ON A.MA_PHONG = B.MA_PHONG WHERE DA_TRA_PHONG = 0", dbConnection.Connection);
+            phieuThuePhongAdapter = new SqlDataAdapter("SELECT MA_PHIEU, SO_PHONG, NGAY_NHAN_PHONG, NGAY_TRA_PHONG FROM PHIEU_THUE_PHONG A INNER JOIN PHONG B ON A.MA_PHONG = B.MA_PHONG WHERE DA_TRA_PHONG = 0", Program.DBConnection.Connection);
             phieuThuePhongAdapter.Fill(dataSet, "PHIEU_THUE_PHONG");
 
-            phieuDangKyDichVuAdapter = new SqlDataAdapter("SELECT SO_PHIEU, MA_PHIEU, MA_DICH_VU, NGAY_PHUC_VU, SO_LUONG, GHI_CHU FROM PHIEU_DANG_KY_DICH_VU", dbConnection.Connection);
+            phieuDangKyDichVuAdapter = new SqlDataAdapter("SELECT SO_PHIEU, MA_PHIEU, MA_DICH_VU, NGAY_PHUC_VU, SO_LUONG, GHI_CHU FROM PHIEU_DANG_KY_DICH_VU", Program.DBConnection.Connection);
             phieuDangKyDichVuAdapter.Fill(dataSet, "PHIEU_DANG_KY_DICH_VU");
 
-            dichVuAdapter = new SqlDataAdapter("SELECT MA_DICH_VU, TEN_DICH_VU, DON_GIA, HIEU_LUC FROM DICH_VU ORDER BY TEN_DICH_VU", dbConnection.Connection);
+            dichVuAdapter = new SqlDataAdapter("SELECT MA_DICH_VU, TEN_DICH_VU, DON_GIA, HIEU_LUC FROM DICH_VU ORDER BY TEN_DICH_VU", Program.DBConnection.Connection);
             dichVuAdapter.Fill(dataSet, "DICH_VU");
 
             DataColumn phieuThuePhong_maPhieu = dataSet.Tables["PHIEU_THUE_PHONG"].Columns["MA_PHIEU"];
@@ -67,15 +64,9 @@ namespace QLKS.DAO
             phieuDangKyDichVuAdapter.InsertCommand = cmd;
         }
 
-        public int getLastIdentity()
-        {
-            int last_id = (int)dbConnection.ExecuteScalar("SELECT last_value FROM sys.identity_columns WHERE object_id = object_id('PHIEU_DANG_KY_DICH_VU')");
-            return last_id;
-        }
-
         public void update()
         {            
-            SqlCommandBuilder cb = new SqlCommandBuilder(phieuDangKyDichVuAdapter);            
+            SqlCommandBuilder cb = new SqlCommandBuilder(phieuDangKyDichVuAdapter);
             cb.ConflictOption = ConflictOption.OverwriteChanges;
             phieuDangKyDichVuAdapter.ContinueUpdateOnError = true;
             phieuDangKyDichVuAdapter.Update(dataSet, "PHIEU_DANG_KY_DICH_VU");            

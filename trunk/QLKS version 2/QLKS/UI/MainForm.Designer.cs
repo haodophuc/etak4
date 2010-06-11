@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.loginLogoutMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.loginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,10 +57,32 @@
             this.StatisticRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.userCPMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SkinMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.caramelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moneyTwinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lilianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.mainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ribbon
+            // 
+            this.ribbon.ApplicationIcon = null;
+            this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Name = "ribbon";
+            this.ribbon.Size = new System.Drawing.Size(708, 53);
+            this.ribbon.StatusBar = this.ribbonStatusBar;
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 426);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(708, 23);
             // 
             // mainMenu
             // 
@@ -70,11 +95,11 @@
             this.searchMenu,
             this.statisticMenu,
             this.userManagementMenu,
-            this.settingMenu});
-            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.SkinMenu});
+            this.mainMenu.Location = new System.Drawing.Point(0, 53);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(731, 24);
-            this.mainMenu.TabIndex = 1;
+            this.mainMenu.Size = new System.Drawing.Size(708, 24);
+            this.mainMenu.TabIndex = 5;
             this.mainMenu.Text = "menuStrip1";
             // 
             // loginLogoutMenu
@@ -159,14 +184,14 @@
             // bookRoomMenuItem
             // 
             this.bookRoomMenuItem.Name = "bookRoomMenuItem";
-            this.bookRoomMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bookRoomMenuItem.Size = new System.Drawing.Size(142, 22);
             this.bookRoomMenuItem.Text = "Đặt phòng";
             this.bookRoomMenuItem.Click += new System.EventHandler(this.bookRoomMenuItem_Click);
             // 
             // rentRoomMenuItem
             // 
             this.rentRoomMenuItem.Name = "rentRoomMenuItem";
-            this.rentRoomMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rentRoomMenuItem.Size = new System.Drawing.Size(142, 22);
             this.rentRoomMenuItem.Text = "Thuê phòng";
             this.rentRoomMenuItem.Click += new System.EventHandler(this.rentRoomMenuItem_Click);
             // 
@@ -215,7 +240,7 @@
             this.searchCustomerMenuItem.Name = "searchCustomerMenuItem";
             this.searchCustomerMenuItem.Size = new System.Drawing.Size(142, 22);
             this.searchCustomerMenuItem.Text = "Khách hàng";
-            this.searchCustomerMenuItem.Click += new System.EventHandler(this.searchCustomerMenuItem_Click_1);
+            this.searchCustomerMenuItem.Click += new System.EventHandler(this.searchCustomerMenuItem_Click);
             // 
             // searchCompanyMenuItem
             // 
@@ -257,7 +282,8 @@
             // userManagementMenu
             // 
             this.userManagementMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userManagementMenuItem});
+            this.userManagementMenuItem,
+            this.changePasswordMenuItem});
             this.userManagementMenu.Name = "userManagementMenu";
             this.userManagementMenu.Size = new System.Drawing.Size(103, 20);
             this.userManagementMenu.Text = "Quản lý tài khoản";
@@ -265,39 +291,79 @@
             // userManagementMenuItem
             // 
             this.userManagementMenuItem.Name = "userManagementMenuItem";
-            this.userManagementMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.userManagementMenuItem.Text = "Quản lý tài khoản";
+            this.userManagementMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.userManagementMenuItem.Text = "Quản trị người dùng";
             this.userManagementMenuItem.Click += new System.EventHandler(this.userManagementMenuItem_Click);
             // 
-            // settingMenu
+            // changePasswordMenuItem
             // 
-            this.settingMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userCPMenuItem});
-            this.settingMenu.Name = "settingMenu";
-            this.settingMenu.Size = new System.Drawing.Size(60, 20);
-            this.settingMenu.Text = "Thiết lập";
+            this.changePasswordMenuItem.Name = "changePasswordMenuItem";
+            this.changePasswordMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.changePasswordMenuItem.Text = "Đổi mật khẩu";
+            this.changePasswordMenuItem.Click += new System.EventHandler(this.changePasswordMenuItem_Click);
             // 
-            // userCPMenuItem
+            // SkinMenu
             // 
-            this.userCPMenuItem.Name = "userCPMenuItem";
-            this.userCPMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.userCPMenuItem.Text = "Bảng điều khiển cá nhân";
-            this.userCPMenuItem.Click += new System.EventHandler(this.userCPMenuItem_Click);
+            this.SkinMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.caramelToolStripMenuItem,
+            this.moneyTwinsToolStripMenuItem,
+            this.lilianToolStripMenuItem});
+            this.SkinMenu.Name = "SkinMenu";
+            this.SkinMenu.Size = new System.Drawing.Size(38, 20);
+            this.SkinMenu.Text = "Skin";
+            // 
+            // caramelToolStripMenuItem
+            // 
+            this.caramelToolStripMenuItem.Name = "caramelToolStripMenuItem";
+            this.caramelToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.caramelToolStripMenuItem.Text = "Caramel";
+            this.caramelToolStripMenuItem.Click += new System.EventHandler(this.camerekToolStripMenuItem_Click);
+            // 
+            // moneyTwinsToolStripMenuItem
+            // 
+            this.moneyTwinsToolStripMenuItem.Name = "moneyTwinsToolStripMenuItem";
+            this.moneyTwinsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.moneyTwinsToolStripMenuItem.Text = "Money Twins";
+            this.moneyTwinsToolStripMenuItem.Click += new System.EventHandler(this.moneyTwinsToolStripMenuItem_Click);
+            // 
+            // lilianToolStripMenuItem
+            // 
+            this.lilianToolStripMenuItem.Name = "lilianToolStripMenuItem";
+            this.lilianToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.lilianToolStripMenuItem.Text = "Lilian";
+            this.lilianToolStripMenuItem.Click += new System.EventHandler(this.lilianToolStripMenuItem_Click);
+            // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
+            this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Lilian";
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(731, 444);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(708, 449);
             this.Controls.Add(this.mainMenu);
+            this.Controls.Add(this.ribbonStatusBar);
+            this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.mainMenu;
             this.Name = "MainForm";
+            this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hotel Management Application";
+            this.StatusBar = this.ribbonStatusBar;
+            this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,35 +371,40 @@
 
         #endregion
 
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
+        public System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem loginLogoutMenu;
         private System.Windows.Forms.ToolStripMenuItem loginMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem receiveCustomerMenu;
-        private System.Windows.Forms.ToolStripMenuItem bookRoomMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rentRoomMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateMenu;
         private System.Windows.Forms.ToolStripMenuItem customerMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerGroupMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviceMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roomMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rentRoomBillMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem receiveCustomerMenu;
+        private System.Windows.Forms.ToolStripMenuItem bookRoomMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rentRoomMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transactMenu;
+        private System.Windows.Forms.ToolStripMenuItem transactMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceMenu;
         private System.Windows.Forms.ToolStripMenuItem serviceOrderMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serviceMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userManagementMenu;
-        public System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem searchMenu;
         private System.Windows.Forms.ToolStripMenuItem searchCustomerMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchCompanyMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchCustomerGroupMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statisticMenu;
         private System.Windows.Forms.ToolStripMenuItem StatisticCustomerMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transactMenu;
-        private System.Windows.Forms.ToolStripMenuItem transactMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userManagementMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingMenu;
-        private System.Windows.Forms.ToolStripMenuItem userCPMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rentRoomBillMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StatisticRoomMenuItem;
-
-
+        private System.Windows.Forms.ToolStripMenuItem userManagementMenu;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private System.Windows.Forms.ToolStripMenuItem SkinMenu;
+        private System.Windows.Forms.ToolStripMenuItem caramelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moneyTwinsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lilianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userManagementMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordMenuItem;
     }
 }

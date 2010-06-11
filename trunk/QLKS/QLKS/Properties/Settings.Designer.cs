@@ -32,5 +32,14 @@ namespace QLKS.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1234")]
+        public string InitialPassword {
+            get {
+                return ((string)(this["InitialPassword"]));
+            }
+        }
     }
 }
