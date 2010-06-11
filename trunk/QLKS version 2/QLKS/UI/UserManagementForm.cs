@@ -184,8 +184,10 @@ namespace QLKS.UI
             {
                 e.Valid = false;
                 view.SetColumnError(userNameColumn, "Làm ơn nhập tên đăng nhập");
-            }                      
-            
+            }
+
+            // guarantee unique name
+            userName = view.GetRowCellDisplayText(GridControl.NewItemRowHandle, userNameColumn);
             if (userBUS.didThisUserExist(userName))
             {
                 e.Valid = false;

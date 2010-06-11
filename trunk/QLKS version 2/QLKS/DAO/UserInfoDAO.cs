@@ -37,10 +37,10 @@ namespace QLKS.DAO
         public bool userHasRole(String username, String roleName)
         {
             SqlCommand cmd = new SqlCommand
-                ("SELECT dbo.FN_USER_HAS_ROLE(@ROLE_NAME, @USER_NAME)",
+                ("SELECT dbo.FN_USER_HAS_ROLE(@USER_NAME, @ROLE_NAME)",
                 Program.DBConnection.Connection);
-            cmd.Parameters.AddWithValue("@ROLE_NAME", roleName);
             cmd.Parameters.AddWithValue("@USER_NAME", username);
+            cmd.Parameters.AddWithValue("@ROLE_NAME", roleName);
 
             try
             {
