@@ -33,6 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -328,18 +329,8 @@
       <DependentUpon>QLKSDataSet_TSKHFilterRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="UI\FormBooking.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FormBooking.Designer.cs">
-      <DependentUpon>FormBooking.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
-    <EmbeddedResource Include="UI\FormBooking.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FormBooking.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>
@@ -462,6 +453,10 @@
       <DependentUpon>UITransaction.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormBooking.resx">
+      <DependentUpon>FormBooking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormCheckIn.resx">
       <DependentUpon>FormCheckIn.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -488,10 +483,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_DatPhong.resx">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_ReportHeSoPhong.resx">
@@ -532,6 +523,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ServicesManagementForm.resx">
@@ -734,6 +729,12 @@
     <Compile Include="UIControl\UITransaction.Designer.cs">
       <DependentUpon>UITransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormBooking.Designer.cs">
+      <DependentUpon>FormBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormCheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -775,12 +776,6 @@
     </Compile>
     <Compile Include="UI\Form_DatPhong.designer.cs">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form_ReportHeSoPhong.cs">
       <SubType>Form</SubType>
@@ -841,6 +836,12 @@
     </Compile>
     <Compile Include="UI\LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ServicesManagementForm.cs">
       <SubType>Form</SubType>
