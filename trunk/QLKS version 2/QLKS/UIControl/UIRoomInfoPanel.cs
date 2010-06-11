@@ -11,7 +11,7 @@ using QLKS.Controls;
 
 namespace QLKS.UIControl
 {
-    public partial class UIRoomInfoPanel : DevExpress.XtraEditors.XtraUserControl
+    public partial class UIRoomInfoPanel : UserControl
     {
 
        #region Constructors
@@ -19,16 +19,14 @@ namespace QLKS.UIControl
         public UIRoomInfoPanel()
         {
             InitializeComponent();
-            if( SubmitMode == Mode.SubmitMode.Booking )
-                LoadRoomTypes();
             room = null;           
         }//end default constructor
 
-        public UIRoomInfoPanel( UITransaction parent, Mode.SubmitMode mode, DataTable table ) : this()
+        public UIRoomInfoPanel( UITransaction parent, Mode.SubmitMode mode ) : this()
         {
             this.ParentUI = parent;
             this.SubmitMode = mode;
-            GridControl.DataSource = table;
+            GridControl.DataSource = ParentUI.RegData.Rooms;
             IniGrid();
         }//end constructor
 
@@ -50,25 +48,29 @@ namespace QLKS.UIControl
 
         private void LoadCheckingControls()
         {
-            textBoxQuantity.Enabled = false;
-
+            textBoxQuantity.Visible = false;
+            labelQuatity.Visible = false;
+            textBoxRoomType.EditValue = null;
+            textBoxRoomType.Properties.NullText = "Chưa có thông tin";
         }//end method CheckingControls
 
         private void LoadBookingControls()
         {
-            textBoxQuantity.Enabled = true;
+            textBoxQuantity.Visible = true;
+            labelQuatity.Visible = false;
         }//end method BookingControls
 
         private void LoadRoomTypes()
         {
-            // Get table data
-            DataTable types = new DataTable();
+            // Get table data           
             BUS.LoaiPhongBUS bus = new BUS.LoaiPhongBUS();
-            types = bus.GetAll();
+            DataTable types = bus.GetAll();
+            types.TableName = "RoomTypes";
 
             // Create BindingSource
-            DataSet ds = types.DataSet;
-            BindingSource binding = new BindingSource(ds, "Table");
+            DataSet ds = new DataSet();
+            ds.Tables.Add(types);
+            BindingSource binding = new BindingSource(ds, "RoomTypes");
 
             // Add binding data source to LookUpEdit
             textBoxRoomType.DataBindings.Add("EditValue", binding, "MA_LOAI_PHONG");
@@ -91,7 +93,7 @@ namespace QLKS.UIControl
         private void LoadData( DataRow row )
         {
             room = row;
-            textBoxRoomType.Text = row["TEN_LOAI_PHONG"].ToString();
+            textBoxRoomType.Properties.NullText = row["TEN_LOAI_PHONG"].ToString();
             textBoxRoomNumber.Text = row["SO_PHONG"].ToString();
             textBoxBeds.Text = row["SO_GIUONG"].ToString();
             textBoxPrice.Text = row["GIA_THAM_KHAO"].ToString();
@@ -101,14 +103,14 @@ namespace QLKS.UIControl
         {
             if (SubmitMode == Mode.SubmitMode.CheckIn)
             {
-                DataRow row = ParentUI.DataRegister.Rooms.NewRow();
+                DataRow row = ParentUI.RegData.Rooms.NewRow();
                 row["RoomID"] = room["MA_PHONG"];
                 row["RoomType"] = room["TEN_LOAI_PHONG"];
                 row["RoomNumber"] = room["SO_PHONG"];
                 row["Beds"] = room["SO_GIUONG"];
                 row["Price"] = room["GIA_THAM_KHAO"];
                 try {
-                    ParentUI.DataRegister.Rooms.Rows.Add(row);
+                    ParentUI.RegData.Rooms.Rows.Add(row);
                 }//end try
                 catch {
                     MessageBox.Show("Phòng đã có trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

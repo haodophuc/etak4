@@ -8,10 +8,12 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Controls;
 using QLKS.UI;
+using QLKS.Controls;
+using QLKS.Base;
 
 namespace QLKS.UIControl
 {
-    public partial class UICustomerInfoPanel : DevExpress.XtraEditors.XtraUserControl
+    public partial class UICustomerInfoPanel : UserControl
     {
 
        #region Constructors
@@ -24,11 +26,11 @@ namespace QLKS.UIControl
             isNewCustomer = false;
         }//end default constructor
 
-        public UICustomerInfoPanel(UITransaction parent, DataTable table )
+        public UICustomerInfoPanel(UITransaction parent )
             : this()
         {
             this.ParentUI = parent;
-            GridControl.DataSource = table;
+            GridControl.DataSource = ParentUI.RegData.Customers;
             IniGridView();
             LoadCountries();
         }//end constructor
@@ -41,7 +43,7 @@ namespace QLKS.UIControl
         private void IniGridView() {
 
             RepositoryItemLookUpEdit lookupRoom = new RepositoryItemLookUpEdit();
-            lookupRoom.DataSource = ParentUI.DataRegister.Rooms;
+            lookupRoom.DataSource = ParentUI.RegData.Rooms;
             lookupRoom.DisplayMember = "RoomNumber";
             lookupRoom.ValueMember = "RoomID";
 
@@ -86,8 +88,7 @@ namespace QLKS.UIControl
             
             }//end try
             catch ( Exception ex ) {
-                MessageBox.Show(ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+                Notice.ShowError(ex.Message);            
             }//end catch
            
 
@@ -114,6 +115,7 @@ namespace QLKS.UIControl
             textBoxPassPort.Properties.ReadOnly = false;
             textBoxPhone.Properties.ReadOnly = false;
             textBoxCMND.Properties.ReadOnly = false;
+            buttonCancel.Visible = true;
             isNewCustomer = true;
 
         }//end method NewCustomer
@@ -121,24 +123,26 @@ namespace QLKS.UIControl
         private void Reset()
         {
             customer = null;
-            textBoxCustomerID.Text = String.Empty;
-            textBoxFirstName.Text = String.Empty;
-            textBoxLastName.Text = String.Empty;
-            textBoxPassPort.Text = String.Empty;
-            textBoxPhone.Text = String.Empty;
-            textBoxCMND.Text = String.Empty;
+            textBoxCustomerID.Text = null;
+            textBoxFirstName.Text = null;
+            textBoxLastName.Text = null;
+            textBoxPassPort.Text = null;
+            textBoxPhone.Text = null;
+            textBoxCMND.Text = null;
 
             textBoxFirstName.Properties.ReadOnly = true;
             textBoxLastName.Properties.ReadOnly = true;
             textBoxPassPort.Properties.ReadOnly = true;
             textBoxPhone.Properties.ReadOnly = true;
             textBoxCMND.Properties.ReadOnly = true;
+
+            buttonCancel.Visible = false;
             isNewCustomer = false;
         }//end method Reset
 
         private void AddCustomer()
         {
-            DataRow row = ParentUI.DataRegister.Customers.NewRow();
+            DataRow row = ParentUI.RegData.Customers.NewRow();
             if (!isNewCustomer)
             {
                 row["CustomerID"] = customer["MA_KHACH_HANG"];
@@ -162,15 +166,36 @@ namespace QLKS.UIControl
             }//end else
 
             try {
-                ParentUI.DataRegister.Customers.Rows.Add(row);
+                ParentUI.RegData.Customers.Rows.Add(row);
             }//end try
             catch( ConstraintException ) {
-                MessageBox.Show("Khách hàng đã có trong danh sách", "Thông Báo Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
+                Notice.ShowError("Khách hàng đã có trong danh sách!");                
             }//end catch 
 
             Reset();
             
         }//end method AddCustomer
+
+        private bool VerifyData()
+        {
+            bool valid = true;
+            if (isNewCustomer)
+            {
+                if (textBoxFirstName.Text == StyledTextBox.DefaultNullText ||
+                    textBoxLastName.Text == StyledTextBox.DefaultNullText ||
+                    textBoxCMND.Text == StyledTextBox.DefaultNullText ||
+                    textBoxPassPort.Text == StyledTextBox.DefaultNullText)
+                {
+                    valid = false;
+                }//end if : check data                    
+            }//end if : new customer
+            else
+            {
+                if( customer == null)
+                    valid = false;
+            }//end else
+            return valid;
+        }//end method Validate
 
        #endregion //end region Methods
 
@@ -179,6 +204,7 @@ namespace QLKS.UIControl
 
         private void buttonFind_Click(object sender, EventArgs e)
         {
+            Reset();
             Form_TimKiemVaChonKhachHang form = new Form_TimKiemVaChonKhachHang();
             DataRow row = form.ShowModal();
             if (row != null)
@@ -191,6 +217,24 @@ namespace QLKS.UIControl
         {
               NewCustomer();
         }//end method buttonNew_Click
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Reset();
+            buttonCancel.Visible = false;
+        }//end method buttonCancel_Click
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            if (VerifyData() == true)
+            {
+                AddCustomer();
+            }//end if
+            else
+            {
+                Notice.ShowError("Hãy điền hết thông tin cần thiết");
+            }//end else
+        }//end method buttonAdd_Click
 
        #endregion //end region Event Handling Methods
 
@@ -222,23 +266,6 @@ namespace QLKS.UIControl
         private bool isNewCustomer;
        #endregion Instance Fields
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            if( customer != null )
-                AddCustomer();
-        }//end method buttonAdd_Click
-
-        private void styledButton1_Click(object sender, EventArgs e)
-        {
-            ParentUI.DataRegister.UpdateCustomers();
-        }
-
-        private void styledButton2_Click(object sender, EventArgs e)
-        {
-            //DataRow row = GridView.GetFocusedDataRow();
-            //MessageBox.Show(row["RoomNumber"].ToString());
-            //LoadCountries();
-        }
         
     }//end class UICustomerInfoPanel
 }//end namespace

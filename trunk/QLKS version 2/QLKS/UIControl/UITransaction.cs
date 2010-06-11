@@ -18,14 +18,14 @@ namespace QLKS.UIControl
             InitializeComponent();
 
             // Prepare all data;
-            DataRegister = new RegData();
-
-            LoadControls();
+            RegData = new RegData();
+            
         }//end default constructor
 
         public UITransaction(Mode.SubmitMode mode) : this()
         {
             SubmitMode = mode;
+            LoadControls();
         }//end constructor
 
        #endregion //end region Constructors
@@ -35,7 +35,7 @@ namespace QLKS.UIControl
 
         private void LoadControls()
         {
-            roomInfo = new UIRoomInfoPanel( this, this.SubmitMode, DataRegister.Rooms );
+            roomInfo = new UIRoomInfoPanel( this, this.SubmitMode );
             roomInfo.Dock = DockStyle.Fill;
             tabPageRoom.Controls.Add( roomInfo );
 
@@ -43,11 +43,30 @@ namespace QLKS.UIControl
             groupInfo.Dock = DockStyle.Fill;
             tabPageGroup.Controls.Add(groupInfo);
 
-            customerInfo = new UICustomerInfoPanel(this, DataRegister.Customers);
+            customerInfo = new UICustomerInfoPanel(this);
             customerInfo.Dock = DockStyle.Fill;
-            tabPageCustomer.Controls.Add(customerInfo); 
+            tabPageCustomer.Controls.Add(customerInfo);
+
+            if (SubmitMode == Mode.SubmitMode.Booking)
+                LoadBookingControls();
+            else
+                LoadCheckInControls();
             
         }//end method LoadControls
+
+        private void LoadCheckInControls()
+        {
+            dateCheckIn.DateTime = DateTime.Today;
+            dateCheckIn.Enabled = false;
+
+            buttonBooking.Enabled = false;
+        }//end method LoadCheckInControls
+
+        private void LoadBookingControls()
+        {
+            dateCheckIn.DateTime = DateTime.Today;
+            buttonCheckIn.Enabled = false;
+        }//end method LoadBookingControls
 
         public void Submit()
         {
@@ -61,7 +80,7 @@ namespace QLKS.UIControl
 
         private void SubmitCheckIn()
         {
-            DataRegister.UpdateCustomers();
+            RegData.UpdateCustomers();
             bool IsGroup = groupInfo.IsAGroup();
             int groupID = -1;
             if (IsGroup == true)
@@ -69,19 +88,19 @@ namespace QLKS.UIControl
                 groupID = groupInfo.GetGroupID();
             }
 
-            int numOfRooms = DataRegister.Rooms.Rows.Count;
+            int numOfRooms = RegData.Rooms.Rows.Count;
 
             // Scan room list
             for (int i = 0; i < numOfRooms; i++)
             {
-                string roomNumber = DataRegister.Rooms.Rows[i]["RoomID"].ToString();
+                string roomNumber = RegData.Rooms.Rows[i]["RoomID"].ToString();
                 int ticketID = -1;
-                int numOfCustomers = DataRegister.Customers.Rows.Count;
+                int numOfCustomers = RegData.Customers.Rows.Count;
                 
                 // Scan customer list
                 for (int j = 0; j < numOfCustomers; j++)
                 {
-                    string roomNumber2 = DataRegister.Customers.Rows[j]["RoomNumber"].ToString();
+                    string roomNumber2 = RegData.Customers.Rows[j]["RoomNumber"].ToString();
                     if (roomNumber2.Equals(roomNumber))
                     {
                         if (ticketID == -1)
@@ -89,8 +108,8 @@ namespace QLKS.UIControl
                             VO.PhieuThuePhongVO item = new VO.PhieuThuePhongVO();
                             if (groupID != -1)
                                 item.MA_DOAN_KHACH = groupID;
-                            item.MA_KHACH_HANG = Int32.Parse(DataRegister.Customers.Rows[j]["CustomerID"].ToString());
-                            item.MA_PHONG = Int32.Parse(DataRegister.Customers.Rows[j]["RoomNumber"].ToString());
+                            item.MA_KHACH_HANG = Int32.Parse(RegData.Customers.Rows[j]["CustomerID"].ToString());
+                            item.MA_PHONG = Int32.Parse(RegData.Customers.Rows[j]["RoomNumber"].ToString());
                             item.NGAY_NHAN_PHONG = DateTime.Parse(dateCheckIn.Text);
                             item.NGAY_TRA_PHONG = DateTime.Parse(dateCheckOut.Text);
                             BUS.PhieuThuePhongBUS bus = new BUS.PhieuThuePhongBUS();
@@ -113,7 +132,7 @@ namespace QLKS.UIControl
                         {
                             VO.KhachTroVO ktItem = new VO.KhachTroVO();
                             ktItem.MA_PHIEU = ticketID;
-                            ktItem.MA_KHACH_HANG = Int32.Parse(DataRegister.Customers.Rows[j]["CustomerID"].ToString());
+                            ktItem.MA_KHACH_HANG = Int32.Parse(RegData.Customers.Rows[j]["CustomerID"].ToString());
                             BUS.KhachTroBUS ktBus = new BUS.KhachTroBUS();
                             try {
                                 int result2 = ktBus.Insert(ktItem);
@@ -149,16 +168,29 @@ namespace QLKS.UIControl
 
         }//end method tabContainer_SelectedPageChanged
 
+        private void buttonCheckIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RegData.VerifyData();
+                SubmitCheckIn();
+            }//end try
+            catch (Exception ex)
+            {
+                Notice.ShowError(ex.Message);
+            }//end catch
+        }//end method buttonCheckIn_Click
+
        #endregion //end region Event Handling Methods
 
 
        #region Attributes
 
-        public RegData DataRegister
+        public RegData RegData
         {
-            get { return dataRegister; }
-            set { this.dataRegister = value; }
-        }//end attribute DataRegister
+            get { return regData; }
+            set { this.regData = value; }
+        }//end attribute RegData
 
         public Mode.SubmitMode SubmitMode
         {
@@ -177,13 +209,10 @@ namespace QLKS.UIControl
         private UIRoomInfoPanel roomInfo;
         private UICustomerInfoPanel customerInfo;
 
-        private RegData dataRegister;
+        private RegData regData;
        #endregion Instance Fields
 
-        private void buttonCheckIn_Click(object sender, EventArgs e)
-        {
-            SubmitCheckIn();
-        }
+
 
 
     }//end class UITransaction

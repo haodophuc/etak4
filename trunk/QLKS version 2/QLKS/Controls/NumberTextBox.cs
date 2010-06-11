@@ -89,36 +89,8 @@ namespace QLKS.Controls
 
        #region Instance Fields
         private int length;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit fProperties;
         private bool allowSpace;
        #endregion Instance Fields
-
-        private void InitializeComponent()
-        {
-            this.fProperties = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.fProperties)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // fProperties
-            // 
-            this.fProperties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.fProperties.Appearance.Options.UseBorderColor = true;
-            this.fProperties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
-            this.fProperties.AppearanceFocused.Options.UseBackColor = true;
-            this.fProperties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.fProperties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
-            this.fProperties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Gray;
-            this.fProperties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.fProperties.AppearanceReadOnly.Options.UseBorderColor = true;
-            this.fProperties.AppearanceReadOnly.Options.UseForeColor = true;
-            this.fProperties.AutoHeight = false;
-            this.fProperties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.fProperties.LookAndFeel.SkinName = "Blue";
-            this.fProperties.Name = "fProperties";
-            ((System.ComponentModel.ISupportInitialize)(this.fProperties)).EndInit();
-            this.ResumeLayout(false);
-
-        }
 
     }//end class NumberTextbox
 }//end namespace

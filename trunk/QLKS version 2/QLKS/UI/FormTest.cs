@@ -20,7 +20,7 @@ namespace QLKS.UI
         {
             InitializeComponent();
 
-            regdata = new RegData();       
+            //regdata = new RegData();       
         }
 
         private void buttonLoad_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace QLKS.UI
 
         }
         
-        private RegData regdata;
+       private RegData regdata;
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
@@ -77,10 +77,12 @@ namespace QLKS.UI
             //PhieuThuePhongBUS bus = new PhieuThuePhongBUS();
             //PhieuThuePhongVO pack = new PhieuThuePhongVO();
 
-            DataRow row = gridView1.GetFocusedDataRow();
+            //DataRow row = gridView1.GetFocusedDataRow();
 
-            MessageBox.Show(row["CustomerID"].ToString());
-
+            //MessageBox.Show(row["CustomerID"].ToString());
+            int int32 = Int32.Parse(textBoxCustomer1.EditValue.ToString());
+            
+            MessageBox.Show(int32.ToString());
 
 
         }

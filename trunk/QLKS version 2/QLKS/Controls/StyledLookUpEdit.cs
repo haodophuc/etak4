@@ -10,7 +10,8 @@ namespace QLKS.Controls
 
         public StyledLookUpEdit() : base() {
             this.Properties.LookAndFeel.UseDefaultLookAndFeel = true;
-            this.Properties.LookAndFeel.SkinName = "Blue";        
+            this.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            //this.Properties.LookAndFeel.SkinName = "Blue";        
         }//end default constructor
 
        #endregion //end region Constructors
