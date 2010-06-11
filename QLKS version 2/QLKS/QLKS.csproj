@@ -414,10 +414,6 @@
       <DependentUpon>FormCheckIn.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FormTest.resx">
-      <DependentUpon>FormTest.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_CapNhatDoanKhach.resx">
       <DependentUpon>Form_CapNhatDoanKhach.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -700,12 +696,6 @@
     <Compile Include="UI\FormCheckIn.Designer.cs">
       <DependentUpon>FormCheckIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FormTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FormTest.Designer.cs">
-      <DependentUpon>FormTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Form_CapNhatDoanKhach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -807,9 +797,6 @@
     </Compile>
     <Compile Include="UI\LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\NumberTextBox.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ServicesManagementForm.cs">
       <SubType>Form</SubType>
