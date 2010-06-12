@@ -154,6 +154,19 @@ namespace QLKS.UI
             formCapNhatPTP.MdiParent = this;
             formCapNhatPTP.Show();
         }
+        private void PhiếuThuDoanKhachToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CapNhatPhieuThuDoanKhach formCapNhatPhieuThuDoanKhach = new Form_CapNhatPhieuThuDoanKhach();
+            formCapNhatPhieuThuDoanKhach.MdiParent = this;
+            formCapNhatPhieuThuDoanKhach.Show();
+        }
+
+        private void phiếuThuKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_CapNhatPhieuThuKhachHang formCapNhatPhieuThuKhachHang = new Form_CapNhatPhieuThuKhachHang();
+            formCapNhatPhieuThuKhachHang.MdiParent = this;
+            formCapNhatPhieuThuKhachHang.Show();
+        }
         #endregion
 
         #region Statistic and Report
@@ -277,27 +290,30 @@ namespace QLKS.UI
         {
             defaultLookAndFeel1.LookAndFeel.SkinName = "Lilian";
         }
-        #endregion        
+           
+
+        private void theAsphaltWorldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            defaultLookAndFeel1.LookAndFeel.SkinName = "The Asphalt World";
+        }
+
+        private void iMaginaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
+        }
+
+        private void blackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            defaultLookAndFeel1.LookAndFeel.SkinName = "Black";
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
+
+        }
+        #endregion
 
 
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+  }
 }

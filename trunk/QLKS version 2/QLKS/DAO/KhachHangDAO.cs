@@ -7,7 +7,7 @@ using QLKS.VO;
 
 namespace QLKS.DAO
 {
-    class KhachHangDAO
+    class KhachHangDAO 
     {
        #region Constructors
 

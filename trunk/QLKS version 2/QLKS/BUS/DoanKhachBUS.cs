@@ -31,7 +31,17 @@ namespace QLKS.BUS
                 throw e;
             }
         }
-
+        public DataTable GetMaDKAndTenCT()
+        {
+            try
+            {
+                return doankhachDAO.SelectMaDKandTenCongTy();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public DataTable LoadFind()
         {
 
