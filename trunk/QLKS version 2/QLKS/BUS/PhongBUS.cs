@@ -29,6 +29,19 @@ namespace QLKS.BUS
             }
         }
 
+        public DataTable GetHeSoPhong(DateTime fromTime, DateTime toTime)
+        {
+            try
+            {
+                return phongDAO.GetHeSoPhong(fromTime, toTime);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
         public DataTable GetEmptyRoom()
         {
             try

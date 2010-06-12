@@ -28,6 +28,24 @@ namespace QLKS.DAO
             }
         }
 
+        public DataTable GetHeSoPhong(DateTime fromTime, DateTime toTime)
+        {
+            try
+            {
+                string query = "SP_HE_SO_SU_DUNG_PHONG";
+                SqlParameter[] sqlParameters = new SqlParameter[2];
+
+                sqlParameters[0] = new SqlParameter("@FROM_TIME", fromTime);
+                sqlParameters[1] = new SqlParameter("@TO_TIME", toTime);
+
+                return Program.DBConnection.ExecuteSelectQuerySP(query, sqlParameters);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public DataTable SelectAllWithMaTinhTrangByOne()
         {
             try

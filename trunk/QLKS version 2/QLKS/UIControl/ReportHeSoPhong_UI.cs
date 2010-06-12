@@ -6,18 +6,29 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using QLKS.Reports;
+using QLKS.BUS;
 
 namespace QLKS.UIControl
 {
     public partial class ReportHeSoPhong_UI : DevExpress.XtraEditors.XtraUserControl
     {
         private Report_HeSoSuDungPhong reportPhong;
+        private Report_HeSoPhong_Chart reportPhongChart;
+        private PhongBUS phongBUS;
+
+        private DateTime f;
+        private DateTime t;
+
+        private bool clicked = false;
 
         public ReportHeSoPhong_UI()
         {
             InitializeComponent();
             InitControl();
             EnableControl();
+            ShowControl();
+            f = new DateTime();
+            t = new DateTime();
         }
 
         private void InitControl()
@@ -54,8 +65,6 @@ namespace QLKS.UIControl
 
         private void LoadDataReport()
         {
-            DateTime f = new DateTime();
-            DateTime t = new DateTime();
             int year, month;
             if (radioButton_FromTo.Checked)
             {
@@ -105,14 +114,52 @@ namespace QLKS.UIControl
                 t = new DateTime(year, 12, daysOfMonth);
             }
             reportPhong = new Report_HeSoSuDungPhong(f, t);
+            reportPhongChart = new Report_HeSoPhong_Chart(f, t);
+            phongBUS = new PhongBUS();
+            gridControl_ViewMode.DataSource = phongBUS.GetHeSoPhong(f, t);
         }
 
+        private void ShowControl()
+        {
+            if (clicked)
+            {
+                panelControl_ViewMode.Visible = true;
+            }
+            else
+            {
+                panelControl_ViewMode.Visible = false;
+            }
+
+            if (radioBtn_TableMode.Checked == true)
+            {
+                 panelControl_ViewMode.Controls.Add(gridControl_ViewMode);
+                 panelControl_ViewMode.Controls.Remove(chartControl_HeSoPhong);
+            }
+            if (radioBtn_ChartMode.Checked == true)
+            {
+                 panelControl_ViewMode.Controls.Add(chartControl_HeSoPhong);
+                    panelControl_ViewMode.Controls.Remove(gridControl_ViewMode);
+            }
+        }
         private void btn_preview_Click(object sender, EventArgs e)
         {
             try
             {
+                clicked = true;
                 LoadDataReport();
-                reportPhong.ShowPreview();
+                ShowControl();
+                if (radioBtn_TableMode.Checked == true)
+                {
+                    gridControl_ViewMode.Dock = DockStyle.Fill;
+                }
+                if (radioBtn_ChartMode.Checked == true)
+                {
+                   
+                    QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters.SP_HE_SO_SU_DUNG_PHONGTableAdapter adapter = new QLKS.DataSets.QLKSDataSet_HeSoPhongTableAdapters.SP_HE_SO_SU_DUNG_PHONGTableAdapter();
+                    adapter.Fill(qLKSDataSet_HeSoPhong.SP_HE_SO_SU_DUNG_PHONG, f, t);
+                    chartControl_HeSoPhong.DataAdapter = adapter;
+                    chartControl_HeSoPhong.Dock = DockStyle.Fill;
+                }
             }
             catch (Exception ex)
             {
@@ -125,7 +172,10 @@ namespace QLKS.UIControl
             try
             {
                 LoadDataReport();
-                reportPhong.Print();
+                if (radioBtn_TableMode.Checked == true)
+                    reportPhong.ShowPreview();
+                if (radioBtn_ChartMode.Checked == true)
+                    reportPhongChart.ShowPreview();
             }
             catch (Exception ex)
             {
@@ -152,5 +202,7 @@ namespace QLKS.UIControl
         {
             EnableControl();
         }
+
+        
     }
 }
