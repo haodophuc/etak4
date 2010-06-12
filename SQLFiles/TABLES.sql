@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  Microsoft SQL Server 2005                     */
-/* Date de création :  6/11/2010 4:11:42 AM                     */
+/* Date de création :  6/12/2010 7:34:25 AM                     */
 /*==============================================================*/
 
 
@@ -132,16 +132,16 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('PHIEU_THU_KHACH_HANG') and o.name = 'FK_PHIEU_TH_THU_KHACH_CA_TRUC')
+   where r.fkeyid = object_id('PHIEU_THU_KHACH_HANG') and o.name = 'FK_PHIEU_TH_REFERENCE_PHIEU_TH')
 alter table PHIEU_THU_KHACH_HANG
-   drop constraint FK_PHIEU_TH_THU_KHACH_CA_TRUC
+   drop constraint FK_PHIEU_TH_REFERENCE_PHIEU_TH
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('PHIEU_THU_KHACH_HANG') and o.name = 'FK_PHIEU_TH_THU_KHACH_KHACH_HA')
+   where r.fkeyid = object_id('PHIEU_THU_KHACH_HANG') and o.name = 'FK_PHIEU_TH_THU_KHACH_CA_TRUC')
 alter table PHIEU_THU_KHACH_HANG
-   drop constraint FK_PHIEU_TH_THU_KHACH_KHACH_HA
+   drop constraint FK_PHIEU_TH_THU_KHACH_CA_TRUC
 go
 
 if exists (select 1
@@ -608,8 +608,8 @@ go
 /*==============================================================*/
 create table PHIEU_THU_KHACH_HANG (
    SO_PHIEU             int                  identity,
-   MA_KHACH_HANG        int                  not null,
    MA_CA_TRUC           int                  not null,
+   MA_PHIEU             int                  null,
    NGAY_PHIEU           datetime             not null,
    SO_TIEN              TIEN_TE              null,
    NOI_DUNG_THU         nvarchar(50)         null,
@@ -801,13 +801,13 @@ alter table PHIEU_THU_DOAN_KHACH
 go
 
 alter table PHIEU_THU_KHACH_HANG
-   add constraint FK_PHIEU_TH_THU_KHACH_CA_TRUC foreign key (MA_CA_TRUC)
-      references CA_TRUC (MA_CA_TRUC)
+   add constraint FK_PHIEU_TH_REFERENCE_PHIEU_TH foreign key (MA_PHIEU)
+      references PHIEU_THUE_PHONG (MA_PHIEU)
 go
 
 alter table PHIEU_THU_KHACH_HANG
-   add constraint FK_PHIEU_TH_THU_KHACH_KHACH_HA foreign key (MA_KHACH_HANG)
-      references KHACH_HANG (MA_KHACH_HANG)
+   add constraint FK_PHIEU_TH_THU_KHACH_CA_TRUC foreign key (MA_CA_TRUC)
+      references CA_TRUC (MA_CA_TRUC)
 go
 
 alter table PHONG
