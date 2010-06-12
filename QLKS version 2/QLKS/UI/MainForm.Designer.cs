@@ -52,6 +52,8 @@
             this.customerGroupMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rentRoomBillMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhiếuThuDoanKhachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuThuKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +63,10 @@
             this.caramelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moneyTwinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lilianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theAsphaltWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iMaginaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -73,7 +79,7 @@
             this.ribbon.ApplicationIcon = null;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Name = "ribbon";
-            this.ribbon.Size = new System.Drawing.Size(708, 53);
+            this.ribbon.Size = new System.Drawing.Size(708, 51);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // ribbonStatusBar
@@ -94,7 +100,7 @@
             this.statisticMenu,
             this.userManagementMenu,
             this.SkinMenu});
-            this.mainMenu.Location = new System.Drawing.Point(0, 53);
+            this.mainMenu.Location = new System.Drawing.Point(0, 51);
             this.mainMenu.Name = "mainMenu";
             this.mainMenu.Size = new System.Drawing.Size(708, 24);
             this.mainMenu.TabIndex = 5;
@@ -221,8 +227,10 @@
             this.updateMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerMenuItem,
             this.customerGroupMenuItem,
+            this.roomMenuItem,
             this.rentRoomBillMenuItem,
-            this.roomMenuItem});
+            this.PhiếuThuDoanKhachToolStripMenuItem,
+            this.phiếuThuKháchHàngToolStripMenuItem});
             this.updateMenu.Name = "updateMenu";
             this.updateMenu.Size = new System.Drawing.Size(63, 20);
             this.updateMenu.Text = "Cập nhật";
@@ -230,30 +238,44 @@
             // customerMenuItem
             // 
             this.customerMenuItem.Name = "customerMenuItem";
-            this.customerMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.customerMenuItem.Size = new System.Drawing.Size(193, 22);
             this.customerMenuItem.Text = "Khách hàng";
             this.customerMenuItem.Click += new System.EventHandler(this.customerMenuItem_Click);
             // 
             // customerGroupMenuItem
             // 
             this.customerGroupMenuItem.Name = "customerGroupMenuItem";
-            this.customerGroupMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.customerGroupMenuItem.Size = new System.Drawing.Size(193, 22);
             this.customerGroupMenuItem.Text = "Đoàn khách";
             this.customerGroupMenuItem.Click += new System.EventHandler(this.customerGroupMenuItem_Click);
             // 
             // roomMenuItem
             // 
             this.roomMenuItem.Name = "roomMenuItem";
-            this.roomMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.roomMenuItem.Size = new System.Drawing.Size(193, 22);
             this.roomMenuItem.Text = "Phòng";
             this.roomMenuItem.Click += new System.EventHandler(this.roomMenuItem_Click);
             // 
             // rentRoomBillMenuItem
             // 
             this.rentRoomBillMenuItem.Name = "rentRoomBillMenuItem";
-            this.rentRoomBillMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.rentRoomBillMenuItem.Size = new System.Drawing.Size(193, 22);
             this.rentRoomBillMenuItem.Text = "Phiếu Thuê Phòng";
             this.rentRoomBillMenuItem.Click += new System.EventHandler(this.rentRoomBillMenuItem_Click);
+            // 
+            // PhiếuThuDoanKhachToolStripMenuItem
+            // 
+            this.PhiếuThuDoanKhachToolStripMenuItem.Name = "PhiếuThuDoanKhachToolStripMenuItem";
+            this.PhiếuThuDoanKhachToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.PhiếuThuDoanKhachToolStripMenuItem.Text = "Phiếu Thu Đoàn Khách";
+            this.PhiếuThuDoanKhachToolStripMenuItem.Click += new System.EventHandler(this.PhiếuThuDoanKhachToolStripMenuItem_Click);
+            // 
+            // phiếuThuKháchHàngToolStripMenuItem
+            // 
+            this.phiếuThuKháchHàngToolStripMenuItem.Name = "phiếuThuKháchHàngToolStripMenuItem";
+            this.phiếuThuKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.phiếuThuKháchHàngToolStripMenuItem.Text = "Phiếu Thu Khách Hàng";
+            this.phiếuThuKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.phiếuThuKháchHàngToolStripMenuItem_Click);
             // 
             // statisticMenu
             // 
@@ -298,7 +320,11 @@
             this.SkinMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.caramelToolStripMenuItem,
             this.moneyTwinsToolStripMenuItem,
-            this.lilianToolStripMenuItem});
+            this.lilianToolStripMenuItem,
+            this.theAsphaltWorldToolStripMenuItem,
+            this.iMaginaryToolStripMenuItem,
+            this.blackToolStripMenuItem,
+            this.blueToolStripMenuItem});
             this.SkinMenu.Name = "SkinMenu";
             this.SkinMenu.Size = new System.Drawing.Size(38, 20);
             this.SkinMenu.Text = "Skin";
@@ -306,23 +332,51 @@
             // caramelToolStripMenuItem
             // 
             this.caramelToolStripMenuItem.Name = "caramelToolStripMenuItem";
-            this.caramelToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.caramelToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.caramelToolStripMenuItem.Text = "Caramel";
             this.caramelToolStripMenuItem.Click += new System.EventHandler(this.camerekToolStripMenuItem_Click);
             // 
             // moneyTwinsToolStripMenuItem
             // 
             this.moneyTwinsToolStripMenuItem.Name = "moneyTwinsToolStripMenuItem";
-            this.moneyTwinsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.moneyTwinsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.moneyTwinsToolStripMenuItem.Text = "Money Twins";
             this.moneyTwinsToolStripMenuItem.Click += new System.EventHandler(this.moneyTwinsToolStripMenuItem_Click);
             // 
             // lilianToolStripMenuItem
             // 
             this.lilianToolStripMenuItem.Name = "lilianToolStripMenuItem";
-            this.lilianToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.lilianToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.lilianToolStripMenuItem.Text = "Lilian";
             this.lilianToolStripMenuItem.Click += new System.EventHandler(this.lilianToolStripMenuItem_Click);
+            // 
+            // theAsphaltWorldToolStripMenuItem
+            // 
+            this.theAsphaltWorldToolStripMenuItem.Name = "theAsphaltWorldToolStripMenuItem";
+            this.theAsphaltWorldToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.theAsphaltWorldToolStripMenuItem.Text = "The Asphalt World";
+            this.theAsphaltWorldToolStripMenuItem.Click += new System.EventHandler(this.theAsphaltWorldToolStripMenuItem_Click);
+            // 
+            // iMaginaryToolStripMenuItem
+            // 
+            this.iMaginaryToolStripMenuItem.Name = "iMaginaryToolStripMenuItem";
+            this.iMaginaryToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.iMaginaryToolStripMenuItem.Text = "iMaginary";
+            this.iMaginaryToolStripMenuItem.Click += new System.EventHandler(this.iMaginaryToolStripMenuItem_Click);
+            // 
+            // blackToolStripMenuItem
+            // 
+            this.blackToolStripMenuItem.Name = "blackToolStripMenuItem";
+            this.blackToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.blackToolStripMenuItem.Text = "Black";
+            this.blackToolStripMenuItem.Click += new System.EventHandler(this.blackToolStripMenuItem_Click);
+            // 
+            // blueToolStripMenuItem
+            // 
+            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.blueToolStripMenuItem.Text = "Blue";
+            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -332,7 +386,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Lilian";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
             // 
             // MainForm
             // 
@@ -396,5 +450,11 @@
         private System.Windows.Forms.ToolStripMenuItem checkInMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookRoomMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PhiếuThuDoanKhachToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuThuKháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theAsphaltWorldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iMaginaryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
     }
 }

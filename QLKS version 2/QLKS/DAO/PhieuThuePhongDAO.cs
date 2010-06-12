@@ -33,6 +33,25 @@ namespace QLKS.DAO
                 throw e;
             }
         }
+        public DataTable SelectMaPhieu_MaKH_HoTen_CMND_HoChieu()
+        {
+            try
+            {
+                string query = " SELECT 'P' + REPLACE(STR(MA_PHIEU,4),' ','0') AS MaP," +
+                                "'KH' + REPLACE(STR(KHACH_HANG.MA_KHACH_HANG,4),' ','0') AS MaKH," +            
+                               "HO_KHACH_HANG+' '+TEN_KHACH_HANG AS HO_TEN,CMND,HO_CHIEU " +
+                               "FROM PHIEU_THUE_PHONG,KHACH_HANG "+
+                               "WHERE PHIEU_THUE_PHONG.MA_KHACH_HANG=KHACH_HANG.MA_KHACH_HANG";
+
+
+                return Program.DBConnection.ExecuteSelectQuery(query);
+            }
+            catch (Exception e)
+            {
+                throw e;
+
+            }
+        }
         public DataTable SelectUnpaidRoomByMaKhachHang(int makhachhang)
         {
             try

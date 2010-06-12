@@ -31,7 +31,23 @@ namespace QLKS.DAO
                 throw e;
             }
 
+        }
+        public DataTable SelectMaDKandTenCongTy()
+        {
+            try
+            {
+                string query = "Select 'DK' + REPLACE(STR(MA_DOAN_KHACH,4),' ','0') AS MaDK,TEN_CONG_TY " +
+                "From Doan_Khach,Cong_ty " +
+                "WHERE DOAN_KHACH.MA_CONG_TY=CONG_TY.MA_CONG_TY ";
 
+
+                return Program.DBConnection.ExecuteSelectQuery(query);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+ 
         }
         public int GetLastIdentity()
         {

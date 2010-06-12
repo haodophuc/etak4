@@ -212,6 +212,7 @@
     <Compile Include="Base\SubmitChecking.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BUS\CaTrucBus.cs" />
     <Compile Include="BUS\CongtyBus.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -230,9 +231,11 @@
     <Compile Include="BUS\PhieuDatPhongBUS.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BUS\PhieuThuDoanKhachBUS.cs" />
     <Compile Include="BUS\PhieuThuePhongBUS.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BUS\PhieuThuKhachHangBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -271,6 +274,7 @@
     <Compile Include="Controls\TextBoxCustomer.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\CatrucDAO.cs" />
     <Compile Include="DAO\CongtyDAO.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -289,9 +293,11 @@
     <Compile Include="DAO\PhieuDatPhongDAO.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAO\PhieuThuDoanKhachDAO.cs" />
     <Compile Include="DAO\PhieuThuePhongDAO.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAO\PhieuThuKhachHangDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -373,8 +379,16 @@
       <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatPhieuThuDoanKhach_UI.resx">
+      <DependentUpon>CapNhatPhieuThuDoanKhach_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\CapNhatPhieuThuePhong_UI.resx">
       <DependentUpon>CapNhatPhieuThuePhong_UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\CapNhatPhieuThuKhachHangUI.resx">
+      <DependentUpon>CapNhatPhieuThuKhachHangUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\CapNhatPhong_UI.resx">
@@ -477,8 +491,16 @@
       <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CapNhatPhieuThuDoanKhach.resx">
+      <DependentUpon>Form_CapNhatPhieuThuDoanKhach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_CapNhatPhieuThuePhong.resx">
       <DependentUpon>Form_CapNhatPhieuThuePhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CapNhatPhieuThuKhachHang.resx">
+      <DependentUpon>Form_CapNhatPhieuThuKhachHang.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_CapNhatPhong.resx">
@@ -611,11 +633,23 @@
     <Compile Include="UIControl\CapNhatKhachHang_UI.designer.cs">
       <DependentUpon>CapNhatKhachHang_UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIControl\CapNhatPhieuThuDoanKhach_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhieuThuDoanKhach_UI.Designer.cs">
+      <DependentUpon>CapNhatPhieuThuDoanKhach_UI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\CapNhatPhieuThuePhong_UI.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIControl\CapNhatPhieuThuePhong_UI.Designer.cs">
       <DependentUpon>CapNhatPhieuThuePhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhieuThuKhachHangUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\CapNhatPhieuThuKhachHangUI.Designer.cs">
+      <DependentUpon>CapNhatPhieuThuKhachHangUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\CapNhatPhong_UI.cs">
       <SubType>UserControl</SubType>
@@ -767,11 +801,23 @@
     <Compile Include="UI\Form_CapNhatKhachHang.designer.cs">
       <DependentUpon>Form_CapNhatKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Form_CapNhatPhieuThuDoanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhieuThuDoanKhach.Designer.cs">
+      <DependentUpon>Form_CapNhatPhieuThuDoanKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form_CapNhatPhieuThuePhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Form_CapNhatPhieuThuePhong.Designer.cs">
       <DependentUpon>Form_CapNhatPhieuThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhieuThuKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CapNhatPhieuThuKhachHang.Designer.cs">
+      <DependentUpon>Form_CapNhatPhieuThuKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form_CapNhatPhong.cs">
       <SubType>Form</SubType>
@@ -881,12 +927,15 @@
     <Compile Include="UI\UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VO\CaTrucVO.cs" />
     <Compile Include="VO\CongtyVO.cs" />
     <Compile Include="VO\DoanKhachVO.cs" />
     <Compile Include="VO\KhachHangVO.cs" />
     <Compile Include="VO\KhachTroVO.cs" />
     <Compile Include="VO\PhieuDatPhongVO.cs" />
+    <Compile Include="VO\PhieuThuDoanKhachVO.cs" />
     <Compile Include="VO\PhieuThuePhongVO.cs" />
+    <Compile Include="VO\PhieuThuKhachHangVO.cs" />
     <Compile Include="VO\PhongVO.cs" />
     <Compile Include="VO\ServiceOrderVO.cs" />
     <Compile Include="VO\ServiceVO.cs" />
