@@ -122,6 +122,32 @@ namespace QLKS
             return dataTable;
         }
 
+        public DataTable ExecuteSelectQuerySP(string query, SqlParameter[] sqlParameters)
+        {
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            try
+            {
+                command = new SqlCommand();
+                command.CommandText = query;
+                command.CommandType = CommandType.StoredProcedure;
+                command.Connection = connection;
+                command.Parameters.AddRange(sqlParameters);
+                dataAdapter.SelectCommand = command;
+                dataAdapter.Fill(dataTable);
+
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dataAdapter.Dispose();
+            }
+            return dataTable;
+        }
+
         public int ExecuteNonQuery(String query, SqlParameter[] sqlParameters )
         {
             int result = 0;
