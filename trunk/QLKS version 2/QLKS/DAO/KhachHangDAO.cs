@@ -190,22 +190,26 @@ namespace QLKS.DAO
 
         public int InsertBySP(KhachHangVO kh)
         {
-            SqlCommand cmd = new SqlCommand("SP_INSERT_CUSTOMER", Program.DBConnection.Connection);
-            cmd.CommandType = CommandType.StoredProcedure;
+            try {
+                String sp = "SP_INSERT_CUSTOMER";
+                SqlParameter[] param = new SqlParameter[7];
 
-            SqlParameter param = cmd.Parameters.AddWithValue("@IDENTITY", kh.MA_KHACH_HANG);
-            //SqlParameter param = cmd.Parameters.Add(
-            param.Direction = ParameterDirection.Output;
+                // Output parameter
+                param[0] = new SqlParameter("@IDENTITY", kh.MA_KHACH_HANG);
+                param[0].Direction = ParameterDirection.Output;
 
-            cmd.Parameters.AddWithValue("@MA_QUOC_GIA", kh.MA_QUOC_GIA);
-            cmd.Parameters.AddWithValue("@HO_KHACH_HANG", kh.HO_KHACH_HANG);
-            cmd.Parameters.AddWithValue("@TEN_KHACH_HANG", kh.TEN_KHACH_HANG);
-            cmd.Parameters.AddWithValue("@CMND", kh.CMND);
-            cmd.Parameters.AddWithValue("@HO_CHIEU", kh.HO_CHIEU);
-            cmd.Parameters.AddWithValue("@DIEN_THOAI", kh.DIEN_THOAI);
+                param[1] = new SqlParameter("@MA_QUOC_GIA", kh.MA_QUOC_GIA);
+                param[2] = new SqlParameter("@HO_KHACH_HANG", kh.HO_KHACH_HANG);
+                param[3] = new SqlParameter("@TEN_KHACH_HANG", kh.TEN_KHACH_HANG);
+                param[4] = new SqlParameter("@CMND", kh.CMND);
+                param[5] = new SqlParameter("@HO_CHIEU", kh.HO_CHIEU);
+                param[6] = new SqlParameter("@DIEN_THOAI", kh.DIEN_THOAI);
 
-            cmd.ExecuteNonQuery();
-            return 0;
+                return (int)Program.DBConnection.ExecuteSPReturnsID(sp, param);
+            }//end try
+            catch {
+                throw;            
+            }//end catch            
         }//end method InsertBySP
         
        #endregion //end region Methods

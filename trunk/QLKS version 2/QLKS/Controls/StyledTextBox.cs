@@ -11,7 +11,7 @@ namespace QLKS.Controls
         public StyledTextBox() : base() {
 
             this.Properties.AutoHeight = false;
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.UseDefaultLookAndFeel = true;
             //this.LookAndFeel.SkinName = "Blue";
 
             this.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;

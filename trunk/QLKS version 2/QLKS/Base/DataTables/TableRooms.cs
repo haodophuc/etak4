@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -28,11 +28,14 @@ namespace QLKS.Base
 
             // Add other column
             cols.Add("RoomTypeID", typeof(Int32));
-            cols.Add("RoomType", typeof(String));
-            cols.Add("RoomNumber", typeof(String));
-            cols.Add("Beds", typeof(Int32));
-            cols.Add("Price", typeof(Decimal));
-            cols.Add("Quantity", typeof(Int32));
+            cols.Add("RoomType", typeof(String)).Caption = "Loại Phòng";
+            cols.Add("TicketID", typeof(Int32));
+            cols.Add("OwnerID", typeof(Int32));
+            cols.Add("Owner", typeof(String)).Caption = "Người Đứng Tên Thuê";
+            cols.Add("RoomNumber", typeof(String)).Caption = "Số Phòng";
+            cols.Add("Beds", typeof(Int32)).Caption = "Số Giường";
+            cols.Add("Price", typeof(Decimal)).Caption = "Đơn Giá";
+            cols.Add("Quantity", typeof(Int32)).Caption = "Số Lượng Phòng Đã Đăng Ký";
 
             // Add primary colummn
             this.PrimaryKey = new DataColumn[] { cols["RoomID"] };
@@ -50,6 +53,7 @@ namespace QLKS.Base
             get { return "SELECT * FROM PHONG"; }
         }//end attribute SelectCommand
 
+        public enum RoomState : int { Ready = 1, Busy, Cleaning };
 
     }//end clas RoomTable
 }//end namespace

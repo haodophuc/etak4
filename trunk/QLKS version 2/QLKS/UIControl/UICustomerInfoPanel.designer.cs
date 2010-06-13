@@ -34,6 +34,7 @@
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelEditor = new QLKS.Controls.StyledPanel();
             this.panelCenter = new QLKS.Controls.StyledPanel();
+            this.buttonSetOwner = new QLKS.Controls.StyledButton();
             this.buttonCancel = new QLKS.Controls.StyledButton();
             this.labelPassPort = new System.Windows.Forms.Label();
             this.labelCMND = new System.Windows.Forms.Label();
@@ -141,6 +142,7 @@
             // 
             this.panelCenter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelCenter.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelCenter.Controls.Add(this.buttonSetOwner);
             this.panelCenter.Controls.Add(this.buttonCancel);
             this.panelCenter.Controls.Add(this.labelPassPort);
             this.panelCenter.Controls.Add(this.labelCMND);
@@ -166,6 +168,17 @@
             this.panelCenter.Name = "panelCenter";
             this.panelCenter.Size = new System.Drawing.Size(720, 204);
             this.panelCenter.TabIndex = 0;
+            // 
+            // buttonSetOwner
+            // 
+            this.buttonSetOwner.Location = new System.Drawing.Point(537, 147);
+            this.buttonSetOwner.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.buttonSetOwner.LookAndFeel.UseWindowsXPTheme = true;
+            this.buttonSetOwner.Name = "buttonSetOwner";
+            this.buttonSetOwner.Size = new System.Drawing.Size(178, 23);
+            this.buttonSetOwner.TabIndex = 30;
+            this.buttonSetOwner.Text = "Chọn Làm Người Thuê Phòng";
+            this.buttonSetOwner.Click += new System.EventHandler(this.buttonSetOwner_Click);
             // 
             // buttonCancel
             // 
@@ -203,6 +216,7 @@
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textBoxCountry.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.textBoxCountry.Properties.NullText = "Chọn quốc gia";
             this.textBoxCountry.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.textBoxCountry.Size = new System.Drawing.Size(246, 20);
@@ -210,7 +224,7 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(629, 173);
+            this.buttonDel.Location = new System.Drawing.Point(629, 176);
             this.buttonDel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.buttonDel.LookAndFeel.UseWindowsXPTheme = true;
             this.buttonDel.Name = "buttonDel";
@@ -220,7 +234,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(530, 173);
+            this.buttonAdd.Location = new System.Drawing.Point(537, 176);
             this.buttonAdd.LookAndFeel.UseDefaultLookAndFeel = false;
             this.buttonAdd.LookAndFeel.UseWindowsXPTheme = true;
             this.buttonAdd.Name = "buttonAdd";
@@ -257,6 +271,28 @@
             this.textBoxPhone.Length = 10;
             this.textBoxPhone.Location = new System.Drawing.Point(469, 42);
             this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxPhone.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxPhone.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxPhone.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxPhone.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxPhone.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxPhone.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxPhone.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxPhone.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxPhone.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxPhone.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxPhone.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxPhone.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxPhone.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxPhone.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxPhone.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxPhone.Properties.AutoHeight = false;
+            this.textBoxPhone.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxPhone.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxPhone.Properties.Mask.EditMask = "\\d{1,10}";
+            this.textBoxPhone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxPhone.Properties.NullText = "Chưa có thông tin.";
             this.textBoxPhone.Properties.ReadOnly = true;
             this.textBoxPhone.Size = new System.Drawing.Size(246, 20);
             this.textBoxPhone.TabIndex = 8;
@@ -267,6 +303,28 @@
             this.textBoxPassPort.Length = 10;
             this.textBoxPassPort.Location = new System.Drawing.Point(117, 121);
             this.textBoxPassPort.Name = "textBoxPassPort";
+            this.textBoxPassPort.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxPassPort.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxPassPort.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxPassPort.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxPassPort.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxPassPort.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxPassPort.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxPassPort.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxPassPort.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxPassPort.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxPassPort.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxPassPort.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxPassPort.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxPassPort.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxPassPort.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxPassPort.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxPassPort.Properties.AutoHeight = false;
+            this.textBoxPassPort.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxPassPort.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxPassPort.Properties.Mask.EditMask = "\\d{1,10}";
+            this.textBoxPassPort.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxPassPort.Properties.NullText = "Chưa có thông tin.";
             this.textBoxPassPort.Properties.ReadOnly = true;
             this.textBoxPassPort.Size = new System.Drawing.Size(246, 20);
             this.textBoxPassPort.TabIndex = 6;
@@ -277,6 +335,28 @@
             this.textBoxCMND.Length = 9;
             this.textBoxCMND.Location = new System.Drawing.Point(117, 95);
             this.textBoxCMND.Name = "textBoxCMND";
+            this.textBoxCMND.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxCMND.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxCMND.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxCMND.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxCMND.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxCMND.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxCMND.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxCMND.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxCMND.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxCMND.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxCMND.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxCMND.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxCMND.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxCMND.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxCMND.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxCMND.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxCMND.Properties.AutoHeight = false;
+            this.textBoxCMND.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxCMND.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxCMND.Properties.Mask.EditMask = "\\d{1,9}";
+            this.textBoxCMND.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxCMND.Properties.NullText = "Chưa có thông tin.";
             this.textBoxCMND.Properties.ReadOnly = true;
             this.textBoxCMND.Size = new System.Drawing.Size(246, 20);
             this.textBoxCMND.TabIndex = 5;
@@ -331,6 +411,31 @@
             this.textBoxCustomerID.Enabled = false;
             this.textBoxCustomerID.Location = new System.Drawing.Point(117, 17);
             this.textBoxCustomerID.Name = "textBoxCustomerID";
+            this.textBoxCustomerID.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxCustomerID.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxCustomerID.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxCustomerID.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxCustomerID.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxCustomerID.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxCustomerID.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxCustomerID.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxCustomerID.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxCustomerID.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxCustomerID.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxCustomerID.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxCustomerID.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxCustomerID.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxCustomerID.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxCustomerID.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxCustomerID.Properties.AutoHeight = false;
+            this.textBoxCustomerID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxCustomerID.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxCustomerID.Properties.Mask.EditMask = "KH0000";
+            this.textBoxCustomerID.Properties.Mask.IgnoreMaskBlank = false;
+            this.textBoxCustomerID.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textBoxCustomerID.Properties.Mask.SaveLiteral = false;
+            this.textBoxCustomerID.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.textBoxCustomerID.Properties.NullText = "Mã Khách Hàng sẽ được tạo tự động.";
             this.textBoxCustomerID.Properties.ReadOnly = true;
             this.textBoxCustomerID.Size = new System.Drawing.Size(246, 20);
             this.textBoxCustomerID.TabIndex = 0;
@@ -339,6 +444,26 @@
             // 
             this.textBoxLastName.Location = new System.Drawing.Point(117, 43);
             this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxLastName.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxLastName.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxLastName.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxLastName.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxLastName.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxLastName.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxLastName.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxLastName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxLastName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxLastName.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxLastName.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxLastName.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxLastName.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxLastName.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxLastName.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxLastName.Properties.AutoHeight = false;
+            this.textBoxLastName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxLastName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxLastName.Properties.NullText = "Chưa có thông tin.";
             this.textBoxLastName.Properties.ReadOnly = true;
             this.textBoxLastName.Size = new System.Drawing.Size(246, 20);
             this.textBoxLastName.TabIndex = 3;
@@ -347,6 +472,26 @@
             // 
             this.textBoxFirstName.Location = new System.Drawing.Point(117, 69);
             this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxFirstName.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxFirstName.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxFirstName.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxFirstName.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxFirstName.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxFirstName.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxFirstName.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxFirstName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxFirstName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxFirstName.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxFirstName.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxFirstName.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxFirstName.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxFirstName.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxFirstName.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxFirstName.Properties.AutoHeight = false;
+            this.textBoxFirstName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxFirstName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxFirstName.Properties.NullText = "Chưa có thông tin.";
             this.textBoxFirstName.Properties.ReadOnly = true;
             this.textBoxFirstName.Size = new System.Drawing.Size(246, 20);
             this.textBoxFirstName.TabIndex = 4;
@@ -407,5 +552,6 @@
         private System.Windows.Forms.Label labelPassPort;
         private System.Windows.Forms.Label labelCMND;
         private Controls.StyledButton buttonCancel;
+        private QLKS.Controls.StyledButton buttonSetOwner;
     }
 }

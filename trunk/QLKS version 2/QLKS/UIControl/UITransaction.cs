@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -83,83 +83,34 @@ namespace QLKS.UIControl
 
         private void SubmitCheckIn()
         {
-            RegData.UpdateCustomers();
-            bool IsGroup = groupInfo.IsAGroup();
-            int groupID = -1;
-            if (IsGroup == true)
-            {
-                //groupID = groupInfo.GetGroupID();
-            }
-
-            int numOfRooms = RegData.Rooms.Rows.Count;
-
-            // Scan room list
-            for (int i = 0; i < numOfRooms; i++)
-            {
-                string roomNumber = RegData.Rooms.Rows[i]["RoomID"].ToString();
-                int ticketID = -1;
-                int numOfCustomers = RegData.Customers.Rows.Count;
-                
-                // Scan customer list
-                for (int j = 0; j < numOfCustomers; j++)
-                {
-                    string roomNumber2 = RegData.Customers.Rows[j]["RoomNumber"].ToString();
-                    if (roomNumber2.Equals(roomNumber))
-                    {
-                        if (ticketID == -1)
-                        {
-                            VO.PhieuThuePhongVO item = new VO.PhieuThuePhongVO();
-                            if (groupID != -1)
-                                item.MA_DOAN_KHACH = groupID;
-                            item.MA_KHACH_HANG = Int32.Parse(RegData.Customers.Rows[j]["CustomerID"].ToString());
-                            item.MA_PHONG = Int32.Parse(RegData.Customers.Rows[j]["RoomNumber"].ToString());
-                            //item.NGAY_NHAN_PHONG = DateTime.Parse(dateCheckIn.Text);
-                            //item.NGAY_TRA_PHONG = DateTime.Parse(dateCheckOut.Text);
-                            BUS.PhieuThuePhongBUS bus = new BUS.PhieuThuePhongBUS();
-                            try
-                            {
-                                int result = bus.Insert(item);
-                                if (result == 0)
-                                {
-                                    //code here
-                                }//end if there're some errors
-
-                                ticketID = result;
-                            }//end try
-                            catch (Exception e)
-                            {
-                                MessageBox.Show(e.Message);
-                            }//end catch
-                        }//end if : set owner
-                        else
-                        {
-                            VO.KhachTroVO ktItem = new VO.KhachTroVO();
-                            ktItem.MA_PHIEU = ticketID;
-                            ktItem.MA_KHACH_HANG = Int32.Parse(RegData.Customers.Rows[j]["CustomerID"].ToString());
-                            BUS.KhachTroBUS ktBus = new BUS.KhachTroBUS();
-                            try {
-                                int result2 = ktBus.Insert(ktItem);
-                                if (result2 != 0)
-                                {
-                                   
-                                }//end if
-                            }//end try
-                            catch( Exception e ) {
-                                MessageBox.Show(e.Message);                      
-                            }//end catch                         
-
-                        }//end else
-
-                    }//end if : room number matched
-                }//end for : customers
-
-            }//end for : rooms
+            try {
+                RegData.SubmitCheckIn();
+                DialogResult result = Notice.ShowConfirm("Đăng ký phòng thành công. Tiếp tục đăng ký?", "Đăng Ký Thành Công");
+                if (result == DialogResult.Yes)
+                    Reset();
+                else
+                    ParentForm.Close();
+            }//end try
+            catch(Exception ex) {
+                Notice.ShowError(ex.Message);
+                return;
+            }//end catch
         }//end method SubmitCheckIn
 
         private void SubmitBooking()
         {
 
         }//end method SubmitBooking
+
+        private void Reset() 
+        {
+            this.RegData.Reset();
+
+            generalInfo.Reset();
+            groupInfo.Reset();
+            customerInfo.Reset();
+            roomInfo.Reset();
+        }//end method Reset
 
        #endregion //end region Methods
 
@@ -216,6 +167,11 @@ namespace QLKS.UIControl
 
         private RegData regData;
        #endregion Instance Fields
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }//end method buttonCancel_Click
 
 
     }//end class UITransaction

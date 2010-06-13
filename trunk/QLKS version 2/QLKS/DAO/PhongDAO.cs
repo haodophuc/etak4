@@ -64,8 +64,8 @@ namespace QLKS.DAO
             try
             {
                 String query = "SELECT PHONG.MA_PHONG, PHONG.SO_PHONG, TEN_LOAI_PHONG, SO_GIUONG, GIA_THAM_KHAO " +
-                                 "FROM PHONG, LOAI_PHONG " +
-                                 "WHERE PHONG.MA_LOAI_PHONG = LOAI_PHONG.MA_LOAI_PHONG AND PHONG.MA_TINH_TRANG = 1";
+                               "FROM PHONG, LOAI_PHONG " +
+                               "WHERE PHONG.MA_LOAI_PHONG = LOAI_PHONG.MA_LOAI_PHONG AND PHONG.MA_TINH_TRANG = 1";
                 return Program.DBConnection.ExecuteSelectQuery(query);
             }//end try
             catch (Exception e)
@@ -127,6 +127,24 @@ namespace QLKS.DAO
                 throw e;
             }
         }
+
+        public int SetRoomState(int roomID, Base.TableRooms.RoomState state)
+        {
+            try {
+                String query = "UPDATE PHONG SET MA_TINH_TRANG=@MA_TINH_TRANG " +
+                               "WHERE MA_PHONG=@SO_PHONG";
+
+                SqlParameter[] param = new SqlParameter[2];
+
+                param[0] = new SqlParameter("@MA_TINH_TRANG", state);
+                param[1] = new SqlParameter("@SO_PHONG", roomID);
+
+                return Program.DBConnection.ExecuteNonQuery(query, param);
+            }//end try
+            catch {
+                throw;
+            }//end catch
+        }//end method SetRoomState
        
         public int GetLastIdentity()
         {

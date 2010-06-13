@@ -48,7 +48,7 @@ namespace QLKS.Base
 
         }//end method Initialize
 
-        public void UpdateCustomers()
+        public void InsertCustomers()
         {
 
             try

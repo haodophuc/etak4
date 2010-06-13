@@ -24,6 +24,10 @@ namespace QLKS.Base
             // Add tables to dataset
             CheckInDataSet.Tables.AddRange( new DataTable[] { Customers, Rooms, Groups } );
 
+            DataRelation relation = new DataRelation("OwnerIDRelation", Customers.Columns["CustomerID"], Rooms.Columns["OwnerID"], true);
+
+            CheckInDataSet.Relations.Add(relation);
+
             agent = new RegDataDAO(this);
 
         }//end method RegData
@@ -67,7 +71,31 @@ namespace QLKS.Base
         {
 
             try {
-                agent.UpdateCustomers();
+                int numOfCustomers = Customers.Rows.Count;
+
+                for (int i = 0; i < numOfCustomers; i++)
+                {
+                    if (Customers.Rows[i]["IsNew"].ToString().Equals(Boolean.TrueString))
+                    {
+                        VO.KhachHangVO customer = new QLKS.VO.KhachHangVO();
+                        BUS.KhachHangBUS bus = new QLKS.BUS.KhachHangBUS();
+
+                        customer.MA_QUOC_GIA = (int)Customers.Rows[i]["CountryID"];
+                        customer.HO_KHACH_HANG = Customers.Rows[i]["LastName"].ToString();
+                        customer.TEN_KHACH_HANG = Customers.Rows[i]["FirstName"].ToString();
+                        customer.CMND = Customers.Rows[i]["SocialID"].ToString();
+                        customer.HO_CHIEU = Customers.Rows[i]["PassPort"].ToString();
+                        customer.DIEN_THOAI = Customers.Rows[i]["Phone"].ToString();
+
+                        // Get new identity
+                        int newid = bus.InsertAndGetID(customer);
+
+                        // Sync new identity with table on memory
+                        Customers.Rows[i]["CustomerID"] = newid;
+                        Customers.Rows[i]["IsNew"] = false;
+
+                    }//end if: new customers
+                }//end for
             }//end try
             catch {
                 throw;
@@ -75,10 +103,102 @@ namespace QLKS.Base
             
         }//emd method Update
 
+        public void SetRoomOwner(int roomID, int ownerID )
+        {
+            string roomfilter = "RoomID =" + roomID.ToString();
+            DataRow room = Rooms.Select(roomfilter)[0];
+
+            // Get given owner's name
+            string customerfilter = "CustomerID = " + ownerID.ToString();
+            DataRow newOwner = Customers.Select(customerfilter)[0];
+            string newOwnerName = newOwner["LastName"].ToString() + newOwner["FirstName"].ToString();
+
+            int oldOwnerID = -1;
+
+            if (room["Owner"].ToString() != String.Empty)
+            {
+                oldOwnerID = (int)room["OwnerID"];
+                customerfilter = "CustomerID =" + oldOwnerID.ToString();
+                DataRow oldOwner = Customers.Select(customerfilter)[0];
+                oldOwner["IsOwner"] = false;
+            }//end if : room has an owner
+
+            room["OwnerID"] = ownerID;
+            room["Owner"] = newOwnerName;
+            newOwner["IsOwner"] = true;
+        }//end method SetOwner
+
         public void SubmitCheckIn()
         {
-            // Update table Customers, if there are new customers, add to database.
-            UpdateCustomers();
+            try {
+                // Update table Customers, if there are new customers, add to database.
+                UpdateCustomers();
+
+                int groupID = -1;
+
+                // Check if there is group
+                if (Groups.Rows.Count == 1)
+                    groupID = (int)Groups.Rows[0]["GroupID"];
+
+                // Get rooms
+                int numOfRooms = Rooms.Rows.Count;
+
+                // Scan room list to register to PHIEU_THUE_PHONG
+                for (int i = 0; i < numOfRooms; i++)
+                {
+                    VO.PhieuThuePhongVO ticket = new VO.PhieuThuePhongVO();
+                    BUS.PhieuThuePhongBUS bus = new QLKS.BUS.PhieuThuePhongBUS();
+
+                    // Set customer id
+                    ticket.MA_KHACH_HANG = (int)Rooms.Rows[i]["OwnerID"];
+
+                    // Set group id
+                    if (groupID != -1)
+                        ticket.MA_DOAN_KHACH = groupID;
+                    else
+                        ticket.MA_DOAN_KHACH = groupID;
+                    ticket.MA_PHONG = (int)Rooms.Rows[i]["RoomID"];
+                    ticket.NGAY_NHAN_PHONG = CheckInDay;
+
+                    // Insert and get the new id
+                    int ticketID = bus.InsertAndGetID(ticket);
+                    
+                    // Update room ticker id
+                    Rooms.Rows[i]["TicketID"] = ticketID;
+
+                    // Set room state to busy
+                    BUS.PhongBUS roomBus = new QLKS.BUS.PhongBUS();
+                    roomBus.SetRoomState(ticket.MA_PHONG, TableRooms.RoomState.Busy);
+
+                }//end for : scan all rooms
+
+                // Scan all customer to register to table KHACH_TRO
+                int numOfCustomers = Customers.Rows.Count;
+
+                for (int j = 0; j < numOfCustomers; j++)
+                {
+                    int roomNumber = (int)Customers.Rows[j]["RoomNumber"];
+
+                    string filter = "RoomID = " + roomNumber.ToString();
+                    DataRow matchedRoom = Rooms.Select(filter)[0];
+
+                    VO.KhachTroVO ktRow = new QLKS.VO.KhachTroVO();
+                    ktRow.MA_KHACH_HANG = (int)Customers.Rows[j]["CustomerID"];
+                    ktRow.MA_PHIEU = (int)matchedRoom["TicketID"];
+
+                    BUS.KhachTroBUS ktBus = new QLKS.BUS.KhachTroBUS();
+                    int result = ktBus.Insert(ktRow);
+                    if (result <= 0)
+                        throw new Exception("Không thể thêm dữ liệu vào bảng Khách Trọ");
+                        
+                }//end for : scan all customers
+
+            
+            }//end try
+            catch {
+                throw;            
+            }//end catch
+            
 
 
         }//end method SubmitCheckIn
@@ -88,10 +208,18 @@ namespace QLKS.Base
 
         }//end method SubmitBooking
 
+        public void Reset()
+        {
+            Groups.Rows.Clear();
+            Rooms.Rows.Clear();
+            Customers.Rows.Clear();
+            
+        }//end method Reset()
+
        #endregion //end region Methods
 
 
-       #region Attributes
+       #region  Attributes
 
         public DataSet CheckInDataSet
         { 
@@ -123,6 +251,18 @@ namespace QLKS.Base
             set { this.companies = value; }
         }//end attribute Companies
 
+        public DateTime CheckInDay
+        {
+            get { return checkInDay; }
+            set { this.checkInDay = value; }
+        }//end attribute CheckInDay
+
+        public DateTime CheckOutDay
+        {
+            get { return checkOutDay; }
+            set { this.checkOutDay = value; }
+        }//end attribute CheckOutDay
+
        #endregion //end region Attributes
 
 
@@ -133,7 +273,8 @@ namespace QLKS.Base
         private TableRooms rooms;
 
         private DataSet checkInData;
-
+        private DateTime checkInDay;
+        private DateTime checkOutDay;
         private RegDataDAO agent;
        #endregion Instance Fields
 

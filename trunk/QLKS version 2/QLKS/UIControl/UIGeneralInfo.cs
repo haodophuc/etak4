@@ -22,7 +22,7 @@ namespace QLKS.UIControl
         {
             ParentUI = parent;
             SubmitMode = mode;
-            LoadControls();
+            LoadControls();            
         }//end method UIGeneralInfo
 
        #endregion //end region Constructors
@@ -41,12 +41,16 @@ namespace QLKS.UIControl
         private void LoadBookingControls()
         {
             dateCheckIn.DateTime = DateTime.Today;
+            
         }//end method LoadBookingControls()
 
         private void LoadCheckingControls()
         {
             dateCheckIn.DateTime = DateTime.Today;
+            UpdateCheckInTime();
             dateCheckIn.Enabled = false;
+            dateCheckOut.Enabled = false;
+            textBoxNumOfDays.enabled = false;
         }//end method LoadCheckingControls
 
         public void LoadData()
@@ -56,9 +60,13 @@ namespace QLKS.UIControl
             else
                 LoadGroup();
             //LoadCustomers();
-            LoadTime();
+            //LoadTime();
         }//end method LoadData
 
+        private void LoadCustomers()
+        {
+
+        }//end method LoadCustomers
 
         private void LoadNoGroup()
         {
@@ -87,15 +95,35 @@ namespace QLKS.UIControl
             labelCompanyPhoneText.Text = value["Phone"].ToString();  
         }//end method LoadGroup
 
-        private void LoadTime()
+        private void UpdateCheckInTime()
         {
-
+            ParentUI.RegData.CheckInDay = dateCheckIn.DateTime;
         }//end method LoadTime
+
+        private void UpdateCheckOutTime()
+        {
+            ParentUI.RegData.CheckOutDay = dateCheckOut.DateTime;
+        }//end method UpdateCheckOutTime
+
+        public void Reset()
+        {
+            LoadNoGroup();
+        }//end method Reset
 
        #endregion //end region Methods
 
 
        #region Event Handling Methods
+
+        private void dateCheckIn_EditValueChanged(object sender, EventArgs e)
+        {
+            UpdateCheckInTime();
+        }//end method dateCheckIn_EditValueChanged
+
+        private void dateCheckOut_EditValueChanged(object sender, EventArgs e)
+        {
+            UpdateCheckOutTime();
+        }//end method dateCheckOut_EditValueChanged
 
        #endregion //end region Event Handling Methods
 
@@ -123,6 +151,7 @@ namespace QLKS.UIControl
         private UITransaction parentUI;
 
        #endregion Instance Fields
+
 
 
     }//end class UIGeneralInfo

@@ -120,7 +120,7 @@ namespace QLKS.UIControl
 
         }//end method NewCustomer
 
-        private void Reset()
+        public void Reset()
         {
             customer = null;
             textBoxCustomerID.Text = null;
@@ -153,6 +153,7 @@ namespace QLKS.UIControl
                 row["Phone"] = customer["DIEN_THOAI"];
                 row["CountryID"] = customer["MA_QUOC_GIA"];
                 row["Country"] = customer["TEN_QUOC_GIA"];
+                row["IsOwner"] = false;
             }//end if
             else
             {
@@ -164,6 +165,7 @@ namespace QLKS.UIControl
                 row["Phone"] = textBoxPhone.Text;
                 row["CountryID"] = textBoxCountry.EditValue;
                 row["IsNew"] = true;
+                row["IsOwner"] = false;
             }//end else
 
             try {
@@ -176,6 +178,24 @@ namespace QLKS.UIControl
             Reset();
             
         }//end method AddCustomer
+
+        private void SetRoomOwner()
+        {
+            DataRow row = GridView.GetFocusedDataRow();
+
+            //String value = row["RoomNumber"].ToString();
+
+            if (row["RoomNumber"].ToString() == String.Empty)
+                Notice.ShowWarning("Khách hàng chưa được sắp phòng");
+            else
+            {
+                int roomNumber = (int)row["RoomNumber"];
+                int customerID = (int)row["CustomerID"];
+                ParentUI.RegData.SetRoomOwner((int)row["RoomNumber"], (int)row["CustomerID"]);
+            }//end else
+                
+
+        }//end method SetRoomOwner
 
         private bool VerifyData()
         {
@@ -266,6 +286,11 @@ namespace QLKS.UIControl
         private DataRow customer;
         private bool isNewCustomer;
        #endregion Instance Fields
+
+        private void buttonSetOwner_Click(object sender, EventArgs e)
+        {
+            SetRoomOwner();
+        }
 
         
     }//end class UICustomerInfoPanel

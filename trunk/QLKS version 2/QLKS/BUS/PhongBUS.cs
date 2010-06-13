@@ -89,6 +89,16 @@ namespace QLKS.BUS
                 throw e;
             }
         }
+
+        public int SetRoomState(int roomID, Base.TableRooms.RoomState state)
+        {
+            try {
+                return phongDAO.SetRoomState(roomID, state);
+            }//end try
+            catch {
+                throw;                        
+            }//end catch
+        }//end method SetRoomState
         
         public int GetNewIndentity()
         {

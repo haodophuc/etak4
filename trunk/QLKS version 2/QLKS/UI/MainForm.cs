@@ -15,6 +15,16 @@ namespace QLKS.UI
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private LoginForm loginForm;
+        private FormCheckIn checkInForm;
+        private FormBooking bookingForm;
+        private UserControlPanelForm userCPForm;
+
+        private Form_TimKiemVaChonKhachHang searchAndSelectForm;
+        private UserManagementForm userManagementForm;
+
+
+
+
         private String currentUserName;
         public MainForm()
         {
@@ -40,7 +50,8 @@ namespace QLKS.UI
         private void loginMenuItem_Click(object sender, EventArgs e)
         {
             // show login form as modal dialog
-            loginForm.ShowDialog();
+            if( loginForm != null )
+                loginForm.ShowDialog();
         }
 
         private void logoutMenuItem_Click(object sender, EventArgs e)
@@ -58,25 +69,45 @@ namespace QLKS.UI
 
         private void changePasswordMenuItem_Click(object sender, EventArgs e)
         {
-            UserControlPanelForm userCPForm = new UserControlPanelForm(currentUserName);
-            userCPForm.MdiParent = this;
-            userCPForm.Show();
+            if (userCPForm == null)
+            {
+                userCPForm = new UserControlPanelForm(currentUserName);
+                userCPForm.MdiParent = this;
+                userCPForm.Show();
+            }
+            else
+                userCPForm.Activate();
         }
         #endregion
 
         #region Transaction Menu
         private void bookRoomMenuItem_Click(object sender, EventArgs e)
         {
-            FormBooking bookingForm = new FormBooking();
-            bookingForm.MdiParent = this;
-            bookingForm.Show();
+            if (bookingForm == null)
+            {
+                bookingForm = new FormBooking();
+                bookingForm.MdiParent = this;
+                bookingForm.Show();
+            }//end if
+            else
+            {
+                bookingForm.Activate();
+            }//end else
+            
         }
 
         private void checkInMenuItem_Click(object sender, EventArgs e)
         {
-            FormCheckIn checkInForm = new FormCheckIn();
-            checkInForm.MdiParent = this;
-            checkInForm.Show();
+            if (checkInForm == null || checkInForm.IsDisposed )
+            {
+                checkInForm = new FormCheckIn();
+                checkInForm.MdiParent = this;
+                checkInForm.Show();
+            }//end if
+            else
+            {
+                checkInForm.Activate();
+            }//end else
         }
 
         private void checkOutMenuItem_Click(object sender, EventArgs e)
@@ -196,17 +227,31 @@ namespace QLKS.UI
         #region User Management
         private void userManagementMenuItem_Click(object sender, EventArgs e)
         {
-            UserManagementForm userManagementForm = new UserManagementForm();
-            userManagementForm.MdiParent = this;
-            userManagementForm.Show();
+            if (userManagementForm == null)
+            {
+                userManagementForm = new UserManagementForm();
+                userManagementForm.MdiParent = this;
+                userManagementForm.Show();
+            }
+            else
+            {
+                userManagementForm.Activate();
+            }
         }
         #endregion
 
         private void searchAndSelectCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            Form_TimKiemVaChonKhachHang searchAndSelectForm = new Form_TimKiemVaChonKhachHang();
-            searchAndSelectForm.MdiParent = this;
-            searchAndSelectForm.Show();
+            if (searchAndSelectForm == null)
+            {
+                searchAndSelectForm = new Form_TimKiemVaChonKhachHang();
+                searchAndSelectForm.MdiParent = this;
+                searchAndSelectForm.Show();
+            }
+            else
+            {
+                searchAndSelectForm.Activate();
+            }
         }
 
         #region Helpers
