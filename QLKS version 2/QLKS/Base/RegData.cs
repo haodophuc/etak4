@@ -18,11 +18,11 @@ namespace QLKS.Base
             // Create tables
             Customers = new TableCustomers();
             Rooms = new TableRooms();
-            //Groups = new TableGroups();           
+            Groups = new TableGroups();           
             //Companies = new TableCompanies();
 
             // Add tables to dataset
-            CheckInDataSet.Tables.AddRange( new DataTable[] { Customers, Rooms } );
+            CheckInDataSet.Tables.AddRange( new DataTable[] { Customers, Rooms, Groups } );
 
             agent = new RegDataDAO(this);
 
@@ -74,6 +74,19 @@ namespace QLKS.Base
             }//end catch          
             
         }//emd method Update
+
+        public void SubmitCheckIn()
+        {
+            // Update table Customers, if there are new customers, add to database.
+            UpdateCustomers();
+
+
+        }//end method SubmitCheckIn
+
+        public void SubmitBooking()
+        {
+
+        }//end method SubmitBooking
 
        #endregion //end region Methods
 

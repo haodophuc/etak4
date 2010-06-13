@@ -29,8 +29,8 @@ namespace QLKS.Controls
 
             // Set disable appearance
             this.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
-            this.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkGray;
-            this.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.Gray;
+            this.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
 
             // Set nulltext
             this.Properties.NullText = StyledTextBox.DefaultNullText;

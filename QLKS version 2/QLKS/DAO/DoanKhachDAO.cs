@@ -146,7 +146,7 @@ namespace QLKS.DAO
         {
             try
             {
-                String query = "SELECT DOAN_KHACH.MA_DOAN_KHACH, DOAN_KHACH.MA_CONG_TY, MA_QUOC_GIA, MA_NGUOI_DAI_DIEN, NGAY_DEN, TEN_CONG_TY " +
+                String query = "SELECT DOAN_KHACH.MA_DOAN_KHACH, DOAN_KHACH.MA_CONG_TY, NGAY_DEN, TEN_CONG_TY " +
                                "FROM DOAN_KHACH, CONG_TY " +
                                "WHERE DOAN_KHACH.MA_CONG_TY = CONG_TY.MA_CONG_TY";
                 return Program.DBConnection.ExecuteSelectQuery(query);
@@ -158,5 +158,6 @@ namespace QLKS.DAO
 
 
         }//end method LoadFind
+
     }//end class DoanKhachDAO
 }//end namespace

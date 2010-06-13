@@ -1,4 +1,4 @@
-namespace QLKS.UI
+﻿namespace QLKS.UI
 {
     partial class  Form_TimKiemvaChonPhongTrong
     {
@@ -30,14 +30,19 @@ namespace QLKS.UI
         {
             this.SuspendLayout();
             // 
-            //  Form_TimKiemvaChonPhongTrong
+            // Form_TimKiemvaChonPhongTrong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 527);
-            this.Name = " Form_TimKiemvaChonPhongTrong";
-            this.Text = " Form_TimKiemvaChonPhongTrong";
-            this.Load += new System.EventHandler(this. Form_TimKiemvaChonPhongTrong_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
+            this.Name = "Form_TimKiemvaChonPhongTrong";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Thông Tin Các Phòng Còn Trống";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.Form_TimKiemvaChonPhongTrong_Load);
             this.ResumeLayout(false);
 
         }

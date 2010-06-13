@@ -57,6 +57,7 @@
             this.statisticMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatisticRoomMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItem_DoanhThu = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SkinMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,12 +68,11 @@
             this.iMaginaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.MenuItem_DoanhThu = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabbedManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.skinController = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.mainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedManager)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -120,21 +120,21 @@
             // loginMenuItem
             // 
             this.loginMenuItem.Name = "loginMenuItem";
-            this.loginMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.loginMenuItem.Size = new System.Drawing.Size(153, 22);
             this.loginMenuItem.Text = "Đăng nhập";
             this.loginMenuItem.Click += new System.EventHandler(this.loginMenuItem_Click);
             // 
             // logoutMenuItem
             // 
             this.logoutMenuItem.Name = "logoutMenuItem";
-            this.logoutMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.logoutMenuItem.Size = new System.Drawing.Size(153, 22);
             this.logoutMenuItem.Text = "Đăng xuất";
             this.logoutMenuItem.Click += new System.EventHandler(this.logoutMenuItem_Click);
             // 
             // changePasswordMenuItem
             // 
             this.changePasswordMenuItem.Name = "changePasswordMenuItem";
-            this.changePasswordMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.changePasswordMenuItem.Size = new System.Drawing.Size(153, 22);
             this.changePasswordMenuItem.Text = "Đổi mật khẩu";
             this.changePasswordMenuItem.Click += new System.EventHandler(this.changePasswordMenuItem_Click);
             // 
@@ -151,21 +151,21 @@
             // bookRoomMenuItem
             // 
             this.bookRoomMenuItem.Name = "bookRoomMenuItem";
-            this.bookRoomMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.bookRoomMenuItem.Size = new System.Drawing.Size(163, 22);
             this.bookRoomMenuItem.Text = "Đặt phòng";
             this.bookRoomMenuItem.Click += new System.EventHandler(this.bookRoomMenuItem_Click);
             // 
             // checkInMenuItem
             // 
             this.checkInMenuItem.Name = "checkInMenuItem";
-            this.checkInMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.checkInMenuItem.Size = new System.Drawing.Size(163, 22);
             this.checkInMenuItem.Text = "Đăng ký phòng";
             this.checkInMenuItem.Click += new System.EventHandler(this.checkInMenuItem_Click);
             // 
             // checkOutMenuItem
             // 
             this.checkOutMenuItem.Name = "checkOutMenuItem";
-            this.checkOutMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.checkOutMenuItem.Size = new System.Drawing.Size(163, 22);
             this.checkOutMenuItem.Text = "Trả phòng";
             this.checkOutMenuItem.Click += new System.EventHandler(this.checkOutMenuItem_Click);
             // 
@@ -181,14 +181,14 @@
             // serviceMenuItem
             // 
             this.serviceMenuItem.Name = "serviceMenuItem";
-            this.serviceMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.serviceMenuItem.Size = new System.Drawing.Size(167, 22);
             this.serviceMenuItem.Text = "Quản lý dịch vụ";
             this.serviceMenuItem.Click += new System.EventHandler(this.serviceMenuItem_Click);
             // 
             // serviceOrderMenuItem
             // 
             this.serviceOrderMenuItem.Name = "serviceOrderMenuItem";
-            this.serviceOrderMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.serviceOrderMenuItem.Size = new System.Drawing.Size(167, 22);
             this.serviceOrderMenuItem.Text = "Đăng ký dịch vụ";
             this.serviceOrderMenuItem.Click += new System.EventHandler(this.serviceOrderMenuItem_Click);
             // 
@@ -205,21 +205,21 @@
             // searchCustomerMenuItem
             // 
             this.searchCustomerMenuItem.Name = "searchCustomerMenuItem";
-            this.searchCustomerMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.searchCustomerMenuItem.Size = new System.Drawing.Size(145, 22);
             this.searchCustomerMenuItem.Text = "Khách hàng";
             this.searchCustomerMenuItem.Click += new System.EventHandler(this.searchCustomerMenuItem_Click);
             // 
             // searchCompanyMenuItem
             // 
             this.searchCompanyMenuItem.Name = "searchCompanyMenuItem";
-            this.searchCompanyMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.searchCompanyMenuItem.Size = new System.Drawing.Size(145, 22);
             this.searchCompanyMenuItem.Text = "Công ty";
             this.searchCompanyMenuItem.Click += new System.EventHandler(this.searchCompanyMenuItem_Click);
             // 
             // searchCustomerGroupMenuItem
             // 
             this.searchCustomerGroupMenuItem.Name = "searchCustomerGroupMenuItem";
-            this.searchCustomerGroupMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.searchCustomerGroupMenuItem.Size = new System.Drawing.Size(145, 22);
             this.searchCustomerGroupMenuItem.Text = "Đoàn khách";
             this.searchCustomerGroupMenuItem.Click += new System.EventHandler(this.searchCustomerGroupMenuItem_Click);
             // 
@@ -239,42 +239,42 @@
             // customerMenuItem
             // 
             this.customerMenuItem.Name = "customerMenuItem";
-            this.customerMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.customerMenuItem.Size = new System.Drawing.Size(204, 22);
             this.customerMenuItem.Text = "Khách hàng";
             this.customerMenuItem.Click += new System.EventHandler(this.customerMenuItem_Click);
             // 
             // customerGroupMenuItem
             // 
             this.customerGroupMenuItem.Name = "customerGroupMenuItem";
-            this.customerGroupMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.customerGroupMenuItem.Size = new System.Drawing.Size(204, 22);
             this.customerGroupMenuItem.Text = "Đoàn khách";
             this.customerGroupMenuItem.Click += new System.EventHandler(this.customerGroupMenuItem_Click);
             // 
             // roomMenuItem
             // 
             this.roomMenuItem.Name = "roomMenuItem";
-            this.roomMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.roomMenuItem.Size = new System.Drawing.Size(204, 22);
             this.roomMenuItem.Text = "Phòng";
             this.roomMenuItem.Click += new System.EventHandler(this.roomMenuItem_Click);
             // 
             // rentRoomBillMenuItem
             // 
             this.rentRoomBillMenuItem.Name = "rentRoomBillMenuItem";
-            this.rentRoomBillMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.rentRoomBillMenuItem.Size = new System.Drawing.Size(204, 22);
             this.rentRoomBillMenuItem.Text = "Phiếu Thuê Phòng";
             this.rentRoomBillMenuItem.Click += new System.EventHandler(this.rentRoomBillMenuItem_Click);
             // 
             // PhiếuThuDoanKhachToolStripMenuItem
             // 
             this.PhiếuThuDoanKhachToolStripMenuItem.Name = "PhiếuThuDoanKhachToolStripMenuItem";
-            this.PhiếuThuDoanKhachToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.PhiếuThuDoanKhachToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.PhiếuThuDoanKhachToolStripMenuItem.Text = "Phiếu Thu Đoàn Khách";
             this.PhiếuThuDoanKhachToolStripMenuItem.Click += new System.EventHandler(this.PhiếuThuDoanKhachToolStripMenuItem_Click);
             // 
             // phiếuThuKháchHàngToolStripMenuItem
             // 
             this.phiếuThuKháchHàngToolStripMenuItem.Name = "phiếuThuKháchHàngToolStripMenuItem";
-            this.phiếuThuKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.phiếuThuKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.phiếuThuKháchHàngToolStripMenuItem.Text = "Phiếu Thu Khách Hàng";
             this.phiếuThuKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.phiếuThuKháchHàngToolStripMenuItem_Click);
             // 
@@ -291,16 +291,23 @@
             // StatisticCustomerMenuItem
             // 
             this.StatisticCustomerMenuItem.Name = "StatisticCustomerMenuItem";
-            this.StatisticCustomerMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.StatisticCustomerMenuItem.Size = new System.Drawing.Size(199, 22);
             this.StatisticCustomerMenuItem.Text = "Số lượng khách";
             this.StatisticCustomerMenuItem.Click += new System.EventHandler(this.StatisticCustomerMenuItem_Click);
             // 
             // StatisticRoomMenuItem
             // 
             this.StatisticRoomMenuItem.Name = "StatisticRoomMenuItem";
-            this.StatisticRoomMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.StatisticRoomMenuItem.Size = new System.Drawing.Size(199, 22);
             this.StatisticRoomMenuItem.Text = "Hệ Số Sử Dụng Phòng";
             this.StatisticRoomMenuItem.Click += new System.EventHandler(this.StatisticRoomMenuItem_Click);
+            // 
+            // MenuItem_DoanhThu
+            // 
+            this.MenuItem_DoanhThu.Name = "MenuItem_DoanhThu";
+            this.MenuItem_DoanhThu.Size = new System.Drawing.Size(199, 22);
+            this.MenuItem_DoanhThu.Text = "Doanh Thu";
+            this.MenuItem_DoanhThu.Click += new System.EventHandler(this.MenuItem_DoanhThu_Click);
             // 
             // userManagementMenu
             // 
@@ -313,7 +320,7 @@
             // userManagementMenuItem
             // 
             this.userManagementMenuItem.Name = "userManagementMenuItem";
-            this.userManagementMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.userManagementMenuItem.Size = new System.Drawing.Size(190, 22);
             this.userManagementMenuItem.Text = "Quản trị người dùng";
             this.userManagementMenuItem.Click += new System.EventHandler(this.userManagementMenuItem_Click);
             // 
@@ -334,68 +341,62 @@
             // caramelToolStripMenuItem
             // 
             this.caramelToolStripMenuItem.Name = "caramelToolStripMenuItem";
-            this.caramelToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.caramelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.caramelToolStripMenuItem.Text = "Caramel";
             this.caramelToolStripMenuItem.Click += new System.EventHandler(this.camerekToolStripMenuItem_Click);
             // 
             // moneyTwinsToolStripMenuItem
             // 
             this.moneyTwinsToolStripMenuItem.Name = "moneyTwinsToolStripMenuItem";
-            this.moneyTwinsToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.moneyTwinsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.moneyTwinsToolStripMenuItem.Text = "Money Twins";
             this.moneyTwinsToolStripMenuItem.Click += new System.EventHandler(this.moneyTwinsToolStripMenuItem_Click);
             // 
             // lilianToolStripMenuItem
             // 
             this.lilianToolStripMenuItem.Name = "lilianToolStripMenuItem";
-            this.lilianToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.lilianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lilianToolStripMenuItem.Text = "Lilian";
             this.lilianToolStripMenuItem.Click += new System.EventHandler(this.lilianToolStripMenuItem_Click);
             // 
             // theAsphaltWorldToolStripMenuItem
             // 
             this.theAsphaltWorldToolStripMenuItem.Name = "theAsphaltWorldToolStripMenuItem";
-            this.theAsphaltWorldToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.theAsphaltWorldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.theAsphaltWorldToolStripMenuItem.Text = "The Asphalt World";
             this.theAsphaltWorldToolStripMenuItem.Click += new System.EventHandler(this.theAsphaltWorldToolStripMenuItem_Click);
             // 
             // iMaginaryToolStripMenuItem
             // 
             this.iMaginaryToolStripMenuItem.Name = "iMaginaryToolStripMenuItem";
-            this.iMaginaryToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.iMaginaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iMaginaryToolStripMenuItem.Text = "iMaginary";
             this.iMaginaryToolStripMenuItem.Click += new System.EventHandler(this.iMaginaryToolStripMenuItem_Click);
             // 
             // blackToolStripMenuItem
             // 
             this.blackToolStripMenuItem.Name = "blackToolStripMenuItem";
-            this.blackToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.blackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.blackToolStripMenuItem.Text = "Black";
             this.blackToolStripMenuItem.Click += new System.EventHandler(this.blackToolStripMenuItem_Click);
             // 
             // blueToolStripMenuItem
             // 
             this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
-            this.blueToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.blueToolStripMenuItem.Text = "Blue";
             this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
             // 
-            // xtraTabbedMdiManager1
+            // tabbedManager
             // 
-            this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
-            this.xtraTabbedMdiManager1.MdiParent = this;
+            this.tabbedManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.tabbedManager.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
+            this.tabbedManager.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
+            this.tabbedManager.MdiParent = this;
             // 
-            // defaultLookAndFeel1
+            // skinController
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
-            // 
-            // MenuItem_DoanhThu
-            // 
-            this.MenuItem_DoanhThu.Name = "MenuItem_DoanhThu";
-            this.MenuItem_DoanhThu.Size = new System.Drawing.Size(191, 22);
-            this.MenuItem_DoanhThu.Text = "Doanh Thu";
-            this.MenuItem_DoanhThu.Click += new System.EventHandler(this.MenuItem_DoanhThu_Click);
+            this.skinController.LookAndFeel.SkinName = "iMaginary";
             // 
             // MainForm
             // 
@@ -417,7 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,8 +449,8 @@
         private System.Windows.Forms.ToolStripMenuItem StatisticCustomerMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StatisticRoomMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userManagementMenu;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabbedManager;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel skinController;
         private System.Windows.Forms.ToolStripMenuItem SkinMenu;
         private System.Windows.Forms.ToolStripMenuItem caramelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moneyTwinsToolStripMenuItem;

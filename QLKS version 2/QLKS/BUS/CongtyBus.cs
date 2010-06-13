@@ -76,6 +76,15 @@ namespace QLKS.BUS
                 throw e;
             }
         }
+        public DataRow LoadDetail(int companyid)
+        {
+            try {
+                return congtyDAO.LoadDetail(companyid);
+            }//end try
+            catch {
+                throw;
+            }//end catch
+        }//end method LoadDetail
        #endregion
     }
 }

@@ -27,8 +27,17 @@ namespace QLKS.Base
             groupId.AutoIncrementStep = -1;
 
             // Create other fields
+            cols.Add("GroupName", typeof(String));
             cols.Add("CompanyID", typeof(Int32));
             cols.Add("CheckInDay", typeof(DateTime));
+            cols.Add("CompanyName", typeof(String));
+            cols.Add("Country", typeof(String));
+            cols.Add("Address", typeof(String));
+            cols.Add("Phone", typeof(String));
+            cols.Add("Fax", typeof(String));
+            cols.Add("Email", typeof(String));
+            cols.Add("AgentName", typeof(String));
+            cols.Add("AgentPhone", typeof(String));
 
             // Set primary key
             this.PrimaryKey = new DataColumn[] { cols["GroupID"] };

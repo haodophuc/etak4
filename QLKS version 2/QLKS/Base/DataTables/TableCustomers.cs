@@ -33,7 +33,8 @@ namespace QLKS.Base
             cols.Add("RoomNumber", typeof(String)).Caption = "Số Phòng";
             cols.Add("RoomID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
             cols.Add("GroupID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
-            cols.Add("CountryID", typeof(Int32)).Caption = "Mã Quốc Gia";
+            cols.Add("CountryID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
+            cols.Add("Country", typeof(String)).Caption = "Quốc Gia";
             cols.Add("LastName", typeof(String)).Caption = "Họ Khách Hàng";
             cols.Add("FirstName", typeof(String)).Caption = "Tên Khách Hàng";
             cols.Add("SocialID", typeof(String)).Caption = "CMND";
