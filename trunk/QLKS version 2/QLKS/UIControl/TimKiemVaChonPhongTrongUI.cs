@@ -29,7 +29,7 @@ namespace QLKS.UIControl
         }
         private void Close()
         {
-            this.ParentForm.Dispose();
+            this.ParentForm.Close();
         }
 
    

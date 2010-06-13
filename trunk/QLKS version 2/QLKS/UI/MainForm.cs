@@ -67,9 +67,9 @@ namespace QLKS.UI
         #region Transaction Menu
         private void bookRoomMenuItem_Click(object sender, EventArgs e)
         {
-            Form_DatPhong bookRoomForm = new Form_DatPhong();
-            bookRoomForm.MdiParent = this;
-            bookRoomForm.Show();
+            FormBooking bookingForm = new FormBooking();
+            bookingForm.MdiParent = this;
+            bookingForm.Show();
         }
 
         private void checkInMenuItem_Click(object sender, EventArgs e)
@@ -285,44 +285,42 @@ namespace QLKS.UI
         #region skins
         private void camerekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "Caramel";
+            skinController.LookAndFeel.SkinName = "Caramel";
         }
 
         private void moneyTwinsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "Money Twins";
+            skinController.LookAndFeel.SkinName = "Money Twins";
         }
 
         private void lilianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "Lilian";
+            skinController.LookAndFeel.SkinName = "Lilian";
         }
            
 
         private void theAsphaltWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "The Asphalt World";
+            skinController.LookAndFeel.SkinName = "The Asphalt World";
         }
 
         private void iMaginaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "iMaginary";
+            skinController.LookAndFeel.SkinName = "iMaginary";
         }
 
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "Black";
+            skinController.LookAndFeel.SkinName = "Black";
         }
 
         private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
+            skinController.LookAndFeel.SkinName = "Blue";
 
         }
         #endregion
 
        
-
-
-  }
+    }
 }

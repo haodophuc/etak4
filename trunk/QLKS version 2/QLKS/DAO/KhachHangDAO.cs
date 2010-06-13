@@ -187,8 +187,29 @@ namespace QLKS.DAO
                 throw;
             }//end catch
         }//end method LoadFind
+
+        public int InsertBySP(KhachHangVO kh)
+        {
+            SqlCommand cmd = new SqlCommand("SP_INSERT_CUSTOMER", Program.DBConnection.Connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter param = cmd.Parameters.AddWithValue("@IDENTITY", kh.MA_KHACH_HANG);
+            //SqlParameter param = cmd.Parameters.Add(
+            param.Direction = ParameterDirection.Output;
+
+            cmd.Parameters.AddWithValue("@MA_QUOC_GIA", kh.MA_QUOC_GIA);
+            cmd.Parameters.AddWithValue("@HO_KHACH_HANG", kh.HO_KHACH_HANG);
+            cmd.Parameters.AddWithValue("@TEN_KHACH_HANG", kh.TEN_KHACH_HANG);
+            cmd.Parameters.AddWithValue("@CMND", kh.CMND);
+            cmd.Parameters.AddWithValue("@HO_CHIEU", kh.HO_CHIEU);
+            cmd.Parameters.AddWithValue("@DIEN_THOAI", kh.DIEN_THOAI);
+
+            cmd.ExecuteNonQuery();
+            return 0;
+        }//end method InsertBySP
         
        #endregion //end region Methods
+
 
        #region Attributes
 

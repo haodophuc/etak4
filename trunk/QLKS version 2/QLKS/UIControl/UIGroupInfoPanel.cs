@@ -21,8 +21,9 @@ namespace QLKS.UIControl
             InitializeComponent();
         }//end default constructor
 
-        public UIGroupInfoPanel(Mode.SubmitMode mode) : this()
+        public UIGroupInfoPanel(UITransaction parent, Mode.SubmitMode mode) : this()
         {
+            ParentUI = parent;
             SubmitMode = mode;
             groupMode = false;
         }//end constructor
@@ -76,22 +77,58 @@ namespace QLKS.UIControl
             return textboxes;
         }//end method GetAllTextBox
 
-        public Int32 GetGroupID()
+        private void AddGroup( DataRow group, DataRow companydetail)
         {
-            if (groupMode)
-                return groupID;
-            else
-                return -1;
-        }//end method GetData();
+            // Get new datarow
+            DataRow newRow = ParentUI.RegData.Groups.NewRow();
+
+            // Set values for new row
+            newRow["GroupID"] = group["MA_DOAN_KHACH"];
+            newRow["GroupName"] = textBoxGroupID.Text;
+            newRow["CompanyID"] = group["MA_CONG_TY"];
+            newRow["CheckInDay"] = group["NGAY_DEN"];
+            newRow["CompanyName"] = group["TEN_CONG_TY"];
+            newRow["Country"] = companydetail["TEN_QUOC_GIA"];
+            newRow["Address"] = companydetail["DIA_CHI"];
+            newRow["Phone"] = companydetail["DIEN_THOAI"];
+            newRow["Fax"] = companydetail["FAX"];
+            newRow["Email"] = companydetail["EMAIL"];
+            newRow["AgentName"] = companydetail["HO_KHACH_HANG"].ToString() + " " + companydetail["TEN_KHACH_HANG"].ToString();
+            newRow["AgentPhone"] = companydetail["DIEN_THOAI_KHACH_HANG"];
+
+            // Replace the first row with the new row.
+            if (ParentUI.RegData.Groups.Rows.Count > 0)
+                ParentUI.RegData.Groups.Rows.RemoveAt(0);
+            ParentUI.RegData.Groups.Rows.Add(newRow);
+        }//end AddGroup
 
         private void LoadData( DataRow row )
         {
-            groupID = Int32.Parse(row["MA_DOAN_KHACH"].ToString());
+            groupMode = true;
+            DataRow detail = null;
             textBoxGroupID.Text = row["MA_DOAN_KHACH"].ToString();
             textBoxCheckInDay.Text = row["NGAY_DEN"].ToString();
             textBoxCompanyName.Text = row["TEN_CONG_TY"].ToString();
-            groupMode = true;
-            
+
+            try {
+                int companyid = int.Parse(row["MA_CONG_TY"].ToString());
+                BUS.CongtyBus bus = new QLKS.BUS.CongtyBus();
+                detail = bus.LoadDetail(companyid);
+
+                textBoxCountry.Text = detail["TEN_QUOC_GIA"].ToString();
+                textBoxAddress.Text = detail["DIA_CHI"].ToString();
+                textBoxPhone.Text = detail["DIEN_THOAI"].ToString();
+                textBoxFax.Text = detail["FAX"].ToString();
+                textBoxEmail.Text = detail["EMAIL"].ToString();
+
+                textBoxAgent.Text = detail["HO_KHACH_HANG"].ToString() + " " + detail["TEN_KHACH_HANG"].ToString();
+                textBoxAgentPhone.Text = detail["DIEN_THOAI_KHACH_HANG"].ToString();   
+            }//end try
+            catch( Exception ex ) {
+                Notice.ShowError(ex.Message);
+            }//end catch
+
+            AddGroup(row, detail);
         }//end method LoadData
 
         public bool IsAGroup()
@@ -116,13 +153,14 @@ namespace QLKS.UIControl
 
         private void buttonNewGroup_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(GetGroupID().ToString());
+            //MessageBox.Show(GetGroupID().ToString());
         }//end method buttonNewGroup_Click
 
        #endregion //end region Event Handling Methods
 
 
        #region Attributes
+
         public Mode.SubmitMode SubmitMode
         {
             get { return this.submitMode; }
@@ -139,14 +177,19 @@ namespace QLKS.UIControl
             }//end method set
         }//end attribute Mode
 
+        public UITransaction ParentUI
+        {
+            get { return this.parentUI; }
+            set { this.parentUI = value; }
+        }//end attribute ParentUI
 
        #endregion //end region Attributes
 
 
        #region Instance Fields
         private Mode.SubmitMode submitMode;
-        private Int32 groupID;
         private bool groupMode;
+        private UITransaction parentUI;
        #endregion Instance Fields
 
 

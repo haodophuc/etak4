@@ -35,8 +35,12 @@ namespace QLKS.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 527);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form_TimKiemVaChonKhachHang";
-            this.Text = "Form_TimKiemVaChonKhachHang";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Tìm Khách Hàng";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_TimKiemVaChonKhachHang_Load);
             this.ResumeLayout(false);
 

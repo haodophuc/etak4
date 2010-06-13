@@ -35,11 +35,18 @@ namespace QLKS.UIControl
 
         private void LoadControls()
         {
+            generalInfo = new UIGeneralInfo( this, this.SubmitMode);
+            generalInfo.Dock = DockStyle.Fill;
+            tabPageGeneral.Controls.Add(generalInfo);
+            // bring back to z-order 0;
+            generalInfo.BringToFront();
+          
+
             roomInfo = new UIRoomInfoPanel( this, this.SubmitMode );
             roomInfo.Dock = DockStyle.Fill;
             tabPageRoom.Controls.Add( roomInfo );
 
-            groupInfo = new UIGroupInfoPanel(this.SubmitMode);
+            groupInfo = new UIGroupInfoPanel(this, this.SubmitMode);
             groupInfo.Dock = DockStyle.Fill;
             tabPageGroup.Controls.Add(groupInfo);
 
@@ -56,15 +63,11 @@ namespace QLKS.UIControl
 
         private void LoadCheckInControls()
         {
-            dateCheckIn.DateTime = DateTime.Today;
-            dateCheckIn.Enabled = false;
-
             buttonBooking.Enabled = false;
         }//end method LoadCheckInControls
 
         private void LoadBookingControls()
         {
-            dateCheckIn.DateTime = DateTime.Today;
             buttonCheckIn.Enabled = false;
         }//end method LoadBookingControls
 
@@ -85,7 +88,7 @@ namespace QLKS.UIControl
             int groupID = -1;
             if (IsGroup == true)
             {
-                groupID = groupInfo.GetGroupID();
+                //groupID = groupInfo.GetGroupID();
             }
 
             int numOfRooms = RegData.Rooms.Rows.Count;
@@ -110,8 +113,8 @@ namespace QLKS.UIControl
                                 item.MA_DOAN_KHACH = groupID;
                             item.MA_KHACH_HANG = Int32.Parse(RegData.Customers.Rows[j]["CustomerID"].ToString());
                             item.MA_PHONG = Int32.Parse(RegData.Customers.Rows[j]["RoomNumber"].ToString());
-                            item.NGAY_NHAN_PHONG = DateTime.Parse(dateCheckIn.Text);
-                            item.NGAY_TRA_PHONG = DateTime.Parse(dateCheckOut.Text);
+                            //item.NGAY_NHAN_PHONG = DateTime.Parse(dateCheckIn.Text);
+                            //item.NGAY_TRA_PHONG = DateTime.Parse(dateCheckOut.Text);
                             BUS.PhieuThuePhongBUS bus = new BUS.PhieuThuePhongBUS();
                             try
                             {
@@ -165,7 +168,8 @@ namespace QLKS.UIControl
 
         private void tabContainer_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-
+            if (e.Page == tabPageGeneral)
+                generalInfo.LoadData();
         }//end method tabContainer_SelectedPageChanged
 
         private void buttonCheckIn_Click(object sender, EventArgs e)
@@ -208,11 +212,10 @@ namespace QLKS.UIControl
         private UIGroupInfoPanel groupInfo;
         private UIRoomInfoPanel roomInfo;
         private UICustomerInfoPanel customerInfo;
+        private UIGeneralInfo generalInfo;
 
         private RegData regData;
        #endregion Instance Fields
-
-
 
 
     }//end class UITransaction

@@ -60,7 +60,7 @@ namespace QLKS.DAO
         {
             try
             {
-                String query = "SELECT last_value FROM sys.identity_columns WHERE [object_id] = object_id(@table)";
+                String query = "SELECT last_value FROM sys.identity_columns WHERE [objeCT_id] = objeCT_id(@table)";
                 SqlParameter[] sqlParameters = new SqlParameter[1];
                 sqlParameters[0] = new SqlParameter("@table", "CONG_TY");
                 return (int)Program.DBConnection.ExecuteScalar(query, sqlParameters);
@@ -87,7 +87,7 @@ namespace QLKS.DAO
                 sqlParameters[7] = new SqlParameter("@FAX", congtyVO.FAX);
                 sqlParameters[8] = new SqlParameter("@SO_TAI_KHOAN", congtyVO.SO_TAI_KHOAN);
                 sqlParameters[9] = new SqlParameter("@MA_SO_THUE", congtyVO.MA_SO_THUE);
-          
+
 
                 return Program.DBConnection.ExecuteNonQuery(query, sqlParameters);
             }
@@ -111,6 +111,21 @@ namespace QLKS.DAO
             }
         }
 
-
+        public DataRow LoadDetail(int companyid)
+        {
+            try {
+                String query = "SELECT CTX.TEN_CONG_TY, QG.TEN_QUOC_GIA, CTX.DIA_CHI, CTX.DIEN_THOAI, CTX.EMAIL, CTX.FAX, CTX.HO_KHACH_HANG, CTX.TEN_KHACH_HANG, CTX.DIEN_THOAI_KHACH_HANG " +
+                               "FROM QUOC_GIA QG INNER JOIN (	SELECT CTS.TEN_CONG_TY, CTS.MA_QUOC_GIA, CTS.DIA_CHI, CTS.DIEN_THOAI, CTS.EMAIL, CTS.FAX, " +
+                                                                       "KH.HO_KHACH_HANG, KH.TEN_KHACH_HANG, KH.DIEN_THOAI AS DIEN_THOAI_KHACH_HANG " +
+                                                                "FROM KHACH_HANG KH INNER JOIN ( SELECT * FROM CONG_TY WHERE MA_CONG_TY = @MA_CONG_TY ) CTS ON KH.MA_KHACH_HANG = CTS.MA_NGUOI_DAI_DIEN ) CTX " +
+                                                 "ON QG.MA_QUOC_GIA = CTX.MA_QUOC_GIA";
+                SqlParameter param = new SqlParameter("@MA_CONG_TY", companyid);
+                DataTable result = Program.DBConnection.ExecuteSelectQuery(query, new SqlParameter[] { param });
+                return result.Rows[0];
+            }//end try
+            catch {
+                throw;
+            }//end catch
+        }//end method LoadDetail
     }
 }

@@ -152,6 +152,7 @@ namespace QLKS.UIControl
                 row["PassPort"] = customer["HO_CHIEU"];
                 row["Phone"] = customer["DIEN_THOAI"];
                 row["CountryID"] = customer["MA_QUOC_GIA"];
+                row["Country"] = customer["TEN_QUOC_GIA"];
             }//end if
             else
             {
