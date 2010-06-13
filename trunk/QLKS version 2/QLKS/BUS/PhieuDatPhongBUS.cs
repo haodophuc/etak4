@@ -80,6 +80,27 @@ namespace QLKS.BUS
             }
         }
 
+        public int InsertAndGetID(VO.PhieuDatPhongVO valueObject)
+        {
+            try {
+                return phieuDatPhongDAO.InsertAndGetID(valueObject);
+            }//end try
+            catch {
+                throw;
+            }//end catch
+        }//end method InsertAndGetID
+
+        public int InsertBookingDetail(VO.BookingDetailVO valueObject)
+        {
+            try
+            {
+                return phieuDatPhongDAO.InsertBookingDetail(valueObject);
+            }//end try
+            catch
+            {
+                throw;
+            }//end catch
+        }//end method InsertBookingDetail
 
     }
 }

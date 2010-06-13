@@ -30,6 +30,7 @@ namespace QLKS.Base
             cols.Add("GroupName", typeof(String));
             cols.Add("CompanyID", typeof(Int32));
             cols.Add("CheckInDay", typeof(DateTime));
+            cols.Add("CheckOutDay", typeof(DateTime));
             cols.Add("CompanyName", typeof(String));
             cols.Add("Country", typeof(String));
             cols.Add("Address", typeof(String));

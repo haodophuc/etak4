@@ -99,7 +99,20 @@ namespace QLKS.UIControl
 
         private void SubmitBooking()
         {
-
+            try
+            {
+                RegData.SubmitBooking();
+                DialogResult result = Notice.ShowConfirm("Đăng ký đặt phòng thành công. Tiếp tục đăng ký?", "Đăng Ký Thành Công");
+                if (result == DialogResult.Yes)
+                    Reset();
+                else
+                    ParentForm.Close();
+            }//end try
+            catch (Exception ex)
+            {
+                Notice.ShowError(ex.Message);
+                return;
+            }//end catch
         }//end method SubmitBooking
 
         private void Reset() 
