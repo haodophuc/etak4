@@ -127,7 +127,58 @@ namespace QLKS.DAO
                 throw e;
             }
         }
-        
+
+        public int InsertAndGetID(VO.PhieuDatPhongVO valueObject)
+        {
+            try
+            {
+                string sp = "SP_INSERT_PHIEU_THUE_PHONG";
+
+                SqlParameter[] param = new SqlParameter[4];
+
+                param[0] = new SqlParameter("@IDENTITY", SqlDbType.Int);
+                param[0].Direction = ParameterDirection.Output;
+
+                param[1] = new SqlParameter("@MA_KHACH_HANG", valueObject.MA_KHACH_HANG);
+                if (valueObject.MA_KHACH_HANG == -1)
+                    param[1].Value = DBNull.Value;
+
+                param[2] = new SqlParameter("@MA_DOAN_KHACH", valueObject.MA_DOAN_KHACH);
+                if (valueObject.MA_DOAN_KHACH == -1)
+                    param[2].Value = DBNull.Value;
+
+                param[3] = new SqlParameter("@TIEN_COC", valueObject.TIEN_COC);
+
+                return Program.DBConnection.ExecuteSPReturnsID(sp, param);
+            }//end try
+            catch
+            {
+                throw;
+            }//end catch
+
+        }//end method InsertAndGetID
+
+
+        public int InsertBookingDetail(VO.BookingDetailVO detail)
+        {
+            try {
+                string insert = "INSERT INTO CHI_TIET_DAT_PHONG " +
+                                "VALUES (@MA_PHIEU, @MA_LOAI_PHONG, @NGAY_DEN, @NGAY_DI, @SO_LUONG)";
+
+                SqlParameter[] param = new SqlParameter[5];
+
+                param[0] = new SqlParameter("@MA_PHIEU", detail.IssueID);
+                param[1] = new SqlParameter("@MA_LOAI_PHONG", detail.RoomTypeID);
+                param[2] = new SqlParameter("@NGAY_DEN", detail.CheckInDay);
+                param[3] = new SqlParameter("@SO_LUONG", detail.Quantity);
+
+                return Program.DBConnection.ExecuteNonQuery(insert, param);
+                
+            }//end try
+            catch {
+                throw;                            
+            }//end catch
+        }//end method InsertBookingDetail
 
 
     }

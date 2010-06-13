@@ -944,6 +944,7 @@
     <Compile Include="UI\UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VO\BookingDetailVO.cs" />
     <Compile Include="VO\CaTrucVO.cs" />
     <Compile Include="VO\CongtyVO.cs" />
     <Compile Include="VO\DoanKhachVO.cs" />

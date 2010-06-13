@@ -205,7 +205,59 @@ namespace QLKS.Base
 
         public void SubmitBooking()
         {
+            try {
+                VO.PhieuDatPhongVO item = new QLKS.VO.PhieuDatPhongVO();
 
+                // Determine the CustomerMode wil be used
+                Mode.CustomerMode mode;
+                if (Groups.Rows.Count > 0)
+                {
+                    mode = Mode.CustomerMode.Group;
+                    item.MA_KHACH_HANG = -1;
+                }//end if: group mode
+                else
+                {
+                    mode = Mode.CustomerMode.Customer;
+                    item.MA_DOAN_KHACH = -1;
+                }//end else: customer mode
+
+
+                // Processing data
+                if (mode == Mode.CustomerMode.Group)
+                {
+                    item.MA_DOAN_KHACH = (int)Groups.Rows[0]["GroupID"];
+                }//end if: processing group mode
+                else
+                {
+                    item.MA_KHACH_HANG = (int)Customers.Rows[0]["CustomerID"];
+                }//end else: processing customer mode
+
+                // Set the deposit
+                item.TIEN_COC = Deposit;
+
+                BUS.PhieuDatPhongBUS bus = new QLKS.BUS.PhieuDatPhongBUS();
+                int issueID = bus.InsertAndGetID(item);
+
+                int numOfRoomTypes = Rooms.Rows.Count;
+
+                for (int i = 0; i < numOfRoomTypes; i++)
+                {
+                    VO.BookingDetailVO detail = new QLKS.VO.BookingDetailVO();
+                    detail.IssueID = issueID;
+                    detail.RoomTypeID = (int)Rooms.Rows[i]["RoomTypeID"];
+                    detail.CheckInDay = CheckInDay;
+                    detail.CheckOutDay = CheckOutDay;
+                    detail.Quantity = (int)Rooms.Rows[i]["Quantity"];
+
+                    int result = bus.InsertBookingDetail(detail);
+                    if (result <= 0)
+                        throw new Exception("Không thể thêm dữ liệu vào bảng Chi Tiết Đặt Phòng");
+                }//end for
+                
+            }//end try
+            catch {
+                throw;
+            }//end catch
         }//end method SubmitBooking
 
         public void Reset()
@@ -263,6 +315,12 @@ namespace QLKS.Base
             set { this.checkOutDay = value; }
         }//end attribute CheckOutDay
 
+        public Decimal Deposit
+        {
+            get { return deposit; }
+            set { this.deposit = value; }
+        }//end attribute Deposit
+
        #endregion //end region Attributes
 
 
@@ -275,6 +333,7 @@ namespace QLKS.Base
         private DataSet checkInData;
         private DateTime checkInDay;
         private DateTime checkOutDay;
+        private Decimal deposit;
         private RegDataDAO agent;
        #endregion Instance Fields
 
