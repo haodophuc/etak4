@@ -30,8 +30,8 @@ namespace QLKS.Base
             customerId.Caption = "Mã Khách Hàng";
 
             // Add other columns
-            cols.Add("RoomNumber", typeof(String)).Caption = "Số Phòng";
-            cols.Add("RoomID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
+            cols.Add("RoomNumber", typeof(Int32)).Caption = "Số Phòng";
+            //cols.Add("RoomID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
             cols.Add("GroupID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
             cols.Add("CountryID", typeof(Int32)).ColumnMapping = MappingType.Hidden;
             cols.Add("Country", typeof(String)).Caption = "Quốc Gia";
@@ -40,7 +40,9 @@ namespace QLKS.Base
             cols.Add("SocialID", typeof(String)).Caption = "CMND";
             cols.Add("PassPort", typeof(String)).Caption = "Hộ Chiếu";
             cols.Add("Phone", typeof(String)).Caption = "Điện Thoại";
+            cols.Add("IsOwner", typeof(Boolean)).Caption = "Đứng Tên Thuê Phòng";
             cols.Add("IsNew", typeof(Boolean));
+            
 
             // Add primary column
             this.PrimaryKey = new DataColumn[] { cols["CustomerID"] };

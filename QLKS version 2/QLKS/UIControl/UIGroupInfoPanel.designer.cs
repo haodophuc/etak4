@@ -52,6 +52,8 @@
             this.textBoxCompanyName = new QLKS.Controls.StyledTextBox();
             this.textBoxCountry = new QLKS.Controls.StyledTextBox();
             this.labelPhone = new System.Windows.Forms.Label();
+            this.textBoxDeposit = new QLKS.Controls.StyledTextBox();
+            this.labelDeposit = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl)).BeginInit();
             this.groupControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).BeginInit();
@@ -66,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBoxAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCompanyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxDeposit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl
@@ -82,6 +85,8 @@
             // 
             this.panelCenter.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelCenter.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelCenter.Controls.Add(this.labelDeposit);
+            this.panelCenter.Controls.Add(this.textBoxDeposit);
             this.panelCenter.Controls.Add(this.labelGroupID);
             this.panelCenter.Controls.Add(this.textBoxAgentPhone);
             this.panelCenter.Controls.Add(this.textBoxGroupID);
@@ -507,6 +512,42 @@
             this.labelPhone.TabIndex = 17;
             this.labelPhone.Text = "Số Điện Thoại";
             // 
+            // textBoxDeposit
+            // 
+            this.textBoxDeposit.Location = new System.Drawing.Point(247, 79);
+            this.textBoxDeposit.Name = "textBoxDeposit";
+            this.textBoxDeposit.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxDeposit.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxDeposit.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxDeposit.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxDeposit.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxDeposit.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxDeposit.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxDeposit.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxDeposit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxDeposit.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxDeposit.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxDeposit.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxDeposit.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxDeposit.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxDeposit.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxDeposit.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxDeposit.Properties.AutoHeight = false;
+            this.textBoxDeposit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxDeposit.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.textBoxDeposit.Properties.NullText = "Chưa có thông tin.";
+            this.textBoxDeposit.Properties.ReadOnly = true;
+            this.textBoxDeposit.Size = new System.Drawing.Size(335, 20);
+            this.textBoxDeposit.TabIndex = 25;
+            // 
+            // labelDeposit
+            // 
+            this.labelDeposit.Location = new System.Drawing.Point(95, 82);
+            this.labelDeposit.Name = "labelDeposit";
+            this.labelDeposit.Size = new System.Drawing.Size(63, 13);
+            this.labelDeposit.TabIndex = 26;
+            this.labelDeposit.Text = "labelControl1";
+            // 
             // UIGroupInfoPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,6 +570,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBoxAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCompanyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxDeposit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,5 +601,7 @@
         private Controls.StyledButton buttonLoadGroup;
         private Controls.StyledTextBox textBoxGroupID;
         private Controls.StyledPanel panelCenter;
+        private DevExpress.XtraEditors.LabelControl labelDeposit;
+        private QLKS.Controls.StyledTextBox textBoxDeposit;
     }
 }

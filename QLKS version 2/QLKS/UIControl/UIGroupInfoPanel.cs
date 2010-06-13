@@ -33,12 +33,29 @@ namespace QLKS.UIControl
 
        #region Methods
 
+        private void LoadControls() {
+            bool enabled = ( SubmitMode == Mode.SubmitMode.CheckIn ) ? true : false;
+
+            // Set all textboxes
+            StyledTextBox[] textboxes = GetAllTextBox();
+            for (int i = 0; i < textboxes.Length; i++)
+            {
+                textboxes[i].Text = null;
+                textboxes[i].Properties.ReadOnly = enabled;
+            }//end for
+
+            // Adjust buttons
+            buttonLoadGroup.Enabled = enabled;
+            buttonNewGroup.Enabled = !enabled;            
+        }//end method LoadControls
+
         private void LoadCheckingControls()
         {
             // Set all textboxes to readonly
             StyledTextBox[] textboxes = GetAllTextBox();
             for (int i = 0; i < textboxes.Length; i++)
             {
+                textboxes[i].Text = null;
                 textboxes[i].Properties.ReadOnly = true;
             }//end for
 
@@ -136,6 +153,11 @@ namespace QLKS.UIControl
             return groupMode;
         }//end method IsAGroup
 
+        public void Reset()
+        {
+            LoadControls();
+        }//end method Reset 
+
        #endregion //end region Methods
 
 
@@ -153,7 +175,10 @@ namespace QLKS.UIControl
 
         private void buttonNewGroup_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(GetGroupID().ToString());
+            Form_CapNhatDoanKhach groupManagement = new Form_CapNhatDoanKhach();
+            groupManagement.ShowInTaskbar = false;
+            groupManagement.StartPosition = FormStartPosition.CenterParent;
+            groupManagement.ShowDialog();
         }//end method buttonNewGroup_Click
 
        #endregion //end region Event Handling Methods
@@ -166,14 +191,7 @@ namespace QLKS.UIControl
             get { return this.submitMode; }
             set { 
                 this.submitMode = value;
-                if (SubmitMode == Mode.SubmitMode.CheckIn)
-                {
-                    LoadCheckingControls();
-                }//end if
-                else
-                {
-                    LoadBookingControls();
-                }//end else
+                LoadControls();
             }//end method set
         }//end attribute Mode
 

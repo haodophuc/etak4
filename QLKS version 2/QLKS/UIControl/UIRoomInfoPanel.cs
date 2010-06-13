@@ -113,7 +113,7 @@ namespace QLKS.UIControl
                     ParentUI.RegData.Rooms.Rows.Add(row);
                 }//end try
                 catch {
-                    MessageBox.Show("Phòng đã có trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Notice.ShowWarning("Phòng đã có trong danh sách");
                 }//end catch                
                 Reset();
             }//end if
@@ -123,15 +123,22 @@ namespace QLKS.UIControl
             }//end else
         }//end method AddRoom
 
-        private void Reset()
+        public void Reset()
         {
             room = null;
-            textBoxRoomNumber.Text = String.Empty;
-            textBoxRoomType.Text = String.Empty;
-            textBoxQuantity.Text = String.Empty;
-            textBoxPrice.Text = String.Empty;
-            textBoxBeds.Text = String.Empty;
+            textBoxRoomNumber.Text = null;
+            textBoxRoomType.Text = null;
+            textBoxQuantity.Text = null;
+            textBoxPrice.Text = null;
+            textBoxBeds.Text = null;
         }//end method Reset
+
+        public void ResetAll()
+        {
+            Reset();
+            //GridControl.RefreshDataSource();
+            //GridView.RefreshEditor(true);
+        }//end method ResetAll
 
        #endregion //end region Methods
 
@@ -218,6 +225,20 @@ namespace QLKS.UIControl
         private UITransaction parentUI;
         private DataRow room;
        #endregion Instance Fields
+
+        private void styledButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String expression = "RoomID = " + styledTextBox1.Text;
+                DataRow[] row = ParentUI.RegData.Rooms.Select(expression);
+                MessageBox.Show(row[0]["RoomType"].ToString());
+            }
+            catch( Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
     }//end class UIRoomInfoPanel
 }//end namespace

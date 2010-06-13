@@ -67,7 +67,7 @@
             // 
             this.tabPageGeneral.Controls.Add(this.panelAction);
             this.tabPageGeneral.Name = "tabPageGeneral";
-            this.tabPageGeneral.Size = new System.Drawing.Size(722, 553);
+            this.tabPageGeneral.Size = new System.Drawing.Size(723, 553);
             this.tabPageGeneral.Text = "General";
             // 
             // panelAction
@@ -80,7 +80,7 @@
             this.panelAction.Location = new System.Drawing.Point(0, 480);
             this.panelAction.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelAction.Name = "panelAction";
-            this.panelAction.Size = new System.Drawing.Size(722, 73);
+            this.panelAction.Size = new System.Drawing.Size(723, 73);
             this.panelAction.TabIndex = 11;
             // 
             // buttonCancel
@@ -93,6 +93,7 @@
             this.buttonCancel.Size = new System.Drawing.Size(88, 40);
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonCheckIn
             // 
@@ -120,19 +121,19 @@
             // tabPageGroup
             // 
             this.tabPageGroup.Name = "tabPageGroup";
-            this.tabPageGroup.Size = new System.Drawing.Size(722, 553);
+            this.tabPageGroup.Size = new System.Drawing.Size(723, 553);
             this.tabPageGroup.Text = "Đoàn Khách";
             // 
             // tabPageCustomer
             // 
             this.tabPageCustomer.Name = "tabPageCustomer";
-            this.tabPageCustomer.Size = new System.Drawing.Size(722, 553);
+            this.tabPageCustomer.Size = new System.Drawing.Size(723, 553);
             this.tabPageCustomer.Text = "Khách Hàng";
             // 
             // tabPageRoom
             // 
             this.tabPageRoom.Name = "tabPageRoom";
-            this.tabPageRoom.Size = new System.Drawing.Size(722, 553);
+            this.tabPageRoom.Size = new System.Drawing.Size(723, 553);
             this.tabPageRoom.Text = "Phòng";
             // 
             // UITransaction

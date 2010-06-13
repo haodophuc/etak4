@@ -100,5 +100,15 @@ namespace QLKS.BUS
         {
             return khachHangDAO.SearchByIndicator( khachHangVO, bMKH, bMaQG, bHo, bTen, bCMND, bHochieu, bDienThoai);
         }
+
+        public int InsertAndGetID(KhachHangVO kh)
+        {
+            try {
+                return khachHangDAO.InsertBySP(kh);
+            }//end try
+            catch {
+                throw;
+            }//end catch
+        }//end method InsertAndGetID
     }
 }

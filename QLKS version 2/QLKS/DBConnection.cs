@@ -247,7 +247,109 @@ namespace QLKS
             return result;
         }
 
-        //public Int32 ExecuteSPReturnsID() { }
+        public int ExecuteSPReturnsID( string spName, SqlParameter[] param ) 
+        {
+            int result = 0;
+            try
+            {
+                Connect();
+                command = new SqlCommand(spName, Connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddRange(param);
+                result = command.ExecuteNonQuery();
+                if (result <= 0)
+                    result = -1;
+                else
+                    result = (int)command.Parameters["@IDENTITY"].Value;
+
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                command.Dispose();
+                Disconnect();
+            }
+            return result;
+
+
+        }//end method ExecuteSPReturnsID
+
+        public bool databaseContainsUser(String username, String password)
+        {
+            SqlCommand cmd = new SqlCommand("", Program.DBConnection.Connection);
+
+            // add username and password as parameters
+            SqlParameter[] parameters = new SqlParameter[2];
+            parameters[0] = new SqlParameter("@USERNAME", username);
+            parameters[1] = new SqlParameter("@PASSWORD", password);
+            cmd.Parameters.AddRange(parameters);
+            
+            try
+            {
+                Connect();                
+                cmd.CommandText = "SELECT COUNT(1) FROM ADMINS" +
+                                        " WHERE TEN_DANG_NHAP = @USERNAME AND MAT_KHAU = @PASSWORD";
+                if ( (int)cmd.ExecuteScalar() > 0 )
+                    return true;
+
+                cmd.CommandText = "SELECT COUNT(1) FROM THU_NGAN" +
+                                        " WHERE TEN_DANG_NHAP = @USERNAME AND MAT_KHAU = @PASSWORD";
+                if ( (int)cmd.ExecuteScalar() > 0 )
+                    return true;
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                Disconnect();             
+            }
+
+            return false;
+        }
+
+        public bool userHasRole(String roleName, String username)
+        {
+            SqlCommand cmd = new SqlCommand("", Program.DBConnection.Connection);
+
+            // add role as parameters
+            SqlParameter[] parameters = new SqlParameter[2];
+            parameters[0] = new SqlParameter("@ROLENAME", roleName);
+            parameters[1] = new SqlParameter("@USERNAME", username);
+            cmd.Parameters.AddRange(parameters);            
+
+            try
+            {
+                Connect();
+                cmd.CommandText = "SELECT COUNT(1)" +
+                        " FROM (QUYEN_ADMIN A INNER JOIN QUYEN B ON A.MA_QUYEN = B.MA_QUYEN)" +
+                        " INNER JOIN ADMINS C ON A.MA_ADMIN = C.MA_ADMIN" + 
+                        " WHERE TEN_QUYEN = @ROLENAME AND C.TEN_DANG_NHAP = @USERNAME";
+                if ((int)cmd.ExecuteScalar() > 0)
+                    return true;
+
+                cmd.CommandText = "SELECT COUNT(1)" +
+                    " FROM (QUYEN_THU_NGAN A INNER JOIN QUYEN B ON A.MA_QUYEN = B.MA_QUYEN)" +
+                    " INNER JOIN THU_NGAN C ON A.MA_THU_NGAN = C.MA_THU_NGAN" +
+                    " WHERE TEN_QUYEN = @ROLENAME AND C.TEN_DANG_NHAP = @USERNAME";
+                if ((int)cmd.ExecuteScalar() > 0)
+                    return true;
+            }
+            catch (SqlException e)
+            {                
+                throw e;
+            }
+            finally
+            {
+                Disconnect();
+            }
+
+            return false;
+        }
 
        #endregion //end region Methods
         

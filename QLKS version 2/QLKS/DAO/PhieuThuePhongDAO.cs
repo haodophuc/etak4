@@ -199,7 +199,7 @@ namespace QLKS.DAO
         }
 
         // Created by G
-        public int InsertBySP(PhieuThuePhongVO value)
+        public int InsertBySP(PhieuThuePhongVO valueObject)
         {
             try
             {
@@ -207,19 +207,20 @@ namespace QLKS.DAO
                 String sp = "SP_INSERT_PHIEU_THUE_PHONG";
 
                 // Create parameters
-                SqlParameter[] param = new SqlParameter[6];
+                SqlParameter[] param = new SqlParameter[5];
 
                 // Return value
-                param[0] = new SqlParameter("@IDENTITY", value.MA_PHIEU);
+                param[0] = new SqlParameter("@IDENTITY", valueObject.MA_PHIEU);
                 param[0].Direction = ParameterDirection.Output;
 
-                param[1] = new SqlParameter("@MA_KHACH_HANG", value.MA_KHACH_HANG);
-                param[2] = new SqlParameter("@MA_DOAN_KHACH", value.MA_DOAN_KHACH);
-                param[3] = new SqlParameter("@MA_PHONG", value.MA_PHONG);
-                param[4] = new SqlParameter("@NGAY_NHAN_PHONG", value.NGAY_NHAN_PHONG);
-                param[5] = new SqlParameter("@NGAY_TRA_PHONG", value.NGAY_TRA_PHONG);
+                param[1] = new SqlParameter("@MA_KHACH_HANG", valueObject.MA_KHACH_HANG);
+                param[2] = new SqlParameter("@MA_DOAN_KHACH", valueObject.MA_DOAN_KHACH);
+                if (valueObject.MA_DOAN_KHACH == -1)
+                    param[2].Value = DBNull.Value;
+                param[3] = new SqlParameter("@MA_PHONG", valueObject.MA_PHONG);
+                param[4] = new SqlParameter("@NGAY_NHAN_PHONG", valueObject.NGAY_NHAN_PHONG);
 
-                return (int)Program.DBConnection.ExecuteScalarByProcedure(sp, param);
+                return (int)Program.DBConnection.ExecuteSPReturnsID(sp, param);
 
             }//end try
             catch (Exception e)

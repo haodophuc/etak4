@@ -166,6 +166,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateCheckIn.Size = new System.Drawing.Size(349, 20);
             this.dateCheckIn.TabIndex = 0;
+            this.dateCheckIn.EditValueChanged += new System.EventHandler(this.dateCheckIn_EditValueChanged);
             // 
             // dateCheckOut
             // 
@@ -179,6 +180,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateCheckOut.Size = new System.Drawing.Size(349, 20);
             this.dateCheckOut.TabIndex = 2;
+            this.dateCheckOut.EditValueChanged += new System.EventHandler(this.dateCheckOut_EditValueChanged);
             // 
             // labelCheckoutDay
             // 
