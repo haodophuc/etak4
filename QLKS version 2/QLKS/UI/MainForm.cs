@@ -25,7 +25,8 @@ namespace QLKS.UI
         #region Event Handlers
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // show login form as modal dialog            
+            // show login form as modal dialog
+            disableAllMenuItems();
             enableLoginMenuItems();
             loginForm.ShowDialog();
         }
@@ -45,8 +46,7 @@ namespace QLKS.UI
         private void logoutMenuItem_Click(object sender, EventArgs e)
         {
             disableAllMenuItems();
-            foreach (Form form in MdiChildren)
-                form.Close();
+            closeAllChilren();
 
             // enable "Login" "Logout" and disable "Change password"
             enableLoginMenuItems();
@@ -154,6 +154,7 @@ namespace QLKS.UI
             formCapNhatPTP.MdiParent = this;
             formCapNhatPTP.Show();
         }
+
         private void PhiếuThuDoanKhachToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_CapNhatPhieuThuDoanKhach formCapNhatPhieuThuDoanKhach = new Form_CapNhatPhieuThuDoanKhach();
@@ -273,6 +274,12 @@ namespace QLKS.UI
         public void disableChangePasswordMenuItem()
         {
             changePasswordMenuItem.Enabled = false;
+        }
+
+        public void closeAllChilren()
+        {
+            foreach (Form form in MdiChildren)
+                form.Close();            
         }
 
         // private helpers, function fragments, can be used in combination
