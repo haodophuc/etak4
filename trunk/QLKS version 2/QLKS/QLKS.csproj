@@ -216,6 +216,7 @@
     <Compile Include="BUS\CongtyBus.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BUS\DoanhThuBUS.cs" />
     <Compile Include="BUS\DoanKhachBUS.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -278,6 +279,7 @@
     <Compile Include="DAO\CongtyDAO.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAO\DoanhThuDAO.cs" />
     <Compile Include="DAO\DoanKhachDAO.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -315,6 +317,11 @@
     </Compile>
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DAO\UserInfoDAO.cs" />
+    <Compile Include="DataSets\QLKSDataSet_DoanhThu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKSDataSet_DoanhThu.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\QLKSDataSet_HeSoPhong.cs">
       <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -974,6 +981,17 @@
     <None Include="Resources\up_arrow.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSets\QLKSDataSet_DoanhThu.xsc">
+      <DependentUpon>QLKSDataSet_DoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\QLKSDataSet_DoanhThu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKSDataSet_DoanhThu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\QLKSDataSet_DoanhThu.xss">
+      <DependentUpon>QLKSDataSet_DoanhThu.xsd</DependentUpon>
+    </None>
     <None Include="DataSets\QLKSDataSet_HeSoPhong.xsc">
       <DependentUpon>QLKSDataSet_HeSoPhong.xsd</DependentUpon>
     </None>
