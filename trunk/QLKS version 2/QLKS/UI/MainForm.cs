@@ -183,6 +183,13 @@ namespace QLKS.UI
             formReportPhong.MdiParent = this;
             formReportPhong.Show();
         }
+
+        private void MenuItem_DoanhThu_Click(object sender, EventArgs e)
+        {
+            Form_ReportDoanhThu reportDoanhThu = new Form_ReportDoanhThu();
+            reportDoanhThu.MdiParent = this;
+            reportDoanhThu.Show();
+        }
         #endregion
 
         #region User Management
@@ -313,6 +320,8 @@ namespace QLKS.UI
 
         }
         #endregion
+
+       
 
 
   }
