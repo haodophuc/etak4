@@ -64,8 +64,8 @@ namespace QLKS.DAO
             try
             {
                 String query = "SELECT PHONG.MA_PHONG, PHONG.SO_PHONG, TEN_LOAI_PHONG, SO_GIUONG, GIA_THAM_KHAO " +
-                               "FROM PHONG, LOAI_PHONG " +
-                               "WHERE PHONG.MA_LOAI_PHONG = LOAI_PHONG.MA_LOAI_PHONG";
+                                 "FROM PHONG, LOAI_PHONG " +
+                                 "WHERE PHONG.MA_LOAI_PHONG = LOAI_PHONG.MA_LOAI_PHONG AND PHONG.MA_TINH_TRANG = 1";
                 return Program.DBConnection.ExecuteSelectQuery(query);
             }//end try
             catch (Exception e)
