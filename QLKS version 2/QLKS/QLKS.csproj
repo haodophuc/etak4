@@ -403,6 +403,10 @@
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ReportDoanhThu_UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportDoanhThu_UI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\ReportKhachHang_UI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReportKhachHang_UI.cs</DependentUpon>
@@ -514,6 +518,10 @@
     <EmbeddedResource Include="UI\Form_DatPhong.resx">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_ReportDoanhThu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ReportDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_ReportHeSoPhong.resx">
       <DependentUpon>Form_ReportHeSoPhong.cs</DependentUpon>
@@ -668,6 +676,12 @@
     </Compile>
     <Compile Include="UIControl\DatPhong_UI.Designer.cs">
       <DependentUpon>DatPhong_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\ReportDoanhThu_UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ReportDoanhThu_UI.Designer.cs">
+      <DependentUpon>ReportDoanhThu_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\ReportKhachHang_UI.cs">
       <SubType>UserControl</SubType>
@@ -836,6 +850,12 @@
     </Compile>
     <Compile Include="UI\Form_DatPhong.designer.cs">
       <DependentUpon>Form_DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_ReportDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_ReportDoanhThu.Designer.cs">
+      <DependentUpon>Form_ReportDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form_ReportHeSoPhong.cs">
       <SubType>Form</SubType>

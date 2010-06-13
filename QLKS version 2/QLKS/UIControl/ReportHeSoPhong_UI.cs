@@ -36,6 +36,14 @@ namespace QLKS.UIControl
             spinEditMonthYear.Properties.MinValue = DateTime.MinValue.Year;
             spinEditMonthYear.Properties.MaxValue = DateTime.MaxValue.Year;
             spinEditMonthYear.Value = DateTime.Today.Year;
+
+            spinEditQuarterYear.Properties.MinValue = DateTime.MinValue.Year;
+            spinEditQuarterYear.Properties.MaxValue = DateTime.MaxValue.Year;
+            spinEditQuarterYear.Value = DateTime.Today.Year;
+
+            spinEdit_Year.Properties.MinValue = DateTime.MinValue.Year;
+            spinEdit_Year.Properties.MaxValue = DateTime.MaxValue.Year;
+            spinEdit_Year.Value = DateTime.Today.Year;
         }
 
         private void EnableControl()
