@@ -409,10 +409,6 @@
       <DependentUpon>CheckOutUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIControl\DatPhong_UI.resx">
-      <DependentUpon>DatPhong_UI.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\ReportDoanhThu_UI.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReportDoanhThu_UI.cs</DependentUpon>
@@ -676,12 +672,6 @@
     </Compile>
     <Compile Include="UIControl\CheckOutUI.designer.cs">
       <DependentUpon>CheckOutUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIControl\DatPhong_UI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIControl\DatPhong_UI.Designer.cs">
-      <DependentUpon>DatPhong_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\ReportDoanhThu_UI.cs">
       <SubType>UserControl</SubType>
