@@ -233,7 +233,7 @@ namespace QLKS.Base
                 }//end else: processing customer mode
 
                 // Set the deposit
-                item.TIEN_COC = Deposit;
+                item.TIEN_COC = (int)Deposit;
 
                 BUS.PhieuDatPhongBUS bus = new QLKS.BUS.PhieuDatPhongBUS();
                 int issueID = bus.InsertAndGetID(item);

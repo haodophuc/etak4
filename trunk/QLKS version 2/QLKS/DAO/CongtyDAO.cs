@@ -35,7 +35,7 @@ namespace QLKS.DAO
         {
             try
             {
-                String query = "INSERT INTO CONG_TY VALUES(@MA_QUOC_GIA,@MA_NGUOI_DAI_DIEN,@TEN_CONG_TY,@DIA_CHI,@DIEN_THOAI,@EMAIL,@FAX,@SO_TAI_KHOAN,@MA_SO_THUE,@HIEU_LUC)";
+                String query = "INSERT INTO CONG_TY VALUES(@TEN_CONG_TY,@MA_QUOC_GIA,@MA_NGUOI_DAI_DIEN,@DIA_CHI,@DIEN_THOAI,@EMAIL,@FAX,@SO_TAI_KHOAN,@MA_SO_THUE,@HIEU_LUC)";
                 SqlParameter[] sqlParameters = new SqlParameter[10];
 
                 sqlParameters[0] = new SqlParameter("@MA_QUOC_GIA", congtyVO.MA_QUOC_GIA);
@@ -77,16 +77,16 @@ namespace QLKS.DAO
             {
                 String query = "UPDATE CONG_TY SET MA_QUOC_GIA=@MA_QUOC_GIA,MA_NGUOI_DAI_DIEN=@MA_NGUOI_DAI_DIEN,TEN_CONG_TY=@TEN_CONG_TY,DIA_CHI=@DIA_CHI,DIEN_THOAI=@DIEN_THOAI,EMAIL=@EMAIL,FAX=@FAX,SO_TAI_KHOAN=@SO_TAI_KHOAN,MA_SO_THUE=@MA_SO_THUE WHERE MA_CONG_TY=@MA_CONG_TY";
                 SqlParameter[] sqlParameters = new SqlParameter[10];
-                sqlParameters[0] = new SqlParameter("@MA_CONG_TY", congtyVO.MA_CONG_TY);
-                sqlParameters[1] = new SqlParameter("@MA_QUOC_GIA", congtyVO.MA_QUOC_GIA);
-                sqlParameters[2] = new SqlParameter("@MA_NGUOI_DAI_DIEN", congtyVO.MA_NGUOI_DAI_DIEN);
-                sqlParameters[3] = new SqlParameter("@TEN_CONG_TY", congtyVO.TEN_CONG_TY);
-                sqlParameters[4] = new SqlParameter("@DIA_CHI", congtyVO.DIA_CHI);
-                sqlParameters[5] = new SqlParameter("@DIEN_THOAI", congtyVO.DIEN_THOAI);
-                sqlParameters[6] = new SqlParameter("@EMAIL", congtyVO.EMAIL);
-                sqlParameters[7] = new SqlParameter("@FAX", congtyVO.FAX);
-                sqlParameters[8] = new SqlParameter("@SO_TAI_KHOAN", congtyVO.SO_TAI_KHOAN);
-                sqlParameters[9] = new SqlParameter("@MA_SO_THUE", congtyVO.MA_SO_THUE);
+                sqlParameters[9] = new SqlParameter("@MA_CONG_TY", congtyVO.MA_CONG_TY);
+                sqlParameters[0] = new SqlParameter("@MA_QUOC_GIA", congtyVO.MA_QUOC_GIA);
+                sqlParameters[1] = new SqlParameter("@MA_NGUOI_DAI_DIEN", congtyVO.MA_NGUOI_DAI_DIEN);
+                sqlParameters[2] = new SqlParameter("@TEN_CONG_TY", congtyVO.TEN_CONG_TY);
+                sqlParameters[3] = new SqlParameter("@DIA_CHI", congtyVO.DIA_CHI);
+                sqlParameters[4] = new SqlParameter("@DIEN_THOAI", congtyVO.DIEN_THOAI);
+                sqlParameters[5] = new SqlParameter("@EMAIL", congtyVO.EMAIL);
+                sqlParameters[6] = new SqlParameter("@FAX", congtyVO.FAX);
+                sqlParameters[7] = new SqlParameter("@SO_TAI_KHOAN", congtyVO.SO_TAI_KHOAN);
+                sqlParameters[8] = new SqlParameter("@MA_SO_THUE", congtyVO.MA_SO_THUE);
 
 
                 return Program.DBConnection.ExecuteNonQuery(query, sqlParameters);
