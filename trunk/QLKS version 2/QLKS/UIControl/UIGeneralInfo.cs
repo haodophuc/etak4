@@ -41,12 +41,14 @@ namespace QLKS.UIControl
         private void LoadBookingControls()
         {
             dateCheckIn.DateTime = DateTime.Today;
-            
+            dateCheckOut.DateTime = DateTime.Today;
+            labelTitle.Text = "ĐẶT PHÒNG";
         }//end method LoadBookingControls()
 
         private void LoadCheckingControls()
         {
             dateCheckIn.DateTime = DateTime.Today;
+            labelTitle.Text = "ĐĂNG KÝ PHÒNG";
             UpdateCheckInTime();
             dateCheckIn.Enabled = false;
             dateCheckOut.Enabled = false;
@@ -97,12 +99,26 @@ namespace QLKS.UIControl
 
         private void UpdateCheckInTime()
         {
-            ParentUI.RegData.CheckInDay = dateCheckIn.DateTime;
+            DateTime value = dateCheckIn.DateTime;
+            if (value < DateTime.Today)
+            {
+                Base.Notice.ShowWarning("Ngày không hợp lệ");
+                dateCheckIn.DateTime = DateTime.Today;
+            }
+            else
+                ParentUI.RegData.CheckInDay = dateCheckIn.DateTime;
         }//end method LoadTime
 
         private void UpdateCheckOutTime()
         {
-            ParentUI.RegData.CheckOutDay = dateCheckOut.DateTime;
+            DateTime value = dateCheckOut.DateTime;
+            if (value < DateTime.Today)
+            {
+                Base.Notice.ShowWarning("Ngày không hợp lệ");
+                dateCheckOut.DateTime = DateTime.Today;
+            }
+            else
+                ParentUI.RegData.CheckOutDay = dateCheckOut.DateTime;
         }//end method UpdateCheckOutTime
 
         public void Reset()

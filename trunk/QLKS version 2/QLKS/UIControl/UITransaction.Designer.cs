@@ -46,7 +46,7 @@
             // 
             // tabContainer
             // 
-            this.tabContainer.AppearancePage.Header.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tabContainer.AppearancePage.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tabContainer.AppearancePage.Header.Options.UseFont = true;
             this.tabContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabContainer.Location = new System.Drawing.Point(0, 0);
@@ -67,8 +67,8 @@
             // 
             this.tabPageGeneral.Controls.Add(this.panelAction);
             this.tabPageGeneral.Name = "tabPageGeneral";
-            this.tabPageGeneral.Size = new System.Drawing.Size(723, 553);
-            this.tabPageGeneral.Text = "General";
+            this.tabPageGeneral.Size = new System.Drawing.Size(722, 553);
+            this.tabPageGeneral.Text = "Thông Tin Chung";
             // 
             // panelAction
             // 
@@ -80,7 +80,7 @@
             this.panelAction.Location = new System.Drawing.Point(0, 480);
             this.panelAction.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelAction.Name = "panelAction";
-            this.panelAction.Size = new System.Drawing.Size(723, 73);
+            this.panelAction.Size = new System.Drawing.Size(722, 73);
             this.panelAction.TabIndex = 11;
             // 
             // buttonCancel
@@ -117,23 +117,24 @@
             this.buttonBooking.Size = new System.Drawing.Size(88, 40);
             this.buttonBooking.TabIndex = 9;
             this.buttonBooking.Text = "Đặt Phòng";
+            this.buttonBooking.Click += new System.EventHandler(this.buttonBooking_Click);
             // 
             // tabPageGroup
             // 
             this.tabPageGroup.Name = "tabPageGroup";
-            this.tabPageGroup.Size = new System.Drawing.Size(723, 553);
+            this.tabPageGroup.Size = new System.Drawing.Size(722, 553);
             this.tabPageGroup.Text = "Đoàn Khách";
             // 
             // tabPageCustomer
             // 
             this.tabPageCustomer.Name = "tabPageCustomer";
-            this.tabPageCustomer.Size = new System.Drawing.Size(723, 553);
+            this.tabPageCustomer.Size = new System.Drawing.Size(722, 553);
             this.tabPageCustomer.Text = "Khách Hàng";
             // 
             // tabPageRoom
             // 
             this.tabPageRoom.Name = "tabPageRoom";
-            this.tabPageRoom.Size = new System.Drawing.Size(723, 553);
+            this.tabPageRoom.Size = new System.Drawing.Size(722, 553);
             this.tabPageRoom.Text = "Phòng";
             // 
             // UITransaction

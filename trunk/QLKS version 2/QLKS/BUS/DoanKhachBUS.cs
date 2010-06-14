@@ -42,6 +42,16 @@ namespace QLKS.BUS
                 throw e;
             }
         }
+        public Decimal GetDeposit(int groupID)
+        {
+            try {
+                return doankhachDAO.GetDeposit(groupID);
+            }
+            catch {
+                throw;
+            }
+        }//end method GetDeposit
+
         public DataTable LoadFind()
         {
 

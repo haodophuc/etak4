@@ -39,10 +39,19 @@ namespace QLKS.UIControl
         {
             GridView.Columns["RoomID"].Visible = false;
             GridView.Columns["RoomTypeID"].Visible = false;
-            if( SubmitMode == Mode.SubmitMode.Booking )
+            GridView.Columns["TicketID"].Visible = false;
+            GridView.Columns["OwnerID"].Visible = false;
+            if (SubmitMode == Mode.SubmitMode.Booking)
+            {
                 GridView.Columns["Quantity"].Visible = true;
+                GridView.Columns["Owner"].Visible = false;
+                GridView.Columns["RoomNumber"].Visible = false;
+                
+            }//end if
             else
-                GridView.Columns["Quantity"].Visible = true;
+            {
+                GridView.Columns["Quantity"].Visible = false;
+            }//end else
 
         }//end method IniGrid
 
@@ -50,14 +59,25 @@ namespace QLKS.UIControl
         {
             textBoxQuantity.Visible = false;
             labelQuatity.Visible = false;
+
             textBoxRoomType.EditValue = null;
             textBoxRoomType.Properties.NullText = "Chưa có thông tin";
         }//end method CheckingControls
 
         private void LoadBookingControls()
         {
+            // Disable Picking rooms
+            buttonPick.Enabled = false;
+
+            // Enable Picking Room Types
+            textBoxRoomType.Enabled = true;
+            textBoxRoomType.Properties.ReadOnly = false;
+            LoadRoomTypes();
+
+            // Enable Inputting quantity
             textBoxQuantity.Visible = true;
-            labelQuatity.Visible = false;
+            textBoxQuantity.Properties.ReadOnly = false;
+            labelQuatity.Visible = true;
         }//end method BookingControls
 
         private void LoadRoomTypes()
@@ -103,23 +123,39 @@ namespace QLKS.UIControl
         {
             if (SubmitMode == Mode.SubmitMode.CheckIn)
             {
+                if (room != null)
+                {
+                    DataRow row = ParentUI.RegData.Rooms.NewRow();
+                    row["RoomID"] = room["MA_PHONG"];
+                    row["RoomType"] = room["TEN_LOAI_PHONG"];
+                    row["RoomNumber"] = room["SO_PHONG"];
+                    row["Beds"] = room["SO_GIUONG"];
+                    row["Price"] = room["GIA_THAM_KHAO"];
+                    try
+                    {
+                        ParentUI.RegData.Rooms.Rows.Add(row);
+                    }//end try
+                    catch
+                    {
+                        Notice.ShowWarning("Phòng đã có trong danh sách");
+                    }//end catch                
+                    Reset();
+                }//end if: room has null value
+            }//end if
+            else
+            {
                 DataRow row = ParentUI.RegData.Rooms.NewRow();
-                row["RoomID"] = room["MA_PHONG"];
-                row["RoomType"] = room["TEN_LOAI_PHONG"];
-                row["RoomNumber"] = room["SO_PHONG"];
-                row["Beds"] = room["SO_GIUONG"];
-                row["Price"] = room["GIA_THAM_KHAO"];
+                row["RoomTypeID"] = (int)textBoxRoomType.EditValue;
+                row["Beds"] = Int32.Parse(textBoxBeds.Text);
+                row["Price"] = Decimal.Parse(textBoxPrice.Text);
+                row["Quantity"] = int.Parse(textBoxQuantity.Text);
+                row["RoomType"] = textBoxRoomType.Text;
                 try {
                     ParentUI.RegData.Rooms.Rows.Add(row);
                 }//end try
                 catch {
-                    Notice.ShowWarning("Phòng đã có trong danh sách");
-                }//end catch                
-                Reset();
-            }//end if
-            else
-            {
-
+                    Notice.ShowWarning("Có lỗi xảy ra!");
+                }//end catch
             }//end else
         }//end method AddRoom
 
@@ -170,7 +206,6 @@ namespace QLKS.UIControl
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (room != null)
                 AddRoom();
         }//end method buttonAdd_Click
 
@@ -226,19 +261,6 @@ namespace QLKS.UIControl
         private DataRow room;
        #endregion Instance Fields
 
-        private void styledButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                String expression = "RoomID = " + styledTextBox1.Text;
-                DataRow[] row = ParentUI.RegData.Rooms.Select(expression);
-                MessageBox.Show(row[0]["RoomType"].ToString());
-            }
-            catch( Exception ex )
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
     }//end class UIRoomInfoPanel
 }//end namespace

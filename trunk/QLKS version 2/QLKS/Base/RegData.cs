@@ -37,10 +37,25 @@ namespace QLKS.Base
 
        #region Methods
 
-        public void VerifyData()
+        public void VerifyData( Mode.SubmitMode mode )
         {
             //bool hasErrors = false;
+            if (mode == Mode.SubmitMode.CheckIn)
+                VerifyCheckingData();
+            else
+                VerifyBookingData();
+        }//end method VerifyData
 
+        private void VerifyBookingData()
+        {
+            if (Groups.Rows.Count == 0 && Customers.Rows.Count == 0)
+                throw new Exception("Chưa có thông tin khách hàng hay đoàn khách");
+            if (Rooms.Rows.Count == 0)
+                throw new Exception("Chưa có thông tin đăng ký phòng");
+        }//end method VerifyBookingData
+
+        private void VerifyCheckingData()
+        {
             if (Customers.Rows.Count == 0)
             {
                 //errorMessage = "Chưa có khách hàng";
@@ -48,7 +63,7 @@ namespace QLKS.Base
                 throw new Exception("Chưa có khách hàng");
             }//end if : no customer
 
-            if( Rooms.Rows.Count == 0 )
+            if (Rooms.Rows.Count == 0)
             {
                 throw new Exception("Chưa có phòng");
             }//end 
@@ -57,7 +72,7 @@ namespace QLKS.Base
             for (int i = 0; i < Customers.Rows.Count; i++)
             {
                 String text = Customers.Rows[i]["RoomNumber"].ToString();
-                if ( text == String.Empty)
+                if (text == String.Empty)
                     item++;
             }//end for
             if (item > 0)
@@ -65,7 +80,7 @@ namespace QLKS.Base
                 String message = String.Format("Có {0} khách hàng chưa được sắp phòng.", item);
                 throw new Exception(message);
             }//end if
-        }//end method VerifyData
+        }//end method VerifyCheckingData
 
         public void UpdateCustomers()
         {

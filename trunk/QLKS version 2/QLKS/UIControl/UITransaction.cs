@@ -50,7 +50,7 @@ namespace QLKS.UIControl
             groupInfo.Dock = DockStyle.Fill;
             tabPageGroup.Controls.Add(groupInfo);
 
-            customerInfo = new UICustomerInfoPanel(this);
+            customerInfo = new UICustomerInfoPanel(this, Mode.SubmitMode.CheckIn);
             customerInfo.Dock = DockStyle.Fill;
             tabPageCustomer.Controls.Add(customerInfo);
 
@@ -140,7 +140,7 @@ namespace QLKS.UIControl
         {
             try
             {
-                RegData.VerifyData();
+                RegData.VerifyData(SubmitMode);
                 SubmitCheckIn();
             }//end try
             catch (Exception ex)
@@ -148,6 +148,11 @@ namespace QLKS.UIControl
                 Notice.ShowError(ex.Message);
             }//end catch
         }//end method buttonCheckIn_Click
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }//end method buttonCancel_Click
 
        #endregion //end region Event Handling Methods
 
@@ -181,10 +186,21 @@ namespace QLKS.UIControl
         private RegData regData;
        #endregion Instance Fields
 
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void buttonBooking_Click(object sender, EventArgs e)
         {
-            Reset();
-        }//end method buttonCancel_Click
+            try
+            {
+                RegData.VerifyData( SubmitMode );
+                SubmitBooking();
+            }//end try
+            catch (Exception ex)
+            {
+                Notice.ShowError(ex.Message);
+            }//end catch
+            
+        }//end method buttonBooking_Click
+
+
 
 
     }//end class UITransaction

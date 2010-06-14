@@ -26,10 +26,11 @@ namespace QLKS.UIControl
             isNewCustomer = false;
         }//end default constructor
 
-        public UICustomerInfoPanel(UITransaction parent )
+        public UICustomerInfoPanel(UITransaction parent, Mode.SubmitMode mode  )
             : this()
         {
             this.ParentUI = parent;
+            SubmitMode = mode;
             GridControl.DataSource = ParentUI.RegData.Customers;
             IniGridView();
             LoadCountries();
@@ -39,6 +40,25 @@ namespace QLKS.UIControl
 
 
        #region Methods
+
+        private void LoadContols()
+        {
+            if (SubmitMode == Mode.SubmitMode.Booking)
+                LoadBookingControls();
+            else
+                LoadCheckingControls();
+        }//end method LoadControls
+
+        private void LoadBookingControls()
+        {
+
+        }
+
+        private void LoadCheckingControls()
+        {
+
+        }
+
 
         private void IniGridView() {
 
@@ -129,6 +149,7 @@ namespace QLKS.UIControl
             textBoxPassPort.Text = null;
             textBoxPhone.Text = null;
             textBoxCMND.Text = null;
+            textBoxDeposit.Text = null;
 
             textBoxFirstName.Properties.ReadOnly = true;
             textBoxLastName.Properties.ReadOnly = true;
@@ -143,6 +164,7 @@ namespace QLKS.UIControl
         private void AddCustomer()
         {
             DataRow row = ParentUI.RegData.Customers.NewRow();
+            //ParentUI.RegData.Deposit = Decimal.Parse(textBoxDeposit.Text);
             if (!isNewCustomer)
             {
                 row["CustomerID"] = customer["MA_KHACH_HANG"];
@@ -257,6 +279,16 @@ namespace QLKS.UIControl
             }//end else
         }//end method buttonAdd_Click
 
+        private void buttonSetOwner_Click(object sender, EventArgs e)
+        {
+            SetRoomOwner();
+        }//end method buttonSetOwner_Click
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            GridView.DeleteRow(GridView.FocusedRowHandle);
+        }//end method buttonDel_Click
+
        #endregion //end region Event Handling Methods
 
 
@@ -278,6 +310,12 @@ namespace QLKS.UIControl
             set { this.parentUI = value; }
         }//end attribute UIParent
 
+        public Base.Mode.SubmitMode SubmitMode
+        {
+            get { return submitMode; }
+            set { this.submitMode = value; }
+        }//end attribute SubmitMode
+
        #endregion //end region Attributes
 
 
@@ -285,13 +323,11 @@ namespace QLKS.UIControl
         private UITransaction parentUI;
         private DataRow customer;
         private bool isNewCustomer;
+        private Mode.SubmitMode submitMode;
        #endregion Instance Fields
 
-        private void buttonSetOwner_Click(object sender, EventArgs e)
-        {
-            SetRoomOwner();
-        }
 
+        
         
     }//end class UICustomerInfoPanel
 }//end namespace

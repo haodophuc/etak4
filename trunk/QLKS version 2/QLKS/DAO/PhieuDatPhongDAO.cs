@@ -132,7 +132,7 @@ namespace QLKS.DAO
         {
             try
             {
-                string sp = "SP_INSERT_PHIEU_THUE_PHONG";
+                string sp = "SP_INSERT_PHIEU_DAT_PHONG";
 
                 SqlParameter[] param = new SqlParameter[4];
 
@@ -170,7 +170,8 @@ namespace QLKS.DAO
                 param[0] = new SqlParameter("@MA_PHIEU", detail.IssueID);
                 param[1] = new SqlParameter("@MA_LOAI_PHONG", detail.RoomTypeID);
                 param[2] = new SqlParameter("@NGAY_DEN", detail.CheckInDay);
-                param[3] = new SqlParameter("@SO_LUONG", detail.Quantity);
+                param[3] = new SqlParameter("@NGAY_DI", detail.CheckOutDay);
+                param[4] = new SqlParameter("@SO_LUONG", detail.Quantity);
 
                 return Program.DBConnection.ExecuteNonQuery(insert, param);
                 
