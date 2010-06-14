@@ -1,8 +1,6 @@
-+ This guide will help you create a database named 'QLKS' with two logins and two users:
-  Logins: ADMIN, pass: 1234
-  Users: NHAN_VIEN, pass: 1234
+﻿
+I N S T R U C T I O N S:
 
-Do this step by step:
 1) Create database 'QLKS' with default settings
 
 2) USE QLKS;

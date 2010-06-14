@@ -45,7 +45,7 @@ namespace QLKS.UIControl
             }//end for
 
             // Adjust buttons
-            buttonLoadGroup.Enabled = enabled;
+            //buttonLoadGroup.Enabled = enabled;
             buttonNewGroup.Enabled = !enabled;            
         }//end method LoadControls
 
@@ -126,6 +126,9 @@ namespace QLKS.UIControl
             textBoxGroupID.Text = row["MA_DOAN_KHACH"].ToString();
             textBoxCheckInDay.Text = row["NGAY_DEN"].ToString();
             textBoxCompanyName.Text = row["TEN_CONG_TY"].ToString();
+
+            //BUS.DoanKhachBUS util = new QLKS.BUS.DoanKhachBUS();
+            //textBoxDeposit.Text = util.GetDeposit((int)row["MA_DOAN_KHACH"]).ToString();
 
             try {
                 int companyid = int.Parse(row["MA_CONG_TY"].ToString());

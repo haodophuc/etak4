@@ -156,8 +156,25 @@ namespace QLKS.DAO
                 throw;
             }//end catch
 
-
         }//end method LoadFind
+
+        public Decimal GetDeposit(int groupID)
+        {
+            try
+            {
+                String query = "SELECT TIEN_COC " +
+                               "FROM PHIEU_DAT_PHONG " +
+                               "WHERE MA_DOAN_KHACH = @MA_DOAN_KHACH";
+                SqlParameter param = new SqlParameter("@MA_DOAN_KHACH", groupID);
+
+                return (Decimal)Program.DBConnection.ExecuteScalar(query, new SqlParameter[] { param } );
+            }//end try
+            catch
+            {
+                throw;
+            }//end catch
+        }//end method GetDeposit
+
 
     }//end class DoanKhachDAO
 }//end namespace

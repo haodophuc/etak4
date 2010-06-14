@@ -34,8 +34,7 @@
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelEditor = new QLKS.Controls.StyledPanel();
             this.panelCenter = new QLKS.Controls.StyledPanel();
-            this.styledTextBox1 = new QLKS.Controls.StyledTextBox();
-            this.styledButton1 = new QLKS.Controls.StyledButton();
+            this.textBoxQuantity = new QLKS.Controls.NumberTextBox();
             this.textBoxRoomNumber = new QLKS.Controls.StyledTextBox();
             this.buttonDel = new QLKS.Controls.StyledButton();
             this.textBoxRoomType = new QLKS.Controls.StyledLookUpEdit();
@@ -43,7 +42,6 @@
             this.textBoxBeds = new QLKS.Controls.StyledTextBox();
             this.labelQuatity = new System.Windows.Forms.Label();
             this.textBoxPrice = new QLKS.Controls.StyledTextBox();
-            this.textBoxQuantity = new QLKS.Controls.StyledTextBox();
             this.labelRoomType = new System.Windows.Forms.Label();
             this.labelRoomNumber = new System.Windows.Forms.Label();
             this.labelBeds = new System.Windows.Forms.Label();
@@ -59,12 +57,11 @@
             this.panelEditor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).BeginInit();
             this.panelCenter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.styledTextBox1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxRoomNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxRoomType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxBeds.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantity.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl
@@ -138,8 +135,7 @@
             // 
             this.panelCenter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelCenter.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelCenter.Controls.Add(this.styledTextBox1);
-            this.panelCenter.Controls.Add(this.styledButton1);
+            this.panelCenter.Controls.Add(this.textBoxQuantity);
             this.panelCenter.Controls.Add(this.textBoxRoomNumber);
             this.panelCenter.Controls.Add(this.buttonDel);
             this.panelCenter.Controls.Add(this.textBoxRoomType);
@@ -147,7 +143,6 @@
             this.panelCenter.Controls.Add(this.textBoxBeds);
             this.panelCenter.Controls.Add(this.labelQuatity);
             this.panelCenter.Controls.Add(this.textBoxPrice);
-            this.panelCenter.Controls.Add(this.textBoxQuantity);
             this.panelCenter.Controls.Add(this.labelRoomType);
             this.panelCenter.Controls.Add(this.labelRoomNumber);
             this.panelCenter.Controls.Add(this.labelBeds);
@@ -160,43 +155,36 @@
             this.panelCenter.Size = new System.Drawing.Size(720, 210);
             this.panelCenter.TabIndex = 15;
             // 
-            // styledTextBox1
+            // textBoxQuantity
             // 
-            this.styledTextBox1.Location = new System.Drawing.Point(598, 121);
-            this.styledTextBox1.Name = "styledTextBox1";
-            this.styledTextBox1.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.styledTextBox1.Properties.Appearance.Options.UseBorderColor = true;
-            this.styledTextBox1.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
-            this.styledTextBox1.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.styledTextBox1.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
-            this.styledTextBox1.Properties.AppearanceDisabled.Options.UseBackColor = true;
-            this.styledTextBox1.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.styledTextBox1.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.styledTextBox1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
-            this.styledTextBox1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.styledTextBox1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.styledTextBox1.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
-            this.styledTextBox1.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
-            this.styledTextBox1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.styledTextBox1.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
-            this.styledTextBox1.Properties.AppearanceReadOnly.Options.UseForeColor = true;
-            this.styledTextBox1.Properties.AutoHeight = false;
-            this.styledTextBox1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.styledTextBox1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.styledTextBox1.Properties.NullText = "Chưa có thông tin.";
-            this.styledTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.styledTextBox1.TabIndex = 16;
-            // 
-            // styledButton1
-            // 
-            this.styledButton1.Location = new System.Drawing.Point(623, 151);
-            this.styledButton1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.styledButton1.LookAndFeel.UseWindowsXPTheme = true;
-            this.styledButton1.Name = "styledButton1";
-            this.styledButton1.Size = new System.Drawing.Size(75, 23);
-            this.styledButton1.TabIndex = 15;
-            this.styledButton1.Text = "styledButton1";
-            this.styledButton1.Click += new System.EventHandler(this.styledButton1_Click);
+            this.textBoxQuantity.AllowSpace = false;
+            this.textBoxQuantity.EditValue = "1";
+            this.textBoxQuantity.Length = 1;
+            this.textBoxQuantity.Location = new System.Drawing.Point(272, 125);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxQuantity.Properties.Appearance.Options.UseBorderColor = true;
+            this.textBoxQuantity.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
+            this.textBoxQuantity.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.textBoxQuantity.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxQuantity.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.textBoxQuantity.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            this.textBoxQuantity.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.textBoxQuantity.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxQuantity.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textBoxQuantity.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
+            this.textBoxQuantity.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
+            this.textBoxQuantity.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
+            this.textBoxQuantity.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textBoxQuantity.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
+            this.textBoxQuantity.Properties.AppearanceReadOnly.Options.UseForeColor = true;
+            this.textBoxQuantity.Properties.AutoHeight = false;
+            this.textBoxQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.textBoxQuantity.Properties.Mask.EditMask = "\\d{1,1}";
+            this.textBoxQuantity.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textBoxQuantity.Properties.NullText = "Chưa có thông tin.";
+            this.textBoxQuantity.Size = new System.Drawing.Size(246, 20);
+            this.textBoxQuantity.TabIndex = 15;
             // 
             // textBoxRoomNumber
             // 
@@ -330,35 +318,6 @@
             this.textBoxPrice.Size = new System.Drawing.Size(246, 20);
             this.textBoxPrice.TabIndex = 3;
             // 
-            // textBoxQuantity
-            // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(272, 125);
-            this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Properties.Appearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.textBoxQuantity.Properties.Appearance.Options.UseBorderColor = true;
-            this.textBoxQuantity.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.White;
-            this.textBoxQuantity.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkGray;
-            this.textBoxQuantity.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxQuantity.Properties.AppearanceDisabled.Options.UseBackColor = true;
-            this.textBoxQuantity.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.textBoxQuantity.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.textBoxQuantity.Properties.AppearanceFocused.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxQuantity.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textBoxQuantity.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
-            this.textBoxQuantity.Properties.AppearanceReadOnly.BorderColor = System.Drawing.Color.DarkGray;
-            this.textBoxQuantity.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.RosyBrown;
-            this.textBoxQuantity.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.textBoxQuantity.Properties.AppearanceReadOnly.Options.UseBorderColor = true;
-            this.textBoxQuantity.Properties.AppearanceReadOnly.Options.UseForeColor = true;
-            this.textBoxQuantity.Properties.AutoHeight = false;
-            this.textBoxQuantity.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.textBoxQuantity.Properties.LookAndFeel.SkinName = "Blue";
-            this.textBoxQuantity.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.textBoxQuantity.Properties.NullText = "Chưa có thông tin.";
-            this.textBoxQuantity.Properties.ReadOnly = true;
-            this.textBoxQuantity.Size = new System.Drawing.Size(246, 20);
-            this.textBoxQuantity.TabIndex = 12;
-            // 
             // labelRoomType
             // 
             this.labelRoomType.AutoSize = true;
@@ -424,12 +383,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelCenter)).EndInit();
             this.panelCenter.ResumeLayout(false);
             this.panelCenter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.styledTextBox1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxRoomNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxRoomType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxBeds.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantity.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,12 +408,10 @@
         private Controls.StyledButton buttonDel;
         private Controls.StyledButton buttonAdd;
         private System.Windows.Forms.Label labelQuatity;
-        private Controls.StyledTextBox textBoxQuantity;
         private Controls.StyledLookUpEdit textBoxRoomType;
         private Controls.StyledPanel panelCenter;
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private QLKS.Controls.StyledTextBox styledTextBox1;
-        private QLKS.Controls.StyledButton styledButton1;
+        private QLKS.Controls.NumberTextBox textBoxQuantity;
     }
 }

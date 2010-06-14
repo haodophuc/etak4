@@ -83,7 +83,7 @@ namespace QLKS.UI
         #region Transaction Menu
         private void bookRoomMenuItem_Click(object sender, EventArgs e)
         {
-            if (bookingForm == null)
+            if (bookingForm == null || bookingForm.IsDisposed)
             {
                 bookingForm = new FormBooking();
                 bookingForm.MdiParent = this;
@@ -227,7 +227,7 @@ namespace QLKS.UI
         #region User Management
         private void userManagementMenuItem_Click(object sender, EventArgs e)
         {
-            if (userManagementForm == null)
+            if (userManagementForm == null || userManagementForm.IsDisposed )
             {
                 userManagementForm = new UserManagementForm();
                 userManagementForm.MdiParent = this;
@@ -242,7 +242,7 @@ namespace QLKS.UI
 
         private void searchAndSelectCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            if (searchAndSelectForm == null)
+            if (searchAndSelectForm == null || searchAndSelectForm.IsDisposed)
             {
                 searchAndSelectForm = new Form_TimKiemVaChonKhachHang();
                 searchAndSelectForm.MdiParent = this;
