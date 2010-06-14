@@ -346,6 +346,18 @@
       <DependentUpon>QLKSDataSet_TSKHFilterRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Reports\Report_DoanhThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_DoanhThu.Designer.cs">
+      <DependentUpon>Report_DoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_DoanhThu_Chart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_DoanhThu_Chart.Designer.cs">
+      <DependentUpon>Report_DoanhThu_Chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\UIGeneralInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -354,6 +366,14 @@
     </Compile>
     <Compile Include="MyUtilities.cs" />
     <Compile Include="Program.cs" />
+    <EmbeddedResource Include="Reports\Report_DoanhThu.resx">
+      <DependentUpon>Report_DoanhThu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_DoanhThu_Chart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Report_DoanhThu_Chart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UIGeneralInfo.resx">
       <SubType>Designer</SubType>
       <DependentUpon>UIGeneralInfo.cs</DependentUpon>

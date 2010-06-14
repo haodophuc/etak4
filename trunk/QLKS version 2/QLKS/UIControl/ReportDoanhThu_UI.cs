@@ -6,11 +6,14 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using QLKS.BUS;
+using QLKS.Reports;
 
 namespace QLKS.UIControl
 {
     public partial class ReportDoanhThu_UI : UserControl
     {
+        private Report_DoanhThu_Chart reportDoanhThuChart;
+        private Report_DoanhThu reportDoanhThuTable;
         private DoanhThuBUS doanhThuBUS;
         private int year;
         private bool clicked = false;
@@ -58,6 +61,8 @@ namespace QLKS.UIControl
 
             doanhThuBUS = new DoanhThuBUS();
             gridControl_ViewMode.DataSource = doanhThuBUS.GetDoanhThu(year);
+            reportDoanhThuChart = new Report_DoanhThu_Chart(year);
+            reportDoanhThuTable = new Report_DoanhThu(year);
         }
 
         private void btn_preview_Click(object sender, EventArgs e)
@@ -79,6 +84,22 @@ namespace QLKS.UIControl
                     chartControl_ViewMode.DataAdapter = adapter;
                     chartControl_ViewMode.Dock = DockStyle.Fill;
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_Print_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadDataReport();
+                if (radioBtn_TableMode.Checked == true)
+                     reportDoanhThuTable.ShowPreview();
+                   if (radioBtn_ChartMode.Checked == true)
+                        reportDoanhThuChart.ShowPreview();
             }
             catch (Exception ex)
             {

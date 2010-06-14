@@ -117,10 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="qLKSDataSetDoanhThuBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>200, 17</value>
+  <metadata name="Detail.Name" xml:space="preserve">
+    <value>Detail</value>
   </metadata>
-  <metadata name="qLKSDataSet_DoanhThu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="TopMargin.Name" xml:space="preserve">
+    <value>TopMargin</value>
+  </metadata>
+  <metadata name="BottomMargin.Name" xml:space="preserve">
+    <value>BottomMargin</value>
+  </metadata>
+  <metadata name="qlksDataSet_DoanhThu1.Name" xml:space="preserve">
+    <value>qlksDataSet_DoanhThu1</value>
+  </metadata>
+  <metadata name="qlksDataSet_DoanhThu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="sP_DOANH_THUTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>201, 17</value>
+  </metadata>
+  <metadata name="sP_DOANH_THUTableAdapter.Name" xml:space="preserve">
+    <value>sP_DOANH_THUTableAdapter</value>
+  </metadata>
+  <metadata name="ReportHeader.Name" xml:space="preserve">
+    <value>ReportHeader</value>
+  </metadata>
+  <metadata name="xrChart1.Name" xml:space="preserve">
+    <value>xrChart1</value>
+  </metadata>
+  <metadata name="xrLine1.Name" xml:space="preserve">
+    <value>xrLine1</value>
+  </metadata>
+  <metadata name="lbAddress.Name" xml:space="preserve">
+    <value>lbAddress</value>
+  </metadata>
+  <metadata name="xrPageInfo1.Name" xml:space="preserve">
+    <value>xrPageInfo1</value>
+  </metadata>
+  <metadata name="lbDate.Name" xml:space="preserve">
+    <value>lbDate</value>
+  </metadata>
+  <metadata name="pic_logo.Name" xml:space="preserve">
+    <value>pic_logo</value>
+  </metadata>
+  <metadata name="xrLabel4.Name" xml:space="preserve">
+    <value>xrLabel4</value>
+  </metadata>
+  <metadata name="$this.Name" xml:space="preserve">
+    <value>Report_DoanhThu_Chart</value>
   </metadata>
 </root>
