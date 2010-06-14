@@ -50,7 +50,7 @@ namespace QLKS.UIControl
             UpdateCheckInTime();
             dateCheckIn.Enabled = false;
             dateCheckOut.Enabled = false;
-            textBoxNumOfDays.enabled = false;
+            textBoxNumOfDays.Enabled = false;
         }//end method LoadCheckingControls
 
         public void LoadData()
